@@ -21406,6 +21406,7 @@ function User_getPrototypeOf(o) { User_getPrototypeOf = Object.setPrototypeOf ? 
 
 
 
+
 var User_User_User = /*#__PURE__*/function (_React$Component) {
   User_inherits(User, _React$Component);
 
@@ -21436,7 +21437,7 @@ var User_User_User = /*#__PURE__*/function (_React$Component) {
           duration: 500
         }, /*#__PURE__*/react_default.a.createElement(Link, {
           className: "cabinetLink",
-          to: "/cabinet"
+          to: route + "/cabinet"
         }, "\u041B\u0438\u0447\u043D\u044B\u0439 \u043A\u0430\u0431\u0438\u043D\u0435\u0442")), /*#__PURE__*/react_default.a.createElement(Popup_UserWithStore, null), /*#__PURE__*/react_default.a.createElement("span", {
           className: 'UserName',
           onClick: handleClick
@@ -21447,7 +21448,7 @@ var User_User_User = /*#__PURE__*/function (_React$Component) {
         }, /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
           className: 'headerListReg'
         }, /*#__PURE__*/react_default.a.createElement(Link, {
-          to: "/reg"
+          to: route + "/reg"
         }, "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F")), /*#__PURE__*/react_default.a.createElement(Modal_LoginModal_LoginModal, null));
       }
     }
@@ -21505,6 +21506,7 @@ var User_UserWithStore = /*#__PURE__*/function (_React$Component2) {
 
 
 
+
 function Header_List_List_List() {
   return /*#__PURE__*/react_default.a.createElement(esm_Grid_Grid, {
     container: true,
@@ -21517,35 +21519,35 @@ function Header_List_List_List() {
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: "/"
+    to: route + "/"
   }, "\u0413\u043B\u0430\u0432\u043D\u0430\u044F"))), /*#__PURE__*/react_default.a.createElement("li", null, /*#__PURE__*/react_default.a.createElement(modules["Link"], {
     to: "rules",
     spy: true,
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: "/#rules"
+    to: route + "/#rules"
   }, "\u041F\u0440\u0430\u0432\u0438\u043B\u0430"))), /*#__PURE__*/react_default.a.createElement("li", null, /*#__PURE__*/react_default.a.createElement(modules["Link"], {
     to: "priz",
     spy: true,
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: "/#priz"
+    to: route + "/#priz"
   }, "\u041F\u0440\u0438\u0437\u044B"))), /*#__PURE__*/react_default.a.createElement("li", null, /*#__PURE__*/react_default.a.createElement(modules["Link"], {
     to: "winners",
     spy: true,
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: "/#winners"
+    to: route + "/#winners"
   }, "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u0435\u043B\u0438"))), /*#__PURE__*/react_default.a.createElement("li", null, /*#__PURE__*/react_default.a.createElement(modules["Link"], {
     to: "faq",
     spy: true,
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: "/faq"
+    to: route + "/faq"
   }, "faq"))), /*#__PURE__*/react_default.a.createElement("div", {
     className: "headerListGap"
   }), /*#__PURE__*/react_default.a.createElement(User_UserWithStore, null)));
@@ -22476,6 +22478,7 @@ HideOnScroll.propTypes = {
    */
   window: prop_types_default.a.func
 };
+
 function Header_Header(props) {
   return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(CssBaseline_CssBaseline, null), /*#__PURE__*/react_default.a.createElement(HideOnScroll, props, /*#__PURE__*/react_default.a.createElement(esm_AppBar_AppBar, {
     className: 'header'
@@ -22485,7 +22488,7 @@ function Header_Header(props) {
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: "/"
+    to: route + "/"
   }, /*#__PURE__*/react_default.a.createElement("img", {
     src: logo
   }))), /*#__PURE__*/react_default.a.createElement(Header_List_List_List, null), /*#__PURE__*/react_default.a.createElement(SwipeableTemporaryDrawer, null))));
