@@ -25391,7 +25391,7 @@ var App_App = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react_default.a.createElement(FAQ, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         path: "/pages/Pepsilays/reg"
       }, /*#__PURE__*/react_default.a.createElement(Registration_Registration_Registration, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        path: "/pages/Pepsilays/faq/cabinet"
+        path: "/pages/Pepsilays/cabinet"
       }, /*#__PURE__*/react_default.a.createElement(Cabinet_CabWithStore, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         exact: true,
         path: ""
