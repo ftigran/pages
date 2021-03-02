@@ -9498,9 +9498,7 @@ function Rules_Rules() {
   }), /*#__PURE__*/react_default.a.createElement("img", {
     alt: "3",
     className: 'rulesNumb',
-    src: {
-      nunb3: numb3
-    }
+    src: numb3
   }), /*#__PURE__*/react_default.a.createElement(esm_ListItemText_ListItemText, {
     primary: "\u0432\u044B\u0438\u0433\u0440\u044B\u0432\u0430\u0439 \u043F\u0440\u0438\u0437\u044B    ",
     secondary: "\u043A\u0430\u0436\u0434\u0443\u044E \u043D\u0435\u0434\u0435\u043B\u044E"
@@ -11445,11 +11443,22 @@ var Box = styles_styled('div')(Box_styleFunction, {
 // EXTERNAL MODULE: ./dev/components/Priz/Priz.scss
 var Priz = __webpack_require__(113);
 
+// CONCATENATED MODULE: ./dev/img/priz1.png
+/* harmony default export */ var priz1 = (__webpack_require__.p + "images/priz1.png");
+// CONCATENATED MODULE: ./dev/img/priz2.png
+/* harmony default export */ var priz2 = (__webpack_require__.p + "images/priz2.png");
+// CONCATENATED MODULE: ./dev/img/priz3.png
+/* harmony default export */ var priz3 = (__webpack_require__.p + "images/priz3.png");
+// CONCATENATED MODULE: ./dev/img/priz3-1.png
+/* harmony default export */ var priz3_1 = (__webpack_require__.p + "images/priz3-1.png");
 // CONCATENATED MODULE: ./dev/components/Priz/Priz.js
 
 
 
-var imgs = ['../dev/img/priz1.png', '../dev/img/priz2.png', '../dev/img/priz3.png', '../dev/img/priz3-1.png'];
+
+
+
+
 
 function Priz_Priz() {
   return /*#__PURE__*/react_default.a.createElement(Box_Box, {
@@ -11467,24 +11476,24 @@ function Priz_Priz() {
     xs: 12,
     lg: 3
   }, /*#__PURE__*/react_default.a.createElement("img", {
-    src: imgs[0],
+    src: priz1,
     className: 'prizImg'
   })), /*#__PURE__*/react_default.a.createElement(esm_Grid_Grid, {
     item: true,
     xs: 12,
     lg: 3
   }, /*#__PURE__*/react_default.a.createElement("img", {
-    src: imgs[1],
+    src: priz2,
     className: 'prizImg'
   })), /*#__PURE__*/react_default.a.createElement(esm_Grid_Grid, {
     item: true,
     xs: 12,
     lg: 6
   }, /*#__PURE__*/react_default.a.createElement("img", {
-    src: imgs[2],
+    src: priz3,
     className: 'prizImg prizImg_pc'
   }), /*#__PURE__*/react_default.a.createElement("img", {
-    src: imgs[3],
+    src: priz3_1,
     className: 'prizImg prizImg_mob'
   }))));
 }
@@ -25378,12 +25387,11 @@ var App_App = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react_default.a.createElement(react_router_dom_BrowserRouter, null, /*#__PURE__*/react_default.a.createElement(Header_Header, null), /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        exact: true,
-        path: "/faq"
+        path: "/pages/Pepsilays/faq"
       }, /*#__PURE__*/react_default.a.createElement(FAQ, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        path: "/reg"
+        path: "/pages/Pepsilays/reg"
       }, /*#__PURE__*/react_default.a.createElement(Registration_Registration_Registration, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        path: "/cabinet"
+        path: "/pages/Pepsilays/faq/cabinet"
       }, /*#__PURE__*/react_default.a.createElement(Cabinet_CabWithStore, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         exact: true,
         path: ""
