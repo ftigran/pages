@@ -21406,7 +21406,6 @@ function User_getPrototypeOf(o) { User_getPrototypeOf = Object.setPrototypeOf ? 
 
 
 
-
 var User_User_User = /*#__PURE__*/function (_React$Component) {
   User_inherits(User, _React$Component);
 
@@ -21437,7 +21436,7 @@ var User_User_User = /*#__PURE__*/function (_React$Component) {
           duration: 500
         }, /*#__PURE__*/react_default.a.createElement(Link, {
           className: "cabinetLink",
-          to: route + "/cabinet"
+          to: "/pages/Pepsilays/cabinet"
         }, "\u041B\u0438\u0447\u043D\u044B\u0439 \u043A\u0430\u0431\u0438\u043D\u0435\u0442")), /*#__PURE__*/react_default.a.createElement(Popup_UserWithStore, null), /*#__PURE__*/react_default.a.createElement("span", {
           className: 'UserName',
           onClick: handleClick
@@ -21448,7 +21447,7 @@ var User_User_User = /*#__PURE__*/function (_React$Component) {
         }, /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
           className: 'headerListReg'
         }, /*#__PURE__*/react_default.a.createElement(Link, {
-          to: route + "/reg"
+          to: "/pages/Pepsilays/reg"
         }, "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F")), /*#__PURE__*/react_default.a.createElement(Modal_LoginModal_LoginModal, null));
       }
     }
@@ -21506,7 +21505,6 @@ var User_UserWithStore = /*#__PURE__*/function (_React$Component2) {
 
 
 
-
 function Header_List_List_List() {
   return /*#__PURE__*/react_default.a.createElement(esm_Grid_Grid, {
     container: true,
@@ -21519,35 +21517,35 @@ function Header_List_List_List() {
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: route + "/"
+    to: "/pages/Pepsilays/"
   }, "\u0413\u043B\u0430\u0432\u043D\u0430\u044F"))), /*#__PURE__*/react_default.a.createElement("li", null, /*#__PURE__*/react_default.a.createElement(modules["Link"], {
     to: "rules",
     spy: true,
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: route + "/#rules"
+    to: "/pages/Pepsilays/#rules"
   }, "\u041F\u0440\u0430\u0432\u0438\u043B\u0430"))), /*#__PURE__*/react_default.a.createElement("li", null, /*#__PURE__*/react_default.a.createElement(modules["Link"], {
     to: "priz",
     spy: true,
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: route + "/#priz"
+    to: "/pages/Pepsilays/#priz"
   }, "\u041F\u0440\u0438\u0437\u044B"))), /*#__PURE__*/react_default.a.createElement("li", null, /*#__PURE__*/react_default.a.createElement(modules["Link"], {
     to: "winners",
     spy: true,
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: route + "/#winners"
+    to: "/pages/Pepsilays/#winners"
   }, "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u0435\u043B\u0438"))), /*#__PURE__*/react_default.a.createElement("li", null, /*#__PURE__*/react_default.a.createElement(modules["Link"], {
     to: "faq",
     spy: true,
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: route + "/faq"
+    to: "/pages/Pepsilays/faq"
   }, "faq"))), /*#__PURE__*/react_default.a.createElement("div", {
     className: "headerListGap"
   }), /*#__PURE__*/react_default.a.createElement(User_UserWithStore, null)));
@@ -22488,7 +22486,7 @@ function Header_Header(props) {
     smooth: true,
     duration: 500
   }, /*#__PURE__*/react_default.a.createElement(Link, {
-    to: route + "/"
+    to: "/pages/Pepsilays/"
   }, /*#__PURE__*/react_default.a.createElement("img", {
     src: logo
   }))), /*#__PURE__*/react_default.a.createElement(Header_List_List_List, null), /*#__PURE__*/react_default.a.createElement(SwipeableTemporaryDrawer, null))));
@@ -25364,7 +25362,6 @@ function App_getPrototypeOf(o) { App_getPrototypeOf = Object.setPrototypeOf ? Ob
 
 
 
-var route = 'pages/Pepsilays';
 
 var App_App = /*#__PURE__*/function (_Component) {
   App_inherits(App, _Component);
@@ -25382,16 +25379,14 @@ var App_App = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/react_default.a.createElement(react_router_dom_BrowserRouter, null, /*#__PURE__*/react_default.a.createElement(Header_Header, null), /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         exact: true,
-        path: route + "/faq"
+        path: "/faq"
       }, /*#__PURE__*/react_default.a.createElement(FAQ, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        path: route + "/reg"
+        path: "/reg"
       }, /*#__PURE__*/react_default.a.createElement(Registration_Registration_Registration, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        path: route + "/cabinet"
+        path: "/cabinet"
       }, /*#__PURE__*/react_default.a.createElement(Cabinet_CabWithStore, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         exact: true,
-        path: route + "/"
-      }, /*#__PURE__*/react_default.a.createElement(main_Main, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        path: route + "/#"
+        path: ""
       }, /*#__PURE__*/react_default.a.createElement(main_Main, null))), /*#__PURE__*/react_default.a.createElement(Footer_Main, null));
     }
   }]);
