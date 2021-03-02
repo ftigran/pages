@@ -25361,6 +25361,7 @@ function App_getPrototypeOf(o) { App_getPrototypeOf = Object.setPrototypeOf ? Ob
 
 
 
+var route = 'pages/Pepsilays';
 
 var App_App = /*#__PURE__*/function (_Component) {
   App_inherits(App, _Component);
@@ -25378,16 +25379,16 @@ var App_App = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/react_default.a.createElement(react_router_dom_BrowserRouter, null, /*#__PURE__*/react_default.a.createElement(Header_Header, null), /*#__PURE__*/react_default.a.createElement(react_router_Switch, null, /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         exact: true,
-        path: "/faq"
+        path: route + "/faq"
       }, /*#__PURE__*/react_default.a.createElement(FAQ, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        path: "/reg"
+        path: route + "/reg"
       }, /*#__PURE__*/react_default.a.createElement(Registration_Registration_Registration, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        path: "/cabinet"
+        path: route + "/cabinet"
       }, /*#__PURE__*/react_default.a.createElement(Cabinet_CabWithStore, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
         exact: true,
-        path: "/"
+        path: route + "/"
       }, /*#__PURE__*/react_default.a.createElement(main_Main, null)), /*#__PURE__*/react_default.a.createElement(react_router_Route, {
-        path: "/#"
+        path: route + "/#"
       }, /*#__PURE__*/react_default.a.createElement(main_Main, null))), /*#__PURE__*/react_default.a.createElement(Footer_Main, null));
     }
   }]);
