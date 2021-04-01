@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 42);
+/******/ 	return __webpack_require__(__webpack_require__.s = 80);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -92,12 +92,110 @@
 
 
 if (true) {
-  module.exports = __webpack_require__(25);
+  module.exports = __webpack_require__(62);
 } else {}
 
 
 /***/ }),
 /* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _extends; });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutProperties; });
+/* harmony import */ var _objectWithoutPropertiesLoose_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = Object(_objectWithoutPropertiesLoose_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(source, excluded);
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+function toVal(mix) {
+	var k, y, str='';
+
+	if (typeof mix === 'string' || typeof mix === 'number') {
+		str += mix;
+	} else if (typeof mix === 'object') {
+		if (Array.isArray(mix)) {
+			for (k=0; k < mix.length; k++) {
+				if (mix[k]) {
+					if (y = toVal(mix[k])) {
+						str && (str += ' ');
+						str += y;
+					}
+				}
+			}
+		} else {
+			for (k in mix) {
+				if (mix[k]) {
+					str && (str += ' ');
+					str += k;
+				}
+			}
+		}
+	}
+
+	return str;
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+	var i=0, tmp, x, str='';
+	while (i < arguments.length) {
+		if (tmp = arguments[i++]) {
+			if (x = toVal(tmp)) {
+				str && (str += ' ');
+				str += x
+			}
+		}
+	}
+	return str;
+});
+
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -110,12 +208,12 @@ if (true) {
 if (false) { var throwOnDirectAccess, ReactIs; } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(31)();
+  module.exports = __webpack_require__(68)();
 }
 
 
 /***/ }),
-/* 2 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -144,19 +242,623 @@ if (true) {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(26);
+  module.exports = __webpack_require__(63);
 } else {}
 
 
 /***/ }),
-/* 3 */,
-/* 4 */
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return capitalize; });
+/* harmony import */ var _material_ui_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
+
+// It should to be noted that this function isn't equivalent to `text-transform: capitalize`.
+//
+// A strict capitalization should uppercase the first letter of each word a the sentence.
+// We only handle the first word.
+function capitalize(string) {
+  if (typeof string !== 'string') {
+    throw new Error( false ? undefined : Object(_material_ui_utils__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(7));
+  }
+
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+/***/ }),
+/* 7 */,
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+var esm_extends = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+var objectWithoutProperties = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(0);
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+var prop_types = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
+var hoist_non_react_statics_cjs = __webpack_require__(17);
+var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/makeStyles/makeStyles.js + 21 modules
+var makeStyles = __webpack_require__(98);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/getThemeProps/getThemeProps.js
+var getThemeProps = __webpack_require__(97);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/useTheme/useTheme.js + 1 modules
+var useTheme = __webpack_require__(99);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/withStyles/withStyles.js
+
+
+
+
+
+
+
+
+ // Link a style sheet with a component.
+// It does not modify the component passed to it;
+// instead, it returns a new component, with a `classes` property.
+
+var withStyles_withStyles = function withStyles(stylesOrCreator) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  return function (Component) {
+    var defaultTheme = options.defaultTheme,
+        _options$withTheme = options.withTheme,
+        withTheme = _options$withTheme === void 0 ? false : _options$withTheme,
+        name = options.name,
+        stylesOptions = Object(objectWithoutProperties["a" /* default */])(options, ["defaultTheme", "withTheme", "name"]);
+
+    if (false) {}
+
+    var classNamePrefix = name;
+
+    if (false) { var displayName; }
+
+    var useStyles = Object(makeStyles["a" /* default */])(stylesOrCreator, Object(esm_extends["a" /* default */])({
+      defaultTheme: defaultTheme,
+      Component: Component,
+      name: name || Component.displayName,
+      classNamePrefix: classNamePrefix
+    }, stylesOptions));
+    var WithStyles = /*#__PURE__*/react_default.a.forwardRef(function WithStyles(props, ref) {
+      var classesProp = props.classes,
+          innerRef = props.innerRef,
+          other = Object(objectWithoutProperties["a" /* default */])(props, ["classes", "innerRef"]); // The wrapper receives only user supplied props, which could be a subset of
+      // the actual props Component might receive due to merging with defaultProps.
+      // So copying it here would give us the same result in the wrapper as well.
+
+
+      var classes = useStyles(Object(esm_extends["a" /* default */])({}, Component.defaultProps, props));
+      var theme;
+      var more = other;
+
+      if (typeof name === 'string' || withTheme) {
+        // name and withTheme are invariant in the outer scope
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        theme = Object(useTheme["a" /* default */])() || defaultTheme;
+
+        if (name) {
+          more = Object(getThemeProps["a" /* default */])({
+            theme: theme,
+            name: name,
+            props: other
+          });
+        } // Provide the theme to the wrapped component.
+        // So we don't have to use the `withTheme()` Higher-order Component.
+
+
+        if (withTheme && !more.theme) {
+          more.theme = theme;
+        }
+      }
+
+      return /*#__PURE__*/react_default.a.createElement(Component, Object(esm_extends["a" /* default */])({
+        ref: innerRef || ref,
+        classes: classes
+      }, more));
+    });
+     false ? undefined : void 0;
+
+    if (false) {}
+
+    hoist_non_react_statics_cjs_default()(WithStyles, Component);
+
+    if (false) {}
+
+    return WithStyles;
+  };
+};
+
+/* harmony default export */ var esm_withStyles_withStyles = (withStyles_withStyles);
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/defaultTheme.js + 16 modules
+var styles_defaultTheme = __webpack_require__(20);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/withStyles.js
+
+
+
+
+function styles_withStyles_withStyles(stylesOrCreator, options) {
+  return esm_withStyles_withStyles(stylesOrCreator, Object(esm_extends["a" /* default */])({
+    defaultTheme: styles_defaultTheme["a" /* default */]
+  }, options));
+}
+
+/* harmony default export */ var styles_withStyles = __webpack_exports__["a"] = (styles_withStyles_withStyles);
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export hexToRgb */
+/* unused harmony export rgbToHex */
+/* unused harmony export hslToRgb */
+/* unused harmony export decomposeColor */
+/* unused harmony export recomposeColor */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getContrastRatio; });
+/* unused harmony export getLuminance */
+/* unused harmony export emphasize */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return fade; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return darken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return lighten; });
+/* harmony import */ var _material_ui_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
+
+
+/* eslint-disable no-use-before-define */
+
+/**
+ * Returns a number whose value is limited to the given range.
+ *
+ * @param {number} value The value to be clamped
+ * @param {number} min The lower boundary of the output range
+ * @param {number} max The upper boundary of the output range
+ * @returns {number} A number in the range [min, max]
+ */
+function clamp(value) {
+  var min = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+  var max = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+
+  if (false) {}
+
+  return Math.min(Math.max(min, value), max);
+}
+/**
+ * Converts a color from CSS hex format to CSS rgb format.
+ *
+ * @param {string} color - Hex color, i.e. #nnn or #nnnnnn
+ * @returns {string} A CSS rgb color string
+ */
+
+
+function hexToRgb(color) {
+  color = color.substr(1);
+  var re = new RegExp(".{1,".concat(color.length >= 6 ? 2 : 1, "}"), 'g');
+  var colors = color.match(re);
+
+  if (colors && colors[0].length === 1) {
+    colors = colors.map(function (n) {
+      return n + n;
+    });
+  }
+
+  return colors ? "rgb".concat(colors.length === 4 ? 'a' : '', "(").concat(colors.map(function (n, index) {
+    return index < 3 ? parseInt(n, 16) : Math.round(parseInt(n, 16) / 255 * 1000) / 1000;
+  }).join(', '), ")") : '';
+}
+
+function intToHex(int) {
+  var hex = int.toString(16);
+  return hex.length === 1 ? "0".concat(hex) : hex;
+}
+/**
+ * Converts a color from CSS rgb format to CSS hex format.
+ *
+ * @param {string} color - RGB color, i.e. rgb(n, n, n)
+ * @returns {string} A CSS rgb color string, i.e. #nnnnnn
+ */
+
+
+function rgbToHex(color) {
+  // Idempotent
+  if (color.indexOf('#') === 0) {
+    return color;
+  }
+
+  var _decomposeColor = decomposeColor(color),
+      values = _decomposeColor.values;
+
+  return "#".concat(values.map(function (n) {
+    return intToHex(n);
+  }).join(''));
+}
+/**
+ * Converts a color from hsl format to rgb format.
+ *
+ * @param {string} color - HSL color values
+ * @returns {string} rgb color values
+ */
+
+function hslToRgb(color) {
+  color = decomposeColor(color);
+  var _color = color,
+      values = _color.values;
+  var h = values[0];
+  var s = values[1] / 100;
+  var l = values[2] / 100;
+  var a = s * Math.min(l, 1 - l);
+
+  var f = function f(n) {
+    var k = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (n + h / 30) % 12;
+    return l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+  };
+
+  var type = 'rgb';
+  var rgb = [Math.round(f(0) * 255), Math.round(f(8) * 255), Math.round(f(4) * 255)];
+
+  if (color.type === 'hsla') {
+    type += 'a';
+    rgb.push(values[3]);
+  }
+
+  return recomposeColor({
+    type: type,
+    values: rgb
+  });
+}
+/**
+ * Returns an object with the type and values of a color.
+ *
+ * Note: Does not support rgb % values.
+ *
+ * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
+ * @returns {object} - A MUI color object: {type: string, values: number[]}
+ */
+
+function decomposeColor(color) {
+  // Idempotent
+  if (color.type) {
+    return color;
+  }
+
+  if (color.charAt(0) === '#') {
+    return decomposeColor(hexToRgb(color));
+  }
+
+  var marker = color.indexOf('(');
+  var type = color.substring(0, marker);
+
+  if (['rgb', 'rgba', 'hsl', 'hsla'].indexOf(type) === -1) {
+    throw new Error( false ? undefined : Object(_material_ui_utils__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(3, color));
+  }
+
+  var values = color.substring(marker + 1, color.length - 1).split(',');
+  values = values.map(function (value) {
+    return parseFloat(value);
+  });
+  return {
+    type: type,
+    values: values
+  };
+}
+/**
+ * Converts a color object with type and values to a string.
+ *
+ * @param {object} color - Decomposed color
+ * @param {string} color.type - One of: 'rgb', 'rgba', 'hsl', 'hsla'
+ * @param {array} color.values - [n,n,n] or [n,n,n,n]
+ * @returns {string} A CSS color string
+ */
+
+function recomposeColor(color) {
+  var type = color.type;
+  var values = color.values;
+
+  if (type.indexOf('rgb') !== -1) {
+    // Only convert the first 3 values to int (i.e. not alpha)
+    values = values.map(function (n, i) {
+      return i < 3 ? parseInt(n, 10) : n;
+    });
+  } else if (type.indexOf('hsl') !== -1) {
+    values[1] = "".concat(values[1], "%");
+    values[2] = "".concat(values[2], "%");
+  }
+
+  return "".concat(type, "(").concat(values.join(', '), ")");
+}
+/**
+ * Calculates the contrast ratio between two colors.
+ *
+ * Formula: https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
+ *
+ * @param {string} foreground - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
+ * @param {string} background - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
+ * @returns {number} A contrast ratio value in the range 0 - 21.
+ */
+
+function getContrastRatio(foreground, background) {
+  var lumA = getLuminance(foreground);
+  var lumB = getLuminance(background);
+  return (Math.max(lumA, lumB) + 0.05) / (Math.min(lumA, lumB) + 0.05);
+}
+/**
+ * The relative brightness of any point in a color space,
+ * normalized to 0 for darkest black and 1 for lightest white.
+ *
+ * Formula: https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
+ *
+ * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
+ * @returns {number} The relative brightness of the color in the range 0 - 1
+ */
+
+function getLuminance(color) {
+  color = decomposeColor(color);
+  var rgb = color.type === 'hsl' ? decomposeColor(hslToRgb(color)).values : color.values;
+  rgb = rgb.map(function (val) {
+    val /= 255; // normalized
+
+    return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
+  }); // Truncate at 3 digits
+
+  return Number((0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2]).toFixed(3));
+}
+/**
+ * Darken or lighten a color, depending on its luminance.
+ * Light colors are darkened, dark colors are lightened.
+ *
+ * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
+ * @param {number} coefficient=0.15 - multiplier in the range 0 - 1
+ * @returns {string} A CSS color string. Hex input values are returned as rgb
+ */
+
+function emphasize(color) {
+  var coefficient = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0.15;
+  return getLuminance(color) > 0.5 ? darken(color, coefficient) : lighten(color, coefficient);
+}
+/**
+ * Set the absolute transparency of a color.
+ * Any existing alpha values are overwritten.
+ *
+ * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
+ * @param {number} value - value to set the alpha channel to in the range 0 -1
+ * @returns {string} A CSS color string. Hex input values are returned as rgb
+ */
+
+function fade(color, value) {
+  color = decomposeColor(color);
+  value = clamp(value);
+
+  if (color.type === 'rgb' || color.type === 'hsl') {
+    color.type += 'a';
+  }
+
+  color.values[3] = value;
+  return recomposeColor(color);
+}
+/**
+ * Darkens a color.
+ *
+ * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
+ * @param {number} coefficient - multiplier in the range 0 - 1
+ * @returns {string} A CSS color string. Hex input values are returned as rgb
+ */
+
+function darken(color, coefficient) {
+  color = decomposeColor(color);
+  coefficient = clamp(coefficient);
+
+  if (color.type.indexOf('hsl') !== -1) {
+    color.values[2] *= 1 - coefficient;
+  } else if (color.type.indexOf('rgb') !== -1) {
+    for (var i = 0; i < 3; i += 1) {
+      color.values[i] *= 1 - coefficient;
+    }
+  }
+
+  return recomposeColor(color);
+}
+/**
+ * Lightens a color.
+ *
+ * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
+ * @param {number} coefficient - multiplier in the range 0 - 1
+ * @returns {string} A CSS color string. Hex input values are returned as rgb
+ */
+
+function lighten(color, coefficient) {
+  color = decomposeColor(color);
+  coefficient = clamp(coefficient);
+
+  if (color.type.indexOf('hsl') !== -1) {
+    color.values[2] += (100 - color.values[2]) * coefficient;
+  } else if (color.type.indexOf('rgb') !== -1) {
+    for (var i = 0; i < 3; i += 1) {
+      color.values[i] += (255 - color.values[i]) * coefficient;
+    }
+  }
+
+  return recomposeColor(color);
+}
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutPropertiesLoose; });
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+/***/ }),
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useForkRef; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _setRef__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(16);
+
+
+function useForkRef(refA, refB) {
+  /**
+   * This will create a new function if the ref props change and are defined.
+   * This means react will call the old forkRef with `null` and the new forkRef
+   * with the ref. Cleanup naturally emerges from this behavior
+   */
+  return react__WEBPACK_IMPORTED_MODULE_0__["useMemo"](function () {
+    if (refA == null && refB == null) {
+      return null;
+    }
+
+    return function (refValue) {
+      Object(_setRef__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(refA, refValue);
+      Object(_setRef__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(refB, refValue);
+    };
+  }, [refA, refB]);
+}
+
+/***/ }),
+/* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useEventCallback; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var useEnhancedEffect = typeof window !== 'undefined' ? react__WEBPACK_IMPORTED_MODULE_0__["useLayoutEffect"] : react__WEBPACK_IMPORTED_MODULE_0__["useEffect"];
+/**
+ * https://github.com/facebook/react/issues/14099#issuecomment-440013892
+ *
+ * @param {function} fn
+ */
+
+function useEventCallback(fn) {
+  var ref = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](fn);
+  useEnhancedEffect(function () {
+    ref.current = fn;
+  });
+  return react__WEBPACK_IMPORTED_MODULE_0__["useCallback"](function () {
+    return (0, ref.current).apply(void 0, arguments);
+  }, []);
+}
+
+/***/ }),
+/* 13 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ownerDocument; });
+function ownerDocument(node) {
+  return node && node.ownerDocument || document;
+}
+
+/***/ }),
+/* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _toConsumableArray; });
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+var arrayLikeToArray = __webpack_require__(26);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return Object(arrayLikeToArray["a" /* default */])(arr);
+}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js
+var iterableToArray = __webpack_require__(48);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+var unsupportedIterableToArray = __webpack_require__(30);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js
+
+
+
+
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || Object(iterableToArray["a" /* default */])(arr) || Object(unsupportedIterableToArray["a" /* default */])(arr) || _nonIterableSpread();
+}
+
+/***/ }),
+/* 15 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _material_ui_utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(81);
+
+
+function merge(acc, item) {
+  if (!item) {
+    return acc;
+  }
+
+  return Object(_material_ui_utils__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(acc, item, {
+    clone: false // No need to clone deep, it's way faster.
+
+  });
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (merge);
+
+/***/ }),
+/* 16 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return setRef; });
+// TODO v5: consider to make it private
+function setRef(ref, value) {
+  if (typeof ref === 'function') {
+    ref(value);
+  } else if (ref) {
+    ref.current = value;
+  }
+}
+
+/***/ }),
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var reactIs = __webpack_require__(33);
+var reactIs = __webpack_require__(70);
 
 /**
  * Copyright 2015, Yahoo! Inc.
@@ -260,7 +962,901 @@ module.exports = hoistNonReactStatics;
 
 
 /***/ }),
-/* 5 */
+/* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _inheritsLoose; });
+/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(47);
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  Object(_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(subClass, superClass);
+}
+
+/***/ }),
+/* 19 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _defineProperty; });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+/* 20 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
+var defineProperty = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+var objectWithoutProperties = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/utils/esm/deepmerge.js
+var deepmerge = __webpack_require__(81);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+var esm_extends = __webpack_require__(1);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createBreakpoints.js
+
+
+// Sorted ASC by size. That's important.
+// It can't be configured as it's used statically for propTypes.
+var keys = ['xs', 'sm', 'md', 'lg', 'xl']; // Keep in mind that @media is inclusive by the CSS specification.
+
+function createBreakpoints(breakpoints) {
+  var _breakpoints$values = breakpoints.values,
+      values = _breakpoints$values === void 0 ? {
+    xs: 0,
+    sm: 600,
+    md: 960,
+    lg: 1280,
+    xl: 1920
+  } : _breakpoints$values,
+      _breakpoints$unit = breakpoints.unit,
+      unit = _breakpoints$unit === void 0 ? 'px' : _breakpoints$unit,
+      _breakpoints$step = breakpoints.step,
+      step = _breakpoints$step === void 0 ? 5 : _breakpoints$step,
+      other = Object(objectWithoutProperties["a" /* default */])(breakpoints, ["values", "unit", "step"]);
+
+  function up(key) {
+    var value = typeof values[key] === 'number' ? values[key] : key;
+    return "@media (min-width:".concat(value).concat(unit, ")");
+  }
+
+  function down(key) {
+    var endIndex = keys.indexOf(key) + 1;
+    var upperbound = values[keys[endIndex]];
+
+    if (endIndex === keys.length) {
+      // xl down applies to all sizes
+      return up('xs');
+    }
+
+    var value = typeof upperbound === 'number' && endIndex > 0 ? upperbound : key;
+    return "@media (max-width:".concat(value - step / 100).concat(unit, ")");
+  }
+
+  function between(start, end) {
+    var endIndex = keys.indexOf(end);
+
+    if (endIndex === keys.length - 1) {
+      return up(start);
+    }
+
+    return "@media (min-width:".concat(typeof values[start] === 'number' ? values[start] : start).concat(unit, ") and ") + "(max-width:".concat((endIndex !== -1 && typeof values[keys[endIndex + 1]] === 'number' ? values[keys[endIndex + 1]] : end) - step / 100).concat(unit, ")");
+  }
+
+  function only(key) {
+    return between(key, key);
+  }
+
+  function width(key) {
+    return values[key];
+  }
+
+  return Object(esm_extends["a" /* default */])({
+    keys: keys,
+    values: values,
+    up: up,
+    down: down,
+    between: between,
+    only: only,
+    width: width
+  }, other);
+}
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createMixins.js
+
+
+function createMixins(breakpoints, spacing, mixins) {
+  var _toolbar;
+
+  return Object(esm_extends["a" /* default */])({
+    gutters: function gutters() {
+      var styles = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      // To deprecate in v4.1
+      //       warning(
+      //         false,
+      //         [
+      //           'Material-UI: Theme.mixins.gutters() is deprecated.',
+      //           'You can use the source of the mixin directly:',
+      //           `
+      // paddingLeft: theme.spacing(2),
+      // paddingRight: theme.spacing(2),
+      // [theme.breakpoints.up('sm')]: {
+      //   paddingLeft: theme.spacing(3),
+      //   paddingRight: theme.spacing(3),
+      // },
+      // `,
+      //         ].join('\n'),
+      //       );
+      return Object(esm_extends["a" /* default */])({
+        paddingLeft: spacing(2),
+        paddingRight: spacing(2)
+      }, styles, Object(defineProperty["a" /* default */])({}, breakpoints.up('sm'), Object(esm_extends["a" /* default */])({
+        paddingLeft: spacing(3),
+        paddingRight: spacing(3)
+      }, styles[breakpoints.up('sm')])));
+    },
+    toolbar: (_toolbar = {
+      minHeight: 56
+    }, Object(defineProperty["a" /* default */])(_toolbar, "".concat(breakpoints.up('xs'), " and (orientation: landscape)"), {
+      minHeight: 48
+    }), Object(defineProperty["a" /* default */])(_toolbar, breakpoints.up('sm'), {
+      minHeight: 64
+    }), _toolbar)
+  }, mixins);
+}
+// EXTERNAL MODULE: ./node_modules/@material-ui/utils/esm/formatMuiErrorMessage.js
+var formatMuiErrorMessage = __webpack_require__(53);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/common.js
+var common = {
+  black: '#000',
+  white: '#fff'
+};
+/* harmony default export */ var colors_common = (common);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/grey.js
+var grey = {
+  50: '#fafafa',
+  100: '#f5f5f5',
+  200: '#eeeeee',
+  300: '#e0e0e0',
+  400: '#bdbdbd',
+  500: '#9e9e9e',
+  600: '#757575',
+  700: '#616161',
+  800: '#424242',
+  900: '#212121',
+  A100: '#d5d5d5',
+  A200: '#aaaaaa',
+  A400: '#303030',
+  A700: '#616161'
+};
+/* harmony default export */ var colors_grey = (grey);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/indigo.js
+var indigo = {
+  50: '#e8eaf6',
+  100: '#c5cae9',
+  200: '#9fa8da',
+  300: '#7986cb',
+  400: '#5c6bc0',
+  500: '#3f51b5',
+  600: '#3949ab',
+  700: '#303f9f',
+  800: '#283593',
+  900: '#1a237e',
+  A100: '#8c9eff',
+  A200: '#536dfe',
+  A400: '#3d5afe',
+  A700: '#304ffe'
+};
+/* harmony default export */ var colors_indigo = (indigo);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/pink.js
+var pink = {
+  50: '#fce4ec',
+  100: '#f8bbd0',
+  200: '#f48fb1',
+  300: '#f06292',
+  400: '#ec407a',
+  500: '#e91e63',
+  600: '#d81b60',
+  700: '#c2185b',
+  800: '#ad1457',
+  900: '#880e4f',
+  A100: '#ff80ab',
+  A200: '#ff4081',
+  A400: '#f50057',
+  A700: '#c51162'
+};
+/* harmony default export */ var colors_pink = (pink);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/red.js
+var red = {
+  50: '#ffebee',
+  100: '#ffcdd2',
+  200: '#ef9a9a',
+  300: '#e57373',
+  400: '#ef5350',
+  500: '#f44336',
+  600: '#e53935',
+  700: '#d32f2f',
+  800: '#c62828',
+  900: '#b71c1c',
+  A100: '#ff8a80',
+  A200: '#ff5252',
+  A400: '#ff1744',
+  A700: '#d50000'
+};
+/* harmony default export */ var colors_red = (red);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/orange.js
+var orange = {
+  50: '#fff3e0',
+  100: '#ffe0b2',
+  200: '#ffcc80',
+  300: '#ffb74d',
+  400: '#ffa726',
+  500: '#ff9800',
+  600: '#fb8c00',
+  700: '#f57c00',
+  800: '#ef6c00',
+  900: '#e65100',
+  A100: '#ffd180',
+  A200: '#ffab40',
+  A400: '#ff9100',
+  A700: '#ff6d00'
+};
+/* harmony default export */ var colors_orange = (orange);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/blue.js
+var blue = {
+  50: '#e3f2fd',
+  100: '#bbdefb',
+  200: '#90caf9',
+  300: '#64b5f6',
+  400: '#42a5f5',
+  500: '#2196f3',
+  600: '#1e88e5',
+  700: '#1976d2',
+  800: '#1565c0',
+  900: '#0d47a1',
+  A100: '#82b1ff',
+  A200: '#448aff',
+  A400: '#2979ff',
+  A700: '#2962ff'
+};
+/* harmony default export */ var colors_blue = (blue);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/green.js
+var green = {
+  50: '#e8f5e9',
+  100: '#c8e6c9',
+  200: '#a5d6a7',
+  300: '#81c784',
+  400: '#66bb6a',
+  500: '#4caf50',
+  600: '#43a047',
+  700: '#388e3c',
+  800: '#2e7d32',
+  900: '#1b5e20',
+  A100: '#b9f6ca',
+  A200: '#69f0ae',
+  A400: '#00e676',
+  A700: '#00c853'
+};
+/* harmony default export */ var colors_green = (green);
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/colorManipulator.js
+var colorManipulator = __webpack_require__(9);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createPalette.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+var light = {
+  // The colors used to style the text.
+  text: {
+    // The most important text.
+    primary: 'rgba(0, 0, 0, 0.87)',
+    // Secondary text.
+    secondary: 'rgba(0, 0, 0, 0.54)',
+    // Disabled text have even lower visual prominence.
+    disabled: 'rgba(0, 0, 0, 0.38)',
+    // Text hints.
+    hint: 'rgba(0, 0, 0, 0.38)'
+  },
+  // The color used to divide different elements.
+  divider: 'rgba(0, 0, 0, 0.12)',
+  // The background colors used to style the surfaces.
+  // Consistency between these values is important.
+  background: {
+    paper: colors_common.white,
+    default: colors_grey[50]
+  },
+  // The colors used to style the action elements.
+  action: {
+    // The color of an active action like an icon button.
+    active: 'rgba(0, 0, 0, 0.54)',
+    // The color of an hovered action.
+    hover: 'rgba(0, 0, 0, 0.04)',
+    hoverOpacity: 0.04,
+    // The color of a selected action.
+    selected: 'rgba(0, 0, 0, 0.08)',
+    selectedOpacity: 0.08,
+    // The color of a disabled action.
+    disabled: 'rgba(0, 0, 0, 0.26)',
+    // The background color of a disabled action.
+    disabledBackground: 'rgba(0, 0, 0, 0.12)',
+    disabledOpacity: 0.38,
+    focus: 'rgba(0, 0, 0, 0.12)',
+    focusOpacity: 0.12,
+    activatedOpacity: 0.12
+  }
+};
+var dark = {
+  text: {
+    primary: colors_common.white,
+    secondary: 'rgba(255, 255, 255, 0.7)',
+    disabled: 'rgba(255, 255, 255, 0.5)',
+    hint: 'rgba(255, 255, 255, 0.5)',
+    icon: 'rgba(255, 255, 255, 0.5)'
+  },
+  divider: 'rgba(255, 255, 255, 0.12)',
+  background: {
+    paper: colors_grey[800],
+    default: '#303030'
+  },
+  action: {
+    active: colors_common.white,
+    hover: 'rgba(255, 255, 255, 0.08)',
+    hoverOpacity: 0.08,
+    selected: 'rgba(255, 255, 255, 0.16)',
+    selectedOpacity: 0.16,
+    disabled: 'rgba(255, 255, 255, 0.3)',
+    disabledBackground: 'rgba(255, 255, 255, 0.12)',
+    disabledOpacity: 0.38,
+    focus: 'rgba(255, 255, 255, 0.12)',
+    focusOpacity: 0.12,
+    activatedOpacity: 0.24
+  }
+};
+
+function addLightOrDark(intent, direction, shade, tonalOffset) {
+  var tonalOffsetLight = tonalOffset.light || tonalOffset;
+  var tonalOffsetDark = tonalOffset.dark || tonalOffset * 1.5;
+
+  if (!intent[direction]) {
+    if (intent.hasOwnProperty(shade)) {
+      intent[direction] = intent[shade];
+    } else if (direction === 'light') {
+      intent.light = Object(colorManipulator["d" /* lighten */])(intent.main, tonalOffsetLight);
+    } else if (direction === 'dark') {
+      intent.dark = Object(colorManipulator["a" /* darken */])(intent.main, tonalOffsetDark);
+    }
+  }
+}
+
+function createPalette(palette) {
+  var _palette$primary = palette.primary,
+      primary = _palette$primary === void 0 ? {
+    light: colors_indigo[300],
+    main: colors_indigo[500],
+    dark: colors_indigo[700]
+  } : _palette$primary,
+      _palette$secondary = palette.secondary,
+      secondary = _palette$secondary === void 0 ? {
+    light: colors_pink.A200,
+    main: colors_pink.A400,
+    dark: colors_pink.A700
+  } : _palette$secondary,
+      _palette$error = palette.error,
+      error = _palette$error === void 0 ? {
+    light: colors_red[300],
+    main: colors_red[500],
+    dark: colors_red[700]
+  } : _palette$error,
+      _palette$warning = palette.warning,
+      warning = _palette$warning === void 0 ? {
+    light: colors_orange[300],
+    main: colors_orange[500],
+    dark: colors_orange[700]
+  } : _palette$warning,
+      _palette$info = palette.info,
+      info = _palette$info === void 0 ? {
+    light: colors_blue[300],
+    main: colors_blue[500],
+    dark: colors_blue[700]
+  } : _palette$info,
+      _palette$success = palette.success,
+      success = _palette$success === void 0 ? {
+    light: colors_green[300],
+    main: colors_green[500],
+    dark: colors_green[700]
+  } : _palette$success,
+      _palette$type = palette.type,
+      type = _palette$type === void 0 ? 'light' : _palette$type,
+      _palette$contrastThre = palette.contrastThreshold,
+      contrastThreshold = _palette$contrastThre === void 0 ? 3 : _palette$contrastThre,
+      _palette$tonalOffset = palette.tonalOffset,
+      tonalOffset = _palette$tonalOffset === void 0 ? 0.2 : _palette$tonalOffset,
+      other = Object(objectWithoutProperties["a" /* default */])(palette, ["primary", "secondary", "error", "warning", "info", "success", "type", "contrastThreshold", "tonalOffset"]); // Use the same logic as
+  // Bootstrap: https://github.com/twbs/bootstrap/blob/1d6e3710dd447de1a200f29e8fa521f8a0908f70/scss/_functions.scss#L59
+  // and material-components-web https://github.com/material-components/material-components-web/blob/ac46b8863c4dab9fc22c4c662dc6bd1b65dd652f/packages/mdc-theme/_functions.scss#L54
+
+
+  function getContrastText(background) {
+    var contrastText = Object(colorManipulator["c" /* getContrastRatio */])(background, dark.text.primary) >= contrastThreshold ? dark.text.primary : light.text.primary;
+
+    if (false) { var contrast; }
+
+    return contrastText;
+  }
+
+  var augmentColor = function augmentColor(color) {
+    var mainShade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
+    var lightShade = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 300;
+    var darkShade = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 700;
+    color = Object(esm_extends["a" /* default */])({}, color);
+
+    if (!color.main && color[mainShade]) {
+      color.main = color[mainShade];
+    }
+
+    if (!color.main) {
+      throw new Error( false ? undefined : Object(formatMuiErrorMessage["a" /* default */])(4, mainShade));
+    }
+
+    if (typeof color.main !== 'string') {
+      throw new Error( false ? undefined : Object(formatMuiErrorMessage["a" /* default */])(5, JSON.stringify(color.main)));
+    }
+
+    addLightOrDark(color, 'light', lightShade, tonalOffset);
+    addLightOrDark(color, 'dark', darkShade, tonalOffset);
+
+    if (!color.contrastText) {
+      color.contrastText = getContrastText(color.main);
+    }
+
+    return color;
+  };
+
+  var types = {
+    dark: dark,
+    light: light
+  };
+
+  if (false) {}
+
+  var paletteOutput = Object(deepmerge["a" /* default */])(Object(esm_extends["a" /* default */])({
+    // A collection of common colors.
+    common: colors_common,
+    // The palette type, can be light or dark.
+    type: type,
+    // The colors used to represent primary interface elements for a user.
+    primary: augmentColor(primary),
+    // The colors used to represent secondary interface elements for a user.
+    secondary: augmentColor(secondary, 'A400', 'A200', 'A700'),
+    // The colors used to represent interface elements that the user should be made aware of.
+    error: augmentColor(error),
+    // The colors used to represent potentially dangerous actions or important messages.
+    warning: augmentColor(warning),
+    // The colors used to present information to the user that is neutral and not necessarily important.
+    info: augmentColor(info),
+    // The colors used to indicate the successful completion of an action that user triggered.
+    success: augmentColor(success),
+    // The grey colors.
+    grey: colors_grey,
+    // Used by `getContrastText()` to maximize the contrast between
+    // the background and the text.
+    contrastThreshold: contrastThreshold,
+    // Takes a background color and returns the text color that maximizes the contrast.
+    getContrastText: getContrastText,
+    // Generate a rich color object.
+    augmentColor: augmentColor,
+    // Used by the functions below to shift a color's luminance by approximately
+    // two indexes within its tonal palette.
+    // E.g., shift from Red 500 to Red 300 or Red 700.
+    tonalOffset: tonalOffset
+  }, types[type]), other);
+  return paletteOutput;
+}
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createTypography.js
+
+
+
+
+function round(value) {
+  return Math.round(value * 1e5) / 1e5;
+}
+
+var caseAllCaps = {
+  textTransform: 'uppercase'
+};
+var defaultFontFamily = '"Roboto", "Helvetica", "Arial", sans-serif';
+/**
+ * @see @link{https://material.io/design/typography/the-type-system.html}
+ * @see @link{https://material.io/design/typography/understanding-typography.html}
+ */
+
+function createTypography(palette, typography) {
+  var _ref = typeof typography === 'function' ? typography(palette) : typography,
+      _ref$fontFamily = _ref.fontFamily,
+      fontFamily = _ref$fontFamily === void 0 ? defaultFontFamily : _ref$fontFamily,
+      _ref$fontSize = _ref.fontSize,
+      fontSize = _ref$fontSize === void 0 ? 14 : _ref$fontSize,
+      _ref$fontWeightLight = _ref.fontWeightLight,
+      fontWeightLight = _ref$fontWeightLight === void 0 ? 300 : _ref$fontWeightLight,
+      _ref$fontWeightRegula = _ref.fontWeightRegular,
+      fontWeightRegular = _ref$fontWeightRegula === void 0 ? 400 : _ref$fontWeightRegula,
+      _ref$fontWeightMedium = _ref.fontWeightMedium,
+      fontWeightMedium = _ref$fontWeightMedium === void 0 ? 500 : _ref$fontWeightMedium,
+      _ref$fontWeightBold = _ref.fontWeightBold,
+      fontWeightBold = _ref$fontWeightBold === void 0 ? 700 : _ref$fontWeightBold,
+      _ref$htmlFontSize = _ref.htmlFontSize,
+      htmlFontSize = _ref$htmlFontSize === void 0 ? 16 : _ref$htmlFontSize,
+      allVariants = _ref.allVariants,
+      pxToRem2 = _ref.pxToRem,
+      other = Object(objectWithoutProperties["a" /* default */])(_ref, ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"]);
+
+  if (false) {}
+
+  var coef = fontSize / 14;
+
+  var pxToRem = pxToRem2 || function (size) {
+    return "".concat(size / htmlFontSize * coef, "rem");
+  };
+
+  var buildVariant = function buildVariant(fontWeight, size, lineHeight, letterSpacing, casing) {
+    return Object(esm_extends["a" /* default */])({
+      fontFamily: fontFamily,
+      fontWeight: fontWeight,
+      fontSize: pxToRem(size),
+      // Unitless following https://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+      lineHeight: lineHeight
+    }, fontFamily === defaultFontFamily ? {
+      letterSpacing: "".concat(round(letterSpacing / size), "em")
+    } : {}, casing, allVariants);
+  };
+
+  var variants = {
+    h1: buildVariant(fontWeightLight, 96, 1.167, -1.5),
+    h2: buildVariant(fontWeightLight, 60, 1.2, -0.5),
+    h3: buildVariant(fontWeightRegular, 48, 1.167, 0),
+    h4: buildVariant(fontWeightRegular, 34, 1.235, 0.25),
+    h5: buildVariant(fontWeightRegular, 24, 1.334, 0),
+    h6: buildVariant(fontWeightMedium, 20, 1.6, 0.15),
+    subtitle1: buildVariant(fontWeightRegular, 16, 1.75, 0.15),
+    subtitle2: buildVariant(fontWeightMedium, 14, 1.57, 0.1),
+    body1: buildVariant(fontWeightRegular, 16, 1.5, 0.15),
+    body2: buildVariant(fontWeightRegular, 14, 1.43, 0.15),
+    button: buildVariant(fontWeightMedium, 14, 1.75, 0.4, caseAllCaps),
+    caption: buildVariant(fontWeightRegular, 12, 1.66, 0.4),
+    overline: buildVariant(fontWeightRegular, 12, 2.66, 1, caseAllCaps)
+  };
+  return Object(deepmerge["a" /* default */])(Object(esm_extends["a" /* default */])({
+    htmlFontSize: htmlFontSize,
+    pxToRem: pxToRem,
+    round: round,
+    // TODO v5: remove
+    fontFamily: fontFamily,
+    fontSize: fontSize,
+    fontWeightLight: fontWeightLight,
+    fontWeightRegular: fontWeightRegular,
+    fontWeightMedium: fontWeightMedium,
+    fontWeightBold: fontWeightBold
+  }, variants), other, {
+    clone: false // No need to clone deep
+
+  });
+}
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/shadows.js
+var shadowKeyUmbraOpacity = 0.2;
+var shadowKeyPenumbraOpacity = 0.14;
+var shadowAmbientShadowOpacity = 0.12;
+
+function createShadow() {
+  return ["".concat(arguments.length <= 0 ? undefined : arguments[0], "px ").concat(arguments.length <= 1 ? undefined : arguments[1], "px ").concat(arguments.length <= 2 ? undefined : arguments[2], "px ").concat(arguments.length <= 3 ? undefined : arguments[3], "px rgba(0,0,0,").concat(shadowKeyUmbraOpacity, ")"), "".concat(arguments.length <= 4 ? undefined : arguments[4], "px ").concat(arguments.length <= 5 ? undefined : arguments[5], "px ").concat(arguments.length <= 6 ? undefined : arguments[6], "px ").concat(arguments.length <= 7 ? undefined : arguments[7], "px rgba(0,0,0,").concat(shadowKeyPenumbraOpacity, ")"), "".concat(arguments.length <= 8 ? undefined : arguments[8], "px ").concat(arguments.length <= 9 ? undefined : arguments[9], "px ").concat(arguments.length <= 10 ? undefined : arguments[10], "px ").concat(arguments.length <= 11 ? undefined : arguments[11], "px rgba(0,0,0,").concat(shadowAmbientShadowOpacity, ")")].join(',');
+} // Values from https://github.com/material-components/material-components-web/blob/be8747f94574669cb5e7add1a7c54fa41a89cec7/packages/mdc-elevation/_variables.scss
+
+
+var shadows = ['none', createShadow(0, 2, 1, -1, 0, 1, 1, 0, 0, 1, 3, 0), createShadow(0, 3, 1, -2, 0, 2, 2, 0, 0, 1, 5, 0), createShadow(0, 3, 3, -2, 0, 3, 4, 0, 0, 1, 8, 0), createShadow(0, 2, 4, -1, 0, 4, 5, 0, 0, 1, 10, 0), createShadow(0, 3, 5, -1, 0, 5, 8, 0, 0, 1, 14, 0), createShadow(0, 3, 5, -1, 0, 6, 10, 0, 0, 1, 18, 0), createShadow(0, 4, 5, -2, 0, 7, 10, 1, 0, 2, 16, 1), createShadow(0, 5, 5, -3, 0, 8, 10, 1, 0, 3, 14, 2), createShadow(0, 5, 6, -3, 0, 9, 12, 1, 0, 3, 16, 2), createShadow(0, 6, 6, -3, 0, 10, 14, 1, 0, 4, 18, 3), createShadow(0, 6, 7, -4, 0, 11, 15, 1, 0, 4, 20, 3), createShadow(0, 7, 8, -4, 0, 12, 17, 2, 0, 5, 22, 4), createShadow(0, 7, 8, -4, 0, 13, 19, 2, 0, 5, 24, 4), createShadow(0, 7, 9, -4, 0, 14, 21, 2, 0, 5, 26, 4), createShadow(0, 8, 9, -5, 0, 15, 22, 2, 0, 6, 28, 5), createShadow(0, 8, 10, -5, 0, 16, 24, 2, 0, 6, 30, 5), createShadow(0, 8, 11, -5, 0, 17, 26, 2, 0, 6, 32, 5), createShadow(0, 9, 11, -5, 0, 18, 28, 2, 0, 7, 34, 6), createShadow(0, 9, 12, -6, 0, 19, 29, 2, 0, 7, 36, 6), createShadow(0, 10, 13, -6, 0, 20, 31, 3, 0, 8, 38, 7), createShadow(0, 10, 13, -6, 0, 21, 33, 3, 0, 8, 40, 7), createShadow(0, 10, 14, -6, 0, 22, 35, 3, 0, 8, 42, 7), createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8), createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8)];
+/* harmony default export */ var styles_shadows = (shadows);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/shape.js
+var shape = {
+  borderRadius: 4
+};
+/* harmony default export */ var styles_shape = (shape);
+// EXTERNAL MODULE: ./node_modules/@material-ui/system/esm/spacing.js + 1 modules
+var esm_spacing = __webpack_require__(100);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createSpacing.js
+
+var warnOnce;
+function createSpacing() {
+  var spacingInput = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 8;
+
+  // Already transformed.
+  if (spacingInput.mui) {
+    return spacingInput;
+  } // Material Design layouts are visually balanced. Most measurements align to an 8dp grid applied, which aligns both spacing and the overall layout.
+  // Smaller components, such as icons and type, can align to a 4dp grid.
+  // https://material.io/design/layout/understanding-layout.html#usage
+
+
+  var transform = Object(esm_spacing["a" /* createUnarySpacing */])({
+    spacing: spacingInput
+  });
+
+  var spacing = function spacing() {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    if (false) {}
+
+    if (args.length === 0) {
+      return transform(1);
+    }
+
+    if (args.length === 1) {
+      return transform(args[0]);
+    }
+
+    return args.map(function (argument) {
+      if (typeof argument === 'string') {
+        return argument;
+      }
+
+      var output = transform(argument);
+      return typeof output === 'number' ? "".concat(output, "px") : output;
+    }).join(' ');
+  }; // Backward compatibility, to remove in v5.
+
+
+  Object.defineProperty(spacing, 'unit', {
+    get: function get() {
+      if (false) {}
+
+      return spacingInput;
+    }
+  });
+  spacing.mui = true;
+  return spacing;
+}
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/transitions.js
+var transitions = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/zIndex.js
+var zIndex = __webpack_require__(32);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createMuiTheme.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+function createMuiTheme() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+  var _options$breakpoints = options.breakpoints,
+      breakpointsInput = _options$breakpoints === void 0 ? {} : _options$breakpoints,
+      _options$mixins = options.mixins,
+      mixinsInput = _options$mixins === void 0 ? {} : _options$mixins,
+      _options$palette = options.palette,
+      paletteInput = _options$palette === void 0 ? {} : _options$palette,
+      spacingInput = options.spacing,
+      _options$typography = options.typography,
+      typographyInput = _options$typography === void 0 ? {} : _options$typography,
+      other = Object(objectWithoutProperties["a" /* default */])(options, ["breakpoints", "mixins", "palette", "spacing", "typography"]);
+
+  var palette = createPalette(paletteInput);
+  var breakpoints = createBreakpoints(breakpointsInput);
+  var spacing = createSpacing(spacingInput);
+  var muiTheme = Object(deepmerge["a" /* default */])({
+    breakpoints: breakpoints,
+    direction: 'ltr',
+    mixins: createMixins(breakpoints, spacing, mixinsInput),
+    overrides: {},
+    // Inject custom styles
+    palette: palette,
+    props: {},
+    // Provide default props
+    shadows: styles_shadows,
+    typography: createTypography(palette, typographyInput),
+    spacing: spacing,
+    shape: styles_shape,
+    transitions: transitions["a" /* default */],
+    zIndex: zIndex["a" /* default */]
+  }, other);
+
+  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+
+  muiTheme = args.reduce(function (acc, argument) {
+    return Object(deepmerge["a" /* default */])(acc, argument);
+  }, muiTheme);
+
+  if (false) { var traverse, pseudoClasses; }
+
+  return muiTheme;
+}
+
+/* harmony default export */ var styles_createMuiTheme = (createMuiTheme);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/defaultTheme.js
+
+var defaultTheme = styles_createMuiTheme();
+/* harmony default export */ var styles_defaultTheme = __webpack_exports__["a"] = (defaultTheme);
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ _slicedToArray; });
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
+var arrayWithHoles = __webpack_require__(49);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+var unsupportedIterableToArray = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
+var nonIterableRest = __webpack_require__(50);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js
+
+
+
+
+function _slicedToArray(arr, i) {
+  return Object(arrayWithHoles["a" /* default */])(arr) || _iterableToArrayLimit(arr, i) || Object(unsupportedIterableToArray["a" /* default */])(arr, i) || Object(nonIterableRest["a" /* default */])();
+}
+
+/***/ }),
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _createClass; });
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+/***/ }),
+/* 23 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _typeof; });
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+/***/ }),
+/* 24 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createChainedFunction; });
+/**
+ * Safe chained function
+ *
+ * Will only create a new function if needed,
+ * otherwise will pass back existing functions or null.
+ *
+ * @param {function} functions to chain
+ * @returns {function|null}
+ */
+function createChainedFunction() {
+  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  return funcs.reduce(function (acc, func) {
+    if (func == null) {
+      return acc;
+    }
+
+    if (false) {}
+
+    return function chainedFunction() {
+      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      acc.apply(this, args);
+      func.apply(this, args);
+    };
+  }, function () {});
+}
+
+/***/ }),
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -274,7 +1870,7 @@ function _assertThisInitialized(self) {
 }
 
 /***/ }),
-/* 6 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -290,12 +1886,273 @@ function _arrayLikeToArray(arr, len) {
 }
 
 /***/ }),
-/* 7 */
+/* 27 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export easing */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return duration; });
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+// Follow https://material.google.com/motion/duration-easing.html#duration-easing-natural-easing-curves
+// to learn the context in which each easing should be used.
+var easing = {
+  // This is the most common easing curve.
+  easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
+  // Objects enter the screen at full velocity from off-screen and
+  // slowly decelerate to a resting point.
+  easeOut: 'cubic-bezier(0.0, 0, 0.2, 1)',
+  // Objects leave the screen at full velocity. They do not decelerate when off-screen.
+  easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
+  // The sharp curve is used by objects that may return to the screen at any time.
+  sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
+}; // Follow https://material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
+// to learn when use what timing
+
+var duration = {
+  shortest: 150,
+  shorter: 200,
+  short: 250,
+  // most basic recommended timing
+  standard: 300,
+  // this is to be used in complex animations
+  complex: 375,
+  // recommended when something is entering screen
+  enteringScreen: 225,
+  // recommended when something is leaving screen
+  leavingScreen: 195
+};
+
+function formatMs(milliseconds) {
+  return "".concat(Math.round(milliseconds), "ms");
+}
+/**
+ * @param {string|Array} props
+ * @param {object} param
+ * @param {string} param.prop
+ * @param {number} param.duration
+ * @param {string} param.easing
+ * @param {number} param.delay
+ */
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  easing: easing,
+  duration: duration,
+  create: function create() {
+    var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ['all'];
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    var _options$duration = options.duration,
+        durationOption = _options$duration === void 0 ? duration.standard : _options$duration,
+        _options$easing = options.easing,
+        easingOption = _options$easing === void 0 ? easing.easeInOut : _options$easing,
+        _options$delay = options.delay,
+        delay = _options$delay === void 0 ? 0 : _options$delay,
+        other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(options, ["duration", "easing", "delay"]);
+
+    if (false) { var isNumber, isString; }
+
+    return (Array.isArray(props) ? props : [props]).map(function (animatedProp) {
+      return "".concat(animatedProp, " ").concat(typeof durationOption === 'string' ? durationOption : formatMs(durationOption), " ").concat(easingOption, " ").concat(typeof delay === 'string' ? delay : formatMs(delay));
+    }).join(',');
+  },
+  getAutoHeightDuration: function getAutoHeightDuration(height) {
+    if (!height) {
+      return 0;
+    }
+
+    var constant = height / 36; // https://www.wolframalpha.com/input/?i=(4+%2B+15+*+(x+%2F+36+)+**+0.25+%2B+(x+%2F+36)+%2F+5)+*+10
+
+    return Math.round((4 + 15 * Math.pow(constant, 0.25) + constant / 5) * 10);
+  }
+});
+
+/***/ }),
+/* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export teardown */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useIsFocusVisible; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+// based on https://github.com/WICG/focus-visible/blob/v4.1.5/src/focus-visible.js
+
+
+var hadKeyboardEvent = true;
+var hadFocusVisibleRecently = false;
+var hadFocusVisibleRecentlyTimeout = null;
+var inputTypesWhitelist = {
+  text: true,
+  search: true,
+  url: true,
+  tel: true,
+  email: true,
+  password: true,
+  number: true,
+  date: true,
+  month: true,
+  week: true,
+  time: true,
+  datetime: true,
+  'datetime-local': true
+};
+/**
+ * Computes whether the given element should automatically trigger the
+ * `focus-visible` class being added, i.e. whether it should always match
+ * `:focus-visible` when focused.
+ * @param {Element} node
+ * @return {boolean}
+ */
+
+function focusTriggersKeyboardModality(node) {
+  var type = node.type,
+      tagName = node.tagName;
+
+  if (tagName === 'INPUT' && inputTypesWhitelist[type] && !node.readOnly) {
+    return true;
+  }
+
+  if (tagName === 'TEXTAREA' && !node.readOnly) {
+    return true;
+  }
+
+  if (node.isContentEditable) {
+    return true;
+  }
+
+  return false;
+}
+/**
+ * Keep track of our keyboard modality state with `hadKeyboardEvent`.
+ * If the most recent user interaction was via the keyboard;
+ * and the key press did not include a meta, alt/option, or control key;
+ * then the modality is keyboard. Otherwise, the modality is not keyboard.
+ * @param {KeyboardEvent} event
+ */
+
+
+function handleKeyDown(event) {
+  if (event.metaKey || event.altKey || event.ctrlKey) {
+    return;
+  }
+
+  hadKeyboardEvent = true;
+}
+/**
+ * If at any point a user clicks with a pointing device, ensure that we change
+ * the modality away from keyboard.
+ * This avoids the situation where a user presses a key on an already focused
+ * element, and then clicks on a different element, focusing it with a
+ * pointing device, while we still think we're in keyboard modality.
+ */
+
+
+function handlePointerDown() {
+  hadKeyboardEvent = false;
+}
+
+function handleVisibilityChange() {
+  if (this.visibilityState === 'hidden') {
+    // If the tab becomes active again, the browser will handle calling focus
+    // on the element (Safari actually calls it twice).
+    // If this tab change caused a blur on an element with focus-visible,
+    // re-apply the class when the user switches back to the tab.
+    if (hadFocusVisibleRecently) {
+      hadKeyboardEvent = true;
+    }
+  }
+}
+
+function prepare(doc) {
+  doc.addEventListener('keydown', handleKeyDown, true);
+  doc.addEventListener('mousedown', handlePointerDown, true);
+  doc.addEventListener('pointerdown', handlePointerDown, true);
+  doc.addEventListener('touchstart', handlePointerDown, true);
+  doc.addEventListener('visibilitychange', handleVisibilityChange, true);
+}
+
+function teardown(doc) {
+  doc.removeEventListener('keydown', handleKeyDown, true);
+  doc.removeEventListener('mousedown', handlePointerDown, true);
+  doc.removeEventListener('pointerdown', handlePointerDown, true);
+  doc.removeEventListener('touchstart', handlePointerDown, true);
+  doc.removeEventListener('visibilitychange', handleVisibilityChange, true);
+}
+
+function isFocusVisible(event) {
+  var target = event.target;
+
+  try {
+    return target.matches(':focus-visible');
+  } catch (error) {} // browsers not implementing :focus-visible will throw a SyntaxError
+  // we use our own heuristic for those browsers
+  // rethrow might be better if it's not the expected error but do we really
+  // want to crash if focus-visible malfunctioned?
+  // no need for validFocusTarget check. the user does that by attaching it to
+  // focusable events only
+
+
+  return hadKeyboardEvent || focusTriggersKeyboardModality(target);
+}
+/**
+ * Should be called if a blur event is fired on a focus-visible element
+ */
+
+
+function handleBlurVisible() {
+  // To detect a tab/window switch, we look for a blur event followed
+  // rapidly by a visibility change.
+  // If we don't see a visibility change within 100ms, it's probably a
+  // regular focus change.
+  hadFocusVisibleRecently = true;
+  window.clearTimeout(hadFocusVisibleRecentlyTimeout);
+  hadFocusVisibleRecentlyTimeout = window.setTimeout(function () {
+    hadFocusVisibleRecently = false;
+  }, 100);
+}
+
+function useIsFocusVisible() {
+  var ref = react__WEBPACK_IMPORTED_MODULE_0__["useCallback"](function (instance) {
+    var node = react_dom__WEBPACK_IMPORTED_MODULE_1__["findDOMNode"](instance);
+
+    if (node != null) {
+      prepare(node.ownerDocument);
+    }
+  }, []);
+
+  if (false) {}
+
+  return {
+    isFocusVisible: isFocusVisible,
+    onBlurVisible: handleBlurVisible,
+    ref: ref
+  };
+}
+
+/***/ }),
+/* 29 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ownerWindow; });
+/* harmony import */ var _ownerDocument__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+
+function ownerWindow(node) {
+  var doc = Object(_ownerDocument__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(node);
+  return doc.defaultView || window;
+}
+
+/***/ }),
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _unsupportedIterableToArray; });
-/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
+/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26);
 
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
@@ -307,12 +2164,291 @@ function _unsupportedIterableToArray(o, minLen) {
 }
 
 /***/ }),
-/* 8 */,
-/* 9 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return handleBreakpoints; });
+/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _merge__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(15);
+
+
+
+
+ // The breakpoint **start** at this value.
+// For instance with the first breakpoint xs: [xs, sm[.
+
+var values = {
+  xs: 0,
+  sm: 600,
+  md: 960,
+  lg: 1280,
+  xl: 1920
+};
+var defaultBreakpoints = {
+  // Sorted ASC by size. That's important.
+  // It can't be configured as it's used statically for propTypes.
+  keys: ['xs', 'sm', 'md', 'lg', 'xl'],
+  up: function up(key) {
+    return "@media (min-width:".concat(values[key], "px)");
+  }
+};
+function handleBreakpoints(props, propValue, styleFromPropValue) {
+  if (false) {}
+
+  if (Array.isArray(propValue)) {
+    var themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
+    return propValue.reduce(function (acc, item, index) {
+      acc[themeBreakpoints.up(themeBreakpoints.keys[index])] = styleFromPropValue(propValue[index]);
+      return acc;
+    }, {});
+  }
+
+  if (Object(_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(propValue) === 'object') {
+    var _themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
+
+    return Object.keys(propValue).reduce(function (acc, breakpoint) {
+      acc[_themeBreakpoints.up(breakpoint)] = styleFromPropValue(propValue[breakpoint]);
+      return acc;
+    }, {});
+  }
+
+  var output = styleFromPropValue(propValue);
+  return output;
+}
+
+function breakpoints(styleFunction) {
+  var newStyleFunction = function newStyleFunction(props) {
+    var base = styleFunction(props);
+    var themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
+    var extended = themeBreakpoints.keys.reduce(function (acc, key) {
+      if (props[key]) {
+        acc = acc || {};
+        acc[themeBreakpoints.up(key)] = styleFunction(Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])({
+          theme: props.theme
+        }, props[key]));
+      }
+
+      return acc;
+    }, null);
+    return Object(_merge__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(base, extended);
+  };
+
+  newStyleFunction.propTypes =  false ? undefined : {};
+  newStyleFunction.filterProps = ['xs', 'sm', 'md', 'lg', 'xl'].concat(Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(styleFunction.filterProps));
+  return newStyleFunction;
+}
+
+/* unused harmony default export */ var _unused_webpack_default_export = (breakpoints);
+
+/***/ }),
+/* 32 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// We need to centralize the zIndex definitions as they work
+// like global values in the browser.
+var zIndex = {
+  mobileStepper: 1000,
+  speedDial: 1050,
+  appBar: 1100,
+  drawer: 1200,
+  modal: 1300,
+  snackbar: 1400,
+  tooltip: 1500
+};
+/* harmony default export */ __webpack_exports__["a"] = (zIndex);
+
+/***/ }),
+/* 33 */,
+/* 34 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return requirePropFactory; });
+function requirePropFactory(componentNameInError) {
+  if (true) {
+    return function () {
+      return null;
+    };
+  }
+
+  var requireProp = function requireProp(requiredProp) {
+    return function (props, propName, componentName, location, propFullName) {
+      var propFullNameSafe = propFullName || propName;
+
+      if (typeof props[propName] !== 'undefined' && !props[requiredProp]) {
+        return new Error("The prop `".concat(propFullNameSafe, "` of ") + "`".concat(componentNameInError, "` must be used on `").concat(requiredProp, "`."));
+      }
+
+      return null;
+    };
+  };
+
+  return requireProp;
+}
+
+/***/ }),
+/* 35 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "capitalize", function() { return /* reexport */ capitalize["a" /* default */]; });
+__webpack_require__.d(__webpack_exports__, "createChainedFunction", function() { return /* reexport */ createChainedFunction["a" /* default */]; });
+__webpack_require__.d(__webpack_exports__, "createSvgIcon", function() { return /* reexport */ createSvgIcon["a" /* default */]; });
+__webpack_require__.d(__webpack_exports__, "debounce", function() { return /* reexport */ debounce; });
+__webpack_require__.d(__webpack_exports__, "deprecatedPropType", function() { return /* reexport */ deprecatedPropType; });
+__webpack_require__.d(__webpack_exports__, "isMuiElement", function() { return /* reexport */ isMuiElement; });
+__webpack_require__.d(__webpack_exports__, "ownerDocument", function() { return /* reexport */ ownerDocument["a" /* default */]; });
+__webpack_require__.d(__webpack_exports__, "ownerWindow", function() { return /* reexport */ ownerWindow["a" /* default */]; });
+__webpack_require__.d(__webpack_exports__, "requirePropFactory", function() { return /* reexport */ requirePropFactory["a" /* default */]; });
+__webpack_require__.d(__webpack_exports__, "setRef", function() { return /* reexport */ setRef["a" /* default */]; });
+__webpack_require__.d(__webpack_exports__, "unsupportedProp", function() { return /* reexport */ unsupportedProp; });
+__webpack_require__.d(__webpack_exports__, "useControlled", function() { return /* reexport */ useControlled["a" /* default */]; });
+__webpack_require__.d(__webpack_exports__, "useEventCallback", function() { return /* reexport */ useEventCallback["a" /* default */]; });
+__webpack_require__.d(__webpack_exports__, "useForkRef", function() { return /* reexport */ useForkRef["a" /* default */]; });
+__webpack_require__.d(__webpack_exports__, "unstable_useId", function() { return /* reexport */ unstable_useId["a" /* default */]; });
+__webpack_require__.d(__webpack_exports__, "useIsFocusVisible", function() { return /* reexport */ useIsFocusVisible["a" /* default */]; });
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/capitalize.js
+var capitalize = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/createChainedFunction.js
+var createChainedFunction = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/createSvgIcon.js + 1 modules
+var createSvgIcon = __webpack_require__(44);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/debounce.js
+// Corresponds to 10 frames at 60 Hz.
+// A few bytes payload overhead when lodash/debounce is ~3 kB and debounce ~300 B.
+function debounce(func) {
+  var wait = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 166;
+  var timeout;
+
+  function debounced() {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    // eslint-disable-next-line consistent-this
+    var that = this;
+
+    var later = function later() {
+      func.apply(that, args);
+    };
+
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  }
+
+  debounced.clear = function () {
+    clearTimeout(timeout);
+  };
+
+  return debounced;
+}
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/deprecatedPropType.js
+function deprecatedPropType(validator, reason) {
+  if (true) {
+    return function () {
+      return null;
+    };
+  }
+
+  return function (props, propName, componentName, location, propFullName) {
+    var componentNameSafe = componentName || '<<anonymous>>';
+    var propFullNameSafe = propFullName || propName;
+
+    if (typeof props[propName] !== 'undefined') {
+      return new Error("The ".concat(location, " `").concat(propFullNameSafe, "` of ") + "`".concat(componentNameSafe, "` is deprecated. ").concat(reason));
+    }
+
+    return null;
+  };
+}
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(0);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/isMuiElement.js
+
+function isMuiElement(element, muiNames) {
+  return /*#__PURE__*/react["isValidElement"](element) && muiNames.indexOf(element.type.muiName) !== -1;
+}
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/ownerDocument.js
+var ownerDocument = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/ownerWindow.js
+var ownerWindow = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/requirePropFactory.js
+var requirePropFactory = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/setRef.js
+var setRef = __webpack_require__(16);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/unsupportedProp.js
+function unsupportedProp(props, propName, componentName, location, propFullName) {
+  if (true) {
+    return null;
+  }
+
+  var propFullNameSafe = propFullName || propName;
+
+  if (typeof props[propName] !== 'undefined') {
+    return new Error("The prop `".concat(propFullNameSafe, "` is not supported. Please remove it."));
+  }
+
+  return null;
+}
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/useControlled.js
+var useControlled = __webpack_require__(40);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/useEventCallback.js
+var useEventCallback = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/useForkRef.js
+var useForkRef = __webpack_require__(11);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/unstable_useId.js
+var unstable_useId = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/useIsFocusVisible.js
+var useIsFocusVisible = __webpack_require__(28);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/index.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // eslint-disable-next-line camelcase
+
+
+
+
+/***/ }),
+/* 36 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(46);
 /* global window */
 
 
@@ -331,11 +2467,11 @@ if (typeof self !== 'undefined') {
 var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(36), __webpack_require__(37)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(73), __webpack_require__(74)(module)))
 
 /***/ }),
-/* 10 */,
-/* 11 */
+/* 37 */,
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -432,19 +2568,326 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 12 */
+/* 39 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useId; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/**
+ * Private module reserved for @material-ui/x packages.
+ */
+
+function useId(idOverride) {
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__["useState"](idOverride),
+      defaultId = _React$useState[0],
+      setDefaultId = _React$useState[1];
+
+  var id = idOverride || defaultId;
+  react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](function () {
+    if (defaultId == null) {
+      // Fallback to this default id when possible.
+      // Use the random value for client-side rendering only.
+      // We can't use it server-side.
+      setDefaultId("mui-".concat(Math.round(Math.random() * 1e5)));
+    }
+  }, [defaultId]);
+  return id;
+}
+
+/***/ }),
+/* 40 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useControlled; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* eslint-disable react-hooks/rules-of-hooks, react-hooks/exhaustive-deps */
+
+function useControlled(_ref) {
+  var controlled = _ref.controlled,
+      defaultProp = _ref.default,
+      name = _ref.name,
+      _ref$state = _ref.state,
+      state = _ref$state === void 0 ? 'value' : _ref$state;
+
+  var _React$useRef = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](controlled !== undefined),
+      isControlled = _React$useRef.current;
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0__["useState"](defaultProp),
+      valueState = _React$useState[0],
+      setValue = _React$useState[1];
+
+  var value = isControlled ? controlled : valueState;
+
+  if (false) { var _React$useRef2, defaultValue; }
+
+  var setValueIfUncontrolled = react__WEBPACK_IMPORTED_MODULE_0__["useCallback"](function (newValue) {
+    if (!isControlled) {
+      setValue(newValue);
+    }
+  }, []);
+  return [value, setValueIfUncontrolled];
+}
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(78)["default"];
+
+function _getRequireWildcardCache() {
+  if (typeof WeakMap !== "function") return null;
+  var cache = new WeakMap();
+
+  _getRequireWildcardCache = function _getRequireWildcardCache() {
+    return cache;
+  };
+
+  return cache;
+}
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  }
+
+  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
+    return {
+      "default": obj
+    };
+  }
+
+  var cache = _getRequireWildcardCache();
+
+  if (cache && cache.has(obj)) {
+    return cache.get(obj);
+  }
+
+  var newObj = {};
+  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+
+  for (var key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+
+      if (desc && (desc.get || desc.set)) {
+        Object.defineProperty(newObj, key, desc);
+      } else {
+        newObj[key] = obj[key];
+      }
+    }
+  }
+
+  newObj["default"] = obj;
+
+  if (cache) {
+    cache.set(obj, newObj);
+  }
+
+  return newObj;
+}
+
+module.exports = _interopRequireWildcard;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function get() {
+    return _utils.createSvgIcon;
+  }
+});
+
+var _utils = __webpack_require__(35);
+
+/***/ }),
+/* 44 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ createSvgIcon; });
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+var esm_extends = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(0);
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+var objectWithoutProperties = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+var prop_types = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
+var clsx_m = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/withStyles.js + 1 modules
+var withStyles = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/capitalize.js
+var capitalize = __webpack_require__(6);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/SvgIcon/SvgIcon.js
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      userSelect: 'none',
+      width: '1em',
+      height: '1em',
+      display: 'inline-block',
+      fill: 'currentColor',
+      flexShrink: 0,
+      fontSize: theme.typography.pxToRem(24),
+      transition: theme.transitions.create('fill', {
+        duration: theme.transitions.duration.shorter
+      })
+    },
+
+    /* Styles applied to the root element if `color="primary"`. */
+    colorPrimary: {
+      color: theme.palette.primary.main
+    },
+
+    /* Styles applied to the root element if `color="secondary"`. */
+    colorSecondary: {
+      color: theme.palette.secondary.main
+    },
+
+    /* Styles applied to the root element if `color="action"`. */
+    colorAction: {
+      color: theme.palette.action.active
+    },
+
+    /* Styles applied to the root element if `color="error"`. */
+    colorError: {
+      color: theme.palette.error.main
+    },
+
+    /* Styles applied to the root element if `color="disabled"`. */
+    colorDisabled: {
+      color: theme.palette.action.disabled
+    },
+
+    /* Styles applied to the root element if `fontSize="inherit"`. */
+    fontSizeInherit: {
+      fontSize: 'inherit'
+    },
+
+    /* Styles applied to the root element if `fontSize="small"`. */
+    fontSizeSmall: {
+      fontSize: theme.typography.pxToRem(20)
+    },
+
+    /* Styles applied to the root element if `fontSize="large"`. */
+    fontSizeLarge: {
+      fontSize: theme.typography.pxToRem(35)
+    }
+  };
+};
+var SvgIcon_SvgIcon = /*#__PURE__*/react["forwardRef"](function SvgIcon(props, ref) {
+  var children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$color = props.color,
+      color = _props$color === void 0 ? 'inherit' : _props$color,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? 'svg' : _props$component,
+      _props$fontSize = props.fontSize,
+      fontSize = _props$fontSize === void 0 ? 'default' : _props$fontSize,
+      htmlColor = props.htmlColor,
+      titleAccess = props.titleAccess,
+      _props$viewBox = props.viewBox,
+      viewBox = _props$viewBox === void 0 ? '0 0 24 24' : _props$viewBox,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["children", "classes", "className", "color", "component", "fontSize", "htmlColor", "titleAccess", "viewBox"]);
+
+  return /*#__PURE__*/react["createElement"](Component, Object(esm_extends["a" /* default */])({
+    className: Object(clsx_m["a" /* default */])(classes.root, className, color !== 'inherit' && classes["color".concat(Object(capitalize["a" /* default */])(color))], fontSize !== 'default' && classes["fontSize".concat(Object(capitalize["a" /* default */])(fontSize))]),
+    focusable: "false",
+    viewBox: viewBox,
+    color: htmlColor,
+    "aria-hidden": titleAccess ? undefined : true,
+    role: titleAccess ? 'img' : undefined,
+    ref: ref
+  }, other), children, titleAccess ? /*#__PURE__*/react["createElement"]("title", null, titleAccess) : null);
+});
+ false ? undefined : void 0;
+SvgIcon_SvgIcon.muiName = 'SvgIcon';
+/* harmony default export */ var esm_SvgIcon_SvgIcon = (Object(withStyles["a" /* default */])(styles, {
+  name: 'MuiSvgIcon'
+})(SvgIcon_SvgIcon));
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/createSvgIcon.js
+
+
+
+/**
+ * Private module reserved for @material-ui/x packages.
+ */
+
+function createSvgIcon(path, displayName) {
+  var Component = function Component(props, ref) {
+    return /*#__PURE__*/react_default.a.createElement(esm_SvgIcon_SvgIcon, Object(esm_extends["a" /* default */])({
+      ref: ref
+    }, props), path);
+  };
+
+  if (false) {}
+
+  Component.muiName = esm_SvgIcon_SvgIcon.muiName;
+  return /*#__PURE__*/react_default.a.memo( /*#__PURE__*/react_default.a.forwardRef(Component));
+}
+
+/***/ }),
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(35);
+  module.exports = __webpack_require__(72);
 } else {}
 
 
 /***/ }),
-/* 13 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -469,7 +2912,7 @@ function symbolObservablePonyfill(root) {
 
 
 /***/ }),
-/* 14 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -484,7 +2927,7 @@ function _setPrototypeOf(o, p) {
 }
 
 /***/ }),
-/* 15 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -494,7 +2937,7 @@ function _iterableToArray(iter) {
 }
 
 /***/ }),
-/* 16 */
+/* 49 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -504,7 +2947,7 @@ function _arrayWithHoles(arr) {
 }
 
 /***/ }),
-/* 17 */
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -514,14 +2957,96 @@ function _nonIterableRest() {
 }
 
 /***/ }),
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(41);
+
+var _interopRequireWildcard = __webpack_require__(42);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(0));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(43));
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement("path", {
+  d: "M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+}), 'PlayCircleOutline');
+
+exports.default = _default;
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(41);
+
+var _interopRequireWildcard = __webpack_require__(42);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(0));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(43));
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement("path", {
+  d: "M9 16h2V8H9v8zm3-14C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-4h2V8h-2v8z"
+}), 'PauseCircleOutline');
+
+exports.default = _default;
+
+/***/ }),
+/* 53 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return formatMuiErrorMessage; });
+/**
+ * WARNING: Don't import this directly.
+ * Use `MuiError` from `@material-ui/utils/macros/MuiError.macro` instead.
+ * @param {number} code
+ */
+function formatMuiErrorMessage(code) {
+  // Apply babel-plugin-transform-template-literals in loose mode
+  // loose mode is safe iff we're concatenating primitives
+  // see https://babeljs.io/docs/en/babel-plugin-transform-template-literals#loose
+
+  /* eslint-disable prefer-template */
+  var url = 'https://material-ui.com/production-error/?code=' + code;
+
+  for (var i = 1; i < arguments.length; i += 1) {
+    // rest params over-transpile for this case
+    // eslint-disable-next-line prefer-rest-params
+    url += '&args[]=' + encodeURIComponent(arguments[i]);
+  }
+
+  return 'Minified Material-UI error #' + code + '; visit ' + url + ' for the full message.';
+  /* eslint-enable prefer-template */
+}
+
+/***/ }),
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -533,7 +3058,7 @@ function _nonIterableRest() {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var l=__webpack_require__(11),n=60103,p=60106;exports.Fragment=60107;exports.StrictMode=60108;exports.Profiler=60114;var q=60109,r=60110,t=60112;exports.Suspense=60113;var u=60115,v=60116;
+var l=__webpack_require__(38),n=60103,p=60106;exports.Fragment=60107;exports.StrictMode=60108;exports.Profiler=60114;var q=60109,r=60110,t=60112;exports.Suspense=60113;var u=60115,v=60116;
 if("function"===typeof Symbol&&Symbol.for){var w=Symbol.for;n=w("react.element");p=w("react.portal");exports.Fragment=w("react.fragment");exports.StrictMode=w("react.strict_mode");exports.Profiler=w("react.profiler");q=w("react.provider");r=w("react.context");t=w("react.forward_ref");exports.Suspense=w("react.suspense");u=w("react.memo");v=w("react.lazy")}var x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){if(null===a||"object"!==typeof a)return null;a=x&&a[x]||a["@@iterator"];return"function"===typeof a?a:null}function z(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
 var A={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},B={};function C(a,b,c){this.props=a;this.context=b;this.refs=B;this.updater=c||A}C.prototype.isReactComponent={};C.prototype.setState=function(a,b){if("object"!==typeof a&&"function"!==typeof a&&null!=a)throw Error(z(85));this.updater.enqueueSetState(this,a,b,"setState")};C.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
@@ -551,7 +3076,7 @@ exports.useLayoutEffect=function(a,b){return S().useLayoutEffect(a,b)};exports.u
 
 
 /***/ }),
-/* 26 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -566,7 +3091,7 @@ exports.useLayoutEffect=function(a,b){return S().useLayoutEffect(a,b)};exports.u
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),m=__webpack_require__(11),r=__webpack_require__(27);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
+var aa=__webpack_require__(0),m=__webpack_require__(38),r=__webpack_require__(64);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
 function ea(a,b){ca[a]=b;for(a=0;a<b.length;a++)ba.add(b[a])}
 var fa=!("undefined"===typeof window||"undefined"===typeof window.document||"undefined"===typeof window.document.createElement),ha=/^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,ia=Object.prototype.hasOwnProperty,
 ja={},ka={};function la(a){if(ia.call(ka,a))return!0;if(ia.call(ja,a))return!1;if(ha.test(a))return ka[a]=!0;ja[a]=!0;return!1}function ma(a,b,c,d){if(null!==c&&0===c.type)return!1;switch(typeof b){case "function":case "symbol":return!0;case "boolean":if(d)return!1;if(null!==c)return!c.acceptsBooleans;a=a.toLowerCase().slice(0,5);return"data-"!==a&&"aria-"!==a;default:return!1}}
@@ -855,19 +3380,19 @@ exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!rk(c))throw Er
 
 
 /***/ }),
-/* 27 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(28);
+  module.exports = __webpack_require__(65);
 } else {}
 
 
 /***/ }),
-/* 28 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -894,19 +3419,19 @@ exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;
 
 
 /***/ }),
-/* 29 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 30 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 31 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -919,7 +3444,7 @@ exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;
 
 
 
-var ReactPropTypesSecret = __webpack_require__(32);
+var ReactPropTypesSecret = __webpack_require__(69);
 
 function emptyFunction() {}
 function emptyFunctionWithReset() {}
@@ -977,7 +3502,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 32 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -996,19 +3521,19 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 33 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(34);
+  module.exports = __webpack_require__(71);
 } else {}
 
 
 /***/ }),
-/* 34 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1030,7 +3555,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 35 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1052,7 +3577,7 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 36 */
+/* 73 */
 /***/ (function(module, exports) {
 
 var g;
@@ -1078,7 +3603,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 37 */
+/* 74 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -1108,31 +3633,58 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 38 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 39 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 40 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 41 */
+/* 78 */
+/***/ (function(module, exports) {
+
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    module.exports = _typeof = function _typeof(obj) {
+      return typeof obj;
+    };
+
+    module.exports["default"] = module.exports, module.exports.__esModule = true;
+  } else {
+    module.exports = _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+
+    module.exports["default"] = module.exports, module.exports.__esModule = true;
+  }
+
+  return _typeof(obj);
+}
+
+module.exports = _typeof;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 42 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1144,110 +3696,7144 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
-var react_dom = __webpack_require__(2);
+var react_dom = __webpack_require__(5);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+var objectWithoutProperties = __webpack_require__(2);
 
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+var esm_extends = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+var prop_types = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
+var clsx_m = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/withStyles.js + 1 modules
+var withStyles = __webpack_require__(8);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Grid/Grid.js
+
+
+// A grid component using the following libs as inspiration.
+//
+// For the implementation:
+// - https://getbootstrap.com/docs/4.3/layout/grid/
+// - https://github.com/kristoferjoseph/flexboxgrid/blob/master/src/css/flexboxgrid.css
+// - https://github.com/roylee0704/react-flexbox-grid
+// - https://material.angularjs.org/latest/layout/introduction
+//
+// Follow this flexbox Guide to better understand the underlying model:
+// - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+
+
+
+var SPACINGS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var GRID_SIZES = ['auto', true, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+function generateGrid(globalStyles, theme, breakpoint) {
+  var styles = {};
+  GRID_SIZES.forEach(function (size) {
+    var key = "grid-".concat(breakpoint, "-").concat(size);
+
+    if (size === true) {
+      // For the auto layouting
+      styles[key] = {
+        flexBasis: 0,
+        flexGrow: 1,
+        maxWidth: '100%'
+      };
+      return;
+    }
+
+    if (size === 'auto') {
+      styles[key] = {
+        flexBasis: 'auto',
+        flexGrow: 0,
+        maxWidth: 'none'
+      };
+      return;
+    } // Keep 7 significant numbers.
+
+
+    var width = "".concat(Math.round(size / 12 * 10e7) / 10e5, "%"); // Close to the bootstrap implementation:
+    // https://github.com/twbs/bootstrap/blob/8fccaa2439e97ec72a4b7dc42ccc1f649790adb0/scss/mixins/_grid.scss#L41
+
+    styles[key] = {
+      flexBasis: width,
+      flexGrow: 0,
+      maxWidth: width
+    };
+  }); // No need for a media query for the first size.
+
+  if (breakpoint === 'xs') {
+    Object(esm_extends["a" /* default */])(globalStyles, styles);
+  } else {
+    globalStyles[theme.breakpoints.up(breakpoint)] = styles;
+  }
+}
+
+function getOffset(val) {
+  var div = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+  var parse = parseFloat(val);
+  return "".concat(parse / div).concat(String(val).replace(String(parse), '') || 'px');
+}
+
+function generateGutter(theme, breakpoint) {
+  var styles = {};
+  SPACINGS.forEach(function (spacing) {
+    var themeSpacing = theme.spacing(spacing);
+
+    if (themeSpacing === 0) {
+      return;
+    }
+
+    styles["spacing-".concat(breakpoint, "-").concat(spacing)] = {
+      margin: "-".concat(getOffset(themeSpacing, 2)),
+      width: "calc(100% + ".concat(getOffset(themeSpacing), ")"),
+      '& > $item': {
+        padding: getOffset(themeSpacing, 2)
+      }
+    };
+  });
+  return styles;
+} // Default CSS values
+// flex: '0 1 auto',
+// flexDirection: 'row',
+// alignItems: 'flex-start',
+// flexWrap: 'nowrap',
+// justifyContent: 'flex-start',
+
+
+var Grid_styles = function styles(theme) {
+  return Object(esm_extends["a" /* default */])({
+    /* Styles applied to the root element. */
+    root: {},
+
+    /* Styles applied to the root element if `container={true}`. */
+    container: {
+      boxSizing: 'border-box',
+      display: 'flex',
+      flexWrap: 'wrap',
+      width: '100%'
+    },
+
+    /* Styles applied to the root element if `item={true}`. */
+    item: {
+      boxSizing: 'border-box',
+      margin: '0' // For instance, it's useful when used with a `figure` element.
+
+    },
+
+    /* Styles applied to the root element if `zeroMinWidth={true}`. */
+    zeroMinWidth: {
+      minWidth: 0
+    },
+
+    /* Styles applied to the root element if `direction="column"`. */
+    'direction-xs-column': {
+      flexDirection: 'column'
+    },
+
+    /* Styles applied to the root element if `direction="column-reverse"`. */
+    'direction-xs-column-reverse': {
+      flexDirection: 'column-reverse'
+    },
+
+    /* Styles applied to the root element if `direction="row-reverse"`. */
+    'direction-xs-row-reverse': {
+      flexDirection: 'row-reverse'
+    },
+
+    /* Styles applied to the root element if `wrap="nowrap"`. */
+    'wrap-xs-nowrap': {
+      flexWrap: 'nowrap'
+    },
+
+    /* Styles applied to the root element if `wrap="reverse"`. */
+    'wrap-xs-wrap-reverse': {
+      flexWrap: 'wrap-reverse'
+    },
+
+    /* Styles applied to the root element if `alignItems="center"`. */
+    'align-items-xs-center': {
+      alignItems: 'center'
+    },
+
+    /* Styles applied to the root element if `alignItems="flex-start"`. */
+    'align-items-xs-flex-start': {
+      alignItems: 'flex-start'
+    },
+
+    /* Styles applied to the root element if `alignItems="flex-end"`. */
+    'align-items-xs-flex-end': {
+      alignItems: 'flex-end'
+    },
+
+    /* Styles applied to the root element if `alignItems="baseline"`. */
+    'align-items-xs-baseline': {
+      alignItems: 'baseline'
+    },
+
+    /* Styles applied to the root element if `alignContent="center"`. */
+    'align-content-xs-center': {
+      alignContent: 'center'
+    },
+
+    /* Styles applied to the root element if `alignContent="flex-start"`. */
+    'align-content-xs-flex-start': {
+      alignContent: 'flex-start'
+    },
+
+    /* Styles applied to the root element if `alignContent="flex-end"`. */
+    'align-content-xs-flex-end': {
+      alignContent: 'flex-end'
+    },
+
+    /* Styles applied to the root element if `alignContent="space-between"`. */
+    'align-content-xs-space-between': {
+      alignContent: 'space-between'
+    },
+
+    /* Styles applied to the root element if `alignContent="space-around"`. */
+    'align-content-xs-space-around': {
+      alignContent: 'space-around'
+    },
+
+    /* Styles applied to the root element if `justify="center"`. */
+    'justify-xs-center': {
+      justifyContent: 'center'
+    },
+
+    /* Styles applied to the root element if `justify="flex-end"`. */
+    'justify-xs-flex-end': {
+      justifyContent: 'flex-end'
+    },
+
+    /* Styles applied to the root element if `justify="space-between"`. */
+    'justify-xs-space-between': {
+      justifyContent: 'space-between'
+    },
+
+    /* Styles applied to the root element if `justify="space-around"`. */
+    'justify-xs-space-around': {
+      justifyContent: 'space-around'
+    },
+
+    /* Styles applied to the root element if `justify="space-evenly"`. */
+    'justify-xs-space-evenly': {
+      justifyContent: 'space-evenly'
+    }
+  }, generateGutter(theme, 'xs'), theme.breakpoints.keys.reduce(function (accumulator, key) {
+    // Use side effect over immutability for better performance.
+    generateGrid(accumulator, theme, key);
+    return accumulator;
+  }, {}));
+};
+var Grid_Grid = /*#__PURE__*/react["forwardRef"](function Grid(props, ref) {
+  var _props$alignContent = props.alignContent,
+      alignContent = _props$alignContent === void 0 ? 'stretch' : _props$alignContent,
+      _props$alignItems = props.alignItems,
+      alignItems = _props$alignItems === void 0 ? 'stretch' : _props$alignItems,
+      classes = props.classes,
+      classNameProp = props.className,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? 'div' : _props$component,
+      _props$container = props.container,
+      container = _props$container === void 0 ? false : _props$container,
+      _props$direction = props.direction,
+      direction = _props$direction === void 0 ? 'row' : _props$direction,
+      _props$item = props.item,
+      item = _props$item === void 0 ? false : _props$item,
+      _props$justify = props.justify,
+      justify = _props$justify === void 0 ? 'flex-start' : _props$justify,
+      _props$lg = props.lg,
+      lg = _props$lg === void 0 ? false : _props$lg,
+      _props$md = props.md,
+      md = _props$md === void 0 ? false : _props$md,
+      _props$sm = props.sm,
+      sm = _props$sm === void 0 ? false : _props$sm,
+      _props$spacing = props.spacing,
+      spacing = _props$spacing === void 0 ? 0 : _props$spacing,
+      _props$wrap = props.wrap,
+      wrap = _props$wrap === void 0 ? 'wrap' : _props$wrap,
+      _props$xl = props.xl,
+      xl = _props$xl === void 0 ? false : _props$xl,
+      _props$xs = props.xs,
+      xs = _props$xs === void 0 ? false : _props$xs,
+      _props$zeroMinWidth = props.zeroMinWidth,
+      zeroMinWidth = _props$zeroMinWidth === void 0 ? false : _props$zeroMinWidth,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["alignContent", "alignItems", "classes", "className", "component", "container", "direction", "item", "justify", "lg", "md", "sm", "spacing", "wrap", "xl", "xs", "zeroMinWidth"]);
+
+  var className = Object(clsx_m["a" /* default */])(classes.root, classNameProp, container && [classes.container, spacing !== 0 && classes["spacing-xs-".concat(String(spacing))]], item && classes.item, zeroMinWidth && classes.zeroMinWidth, direction !== 'row' && classes["direction-xs-".concat(String(direction))], wrap !== 'wrap' && classes["wrap-xs-".concat(String(wrap))], alignItems !== 'stretch' && classes["align-items-xs-".concat(String(alignItems))], alignContent !== 'stretch' && classes["align-content-xs-".concat(String(alignContent))], justify !== 'flex-start' && classes["justify-xs-".concat(String(justify))], xs !== false && classes["grid-xs-".concat(String(xs))], sm !== false && classes["grid-sm-".concat(String(sm))], md !== false && classes["grid-md-".concat(String(md))], lg !== false && classes["grid-lg-".concat(String(lg))], xl !== false && classes["grid-xl-".concat(String(xl))]);
+  return /*#__PURE__*/react["createElement"](Component, Object(esm_extends["a" /* default */])({
+    className: className,
+    ref: ref
+  }, other));
+});
+ false ? undefined : void 0;
+var StyledGrid = Object(withStyles["a" /* default */])(Grid_styles, {
+  name: 'MuiGrid'
+})(Grid_Grid);
+
+if (false) { var requireProp; }
+
+/* harmony default export */ var esm_Grid_Grid = (StyledGrid);
+// EXTERNAL MODULE: ./dev/components/App/App.scss
+var App_App = __webpack_require__(66);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/capitalize.js
+var capitalize = __webpack_require__(6);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Typography/Typography.js
+
+
+
+
+
+
+
+var Typography_styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      margin: 0
+    },
+
+    /* Styles applied to the root element if `variant="body2"`. */
+    body2: theme.typography.body2,
+
+    /* Styles applied to the root element if `variant="body1"`. */
+    body1: theme.typography.body1,
+
+    /* Styles applied to the root element if `variant="caption"`. */
+    caption: theme.typography.caption,
+
+    /* Styles applied to the root element if `variant="button"`. */
+    button: theme.typography.button,
+
+    /* Styles applied to the root element if `variant="h1"`. */
+    h1: theme.typography.h1,
+
+    /* Styles applied to the root element if `variant="h2"`. */
+    h2: theme.typography.h2,
+
+    /* Styles applied to the root element if `variant="h3"`. */
+    h3: theme.typography.h3,
+
+    /* Styles applied to the root element if `variant="h4"`. */
+    h4: theme.typography.h4,
+
+    /* Styles applied to the root element if `variant="h5"`. */
+    h5: theme.typography.h5,
+
+    /* Styles applied to the root element if `variant="h6"`. */
+    h6: theme.typography.h6,
+
+    /* Styles applied to the root element if `variant="subtitle1"`. */
+    subtitle1: theme.typography.subtitle1,
+
+    /* Styles applied to the root element if `variant="subtitle2"`. */
+    subtitle2: theme.typography.subtitle2,
+
+    /* Styles applied to the root element if `variant="overline"`. */
+    overline: theme.typography.overline,
+
+    /* Styles applied to the root element if `variant="srOnly"`. Only accessible to screen readers. */
+    srOnly: {
+      position: 'absolute',
+      height: 1,
+      width: 1,
+      overflow: 'hidden'
+    },
+
+    /* Styles applied to the root element if `align="left"`. */
+    alignLeft: {
+      textAlign: 'left'
+    },
+
+    /* Styles applied to the root element if `align="center"`. */
+    alignCenter: {
+      textAlign: 'center'
+    },
+
+    /* Styles applied to the root element if `align="right"`. */
+    alignRight: {
+      textAlign: 'right'
+    },
+
+    /* Styles applied to the root element if `align="justify"`. */
+    alignJustify: {
+      textAlign: 'justify'
+    },
+
+    /* Styles applied to the root element if `nowrap={true}`. */
+    noWrap: {
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap'
+    },
+
+    /* Styles applied to the root element if `gutterBottom={true}`. */
+    gutterBottom: {
+      marginBottom: '0.35em'
+    },
+
+    /* Styles applied to the root element if `paragraph={true}`. */
+    paragraph: {
+      marginBottom: 16
+    },
+
+    /* Styles applied to the root element if `color="inherit"`. */
+    colorInherit: {
+      color: 'inherit'
+    },
+
+    /* Styles applied to the root element if `color="primary"`. */
+    colorPrimary: {
+      color: theme.palette.primary.main
+    },
+
+    /* Styles applied to the root element if `color="secondary"`. */
+    colorSecondary: {
+      color: theme.palette.secondary.main
+    },
+
+    /* Styles applied to the root element if `color="textPrimary"`. */
+    colorTextPrimary: {
+      color: theme.palette.text.primary
+    },
+
+    /* Styles applied to the root element if `color="textSecondary"`. */
+    colorTextSecondary: {
+      color: theme.palette.text.secondary
+    },
+
+    /* Styles applied to the root element if `color="error"`. */
+    colorError: {
+      color: theme.palette.error.main
+    },
+
+    /* Styles applied to the root element if `display="inline"`. */
+    displayInline: {
+      display: 'inline'
+    },
+
+    /* Styles applied to the root element if `display="block"`. */
+    displayBlock: {
+      display: 'block'
+    }
+  };
+};
+var defaultVariantMapping = {
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
+  subtitle1: 'h6',
+  subtitle2: 'h6',
+  body1: 'p',
+  body2: 'p'
+};
+var Typography_Typography = /*#__PURE__*/react["forwardRef"](function Typography(props, ref) {
+  var _props$align = props.align,
+      align = _props$align === void 0 ? 'inherit' : _props$align,
+      classes = props.classes,
+      className = props.className,
+      _props$color = props.color,
+      color = _props$color === void 0 ? 'initial' : _props$color,
+      component = props.component,
+      _props$display = props.display,
+      display = _props$display === void 0 ? 'initial' : _props$display,
+      _props$gutterBottom = props.gutterBottom,
+      gutterBottom = _props$gutterBottom === void 0 ? false : _props$gutterBottom,
+      _props$noWrap = props.noWrap,
+      noWrap = _props$noWrap === void 0 ? false : _props$noWrap,
+      _props$paragraph = props.paragraph,
+      paragraph = _props$paragraph === void 0 ? false : _props$paragraph,
+      _props$variant = props.variant,
+      variant = _props$variant === void 0 ? 'body1' : _props$variant,
+      _props$variantMapping = props.variantMapping,
+      variantMapping = _props$variantMapping === void 0 ? defaultVariantMapping : _props$variantMapping,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["align", "classes", "className", "color", "component", "display", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
+
+  var Component = component || (paragraph ? 'p' : variantMapping[variant] || defaultVariantMapping[variant]) || 'span';
+  return /*#__PURE__*/react["createElement"](Component, Object(esm_extends["a" /* default */])({
+    className: Object(clsx_m["a" /* default */])(classes.root, className, variant !== 'inherit' && classes[variant], color !== 'initial' && classes["color".concat(Object(capitalize["a" /* default */])(color))], noWrap && classes.noWrap, gutterBottom && classes.gutterBottom, paragraph && classes.paragraph, align !== 'inherit' && classes["align".concat(Object(capitalize["a" /* default */])(align))], display !== 'initial' && classes["display".concat(Object(capitalize["a" /* default */])(display))]),
+    ref: ref
+  }, other));
+});
+ false ? undefined : void 0;
+/* harmony default export */ var esm_Typography_Typography = (Object(withStyles["a" /* default */])(Typography_styles, {
+  name: 'MuiTypography'
+})(Typography_Typography));
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
+var toConsumableArray = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/system/esm/merge.js
+var merge = __webpack_require__(15);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/css.js
+
+
+
+
+
+function omit(input, fields) {
+  var output = {};
+  Object.keys(input).forEach(function (prop) {
+    if (fields.indexOf(prop) === -1) {
+      output[prop] = input[prop];
+    }
+  });
+  return output;
+}
+
+function css(styleFunction) {
+  var newStyleFunction = function newStyleFunction(props) {
+    var output = styleFunction(props);
+
+    if (props.css) {
+      return Object(esm_extends["a" /* default */])({}, Object(merge["a" /* default */])(output, styleFunction(Object(esm_extends["a" /* default */])({
+        theme: props.theme
+      }, props.css))), omit(props.css, [styleFunction.filterProps]));
+    }
+
+    return output;
+  };
+
+  newStyleFunction.propTypes =  false ? undefined : {};
+  newStyleFunction.filterProps = ['css'].concat(Object(toConsumableArray["a" /* default */])(styleFunction.filterProps));
+  return newStyleFunction;
+}
+
+/* harmony default export */ var esm_css = (css);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/compose.js
+
+
+
+function compose() {
+  for (var _len = arguments.length, styles = new Array(_len), _key = 0; _key < _len; _key++) {
+    styles[_key] = arguments[_key];
   }
 
-  return target;
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+  var fn = function fn(props) {
+    return styles.reduce(function (acc, style) {
+      var output = style(props);
 
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = _objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
+      if (output) {
+        return Object(merge["a" /* default */])(acc, output);
+      }
+
+      return acc;
+    }, {});
+  }; // Alternative approach that doesn't yield any performance gain.
+  // const handlers = styles.reduce((acc, style) => {
+  //   style.filterProps.forEach(prop => {
+  //     acc[prop] = style;
+  //   });
+  //   return acc;
+  // }, {});
+  // const fn = props => {
+  //   return Object.keys(props).reduce((acc, prop) => {
+  //     if (handlers[prop]) {
+  //       return merge(acc, handlers[prop](props));
+  //     }
+  //     return acc;
+  //   }, {});
+  // };
+
+
+  fn.propTypes =  false ? undefined : {};
+  fn.filterProps = styles.reduce(function (acc, style) {
+    return acc.concat(style.filterProps);
+  }, []);
+  return fn;
+}
+
+/* harmony default export */ var esm_compose = (compose);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
+var defineProperty = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/system/esm/breakpoints.js
+var breakpoints = __webpack_require__(31);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/style.js
+
+
+
+
+function getPath(obj, path) {
+  if (!path || typeof path !== 'string') {
+    return null;
+  }
+
+  return path.split('.').reduce(function (acc, item) {
+    return acc && acc[item] ? acc[item] : null;
+  }, obj);
+}
+
+function style_style(options) {
+  var prop = options.prop,
+      _options$cssProperty = options.cssProperty,
+      cssProperty = _options$cssProperty === void 0 ? options.prop : _options$cssProperty,
+      themeKey = options.themeKey,
+      transform = options.transform;
+
+  var fn = function fn(props) {
+    if (props[prop] == null) {
+      return null;
+    }
+
+    var propValue = props[prop];
+    var theme = props.theme;
+    var themeMapping = getPath(theme, themeKey) || {};
+
+    var styleFromPropValue = function styleFromPropValue(propValueFinal) {
+      var value;
+
+      if (typeof themeMapping === 'function') {
+        value = themeMapping(propValueFinal);
+      } else if (Array.isArray(themeMapping)) {
+        value = themeMapping[propValueFinal] || propValueFinal;
+      } else {
+        value = getPath(themeMapping, propValueFinal) || propValueFinal;
+
+        if (transform) {
+          value = transform(value);
+        }
+      }
+
+      if (cssProperty === false) {
+        return value;
+      }
+
+      return Object(defineProperty["a" /* default */])({}, cssProperty, value);
+    };
+
+    return Object(breakpoints["a" /* handleBreakpoints */])(props, propValue, styleFromPropValue);
+  };
+
+  fn.propTypes =  false ? undefined : {};
+  fn.filterProps = [prop];
+  return fn;
+}
+
+/* harmony default export */ var esm_style = (style_style);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/borders.js
+
+
+
+function getBorder(value) {
+  if (typeof value !== 'number') {
+    return value;
+  }
+
+  return "".concat(value, "px solid");
+}
+
+var border = esm_style({
+  prop: 'border',
+  themeKey: 'borders',
+  transform: getBorder
+});
+var borderTop = esm_style({
+  prop: 'borderTop',
+  themeKey: 'borders',
+  transform: getBorder
+});
+var borderRight = esm_style({
+  prop: 'borderRight',
+  themeKey: 'borders',
+  transform: getBorder
+});
+var borderBottom = esm_style({
+  prop: 'borderBottom',
+  themeKey: 'borders',
+  transform: getBorder
+});
+var borderLeft = esm_style({
+  prop: 'borderLeft',
+  themeKey: 'borders',
+  transform: getBorder
+});
+var borderColor = esm_style({
+  prop: 'borderColor',
+  themeKey: 'palette'
+});
+var borderRadius = esm_style({
+  prop: 'borderRadius',
+  themeKey: 'shape'
+});
+var borders = esm_compose(border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius);
+/* harmony default export */ var esm_borders = (borders);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/display.js
+
+
+var displayPrint = esm_style({
+  prop: 'displayPrint',
+  cssProperty: false,
+  transform: function transform(value) {
+    return {
+      '@media print': {
+        display: value
+      }
+    };
+  }
+});
+var displayRaw = esm_style({
+  prop: 'display'
+});
+var overflow = esm_style({
+  prop: 'overflow'
+});
+var textOverflow = esm_style({
+  prop: 'textOverflow'
+});
+var visibility = esm_style({
+  prop: 'visibility'
+});
+var whiteSpace = esm_style({
+  prop: 'whiteSpace'
+});
+/* harmony default export */ var esm_display = (esm_compose(displayPrint, displayRaw, overflow, textOverflow, visibility, whiteSpace));
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/flexbox.js
+
+
+var flexBasis = esm_style({
+  prop: 'flexBasis'
+});
+var flexDirection = esm_style({
+  prop: 'flexDirection'
+});
+var flexWrap = esm_style({
+  prop: 'flexWrap'
+});
+var justifyContent = esm_style({
+  prop: 'justifyContent'
+});
+var flexbox_alignItems = esm_style({
+  prop: 'alignItems'
+});
+var flexbox_alignContent = esm_style({
+  prop: 'alignContent'
+});
+var order = esm_style({
+  prop: 'order'
+});
+var flex = esm_style({
+  prop: 'flex'
+});
+var flexGrow = esm_style({
+  prop: 'flexGrow'
+});
+var flexShrink = esm_style({
+  prop: 'flexShrink'
+});
+var alignSelf = esm_style({
+  prop: 'alignSelf'
+});
+var justifyItems = esm_style({
+  prop: 'justifyItems'
+});
+var justifySelf = esm_style({
+  prop: 'justifySelf'
+});
+var flexbox = esm_compose(flexBasis, flexDirection, flexWrap, justifyContent, flexbox_alignItems, flexbox_alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf);
+/* harmony default export */ var esm_flexbox = (flexbox);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/grid.js
+
+
+var gridGap = esm_style({
+  prop: 'gridGap'
+});
+var gridColumnGap = esm_style({
+  prop: 'gridColumnGap'
+});
+var gridRowGap = esm_style({
+  prop: 'gridRowGap'
+});
+var gridColumn = esm_style({
+  prop: 'gridColumn'
+});
+var gridRow = esm_style({
+  prop: 'gridRow'
+});
+var gridAutoFlow = esm_style({
+  prop: 'gridAutoFlow'
+});
+var gridAutoColumns = esm_style({
+  prop: 'gridAutoColumns'
+});
+var gridAutoRows = esm_style({
+  prop: 'gridAutoRows'
+});
+var gridTemplateColumns = esm_style({
+  prop: 'gridTemplateColumns'
+});
+var gridTemplateRows = esm_style({
+  prop: 'gridTemplateRows'
+});
+var gridTemplateAreas = esm_style({
+  prop: 'gridTemplateAreas'
+});
+var gridArea = esm_style({
+  prop: 'gridArea'
+});
+var grid = esm_compose(gridGap, gridColumnGap, gridRowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
+/* harmony default export */ var esm_grid = (grid);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/positions.js
+
+
+var position = esm_style({
+  prop: 'position'
+});
+var zIndex = esm_style({
+  prop: 'zIndex',
+  themeKey: 'zIndex'
+});
+var positions_top = esm_style({
+  prop: 'top'
+});
+var right = esm_style({
+  prop: 'right'
+});
+var bottom = esm_style({
+  prop: 'bottom'
+});
+var left = esm_style({
+  prop: 'left'
+});
+/* harmony default export */ var positions = (esm_compose(position, zIndex, positions_top, right, bottom, left));
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/palette.js
+
+
+var palette_color = esm_style({
+  prop: 'color',
+  themeKey: 'palette'
+});
+var bgcolor = esm_style({
+  prop: 'bgcolor',
+  cssProperty: 'backgroundColor',
+  themeKey: 'palette'
+});
+var palette = esm_compose(palette_color, bgcolor);
+/* harmony default export */ var esm_palette = (palette);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/shadows.js
+
+var boxShadow = esm_style({
+  prop: 'boxShadow',
+  themeKey: 'shadows'
+});
+/* harmony default export */ var shadows = (boxShadow);
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/sizing.js
+
+
+
+function sizing_transform(value) {
+  return value <= 1 ? "".concat(value * 100, "%") : value;
+}
+
+var width = esm_style({
+  prop: 'width',
+  transform: sizing_transform
+});
+var maxWidth = esm_style({
+  prop: 'maxWidth',
+  transform: sizing_transform
+});
+var minWidth = esm_style({
+  prop: 'minWidth',
+  transform: sizing_transform
+});
+var height = esm_style({
+  prop: 'height',
+  transform: sizing_transform
+});
+var maxHeight = esm_style({
+  prop: 'maxHeight',
+  transform: sizing_transform
+});
+var minHeight = esm_style({
+  prop: 'minHeight',
+  transform: sizing_transform
+});
+var sizeWidth = esm_style({
+  prop: 'size',
+  cssProperty: 'width',
+  transform: sizing_transform
+});
+var sizeHeight = esm_style({
+  prop: 'size',
+  cssProperty: 'height',
+  transform: sizing_transform
+});
+var boxSizing = esm_style({
+  prop: 'boxSizing'
+});
+var sizing = esm_compose(width, maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
+/* harmony default export */ var esm_sizing = (sizing);
+// EXTERNAL MODULE: ./node_modules/@material-ui/system/esm/spacing.js + 1 modules
+var esm_spacing = __webpack_require__(100);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/typography.js
+
+
+var fontFamily = esm_style({
+  prop: 'fontFamily',
+  themeKey: 'typography'
+});
+var fontSize = esm_style({
+  prop: 'fontSize',
+  themeKey: 'typography'
+});
+var fontStyle = esm_style({
+  prop: 'fontStyle',
+  themeKey: 'typography'
+});
+var fontWeight = esm_style({
+  prop: 'fontWeight',
+  themeKey: 'typography'
+});
+var letterSpacing = esm_style({
+  prop: 'letterSpacing'
+});
+var lineHeight = esm_style({
+  prop: 'lineHeight'
+});
+var textAlign = esm_style({
+  prop: 'textAlign'
+});
+var typography = esm_compose(fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign);
+/* harmony default export */ var esm_typography = (typography);
+// EXTERNAL MODULE: ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
+var hoist_non_react_statics_cjs = __webpack_require__(17);
+var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/makeStyles/makeStyles.js + 21 modules
+var makeStyles = __webpack_require__(98);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/styled/styled.js
+
+
+
+
+
+
+
+
+
+function styled_omit(input, fields) {
+  var output = {};
+  Object.keys(input).forEach(function (prop) {
+    if (fields.indexOf(prop) === -1) {
+      output[prop] = input[prop];
+    }
+  });
+  return output;
+} // styled-components's API removes the mapping between components and styles.
+// Using components as a low-level styling construct can be simpler.
+
+
+function styled_styled(Component) {
+  var componentCreator = function componentCreator(style) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    var name = options.name,
+        stylesOptions = Object(objectWithoutProperties["a" /* default */])(options, ["name"]);
+
+    if (false) {}
+
+    var classNamePrefix = name;
+
+    if (false) { var displayName; }
+
+    var stylesOrCreator = typeof style === 'function' ? function (theme) {
+      return {
+        root: function root(props) {
+          return style(Object(esm_extends["a" /* default */])({
+            theme: theme
+          }, props));
+        }
+      };
+    } : {
+      root: style
+    };
+    var useStyles = Object(makeStyles["a" /* default */])(stylesOrCreator, Object(esm_extends["a" /* default */])({
+      Component: Component,
+      name: name || Component.displayName,
+      classNamePrefix: classNamePrefix
+    }, stylesOptions));
+    var filterProps;
+    var propTypes = {};
+
+    if (style.filterProps) {
+      filterProps = style.filterProps;
+      delete style.filterProps;
+    }
+    /* eslint-disable react/forbid-foreign-prop-types */
+
+
+    if (style.propTypes) {
+      propTypes = style.propTypes;
+      delete style.propTypes;
+    }
+    /* eslint-enable react/forbid-foreign-prop-types */
+
+
+    var StyledComponent = /*#__PURE__*/react_default.a.forwardRef(function StyledComponent(props, ref) {
+      var children = props.children,
+          classNameProp = props.className,
+          clone = props.clone,
+          ComponentProp = props.component,
+          other = Object(objectWithoutProperties["a" /* default */])(props, ["children", "className", "clone", "component"]);
+
+      var classes = useStyles(props);
+      var className = Object(clsx_m["a" /* default */])(classes.root, classNameProp);
+      var spread = other;
+
+      if (filterProps) {
+        spread = styled_omit(spread, filterProps);
+      }
+
+      if (clone) {
+        return /*#__PURE__*/react_default.a.cloneElement(children, Object(esm_extends["a" /* default */])({
+          className: Object(clsx_m["a" /* default */])(children.props.className, className)
+        }, spread));
+      }
+
+      if (typeof children === 'function') {
+        return children(Object(esm_extends["a" /* default */])({
+          className: className
+        }, spread));
+      }
+
+      var FinalComponent = ComponentProp || Component;
+      return /*#__PURE__*/react_default.a.createElement(FinalComponent, Object(esm_extends["a" /* default */])({
+        ref: ref,
+        className: className
+      }, spread), children);
+    });
+     false ? undefined : void 0;
+
+    if (false) {}
+
+    hoist_non_react_statics_cjs_default()(StyledComponent, Component);
+    return StyledComponent;
+  };
+
+  return componentCreator;
+}
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/defaultTheme.js + 16 modules
+var defaultTheme = __webpack_require__(20);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/styled.js
+
+
+
+
+var styles_styled_styled = function styled(Component) {
+  var componentCreator = styled_styled(Component);
+  return function (style, options) {
+    return componentCreator(style, Object(esm_extends["a" /* default */])({
+      defaultTheme: defaultTheme["a" /* default */]
+    }, options));
+  };
+};
+
+/* harmony default export */ var styles_styled = (styles_styled_styled);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Box/Box.js
+
+
+var Box_styleFunction = esm_css(esm_compose(esm_borders, esm_display, esm_flexbox, esm_grid, positions, esm_palette, shadows, esm_sizing, esm_spacing["b" /* default */], esm_typography));
+/**
+ * @ignore - do not document.
+ */
+
+var Box = styles_styled('div')(Box_styleFunction, {
+  name: 'MuiBox'
+});
+/* harmony default export */ var Box_Box = (Box);
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/colorManipulator.js
+var colorManipulator = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/useForkRef.js
+var useForkRef = __webpack_require__(11);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/useEventCallback.js
+var useEventCallback = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/useIsFocusVisible.js
+var useIsFocusVisible = __webpack_require__(28);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+var objectWithoutPropertiesLoose = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
+var assertThisInitialized = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
+var inheritsLoose = __webpack_require__(18);
+
+// CONCATENATED MODULE: ./node_modules/react-transition-group/esm/TransitionGroupContext.js
+
+/* harmony default export */ var TransitionGroupContext = (react_default.a.createContext(null));
+// CONCATENATED MODULE: ./node_modules/react-transition-group/esm/utils/ChildMapping.js
+
+/**
+ * Given `this.props.children`, return an object mapping key to child.
+ *
+ * @param {*} children `this.props.children`
+ * @return {object} Mapping of key to child
+ */
+
+function getChildMapping(children, mapFn) {
+  var mapper = function mapper(child) {
+    return mapFn && Object(react["isValidElement"])(child) ? mapFn(child) : child;
+  };
+
+  var result = Object.create(null);
+  if (children) react["Children"].map(children, function (c) {
+    return c;
+  }).forEach(function (child) {
+    // run the map function here instead so that the key is the computed one
+    result[child.key] = mapper(child);
+  });
+  return result;
+}
+/**
+ * When you're adding or removing children some may be added or removed in the
+ * same render pass. We want to show *both* since we want to simultaneously
+ * animate elements in and out. This function takes a previous set of keys
+ * and a new set of keys and merges them with its best guess of the correct
+ * ordering. In the future we may expose some of the utilities in
+ * ReactMultiChild to make this easy, but for now React itself does not
+ * directly have this concept of the union of prevChildren and nextChildren
+ * so we implement it here.
+ *
+ * @param {object} prev prev children as returned from
+ * `ReactTransitionChildMapping.getChildMapping()`.
+ * @param {object} next next children as returned from
+ * `ReactTransitionChildMapping.getChildMapping()`.
+ * @return {object} a key set that contains all keys in `prev` and all keys
+ * in `next` in a reasonable order.
+ */
+
+function mergeChildMappings(prev, next) {
+  prev = prev || {};
+  next = next || {};
+
+  function getValueForKey(key) {
+    return key in next ? next[key] : prev[key];
+  } // For each key of `next`, the list of keys to insert before that key in
+  // the combined list
+
+
+  var nextKeysPending = Object.create(null);
+  var pendingKeys = [];
+
+  for (var prevKey in prev) {
+    if (prevKey in next) {
+      if (pendingKeys.length) {
+        nextKeysPending[prevKey] = pendingKeys;
+        pendingKeys = [];
+      }
+    } else {
+      pendingKeys.push(prevKey);
+    }
+  }
+
+  var i;
+  var childMapping = {};
+
+  for (var nextKey in next) {
+    if (nextKeysPending[nextKey]) {
+      for (i = 0; i < nextKeysPending[nextKey].length; i++) {
+        var pendingNextKey = nextKeysPending[nextKey][i];
+        childMapping[nextKeysPending[nextKey][i]] = getValueForKey(pendingNextKey);
+      }
+    }
+
+    childMapping[nextKey] = getValueForKey(nextKey);
+  } // Finally, add the keys which didn't appear before any key in `next`
+
+
+  for (i = 0; i < pendingKeys.length; i++) {
+    childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
+  }
+
+  return childMapping;
+}
+
+function getProp(child, prop, props) {
+  return props[prop] != null ? props[prop] : child.props[prop];
+}
+
+function getInitialChildMapping(props, onExited) {
+  return getChildMapping(props.children, function (child) {
+    return Object(react["cloneElement"])(child, {
+      onExited: onExited.bind(null, child),
+      in: true,
+      appear: getProp(child, 'appear', props),
+      enter: getProp(child, 'enter', props),
+      exit: getProp(child, 'exit', props)
+    });
+  });
+}
+function getNextChildMapping(nextProps, prevChildMapping, onExited) {
+  var nextChildMapping = getChildMapping(nextProps.children);
+  var children = mergeChildMappings(prevChildMapping, nextChildMapping);
+  Object.keys(children).forEach(function (key) {
+    var child = children[key];
+    if (!Object(react["isValidElement"])(child)) return;
+    var hasPrev = (key in prevChildMapping);
+    var hasNext = (key in nextChildMapping);
+    var prevChild = prevChildMapping[key];
+    var isLeaving = Object(react["isValidElement"])(prevChild) && !prevChild.props.in; // item is new (entering)
+
+    if (hasNext && (!hasPrev || isLeaving)) {
+      // console.log('entering', key)
+      children[key] = Object(react["cloneElement"])(child, {
+        onExited: onExited.bind(null, child),
+        in: true,
+        exit: getProp(child, 'exit', nextProps),
+        enter: getProp(child, 'enter', nextProps)
+      });
+    } else if (!hasNext && hasPrev && !isLeaving) {
+      // item is old (exiting)
+      // console.log('leaving', key)
+      children[key] = Object(react["cloneElement"])(child, {
+        in: false
+      });
+    } else if (hasNext && hasPrev && Object(react["isValidElement"])(prevChild)) {
+      // item hasn't changed transition states
+      // copy over the last transition props;
+      // console.log('unchanged', key)
+      children[key] = Object(react["cloneElement"])(child, {
+        onExited: onExited.bind(null, child),
+        in: prevChild.props.in,
+        exit: getProp(child, 'exit', nextProps),
+        enter: getProp(child, 'enter', nextProps)
+      });
+    }
+  });
+  return children;
+}
+// CONCATENATED MODULE: ./node_modules/react-transition-group/esm/TransitionGroup.js
+
+
+
+
+
+
+
+
+
+var values = Object.values || function (obj) {
+  return Object.keys(obj).map(function (k) {
+    return obj[k];
+  });
+};
+
+var defaultProps = {
+  component: 'div',
+  childFactory: function childFactory(child) {
+    return child;
+  }
+};
+/**
+ * The `<TransitionGroup>` component manages a set of transition components
+ * (`<Transition>` and `<CSSTransition>`) in a list. Like with the transition
+ * components, `<TransitionGroup>` is a state machine for managing the mounting
+ * and unmounting of components over time.
+ *
+ * Consider the example below. As items are removed or added to the TodoList the
+ * `in` prop is toggled automatically by the `<TransitionGroup>`.
+ *
+ * Note that `<TransitionGroup>`  does not define any animation behavior!
+ * Exactly _how_ a list item animates is up to the individual transition
+ * component. This means you can mix and match animations across different list
+ * items.
+ */
+
+var TransitionGroup_TransitionGroup = /*#__PURE__*/function (_React$Component) {
+  Object(inheritsLoose["a" /* default */])(TransitionGroup, _React$Component);
+
+  function TransitionGroup(props, context) {
+    var _this;
+
+    _this = _React$Component.call(this, props, context) || this;
+
+    var handleExited = _this.handleExited.bind(Object(assertThisInitialized["a" /* default */])(_this)); // Initial children should all be entering, dependent on appear
+
+
+    _this.state = {
+      contextValue: {
+        isMounting: true
+      },
+      handleExited: handleExited,
+      firstRender: true
+    };
+    return _this;
+  }
+
+  var _proto = TransitionGroup.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    this.mounted = true;
+    this.setState({
+      contextValue: {
+        isMounting: false
+      }
+    });
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    this.mounted = false;
+  };
+
+  TransitionGroup.getDerivedStateFromProps = function getDerivedStateFromProps(nextProps, _ref) {
+    var prevChildMapping = _ref.children,
+        handleExited = _ref.handleExited,
+        firstRender = _ref.firstRender;
+    return {
+      children: firstRender ? getInitialChildMapping(nextProps, handleExited) : getNextChildMapping(nextProps, prevChildMapping, handleExited),
+      firstRender: false
+    };
+  } // node is `undefined` when user provided `nodeRef` prop
+  ;
+
+  _proto.handleExited = function handleExited(child, node) {
+    var currentChildMapping = getChildMapping(this.props.children);
+    if (child.key in currentChildMapping) return;
+
+    if (child.props.onExited) {
+      child.props.onExited(node);
+    }
+
+    if (this.mounted) {
+      this.setState(function (state) {
+        var children = Object(esm_extends["a" /* default */])({}, state.children);
+
+        delete children[child.key];
+        return {
+          children: children
+        };
+      });
+    }
+  };
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        Component = _this$props.component,
+        childFactory = _this$props.childFactory,
+        props = Object(objectWithoutPropertiesLoose["a" /* default */])(_this$props, ["component", "childFactory"]);
+
+    var contextValue = this.state.contextValue;
+    var children = values(this.state.children).map(childFactory);
+    delete props.appear;
+    delete props.enter;
+    delete props.exit;
+
+    if (Component === null) {
+      return /*#__PURE__*/react_default.a.createElement(TransitionGroupContext.Provider, {
+        value: contextValue
+      }, children);
+    }
+
+    return /*#__PURE__*/react_default.a.createElement(TransitionGroupContext.Provider, {
+      value: contextValue
+    }, /*#__PURE__*/react_default.a.createElement(Component, props, children));
+  };
+
+  return TransitionGroup;
+}(react_default.a.Component);
+
+TransitionGroup_TransitionGroup.propTypes =  false ? undefined : {};
+TransitionGroup_TransitionGroup.defaultProps = defaultProps;
+/* harmony default export */ var esm_TransitionGroup = (TransitionGroup_TransitionGroup);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/ButtonBase/Ripple.js
+
+
+
+
+var useEnhancedEffect = typeof window === 'undefined' ? react["useEffect"] : react["useLayoutEffect"];
+/**
+ * @ignore - internal component.
+ */
+
+function Ripple(props) {
+  var classes = props.classes,
+      _props$pulsate = props.pulsate,
+      pulsate = _props$pulsate === void 0 ? false : _props$pulsate,
+      rippleX = props.rippleX,
+      rippleY = props.rippleY,
+      rippleSize = props.rippleSize,
+      inProp = props.in,
+      _props$onExited = props.onExited,
+      onExited = _props$onExited === void 0 ? function () {} : _props$onExited,
+      timeout = props.timeout;
+
+  var _React$useState = react["useState"](false),
+      leaving = _React$useState[0],
+      setLeaving = _React$useState[1];
+
+  var rippleClassName = Object(clsx_m["a" /* default */])(classes.ripple, classes.rippleVisible, pulsate && classes.ripplePulsate);
+  var rippleStyles = {
+    width: rippleSize,
+    height: rippleSize,
+    top: -(rippleSize / 2) + rippleY,
+    left: -(rippleSize / 2) + rippleX
+  };
+  var childClassName = Object(clsx_m["a" /* default */])(classes.child, leaving && classes.childLeaving, pulsate && classes.childPulsate);
+  var handleExited = Object(useEventCallback["a" /* default */])(onExited); // Ripple is used for user feedback (e.g. click or press) so we want to apply styles with the highest priority
+
+  useEnhancedEffect(function () {
+    if (!inProp) {
+      // react-transition-group#onExit
+      setLeaving(true); // react-transition-group#onExited
+
+      var timeoutId = setTimeout(handleExited, timeout);
+      return function () {
+        clearTimeout(timeoutId);
+      };
+    }
+
+    return undefined;
+  }, [handleExited, inProp, timeout]);
+  return /*#__PURE__*/react["createElement"]("span", {
+    className: rippleClassName,
+    style: rippleStyles
+  }, /*#__PURE__*/react["createElement"]("span", {
+    className: childClassName
+  }));
+}
+
+ false ? undefined : void 0;
+/* harmony default export */ var ButtonBase_Ripple = (Ripple);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/ButtonBase/TouchRipple.js
+
+
+
+
+
+
+
+
+
+var DURATION = 550;
+var DELAY_RIPPLE = 80;
+var TouchRipple_styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      overflow: 'hidden',
+      pointerEvents: 'none',
+      position: 'absolute',
+      zIndex: 0,
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+      borderRadius: 'inherit'
+    },
+
+    /* Styles applied to the internal `Ripple` components `ripple` class. */
+    ripple: {
+      opacity: 0,
+      position: 'absolute'
+    },
+
+    /* Styles applied to the internal `Ripple` components `rippleVisible` class. */
+    rippleVisible: {
+      opacity: 0.3,
+      transform: 'scale(1)',
+      animation: "$enter ".concat(DURATION, "ms ").concat(theme.transitions.easing.easeInOut)
+    },
+
+    /* Styles applied to the internal `Ripple` components `ripplePulsate` class. */
+    ripplePulsate: {
+      animationDuration: "".concat(theme.transitions.duration.shorter, "ms")
+    },
+
+    /* Styles applied to the internal `Ripple` components `child` class. */
+    child: {
+      opacity: 1,
+      display: 'block',
+      width: '100%',
+      height: '100%',
+      borderRadius: '50%',
+      backgroundColor: 'currentColor'
+    },
+
+    /* Styles applied to the internal `Ripple` components `childLeaving` class. */
+    childLeaving: {
+      opacity: 0,
+      animation: "$exit ".concat(DURATION, "ms ").concat(theme.transitions.easing.easeInOut)
+    },
+
+    /* Styles applied to the internal `Ripple` components `childPulsate` class. */
+    childPulsate: {
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      animation: "$pulsate 2500ms ".concat(theme.transitions.easing.easeInOut, " 200ms infinite")
+    },
+    '@keyframes enter': {
+      '0%': {
+        transform: 'scale(0)',
+        opacity: 0.1
+      },
+      '100%': {
+        transform: 'scale(1)',
+        opacity: 0.3
+      }
+    },
+    '@keyframes exit': {
+      '0%': {
+        opacity: 1
+      },
+      '100%': {
+        opacity: 0
+      }
+    },
+    '@keyframes pulsate': {
+      '0%': {
+        transform: 'scale(1)'
+      },
+      '50%': {
+        transform: 'scale(0.92)'
+      },
+      '100%': {
+        transform: 'scale(1)'
+      }
+    }
+  };
+};
+/**
+ * @ignore - internal component.
+ *
+ * TODO v5: Make private
+ */
+
+var TouchRipple_TouchRipple = /*#__PURE__*/react["forwardRef"](function TouchRipple(props, ref) {
+  var _props$center = props.center,
+      centerProp = _props$center === void 0 ? false : _props$center,
+      classes = props.classes,
+      className = props.className,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["center", "classes", "className"]);
+
+  var _React$useState = react["useState"]([]),
+      ripples = _React$useState[0],
+      setRipples = _React$useState[1];
+
+  var nextKey = react["useRef"](0);
+  var rippleCallback = react["useRef"](null);
+  react["useEffect"](function () {
+    if (rippleCallback.current) {
+      rippleCallback.current();
+      rippleCallback.current = null;
+    }
+  }, [ripples]); // Used to filter out mouse emulated events on mobile.
+
+  var ignoringMouseDown = react["useRef"](false); // We use a timer in order to only show the ripples for touch "click" like events.
+  // We don't want to display the ripple for touch scroll events.
+
+  var startTimer = react["useRef"](null); // This is the hook called once the previous timeout is ready.
+
+  var startTimerCommit = react["useRef"](null);
+  var container = react["useRef"](null);
+  react["useEffect"](function () {
+    return function () {
+      clearTimeout(startTimer.current);
+    };
+  }, []);
+  var startCommit = react["useCallback"](function (params) {
+    var pulsate = params.pulsate,
+        rippleX = params.rippleX,
+        rippleY = params.rippleY,
+        rippleSize = params.rippleSize,
+        cb = params.cb;
+    setRipples(function (oldRipples) {
+      return [].concat(Object(toConsumableArray["a" /* default */])(oldRipples), [/*#__PURE__*/react["createElement"](ButtonBase_Ripple, {
+        key: nextKey.current,
+        classes: classes,
+        timeout: DURATION,
+        pulsate: pulsate,
+        rippleX: rippleX,
+        rippleY: rippleY,
+        rippleSize: rippleSize
+      })]);
+    });
+    nextKey.current += 1;
+    rippleCallback.current = cb;
+  }, [classes]);
+  var start = react["useCallback"](function () {
+    var event = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    var cb = arguments.length > 2 ? arguments[2] : undefined;
+    var _options$pulsate = options.pulsate,
+        pulsate = _options$pulsate === void 0 ? false : _options$pulsate,
+        _options$center = options.center,
+        center = _options$center === void 0 ? centerProp || options.pulsate : _options$center,
+        _options$fakeElement = options.fakeElement,
+        fakeElement = _options$fakeElement === void 0 ? false : _options$fakeElement;
+
+    if (event.type === 'mousedown' && ignoringMouseDown.current) {
+      ignoringMouseDown.current = false;
+      return;
+    }
+
+    if (event.type === 'touchstart') {
+      ignoringMouseDown.current = true;
+    }
+
+    var element = fakeElement ? null : container.current;
+    var rect = element ? element.getBoundingClientRect() : {
+      width: 0,
+      height: 0,
+      left: 0,
+      top: 0
+    }; // Get the size of the ripple
+
+    var rippleX;
+    var rippleY;
+    var rippleSize;
+
+    if (center || event.clientX === 0 && event.clientY === 0 || !event.clientX && !event.touches) {
+      rippleX = Math.round(rect.width / 2);
+      rippleY = Math.round(rect.height / 2);
+    } else {
+      var _ref = event.touches ? event.touches[0] : event,
+          clientX = _ref.clientX,
+          clientY = _ref.clientY;
+
+      rippleX = Math.round(clientX - rect.left);
+      rippleY = Math.round(clientY - rect.top);
+    }
+
+    if (center) {
+      rippleSize = Math.sqrt((2 * Math.pow(rect.width, 2) + Math.pow(rect.height, 2)) / 3); // For some reason the animation is broken on Mobile Chrome if the size if even.
+
+      if (rippleSize % 2 === 0) {
+        rippleSize += 1;
+      }
+    } else {
+      var sizeX = Math.max(Math.abs((element ? element.clientWidth : 0) - rippleX), rippleX) * 2 + 2;
+      var sizeY = Math.max(Math.abs((element ? element.clientHeight : 0) - rippleY), rippleY) * 2 + 2;
+      rippleSize = Math.sqrt(Math.pow(sizeX, 2) + Math.pow(sizeY, 2));
+    } // Touche devices
+
+
+    if (event.touches) {
+      // check that this isn't another touchstart due to multitouch
+      // otherwise we will only clear a single timer when unmounting while two
+      // are running
+      if (startTimerCommit.current === null) {
+        // Prepare the ripple effect.
+        startTimerCommit.current = function () {
+          startCommit({
+            pulsate: pulsate,
+            rippleX: rippleX,
+            rippleY: rippleY,
+            rippleSize: rippleSize,
+            cb: cb
+          });
+        }; // Delay the execution of the ripple effect.
+
+
+        startTimer.current = setTimeout(function () {
+          if (startTimerCommit.current) {
+            startTimerCommit.current();
+            startTimerCommit.current = null;
+          }
+        }, DELAY_RIPPLE); // We have to make a tradeoff with this value.
+      }
+    } else {
+      startCommit({
+        pulsate: pulsate,
+        rippleX: rippleX,
+        rippleY: rippleY,
+        rippleSize: rippleSize,
+        cb: cb
+      });
+    }
+  }, [centerProp, startCommit]);
+  var pulsate = react["useCallback"](function () {
+    start({}, {
+      pulsate: true
+    });
+  }, [start]);
+  var stop = react["useCallback"](function (event, cb) {
+    clearTimeout(startTimer.current); // The touch interaction occurs too quickly.
+    // We still want to show ripple effect.
+
+    if (event.type === 'touchend' && startTimerCommit.current) {
+      event.persist();
+      startTimerCommit.current();
+      startTimerCommit.current = null;
+      startTimer.current = setTimeout(function () {
+        stop(event, cb);
+      });
+      return;
+    }
+
+    startTimerCommit.current = null;
+    setRipples(function (oldRipples) {
+      if (oldRipples.length > 0) {
+        return oldRipples.slice(1);
+      }
+
+      return oldRipples;
+    });
+    rippleCallback.current = cb;
+  }, []);
+  react["useImperativeHandle"](ref, function () {
+    return {
+      pulsate: pulsate,
+      start: start,
+      stop: stop
+    };
+  }, [pulsate, start, stop]);
+  return /*#__PURE__*/react["createElement"]("span", Object(esm_extends["a" /* default */])({
+    className: Object(clsx_m["a" /* default */])(classes.root, className),
+    ref: container
+  }, other), /*#__PURE__*/react["createElement"](esm_TransitionGroup, {
+    component: null,
+    exit: true
+  }, ripples));
+});
+ false ? undefined : void 0;
+/* harmony default export */ var ButtonBase_TouchRipple = (Object(withStyles["a" /* default */])(TouchRipple_styles, {
+  flip: false,
+  name: 'MuiTouchRipple'
+})( /*#__PURE__*/react["memo"](TouchRipple_TouchRipple)));
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/ButtonBase/ButtonBase.js
+
+
+
+
+
+
+
+
+
+
+
+
+var ButtonBase_styles = {
+  /* Styles applied to the root element. */
+  root: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+    WebkitTapHighlightColor: 'transparent',
+    backgroundColor: 'transparent',
+    // Reset default value
+    // We disable the focus ring for mouse, touch and keyboard users.
+    outline: 0,
+    border: 0,
+    margin: 0,
+    // Remove the margin in Safari
+    borderRadius: 0,
+    padding: 0,
+    // Remove the padding in Firefox
+    cursor: 'pointer',
+    userSelect: 'none',
+    verticalAlign: 'middle',
+    '-moz-appearance': 'none',
+    // Reset
+    '-webkit-appearance': 'none',
+    // Reset
+    textDecoration: 'none',
+    // So we take precedent over the style of a native <a /> element.
+    color: 'inherit',
+    '&::-moz-focus-inner': {
+      borderStyle: 'none' // Remove Firefox dotted outline.
+
+    },
+    '&$disabled': {
+      pointerEvents: 'none',
+      // Disable link interactions
+      cursor: 'default'
+    },
+    '@media print': {
+      colorAdjust: 'exact'
+    }
+  },
+
+  /* Pseudo-class applied to the root element if `disabled={true}`. */
+  disabled: {},
+
+  /* Pseudo-class applied to the root element if keyboard focused. */
+  focusVisible: {}
+};
+/**
+ * `ButtonBase` contains as few styles as possible.
+ * It aims to be a simple building block for creating a button.
+ * It contains a load of style reset and some focus/ripple logic.
+ */
+
+var ButtonBase_ButtonBase = /*#__PURE__*/react["forwardRef"](function ButtonBase(props, ref) {
+  var action = props.action,
+      buttonRefProp = props.buttonRef,
+      _props$centerRipple = props.centerRipple,
+      centerRipple = _props$centerRipple === void 0 ? false : _props$centerRipple,
+      children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$component = props.component,
+      component = _props$component === void 0 ? 'button' : _props$component,
+      _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
+      _props$disableRipple = props.disableRipple,
+      disableRipple = _props$disableRipple === void 0 ? false : _props$disableRipple,
+      _props$disableTouchRi = props.disableTouchRipple,
+      disableTouchRipple = _props$disableTouchRi === void 0 ? false : _props$disableTouchRi,
+      _props$focusRipple = props.focusRipple,
+      focusRipple = _props$focusRipple === void 0 ? false : _props$focusRipple,
+      focusVisibleClassName = props.focusVisibleClassName,
+      onBlur = props.onBlur,
+      onClick = props.onClick,
+      onFocus = props.onFocus,
+      onFocusVisible = props.onFocusVisible,
+      onKeyDown = props.onKeyDown,
+      onKeyUp = props.onKeyUp,
+      onMouseDown = props.onMouseDown,
+      onMouseLeave = props.onMouseLeave,
+      onMouseUp = props.onMouseUp,
+      onTouchEnd = props.onTouchEnd,
+      onTouchMove = props.onTouchMove,
+      onTouchStart = props.onTouchStart,
+      onDragLeave = props.onDragLeave,
+      _props$tabIndex = props.tabIndex,
+      tabIndex = _props$tabIndex === void 0 ? 0 : _props$tabIndex,
+      TouchRippleProps = props.TouchRippleProps,
+      _props$type = props.type,
+      type = _props$type === void 0 ? 'button' : _props$type,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["action", "buttonRef", "centerRipple", "children", "classes", "className", "component", "disabled", "disableRipple", "disableTouchRipple", "focusRipple", "focusVisibleClassName", "onBlur", "onClick", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseDown", "onMouseLeave", "onMouseUp", "onTouchEnd", "onTouchMove", "onTouchStart", "onDragLeave", "tabIndex", "TouchRippleProps", "type"]);
+
+  var buttonRef = react["useRef"](null);
+
+  function getButtonNode() {
+    // #StrictMode ready
+    return react_dom["findDOMNode"](buttonRef.current);
+  }
+
+  var rippleRef = react["useRef"](null);
+
+  var _React$useState = react["useState"](false),
+      focusVisible = _React$useState[0],
+      setFocusVisible = _React$useState[1];
+
+  if (disabled && focusVisible) {
+    setFocusVisible(false);
+  }
+
+  var _useIsFocusVisible = Object(useIsFocusVisible["a" /* default */])(),
+      isFocusVisible = _useIsFocusVisible.isFocusVisible,
+      onBlurVisible = _useIsFocusVisible.onBlurVisible,
+      focusVisibleRef = _useIsFocusVisible.ref;
+
+  react["useImperativeHandle"](action, function () {
+    return {
+      focusVisible: function focusVisible() {
+        setFocusVisible(true);
+        buttonRef.current.focus();
+      }
+    };
+  }, []);
+  react["useEffect"](function () {
+    if (focusVisible && focusRipple && !disableRipple) {
+      rippleRef.current.pulsate();
+    }
+  }, [disableRipple, focusRipple, focusVisible]);
+
+  function useRippleHandler(rippleAction, eventCallback) {
+    var skipRippleAction = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : disableTouchRipple;
+    return Object(useEventCallback["a" /* default */])(function (event) {
+      if (eventCallback) {
+        eventCallback(event);
+      }
+
+      var ignore = skipRippleAction;
+
+      if (!ignore && rippleRef.current) {
+        rippleRef.current[rippleAction](event);
+      }
+
+      return true;
+    });
+  }
+
+  var handleMouseDown = useRippleHandler('start', onMouseDown);
+  var handleDragLeave = useRippleHandler('stop', onDragLeave);
+  var handleMouseUp = useRippleHandler('stop', onMouseUp);
+  var handleMouseLeave = useRippleHandler('stop', function (event) {
+    if (focusVisible) {
+      event.preventDefault();
+    }
+
+    if (onMouseLeave) {
+      onMouseLeave(event);
+    }
+  });
+  var handleTouchStart = useRippleHandler('start', onTouchStart);
+  var handleTouchEnd = useRippleHandler('stop', onTouchEnd);
+  var handleTouchMove = useRippleHandler('stop', onTouchMove);
+  var handleBlur = useRippleHandler('stop', function (event) {
+    if (focusVisible) {
+      onBlurVisible(event);
+      setFocusVisible(false);
+    }
+
+    if (onBlur) {
+      onBlur(event);
+    }
+  }, false);
+  var handleFocus = Object(useEventCallback["a" /* default */])(function (event) {
+    // Fix for https://github.com/facebook/react/issues/7769
+    if (!buttonRef.current) {
+      buttonRef.current = event.currentTarget;
+    }
+
+    if (isFocusVisible(event)) {
+      setFocusVisible(true);
+
+      if (onFocusVisible) {
+        onFocusVisible(event);
+      }
+    }
+
+    if (onFocus) {
+      onFocus(event);
+    }
+  });
+
+  var isNonNativeButton = function isNonNativeButton() {
+    var button = getButtonNode();
+    return component && component !== 'button' && !(button.tagName === 'A' && button.href);
+  };
+  /**
+   * IE 11 shim for https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/repeat
+   */
+
+
+  var keydownRef = react["useRef"](false);
+  var handleKeyDown = Object(useEventCallback["a" /* default */])(function (event) {
+    // Check if key is already down to avoid repeats being counted as multiple activations
+    if (focusRipple && !keydownRef.current && focusVisible && rippleRef.current && event.key === ' ') {
+      keydownRef.current = true;
+      event.persist();
+      rippleRef.current.stop(event, function () {
+        rippleRef.current.start(event);
+      });
+    }
+
+    if (event.target === event.currentTarget && isNonNativeButton() && event.key === ' ') {
+      event.preventDefault();
+    }
+
+    if (onKeyDown) {
+      onKeyDown(event);
+    } // Keyboard accessibility for non interactive elements
+
+
+    if (event.target === event.currentTarget && isNonNativeButton() && event.key === 'Enter' && !disabled) {
+      event.preventDefault();
+
+      if (onClick) {
+        onClick(event);
+      }
+    }
+  });
+  var handleKeyUp = Object(useEventCallback["a" /* default */])(function (event) {
+    // calling preventDefault in keyUp on a <button> will not dispatch a click event if Space is pressed
+    // https://codesandbox.io/s/button-keyup-preventdefault-dn7f0
+    if (focusRipple && event.key === ' ' && rippleRef.current && focusVisible && !event.defaultPrevented) {
+      keydownRef.current = false;
+      event.persist();
+      rippleRef.current.stop(event, function () {
+        rippleRef.current.pulsate(event);
+      });
+    }
+
+    if (onKeyUp) {
+      onKeyUp(event);
+    } // Keyboard accessibility for non interactive elements
+
+
+    if (onClick && event.target === event.currentTarget && isNonNativeButton() && event.key === ' ' && !event.defaultPrevented) {
+      onClick(event);
+    }
+  });
+  var ComponentProp = component;
+
+  if (ComponentProp === 'button' && other.href) {
+    ComponentProp = 'a';
+  }
+
+  var buttonProps = {};
+
+  if (ComponentProp === 'button') {
+    buttonProps.type = type;
+    buttonProps.disabled = disabled;
+  } else {
+    if (ComponentProp !== 'a' || !other.href) {
+      buttonProps.role = 'button';
+    }
+
+    buttonProps['aria-disabled'] = disabled;
+  }
+
+  var handleUserRef = Object(useForkRef["a" /* default */])(buttonRefProp, ref);
+  var handleOwnRef = Object(useForkRef["a" /* default */])(focusVisibleRef, buttonRef);
+  var handleRef = Object(useForkRef["a" /* default */])(handleUserRef, handleOwnRef);
+
+  var _React$useState2 = react["useState"](false),
+      mountedState = _React$useState2[0],
+      setMountedState = _React$useState2[1];
+
+  react["useEffect"](function () {
+    setMountedState(true);
+  }, []);
+  var enableTouchRipple = mountedState && !disableRipple && !disabled;
+
+  if (false) {}
+
+  return /*#__PURE__*/react["createElement"](ComponentProp, Object(esm_extends["a" /* default */])({
+    className: Object(clsx_m["a" /* default */])(classes.root, className, focusVisible && [classes.focusVisible, focusVisibleClassName], disabled && classes.disabled),
+    onBlur: handleBlur,
+    onClick: onClick,
+    onFocus: handleFocus,
+    onKeyDown: handleKeyDown,
+    onKeyUp: handleKeyUp,
+    onMouseDown: handleMouseDown,
+    onMouseLeave: handleMouseLeave,
+    onMouseUp: handleMouseUp,
+    onDragLeave: handleDragLeave,
+    onTouchEnd: handleTouchEnd,
+    onTouchMove: handleTouchMove,
+    onTouchStart: handleTouchStart,
+    ref: handleRef,
+    tabIndex: disabled ? -1 : tabIndex
+  }, buttonProps, other), children, enableTouchRipple ?
+  /*#__PURE__*/
+
+  /* TouchRipple is only needed client-side, x2 boost on the server. */
+  react["createElement"](ButtonBase_TouchRipple, Object(esm_extends["a" /* default */])({
+    ref: rippleRef,
+    center: centerRipple
+  }, TouchRippleProps)) : null);
+});
+ false ? undefined : void 0;
+/* harmony default export */ var esm_ButtonBase_ButtonBase = (Object(withStyles["a" /* default */])(ButtonBase_styles, {
+  name: 'MuiButtonBase'
+})(ButtonBase_ButtonBase));
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Button/Button.js
+
+
+
+
+
+
+
+
+
+var Button_styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: Object(esm_extends["a" /* default */])({}, theme.typography.button, {
+      boxSizing: 'border-box',
+      minWidth: 64,
+      padding: '6px 16px',
+      borderRadius: theme.shape.borderRadius,
+      color: theme.palette.text.primary,
+      transition: theme.transitions.create(['background-color', 'box-shadow', 'border'], {
+        duration: theme.transitions.duration.short
+      }),
+      '&:hover': {
+        textDecoration: 'none',
+        backgroundColor: Object(colorManipulator["b" /* fade */])(theme.palette.text.primary, theme.palette.action.hoverOpacity),
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        },
+        '&$disabled': {
+          backgroundColor: 'transparent'
+        }
+      },
+      '&$disabled': {
+        color: theme.palette.action.disabled
+      }
+    }),
+
+    /* Styles applied to the span element that wraps the children. */
+    label: {
+      width: '100%',
+      // Ensure the correct width for iOS Safari
+      display: 'inherit',
+      alignItems: 'inherit',
+      justifyContent: 'inherit'
+    },
+
+    /* Styles applied to the root element if `variant="text"`. */
+    text: {
+      padding: '6px 8px'
+    },
+
+    /* Styles applied to the root element if `variant="text"` and `color="primary"`. */
+    textPrimary: {
+      color: theme.palette.primary.main,
+      '&:hover': {
+        backgroundColor: Object(colorManipulator["b" /* fade */])(theme.palette.primary.main, theme.palette.action.hoverOpacity),
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        }
+      }
+    },
+
+    /* Styles applied to the root element if `variant="text"` and `color="secondary"`. */
+    textSecondary: {
+      color: theme.palette.secondary.main,
+      '&:hover': {
+        backgroundColor: Object(colorManipulator["b" /* fade */])(theme.palette.secondary.main, theme.palette.action.hoverOpacity),
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        }
+      }
+    },
+
+    /* Styles applied to the root element if `variant="outlined"`. */
+    outlined: {
+      padding: '5px 15px',
+      border: "1px solid ".concat(theme.palette.type === 'light' ? 'rgba(0, 0, 0, 0.23)' : 'rgba(255, 255, 255, 0.23)'),
+      '&$disabled': {
+        border: "1px solid ".concat(theme.palette.action.disabledBackground)
+      }
+    },
+
+    /* Styles applied to the root element if `variant="outlined"` and `color="primary"`. */
+    outlinedPrimary: {
+      color: theme.palette.primary.main,
+      border: "1px solid ".concat(Object(colorManipulator["b" /* fade */])(theme.palette.primary.main, 0.5)),
+      '&:hover': {
+        border: "1px solid ".concat(theme.palette.primary.main),
+        backgroundColor: Object(colorManipulator["b" /* fade */])(theme.palette.primary.main, theme.palette.action.hoverOpacity),
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        }
+      }
+    },
+
+    /* Styles applied to the root element if `variant="outlined"` and `color="secondary"`. */
+    outlinedSecondary: {
+      color: theme.palette.secondary.main,
+      border: "1px solid ".concat(Object(colorManipulator["b" /* fade */])(theme.palette.secondary.main, 0.5)),
+      '&:hover': {
+        border: "1px solid ".concat(theme.palette.secondary.main),
+        backgroundColor: Object(colorManipulator["b" /* fade */])(theme.palette.secondary.main, theme.palette.action.hoverOpacity),
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        }
+      },
+      '&$disabled': {
+        border: "1px solid ".concat(theme.palette.action.disabled)
+      }
+    },
+
+    /* Styles applied to the root element if `variant="contained"`. */
+    contained: {
+      color: theme.palette.getContrastText(theme.palette.grey[300]),
+      backgroundColor: theme.palette.grey[300],
+      boxShadow: theme.shadows[2],
+      '&:hover': {
+        backgroundColor: theme.palette.grey.A100,
+        boxShadow: theme.shadows[4],
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          boxShadow: theme.shadows[2],
+          backgroundColor: theme.palette.grey[300]
+        },
+        '&$disabled': {
+          backgroundColor: theme.palette.action.disabledBackground
+        }
+      },
+      '&$focusVisible': {
+        boxShadow: theme.shadows[6]
+      },
+      '&:active': {
+        boxShadow: theme.shadows[8]
+      },
+      '&$disabled': {
+        color: theme.palette.action.disabled,
+        boxShadow: theme.shadows[0],
+        backgroundColor: theme.palette.action.disabledBackground
+      }
+    },
+
+    /* Styles applied to the root element if `variant="contained"` and `color="primary"`. */
+    containedPrimary: {
+      color: theme.palette.primary.contrastText,
+      backgroundColor: theme.palette.primary.main,
+      '&:hover': {
+        backgroundColor: theme.palette.primary.dark,
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: theme.palette.primary.main
+        }
+      }
+    },
+
+    /* Styles applied to the root element if `variant="contained"` and `color="secondary"`. */
+    containedSecondary: {
+      color: theme.palette.secondary.contrastText,
+      backgroundColor: theme.palette.secondary.main,
+      '&:hover': {
+        backgroundColor: theme.palette.secondary.dark,
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: theme.palette.secondary.main
+        }
+      }
+    },
+
+    /* Styles applied to the root element if `disableElevation={true}`. */
+    disableElevation: {
+      boxShadow: 'none',
+      '&:hover': {
+        boxShadow: 'none'
+      },
+      '&$focusVisible': {
+        boxShadow: 'none'
+      },
+      '&:active': {
+        boxShadow: 'none'
+      },
+      '&$disabled': {
+        boxShadow: 'none'
+      }
+    },
+
+    /* Pseudo-class applied to the ButtonBase root element if the button is keyboard focused. */
+    focusVisible: {},
+
+    /* Pseudo-class applied to the root element if `disabled={true}`. */
+    disabled: {},
+
+    /* Styles applied to the root element if `color="inherit"`. */
+    colorInherit: {
+      color: 'inherit',
+      borderColor: 'currentColor'
+    },
+
+    /* Styles applied to the root element if `size="small"` and `variant="text"`. */
+    textSizeSmall: {
+      padding: '4px 5px',
+      fontSize: theme.typography.pxToRem(13)
+    },
+
+    /* Styles applied to the root element if `size="large"` and `variant="text"`. */
+    textSizeLarge: {
+      padding: '8px 11px',
+      fontSize: theme.typography.pxToRem(15)
+    },
+
+    /* Styles applied to the root element if `size="small"` and `variant="outlined"`. */
+    outlinedSizeSmall: {
+      padding: '3px 9px',
+      fontSize: theme.typography.pxToRem(13)
+    },
+
+    /* Styles applied to the root element if `size="large"` and `variant="outlined"`. */
+    outlinedSizeLarge: {
+      padding: '7px 21px',
+      fontSize: theme.typography.pxToRem(15)
+    },
+
+    /* Styles applied to the root element if `size="small"` and `variant="contained"`. */
+    containedSizeSmall: {
+      padding: '4px 10px',
+      fontSize: theme.typography.pxToRem(13)
+    },
+
+    /* Styles applied to the root element if `size="large"` and `variant="contained"`. */
+    containedSizeLarge: {
+      padding: '8px 22px',
+      fontSize: theme.typography.pxToRem(15)
+    },
+
+    /* Styles applied to the root element if `size="small"`. */
+    sizeSmall: {},
+
+    /* Styles applied to the root element if `size="large"`. */
+    sizeLarge: {},
+
+    /* Styles applied to the root element if `fullWidth={true}`. */
+    fullWidth: {
+      width: '100%'
+    },
+
+    /* Styles applied to the startIcon element if supplied. */
+    startIcon: {
+      display: 'inherit',
+      marginRight: 8,
+      marginLeft: -4,
+      '&$iconSizeSmall': {
+        marginLeft: -2
+      }
+    },
+
+    /* Styles applied to the endIcon element if supplied. */
+    endIcon: {
+      display: 'inherit',
+      marginRight: -4,
+      marginLeft: 8,
+      '&$iconSizeSmall': {
+        marginRight: -2
+      }
+    },
+
+    /* Styles applied to the icon element if supplied and `size="small"`. */
+    iconSizeSmall: {
+      '& > *:first-child': {
+        fontSize: 18
+      }
+    },
+
+    /* Styles applied to the icon element if supplied and `size="medium"`. */
+    iconSizeMedium: {
+      '& > *:first-child': {
+        fontSize: 20
+      }
+    },
+
+    /* Styles applied to the icon element if supplied and `size="large"`. */
+    iconSizeLarge: {
+      '& > *:first-child': {
+        fontSize: 22
+      }
+    }
+  };
+};
+var Button_Button = /*#__PURE__*/react["forwardRef"](function Button(props, ref) {
+  var children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$color = props.color,
+      color = _props$color === void 0 ? 'default' : _props$color,
+      _props$component = props.component,
+      component = _props$component === void 0 ? 'button' : _props$component,
+      _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
+      _props$disableElevati = props.disableElevation,
+      disableElevation = _props$disableElevati === void 0 ? false : _props$disableElevati,
+      _props$disableFocusRi = props.disableFocusRipple,
+      disableFocusRipple = _props$disableFocusRi === void 0 ? false : _props$disableFocusRi,
+      endIconProp = props.endIcon,
+      focusVisibleClassName = props.focusVisibleClassName,
+      _props$fullWidth = props.fullWidth,
+      fullWidth = _props$fullWidth === void 0 ? false : _props$fullWidth,
+      _props$size = props.size,
+      size = _props$size === void 0 ? 'medium' : _props$size,
+      startIconProp = props.startIcon,
+      _props$type = props.type,
+      type = _props$type === void 0 ? 'button' : _props$type,
+      _props$variant = props.variant,
+      variant = _props$variant === void 0 ? 'text' : _props$variant,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["children", "classes", "className", "color", "component", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"]);
+
+  var startIcon = startIconProp && /*#__PURE__*/react["createElement"]("span", {
+    className: Object(clsx_m["a" /* default */])(classes.startIcon, classes["iconSize".concat(Object(capitalize["a" /* default */])(size))])
+  }, startIconProp);
+  var endIcon = endIconProp && /*#__PURE__*/react["createElement"]("span", {
+    className: Object(clsx_m["a" /* default */])(classes.endIcon, classes["iconSize".concat(Object(capitalize["a" /* default */])(size))])
+  }, endIconProp);
+  return /*#__PURE__*/react["createElement"](esm_ButtonBase_ButtonBase, Object(esm_extends["a" /* default */])({
+    className: Object(clsx_m["a" /* default */])(classes.root, classes[variant], className, color === 'inherit' ? classes.colorInherit : color !== 'default' && classes["".concat(variant).concat(Object(capitalize["a" /* default */])(color))], size !== 'medium' && [classes["".concat(variant, "Size").concat(Object(capitalize["a" /* default */])(size))], classes["size".concat(Object(capitalize["a" /* default */])(size))]], disableElevation && classes.disableElevation, disabled && classes.disabled, fullWidth && classes.fullWidth),
+    component: component,
+    disabled: disabled,
+    focusRipple: !disableFocusRipple,
+    focusVisibleClassName: Object(clsx_m["a" /* default */])(classes.focusVisible, focusVisibleClassName),
+    ref: ref,
+    type: type
+  }, other), /*#__PURE__*/react["createElement"]("span", {
+    className: classes.label
+  }, startIcon, children, endIcon));
+});
+ false ? undefined : void 0;
+/* harmony default export */ var esm_Button_Button = (Object(withStyles["a" /* default */])(Button_styles, {
+  name: 'MuiButton'
+})(Button_Button));
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
+var slicedToArray = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/useTheme/useTheme.js + 1 modules
+var useTheme = __webpack_require__(99);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/useTheme.js
+
+
+
+function useTheme_useTheme() {
+  var theme = Object(useTheme["a" /* default */])() || defaultTheme["a" /* default */];
+
+  if (false) {}
+
+  return theme;
+}
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/unstable_useId.js
+var unstable_useId = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/useControlled.js
+var useControlled = __webpack_require__(40);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/createSvgIcon.js + 1 modules
+var createSvgIcon = __webpack_require__(44);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/lab/esm/internal/svg-icons/Star.js
+
+
+/**
+ * @ignore - internal component.
+ */
+
+/* harmony default export */ var Star = (Object(createSvgIcon["a" /* default */])( /*#__PURE__*/react["createElement"]("path", {
+  d: "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+}), 'Star'));
+// CONCATENATED MODULE: ./node_modules/@material-ui/lab/esm/Rating/Rating.js
+
+
+
+
+
+
+
+
+
+
+
+function clamp(value, min, max) {
+  if (value < min) {
+    return min;
+  }
+
+  if (value > max) {
+    return max;
+  }
+
+  return value;
+}
+
+function getDecimalPrecision(num) {
+  var decimalPart = num.toString().split('.')[1];
+  return decimalPart ? decimalPart.length : 0;
+}
+
+function roundValueToPrecision(value, precision) {
+  if (value == null) {
+    return value;
+  }
+
+  var nearest = Math.round(value / precision) * precision;
+  return Number(nearest.toFixed(getDecimalPrecision(precision)));
+}
+
+var Rating_styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      display: 'inline-flex',
+      position: 'relative',
+      fontSize: theme.typography.pxToRem(24),
+      color: '#ffb400',
+      cursor: 'pointer',
+      textAlign: 'left',
+      WebkitTapHighlightColor: 'transparent',
+      '&$disabled': {
+        opacity: 0.5,
+        pointerEvents: 'none'
+      },
+      '&$focusVisible $iconActive': {
+        outline: '1px solid #999'
+      }
+    },
+
+    /* Styles applied to the root element if `size="small"`. */
+    sizeSmall: {
+      fontSize: theme.typography.pxToRem(18)
+    },
+
+    /* Styles applied to the root element if `size="large"`. */
+    sizeLarge: {
+      fontSize: theme.typography.pxToRem(30)
+    },
+
+    /* Styles applied to the root element if `readOnly={true}`. */
+    readOnly: {
+      pointerEvents: 'none'
+    },
+
+    /* Pseudo-class applied to the root element if `disabled={true}`. */
+    disabled: {},
+
+    /* Pseudo-class applied to the root element if keyboard focused. */
+    focusVisible: {},
+
+    /* Visually hide an element. */
+    visuallyhidden: {
+      border: 0,
+      clip: 'rect(0 0 0 0)',
+      height: 1,
+      margin: -1,
+      color: '#000',
+      overflow: 'hidden',
+      padding: 0,
+      position: 'absolute',
+      top: 20,
+      width: 1
+    },
+
+    /* Styles applied to the pristine label. */
+    pristine: {
+      'input:focus + &': {
+        top: 0,
+        bottom: 0,
+        position: 'absolute',
+        outline: '1px solid #999',
+        width: '100%'
+      }
+    },
+
+    /* Styles applied to the label elements. */
+    label: {
+      cursor: 'inherit'
+    },
+
+    /* Styles applied to the icon wrapping elements. */
+    icon: {
+      display: 'flex',
+      transition: theme.transitions.create('transform', {
+        duration: theme.transitions.duration.shortest
+      }),
+      // Fix mouseLeave issue.
+      // https://github.com/facebook/react/issues/4492
+      pointerEvents: 'none'
+    },
+
+    /* Styles applied to the icon wrapping elements when empty. */
+    iconEmpty: {
+      color: theme.palette.action.disabled
+    },
+
+    /* Styles applied to the icon wrapping elements when filled. */
+    iconFilled: {},
+
+    /* Styles applied to the icon wrapping elements when hover. */
+    iconHover: {},
+
+    /* Styles applied to the icon wrapping elements when focus. */
+    iconFocus: {},
+
+    /* Styles applied to the icon wrapping elements when active. */
+    iconActive: {
+      transform: 'scale(1.2)'
+    },
+
+    /* Styles applied to the icon wrapping elements when decimals are necessary. */
+    decimal: {
+      position: 'relative'
+    }
+  };
+};
+
+function IconContainer(props) {
+  var value = props.value,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["value"]);
+
+  return /*#__PURE__*/react["createElement"]("span", other);
+}
+
+ false ? undefined : void 0;
+var defaultIcon = /*#__PURE__*/react["createElement"](Star, {
+  fontSize: "inherit"
+});
+
+function defaultLabelText(value) {
+  return "".concat(value, " Star").concat(value !== 1 ? 's' : '');
+}
+
+var Rating_Rating = /*#__PURE__*/react["forwardRef"](function Rating(props, ref) {
+  var classes = props.classes,
+      className = props.className,
+      _props$defaultValue = props.defaultValue,
+      defaultValue = _props$defaultValue === void 0 ? null : _props$defaultValue,
+      _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
+      emptyIcon = props.emptyIcon,
+      _props$emptyLabelText = props.emptyLabelText,
+      emptyLabelText = _props$emptyLabelText === void 0 ? 'Empty' : _props$emptyLabelText,
+      _props$getLabelText = props.getLabelText,
+      getLabelText = _props$getLabelText === void 0 ? defaultLabelText : _props$getLabelText,
+      _props$icon = props.icon,
+      icon = _props$icon === void 0 ? defaultIcon : _props$icon,
+      _props$IconContainerC = props.IconContainerComponent,
+      IconContainerComponent = _props$IconContainerC === void 0 ? IconContainer : _props$IconContainerC,
+      _props$max = props.max,
+      max = _props$max === void 0 ? 5 : _props$max,
+      nameProp = props.name,
+      onChange = props.onChange,
+      onChangeActive = props.onChangeActive,
+      onMouseLeave = props.onMouseLeave,
+      onMouseMove = props.onMouseMove,
+      _props$precision = props.precision,
+      precision = _props$precision === void 0 ? 1 : _props$precision,
+      _props$readOnly = props.readOnly,
+      readOnly = _props$readOnly === void 0 ? false : _props$readOnly,
+      _props$size = props.size,
+      size = _props$size === void 0 ? 'medium' : _props$size,
+      valueProp = props.value,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["classes", "className", "defaultValue", "disabled", "emptyIcon", "emptyLabelText", "getLabelText", "icon", "IconContainerComponent", "max", "name", "onChange", "onChangeActive", "onMouseLeave", "onMouseMove", "precision", "readOnly", "size", "value"]);
+
+  var name = Object(unstable_useId["a" /* default */])(nameProp);
+
+  var _useControlled = Object(useControlled["a" /* default */])({
+    controlled: valueProp,
+    default: defaultValue,
+    name: 'Rating'
+  }),
+      _useControlled2 = Object(slicedToArray["a" /* default */])(_useControlled, 2),
+      valueDerived = _useControlled2[0],
+      setValueState = _useControlled2[1];
+
+  var valueRounded = roundValueToPrecision(valueDerived, precision);
+  var theme = useTheme_useTheme();
+
+  var _React$useState = react["useState"]({
+    hover: -1,
+    focus: -1
+  }),
+      _React$useState$ = _React$useState[0],
+      hover = _React$useState$.hover,
+      focus = _React$useState$.focus,
+      setState = _React$useState[1];
+
+  var value = valueRounded;
+
+  if (hover !== -1) {
+    value = hover;
+  }
+
+  if (focus !== -1) {
+    value = focus;
+  }
+
+  var _useIsFocusVisible = Object(useIsFocusVisible["a" /* default */])(),
+      isFocusVisible = _useIsFocusVisible.isFocusVisible,
+      onBlurVisible = _useIsFocusVisible.onBlurVisible,
+      focusVisibleRef = _useIsFocusVisible.ref;
+
+  var _React$useState2 = react["useState"](false),
+      focusVisible = _React$useState2[0],
+      setFocusVisible = _React$useState2[1];
+
+  var rootRef = react["useRef"]();
+  var handleFocusRef = Object(useForkRef["a" /* default */])(focusVisibleRef, rootRef);
+  var handleRef = Object(useForkRef["a" /* default */])(handleFocusRef, ref);
+
+  var handleMouseMove = function handleMouseMove(event) {
+    if (onMouseMove) {
+      onMouseMove(event);
+    }
+
+    var rootNode = rootRef.current;
+
+    var _rootNode$getBounding = rootNode.getBoundingClientRect(),
+        right = _rootNode$getBounding.right,
+        left = _rootNode$getBounding.left;
+
+    var _rootNode$firstChild$ = rootNode.firstChild.getBoundingClientRect(),
+        width = _rootNode$firstChild$.width;
+
+    var percent;
+
+    if (theme.direction === 'rtl') {
+      percent = (right - event.clientX) / (width * max);
+    } else {
+      percent = (event.clientX - left) / (width * max);
+    }
+
+    var newHover = roundValueToPrecision(max * percent + precision / 2, precision);
+    newHover = clamp(newHover, precision, max);
+    setState(function (prev) {
+      return prev.hover === newHover && prev.focus === newHover ? prev : {
+        hover: newHover,
+        focus: newHover
+      };
+    });
+    setFocusVisible(false);
+
+    if (onChangeActive && hover !== newHover) {
+      onChangeActive(event, newHover);
+    }
+  };
+
+  var handleMouseLeave = function handleMouseLeave(event) {
+    if (onMouseLeave) {
+      onMouseLeave(event);
+    }
+
+    var newHover = -1;
+    setState({
+      hover: newHover,
+      focus: newHover
+    });
+
+    if (onChangeActive && hover !== newHover) {
+      onChangeActive(event, newHover);
+    }
+  };
+
+  var handleChange = function handleChange(event) {
+    var newValue = parseFloat(event.target.value);
+    setValueState(newValue);
+
+    if (onChange) {
+      onChange(event, newValue);
+    }
+  };
+
+  var handleClear = function handleClear(event) {
+    // Ignore keyboard events
+    // https://github.com/facebook/react/issues/7407
+    if (event.clientX === 0 && event.clientY === 0) {
+      return;
+    }
+
+    setState({
+      hover: -1,
+      focus: -1
+    });
+    setValueState(null);
+
+    if (onChange && parseFloat(event.target.value) === valueRounded) {
+      onChange(event, null);
+    }
+  };
+
+  var handleFocus = function handleFocus(event) {
+    if (isFocusVisible(event)) {
+      setFocusVisible(true);
+    }
+
+    var newFocus = parseFloat(event.target.value);
+    setState(function (prev) {
+      return {
+        hover: prev.hover,
+        focus: newFocus
+      };
+    });
+
+    if (onChangeActive && focus !== newFocus) {
+      onChangeActive(event, newFocus);
+    }
+  };
+
+  var handleBlur = function handleBlur(event) {
+    if (hover !== -1) {
+      return;
+    }
+
+    if (focusVisible !== false) {
+      setFocusVisible(false);
+      onBlurVisible();
+    }
+
+    var newFocus = -1;
+    setState(function (prev) {
+      return {
+        hover: prev.hover,
+        focus: newFocus
+      };
+    });
+
+    if (onChangeActive && focus !== newFocus) {
+      onChangeActive(event, newFocus);
+    }
+  };
+
+  var item = function item(state, labelProps) {
+    var id = "".concat(name, "-").concat(String(state.value).replace('.', '-'));
+    var container = /*#__PURE__*/react["createElement"](IconContainerComponent, {
+      value: state.value,
+      className: Object(clsx_m["a" /* default */])(classes.icon, state.filled ? classes.iconFilled : classes.iconEmpty, state.hover && classes.iconHover, state.focus && classes.iconFocus, state.active && classes.iconActive)
+    }, emptyIcon && !state.filled ? emptyIcon : icon);
+
+    if (readOnly) {
+      return /*#__PURE__*/react["createElement"]("span", Object(esm_extends["a" /* default */])({
+        key: state.value
+      }, labelProps), container);
+    }
+
+    return /*#__PURE__*/react["createElement"](react["Fragment"], {
+      key: state.value
+    }, /*#__PURE__*/react["createElement"]("label", Object(esm_extends["a" /* default */])({
+      className: classes.label,
+      htmlFor: id
+    }, labelProps), container, /*#__PURE__*/react["createElement"]("span", {
+      className: classes.visuallyhidden
+    }, getLabelText(state.value))), /*#__PURE__*/react["createElement"]("input", {
+      onFocus: handleFocus,
+      onBlur: handleBlur,
+      onChange: handleChange,
+      onClick: handleClear,
+      disabled: disabled,
+      value: state.value,
+      id: id,
+      type: "radio",
+      name: name,
+      checked: state.checked,
+      className: classes.visuallyhidden
+    }));
+  };
+
+  return /*#__PURE__*/react["createElement"]("span", Object(esm_extends["a" /* default */])({
+    ref: handleRef,
+    onMouseMove: handleMouseMove,
+    onMouseLeave: handleMouseLeave,
+    className: Object(clsx_m["a" /* default */])(classes.root, className, size !== 'medium' && classes["size".concat(Object(capitalize["a" /* default */])(size))], disabled && classes.disabled, focusVisible && classes.focusVisible, readOnly && classes.readOnly),
+    role: readOnly ? 'img' : null,
+    "aria-label": readOnly ? getLabelText(value) : null
+  }, other), Array.from(new Array(max)).map(function (_, index) {
+    var itemValue = index + 1;
+
+    if (precision < 1) {
+      var items = Array.from(new Array(1 / precision));
+      return /*#__PURE__*/react["createElement"]("span", {
+        key: itemValue,
+        className: Object(clsx_m["a" /* default */])(classes.decimal, itemValue === Math.ceil(value) && (hover !== -1 || focus !== -1) && classes.iconActive)
+      }, items.map(function ($, indexDecimal) {
+        var itemDecimalValue = roundValueToPrecision(itemValue - 1 + (indexDecimal + 1) * precision, precision);
+        return item({
+          value: itemDecimalValue,
+          filled: itemDecimalValue <= value,
+          hover: itemDecimalValue <= hover,
+          focus: itemDecimalValue <= focus,
+          checked: itemDecimalValue === valueRounded
+        }, {
+          style: items.length - 1 === indexDecimal ? {} : {
+            width: itemDecimalValue === value ? "".concat((indexDecimal + 1) * precision * 100, "%") : '0%',
+            overflow: 'hidden',
+            zIndex: 1,
+            position: 'absolute'
+          }
+        });
+      }));
+    }
+
+    return item({
+      value: itemValue,
+      active: itemValue === value && (hover !== -1 || focus !== -1),
+      filled: itemValue <= value,
+      hover: itemValue <= hover,
+      focus: itemValue <= focus,
+      checked: itemValue === valueRounded
+    });
+  }), !readOnly && !disabled && valueRounded == null && /*#__PURE__*/react["createElement"](react["Fragment"], null, /*#__PURE__*/react["createElement"]("input", {
+    value: "",
+    id: "".concat(name, "-empty"),
+    type: "radio",
+    name: name,
+    defaultChecked: true,
+    className: classes.visuallyhidden
+  }), /*#__PURE__*/react["createElement"]("label", {
+    className: classes.pristine,
+    htmlFor: "".concat(name, "-empty")
+  }, /*#__PURE__*/react["createElement"]("span", {
+    className: classes.visuallyhidden
+  }, emptyLabelText))));
+});
+ false ? undefined : void 0;
+/* harmony default export */ var esm_Rating_Rating = (Object(withStyles["a" /* default */])(Rating_styles, {
+  name: 'MuiRating'
+})(Rating_Rating));
+// EXTERNAL MODULE: ./dev/components/App/pages/settings/settings.scss
+var settings_settings = __webpack_require__(67);
+
+// CONCATENATED MODULE: ./node_modules/react-redux/es/components/Context.js
+
+var ReactReduxContext = /*#__PURE__*/react_default.a.createContext(null);
+
+if (false) {}
+
+/* harmony default export */ var components_Context = (ReactReduxContext);
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/batch.js
+// Default to a dummy "batch" implementation that just runs the callback
+function defaultNoopBatch(callback) {
+  callback();
+}
+
+var batch_batch = defaultNoopBatch; // Allow injecting another batching function later
+
+var setBatch = function setBatch(newBatch) {
+  return batch_batch = newBatch;
+}; // Supply a getter just to skip dealing with ESM bindings
+
+var getBatch = function getBatch() {
+  return batch_batch;
+};
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/Subscription.js
+ // encapsulates the subscription logic for connecting a component to the redux store, as
+// well as nesting subscriptions of descendant components, so that we can ensure the
+// ancestor components re-render before descendants
+
+var nullListeners = {
+  notify: function notify() {}
+};
+
+function createListenerCollection() {
+  var batch = getBatch();
+  var first = null;
+  var last = null;
+  return {
+    clear: function clear() {
+      first = null;
+      last = null;
+    },
+    notify: function notify() {
+      batch(function () {
+        var listener = first;
+
+        while (listener) {
+          listener.callback();
+          listener = listener.next;
+        }
+      });
+    },
+    get: function get() {
+      var listeners = [];
+      var listener = first;
+
+      while (listener) {
+        listeners.push(listener);
+        listener = listener.next;
+      }
+
+      return listeners;
+    },
+    subscribe: function subscribe(callback) {
+      var isSubscribed = true;
+      var listener = last = {
+        callback: callback,
+        next: null,
+        prev: last
+      };
+
+      if (listener.prev) {
+        listener.prev.next = listener;
+      } else {
+        first = listener;
+      }
+
+      return function unsubscribe() {
+        if (!isSubscribed || first === null) return;
+        isSubscribed = false;
+
+        if (listener.next) {
+          listener.next.prev = listener.prev;
+        } else {
+          last = listener.prev;
+        }
+
+        if (listener.prev) {
+          listener.prev.next = listener.next;
+        } else {
+          first = listener.next;
+        }
+      };
+    }
+  };
+}
+
+var Subscription = /*#__PURE__*/function () {
+  function Subscription(store, parentSub) {
+    this.store = store;
+    this.parentSub = parentSub;
+    this.unsubscribe = null;
+    this.listeners = nullListeners;
+    this.handleChangeWrapper = this.handleChangeWrapper.bind(this);
+  }
+
+  var _proto = Subscription.prototype;
+
+  _proto.addNestedSub = function addNestedSub(listener) {
+    this.trySubscribe();
+    return this.listeners.subscribe(listener);
+  };
+
+  _proto.notifyNestedSubs = function notifyNestedSubs() {
+    this.listeners.notify();
+  };
+
+  _proto.handleChangeWrapper = function handleChangeWrapper() {
+    if (this.onStateChange) {
+      this.onStateChange();
+    }
+  };
+
+  _proto.isSubscribed = function isSubscribed() {
+    return Boolean(this.unsubscribe);
+  };
+
+  _proto.trySubscribe = function trySubscribe() {
+    if (!this.unsubscribe) {
+      this.unsubscribe = this.parentSub ? this.parentSub.addNestedSub(this.handleChangeWrapper) : this.store.subscribe(this.handleChangeWrapper);
+      this.listeners = createListenerCollection();
+    }
+  };
+
+  _proto.tryUnsubscribe = function tryUnsubscribe() {
+    if (this.unsubscribe) {
+      this.unsubscribe();
+      this.unsubscribe = null;
+      this.listeners.clear();
+      this.listeners = nullListeners;
+    }
+  };
+
+  return Subscription;
+}();
+
+
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js
+ // React currently throws a warning when using useLayoutEffect on the server.
+// To get around it, we can conditionally useEffect on the server (no-op) and
+// useLayoutEffect in the browser. We need useLayoutEffect to ensure the store
+// subscription callback always has the selector from the latest render commit
+// available, otherwise a store update may happen between render and the effect,
+// which may cause missed updates; we also must ensure the store subscription
+// is created synchronously, otherwise a store update may occur before the
+// subscription is created and an inconsistent state may be observed
+
+var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? react["useLayoutEffect"] : react["useEffect"];
+// CONCATENATED MODULE: ./node_modules/react-redux/es/components/Provider.js
+
+
+
+
+
+
+function Provider(_ref) {
+  var store = _ref.store,
+      context = _ref.context,
+      children = _ref.children;
+  var contextValue = Object(react["useMemo"])(function () {
+    var subscription = new Subscription(store);
+    subscription.onStateChange = subscription.notifyNestedSubs;
+    return {
+      store: store,
+      subscription: subscription
+    };
+  }, [store]);
+  var previousState = Object(react["useMemo"])(function () {
+    return store.getState();
+  }, [store]);
+  useIsomorphicLayoutEffect(function () {
+    var subscription = contextValue.subscription;
+    subscription.trySubscribe();
+
+    if (previousState !== store.getState()) {
+      subscription.notifyNestedSubs();
+    }
+
+    return function () {
+      subscription.tryUnsubscribe();
+      subscription.onStateChange = null;
+    };
+  }, [contextValue, previousState]);
+  var Context = context || ReactReduxContext;
+  return /*#__PURE__*/react_default.a.createElement(Context.Provider, {
+    value: contextValue
+  }, children);
+}
+
+if (false) {}
+
+/* harmony default export */ var components_Provider = (Provider);
+// EXTERNAL MODULE: ./node_modules/react-redux/node_modules/react-is/index.js
+var react_is = __webpack_require__(45);
+
+// CONCATENATED MODULE: ./node_modules/react-redux/es/components/connectAdvanced.js
+
+
+
+
+
+
+
+ // Define some constant arrays just to avoid re-creating these
+
+var EMPTY_ARRAY = [];
+var NO_SUBSCRIPTION_ARRAY = [null, null];
+
+var stringifyComponent = function stringifyComponent(Comp) {
+  try {
+    return JSON.stringify(Comp);
+  } catch (err) {
+    return String(Comp);
+  }
+};
+
+function storeStateUpdatesReducer(state, action) {
+  var updateCount = state[1];
+  return [action.payload, updateCount + 1];
+}
+
+function useIsomorphicLayoutEffectWithArgs(effectFunc, effectArgs, dependencies) {
+  useIsomorphicLayoutEffect(function () {
+    return effectFunc.apply(void 0, effectArgs);
+  }, dependencies);
+}
+
+function captureWrapperProps(lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs) {
+  // We want to capture the wrapper props and child props we used for later comparisons
+  lastWrapperProps.current = wrapperProps;
+  lastChildProps.current = actualChildProps;
+  renderIsScheduled.current = false; // If the render was from a store update, clear out that reference and cascade the subscriber update
+
+  if (childPropsFromStoreUpdate.current) {
+    childPropsFromStoreUpdate.current = null;
+    notifyNestedSubs();
+  }
+}
+
+function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch) {
+  // If we're not subscribed to the store, nothing to do here
+  if (!shouldHandleStateChanges) return; // Capture values for checking if and when this component unmounts
+
+  var didUnsubscribe = false;
+  var lastThrownError = null; // We'll run this callback every time a store subscription update propagates to this component
+
+  var checkForUpdates = function checkForUpdates() {
+    if (didUnsubscribe) {
+      // Don't run stale listeners.
+      // Redux doesn't guarantee unsubscriptions happen until next dispatch.
+      return;
+    }
+
+    var latestStoreState = store.getState();
+    var newChildProps, error;
+
+    try {
+      // Actually run the selector with the most recent store state and wrapper props
+      // to determine what the child props should be
+      newChildProps = childPropsSelector(latestStoreState, lastWrapperProps.current);
+    } catch (e) {
+      error = e;
+      lastThrownError = e;
+    }
+
+    if (!error) {
+      lastThrownError = null;
+    } // If the child props haven't changed, nothing to do here - cascade the subscription update
+
+
+    if (newChildProps === lastChildProps.current) {
+      if (!renderIsScheduled.current) {
+        notifyNestedSubs();
+      }
+    } else {
+      // Save references to the new child props.  Note that we track the "child props from store update"
+      // as a ref instead of a useState/useReducer because we need a way to determine if that value has
+      // been processed.  If this went into useState/useReducer, we couldn't clear out the value without
+      // forcing another re-render, which we don't want.
+      lastChildProps.current = newChildProps;
+      childPropsFromStoreUpdate.current = newChildProps;
+      renderIsScheduled.current = true; // If the child props _did_ change (or we caught an error), this wrapper component needs to re-render
+
+      forceComponentUpdateDispatch({
+        type: 'STORE_UPDATED',
+        payload: {
+          error: error
+        }
+      });
+    }
+  }; // Actually subscribe to the nearest connected ancestor (or store)
+
+
+  subscription.onStateChange = checkForUpdates;
+  subscription.trySubscribe(); // Pull data from the store after first render in case the store has
+  // changed since we began.
+
+  checkForUpdates();
+
+  var unsubscribeWrapper = function unsubscribeWrapper() {
+    didUnsubscribe = true;
+    subscription.tryUnsubscribe();
+    subscription.onStateChange = null;
+
+    if (lastThrownError) {
+      // It's possible that we caught an error due to a bad mapState function, but the
+      // parent re-rendered without this component and we're about to unmount.
+      // This shouldn't happen as long as we do top-down subscriptions correctly, but
+      // if we ever do those wrong, this throw will surface the error in our tests.
+      // In that case, throw the error from here so it doesn't get lost.
+      throw lastThrownError;
+    }
+  };
+
+  return unsubscribeWrapper;
+}
+
+var initStateUpdates = function initStateUpdates() {
+  return [null, 0];
+};
+
+function connectAdvanced(
+/*
+  selectorFactory is a func that is responsible for returning the selector function used to
+  compute new props from state, props, and dispatch. For example:
+      export default connectAdvanced((dispatch, options) => (state, props) => ({
+      thing: state.things[props.thingId],
+      saveThing: fields => dispatch(actionCreators.saveThing(props.thingId, fields)),
+    }))(YourComponent)
+    Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
+  outside of their selector as an optimization. Options passed to connectAdvanced are passed to
+  the selectorFactory, along with displayName and WrappedComponent, as the second argument.
+    Note that selectorFactory is responsible for all caching/memoization of inbound and outbound
+  props. Do not use connectAdvanced directly without memoizing results between calls to your
+  selector, otherwise the Connect component will re-render on every state or props change.
+*/
+selectorFactory, // options object:
+_ref) {
+  if (_ref === void 0) {
+    _ref = {};
+  }
+
+  var _ref2 = _ref,
+      _ref2$getDisplayName = _ref2.getDisplayName,
+      getDisplayName = _ref2$getDisplayName === void 0 ? function (name) {
+    return "ConnectAdvanced(" + name + ")";
+  } : _ref2$getDisplayName,
+      _ref2$methodName = _ref2.methodName,
+      methodName = _ref2$methodName === void 0 ? 'connectAdvanced' : _ref2$methodName,
+      _ref2$renderCountProp = _ref2.renderCountProp,
+      renderCountProp = _ref2$renderCountProp === void 0 ? undefined : _ref2$renderCountProp,
+      _ref2$shouldHandleSta = _ref2.shouldHandleStateChanges,
+      shouldHandleStateChanges = _ref2$shouldHandleSta === void 0 ? true : _ref2$shouldHandleSta,
+      _ref2$storeKey = _ref2.storeKey,
+      storeKey = _ref2$storeKey === void 0 ? 'store' : _ref2$storeKey,
+      _ref2$withRef = _ref2.withRef,
+      withRef = _ref2$withRef === void 0 ? false : _ref2$withRef,
+      _ref2$forwardRef = _ref2.forwardRef,
+      forwardRef = _ref2$forwardRef === void 0 ? false : _ref2$forwardRef,
+      _ref2$context = _ref2.context,
+      context = _ref2$context === void 0 ? ReactReduxContext : _ref2$context,
+      connectOptions = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref2, ["getDisplayName", "methodName", "renderCountProp", "shouldHandleStateChanges", "storeKey", "withRef", "forwardRef", "context"]);
+
+  if (false) { var customStoreWarningMessage; }
+
+  var Context = context;
+  return function wrapWithConnect(WrappedComponent) {
+    if (false) {}
+
+    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
+    var displayName = getDisplayName(wrappedComponentName);
+
+    var selectorFactoryOptions = Object(esm_extends["a" /* default */])({}, connectOptions, {
+      getDisplayName: getDisplayName,
+      methodName: methodName,
+      renderCountProp: renderCountProp,
+      shouldHandleStateChanges: shouldHandleStateChanges,
+      storeKey: storeKey,
+      displayName: displayName,
+      wrappedComponentName: wrappedComponentName,
+      WrappedComponent: WrappedComponent
+    });
+
+    var pure = connectOptions.pure;
+
+    function createChildSelector(store) {
+      return selectorFactory(store.dispatch, selectorFactoryOptions);
+    } // If we aren't running in "pure" mode, we don't want to memoize values.
+    // To avoid conditionally calling hooks, we fall back to a tiny wrapper
+    // that just executes the given callback immediately.
+
+
+    var usePureOnlyMemo = pure ? react["useMemo"] : function (callback) {
+      return callback();
+    };
+
+    function ConnectFunction(props) {
+      var _useMemo = Object(react["useMemo"])(function () {
+        // Distinguish between actual "data" props that were passed to the wrapper component,
+        // and values needed to control behavior (forwarded refs, alternate context instances).
+        // To maintain the wrapperProps object reference, memoize this destructuring.
+        var reactReduxForwardedRef = props.reactReduxForwardedRef,
+            wrapperProps = Object(objectWithoutPropertiesLoose["a" /* default */])(props, ["reactReduxForwardedRef"]);
+
+        return [props.context, reactReduxForwardedRef, wrapperProps];
+      }, [props]),
+          propsContext = _useMemo[0],
+          reactReduxForwardedRef = _useMemo[1],
+          wrapperProps = _useMemo[2];
+
+      var ContextToUse = Object(react["useMemo"])(function () {
+        // Users may optionally pass in a custom context instance to use instead of our ReactReduxContext.
+        // Memoize the check that determines which context instance we should use.
+        return propsContext && propsContext.Consumer && Object(react_is["isContextConsumer"])( /*#__PURE__*/react_default.a.createElement(propsContext.Consumer, null)) ? propsContext : Context;
+      }, [propsContext, Context]); // Retrieve the store and ancestor subscription via context, if available
+
+      var contextValue = Object(react["useContext"])(ContextToUse); // The store _must_ exist as either a prop or in context.
+      // We'll check to see if it _looks_ like a Redux store first.
+      // This allows us to pass through a `store` prop that is just a plain value.
+
+      var didStoreComeFromProps = Boolean(props.store) && Boolean(props.store.getState) && Boolean(props.store.dispatch);
+      var didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
+
+      if (false) {} // Based on the previous check, one of these must be true
+
+
+      var store = didStoreComeFromProps ? props.store : contextValue.store;
+      var childPropsSelector = Object(react["useMemo"])(function () {
+        // The child props selector needs the store reference as an input.
+        // Re-create this selector whenever the store changes.
+        return createChildSelector(store);
+      }, [store]);
+
+      var _useMemo2 = Object(react["useMemo"])(function () {
+        if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY; // This Subscription's source should match where store came from: props vs. context. A component
+        // connected to the store via props shouldn't use subscription from context, or vice versa.
+
+        var subscription = new Subscription(store, didStoreComeFromProps ? null : contextValue.subscription); // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
+        // the middle of the notification loop, where `subscription` will then be null. This can
+        // probably be avoided if Subscription's listeners logic is changed to not call listeners
+        // that have been unsubscribed in the  middle of the notification loop.
+
+        var notifyNestedSubs = subscription.notifyNestedSubs.bind(subscription);
+        return [subscription, notifyNestedSubs];
+      }, [store, didStoreComeFromProps, contextValue]),
+          subscription = _useMemo2[0],
+          notifyNestedSubs = _useMemo2[1]; // Determine what {store, subscription} value should be put into nested context, if necessary,
+      // and memoize that value to avoid unnecessary context updates.
+
+
+      var overriddenContextValue = Object(react["useMemo"])(function () {
+        if (didStoreComeFromProps) {
+          // This component is directly subscribed to a store from props.
+          // We don't want descendants reading from this store - pass down whatever
+          // the existing context value is from the nearest connected ancestor.
+          return contextValue;
+        } // Otherwise, put this component's subscription instance into context, so that
+        // connected descendants won't update until after this component is done
+
+
+        return Object(esm_extends["a" /* default */])({}, contextValue, {
+          subscription: subscription
+        });
+      }, [didStoreComeFromProps, contextValue, subscription]); // We need to force this wrapper component to re-render whenever a Redux store update
+      // causes a change to the calculated child component props (or we caught an error in mapState)
+
+      var _useReducer = Object(react["useReducer"])(storeStateUpdatesReducer, EMPTY_ARRAY, initStateUpdates),
+          _useReducer$ = _useReducer[0],
+          previousStateUpdateResult = _useReducer$[0],
+          forceComponentUpdateDispatch = _useReducer[1]; // Propagate any mapState/mapDispatch errors upwards
+
+
+      if (previousStateUpdateResult && previousStateUpdateResult.error) {
+        throw previousStateUpdateResult.error;
+      } // Set up refs to coordinate values between the subscription effect and the render logic
+
+
+      var lastChildProps = Object(react["useRef"])();
+      var lastWrapperProps = Object(react["useRef"])(wrapperProps);
+      var childPropsFromStoreUpdate = Object(react["useRef"])();
+      var renderIsScheduled = Object(react["useRef"])(false);
+      var actualChildProps = usePureOnlyMemo(function () {
+        // Tricky logic here:
+        // - This render may have been triggered by a Redux store update that produced new child props
+        // - However, we may have gotten new wrapper props after that
+        // If we have new child props, and the same wrapper props, we know we should use the new child props as-is.
+        // But, if we have new wrapper props, those might change the child props, so we have to recalculate things.
+        // So, we'll use the child props from store update only if the wrapper props are the same as last time.
+        if (childPropsFromStoreUpdate.current && wrapperProps === lastWrapperProps.current) {
+          return childPropsFromStoreUpdate.current;
+        } // TODO We're reading the store directly in render() here. Bad idea?
+        // This will likely cause Bad Things (TM) to happen in Concurrent Mode.
+        // Note that we do this because on renders _not_ caused by store updates, we need the latest store state
+        // to determine what the child props should be.
+
+
+        return childPropsSelector(store.getState(), wrapperProps);
+      }, [store, previousStateUpdateResult, wrapperProps]); // We need this to execute synchronously every time we re-render. However, React warns
+      // about useLayoutEffect in SSR, so we try to detect environment and fall back to
+      // just useEffect instead to avoid the warning, since neither will run anyway.
+
+      useIsomorphicLayoutEffectWithArgs(captureWrapperProps, [lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs]); // Our re-subscribe logic only runs when the store/subscription setup changes
+
+      useIsomorphicLayoutEffectWithArgs(subscribeUpdates, [shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch], [store, subscription, childPropsSelector]); // Now that all that's done, we can finally try to actually render the child component.
+      // We memoize the elements for the rendered child component as an optimization.
+
+      var renderedWrappedComponent = Object(react["useMemo"])(function () {
+        return /*#__PURE__*/react_default.a.createElement(WrappedComponent, Object(esm_extends["a" /* default */])({}, actualChildProps, {
+          ref: reactReduxForwardedRef
+        }));
+      }, [reactReduxForwardedRef, WrappedComponent, actualChildProps]); // If React sees the exact same element reference as last time, it bails out of re-rendering
+      // that child, same as if it was wrapped in React.memo() or returned false from shouldComponentUpdate.
+
+      var renderedChild = Object(react["useMemo"])(function () {
+        if (shouldHandleStateChanges) {
+          // If this component is subscribed to store updates, we need to pass its own
+          // subscription instance down to our descendants. That means rendering the same
+          // Context instance, and putting a different value into the context.
+          return /*#__PURE__*/react_default.a.createElement(ContextToUse.Provider, {
+            value: overriddenContextValue
+          }, renderedWrappedComponent);
+        }
+
+        return renderedWrappedComponent;
+      }, [ContextToUse, renderedWrappedComponent, overriddenContextValue]);
+      return renderedChild;
+    } // If we're in "pure" mode, ensure our wrapper component only re-renders when incoming props have changed.
+
+
+    var Connect = pure ? react_default.a.memo(ConnectFunction) : ConnectFunction;
+    Connect.WrappedComponent = WrappedComponent;
+    Connect.displayName = displayName;
+
+    if (forwardRef) {
+      var forwarded = react_default.a.forwardRef(function forwardConnectRef(props, ref) {
+        return /*#__PURE__*/react_default.a.createElement(Connect, Object(esm_extends["a" /* default */])({}, props, {
+          reactReduxForwardedRef: ref
+        }));
+      });
+      forwarded.displayName = displayName;
+      forwarded.WrappedComponent = WrappedComponent;
+      return hoist_non_react_statics_cjs_default()(forwarded, WrappedComponent);
+    }
+
+    return hoist_non_react_statics_cjs_default()(Connect, WrappedComponent);
+  };
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/shallowEqual.js
+function is(x, y) {
+  if (x === y) {
+    return x !== 0 || y !== 0 || 1 / x === 1 / y;
+  } else {
+    return x !== x && y !== y;
+  }
+}
+
+function shallowEqual(objA, objB) {
+  if (is(objA, objB)) return true;
+
+  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
+    return false;
+  }
+
+  var keysA = Object.keys(objA);
+  var keysB = Object.keys(objB);
+  if (keysA.length !== keysB.length) return false;
+
+  for (var i = 0; i < keysA.length; i++) {
+    if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
+      return false;
+    }
+  }
+
+  return true;
+}
+// EXTERNAL MODULE: ./node_modules/symbol-observable/es/index.js
+var es = __webpack_require__(36);
+
+// CONCATENATED MODULE: ./node_modules/redux/es/redux.js
+
+
+/**
+ * These are private action types reserved by Redux.
+ * For any unknown actions, you must return the current state.
+ * If the current state is undefined, you must return the initial state.
+ * Do not reference these action types directly in your code.
+ */
+var randomString = function randomString() {
+  return Math.random().toString(36).substring(7).split('').join('.');
+};
+
+var ActionTypes = {
+  INIT: "@@redux/INIT" + randomString(),
+  REPLACE: "@@redux/REPLACE" + randomString(),
+  PROBE_UNKNOWN_ACTION: function PROBE_UNKNOWN_ACTION() {
+    return "@@redux/PROBE_UNKNOWN_ACTION" + randomString();
+  }
+};
+
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+function isPlainObject(obj) {
+  if (typeof obj !== 'object' || obj === null) return false;
+  var proto = obj;
+
+  while (Object.getPrototypeOf(proto) !== null) {
+    proto = Object.getPrototypeOf(proto);
+  }
+
+  return Object.getPrototypeOf(obj) === proto;
+}
+
+/**
+ * Creates a Redux store that holds the state tree.
+ * The only way to change the data in the store is to call `dispatch()` on it.
+ *
+ * There should only be a single store in your app. To specify how different
+ * parts of the state tree respond to actions, you may combine several reducers
+ * into a single reducer function by using `combineReducers`.
+ *
+ * @param {Function} reducer A function that returns the next state tree, given
+ * the current state tree and the action to handle.
+ *
+ * @param {any} [preloadedState] The initial state. You may optionally specify it
+ * to hydrate the state from the server in universal apps, or to restore a
+ * previously serialized user session.
+ * If you use `combineReducers` to produce the root reducer function, this must be
+ * an object with the same shape as `combineReducers` keys.
+ *
+ * @param {Function} [enhancer] The store enhancer. You may optionally specify it
+ * to enhance the store with third-party capabilities such as middleware,
+ * time travel, persistence, etc. The only store enhancer that ships with Redux
+ * is `applyMiddleware()`.
+ *
+ * @returns {Store} A Redux store that lets you read the state, dispatch actions
+ * and subscribe to changes.
+ */
+
+function createStore(reducer, preloadedState, enhancer) {
+  var _ref2;
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'function' || typeof enhancer === 'function' && typeof arguments[3] === 'function') {
+    throw new Error('It looks like you are passing several store enhancers to ' + 'createStore(). This is not supported. Instead, compose them ' + 'together to a single function.');
+  }
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
+    enhancer = preloadedState;
+    preloadedState = undefined;
+  }
+
+  if (typeof enhancer !== 'undefined') {
+    if (typeof enhancer !== 'function') {
+      throw new Error('Expected the enhancer to be a function.');
+    }
+
+    return enhancer(createStore)(reducer, preloadedState);
+  }
+
+  if (typeof reducer !== 'function') {
+    throw new Error('Expected the reducer to be a function.');
+  }
+
+  var currentReducer = reducer;
+  var currentState = preloadedState;
+  var currentListeners = [];
+  var nextListeners = currentListeners;
+  var isDispatching = false;
+  /**
+   * This makes a shallow copy of currentListeners so we can use
+   * nextListeners as a temporary list while dispatching.
+   *
+   * This prevents any bugs around consumers calling
+   * subscribe/unsubscribe in the middle of a dispatch.
+   */
+
+  function ensureCanMutateNextListeners() {
+    if (nextListeners === currentListeners) {
+      nextListeners = currentListeners.slice();
+    }
+  }
+  /**
+   * Reads the state tree managed by the store.
+   *
+   * @returns {any} The current state tree of your application.
+   */
+
+
+  function getState() {
+    if (isDispatching) {
+      throw new Error('You may not call store.getState() while the reducer is executing. ' + 'The reducer has already received the state as an argument. ' + 'Pass it down from the top reducer instead of reading it from the store.');
+    }
+
+    return currentState;
+  }
+  /**
+   * Adds a change listener. It will be called any time an action is dispatched,
+   * and some part of the state tree may potentially have changed. You may then
+   * call `getState()` to read the current state tree inside the callback.
+   *
+   * You may call `dispatch()` from a change listener, with the following
+   * caveats:
+   *
+   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
+   * If you subscribe or unsubscribe while the listeners are being invoked, this
+   * will not have any effect on the `dispatch()` that is currently in progress.
+   * However, the next `dispatch()` call, whether nested or not, will use a more
+   * recent snapshot of the subscription list.
+   *
+   * 2. The listener should not expect to see all state changes, as the state
+   * might have been updated multiple times during a nested `dispatch()` before
+   * the listener is called. It is, however, guaranteed that all subscribers
+   * registered before the `dispatch()` started will be called with the latest
+   * state by the time it exits.
+   *
+   * @param {Function} listener A callback to be invoked on every dispatch.
+   * @returns {Function} A function to remove this change listener.
+   */
+
+
+  function subscribe(listener) {
+    if (typeof listener !== 'function') {
+      throw new Error('Expected the listener to be a function.');
+    }
+
+    if (isDispatching) {
+      throw new Error('You may not call store.subscribe() while the reducer is executing. ' + 'If you would like to be notified after the store has been updated, subscribe from a ' + 'component and invoke store.getState() in the callback to access the latest state. ' + 'See https://redux.js.org/api-reference/store#subscribelistener for more details.');
+    }
+
+    var isSubscribed = true;
+    ensureCanMutateNextListeners();
+    nextListeners.push(listener);
+    return function unsubscribe() {
+      if (!isSubscribed) {
+        return;
+      }
+
+      if (isDispatching) {
+        throw new Error('You may not unsubscribe from a store listener while the reducer is executing. ' + 'See https://redux.js.org/api-reference/store#subscribelistener for more details.');
+      }
+
+      isSubscribed = false;
+      ensureCanMutateNextListeners();
+      var index = nextListeners.indexOf(listener);
+      nextListeners.splice(index, 1);
+      currentListeners = null;
+    };
+  }
+  /**
+   * Dispatches an action. It is the only way to trigger a state change.
+   *
+   * The `reducer` function, used to create the store, will be called with the
+   * current state tree and the given `action`. Its return value will
+   * be considered the **next** state of the tree, and the change listeners
+   * will be notified.
+   *
+   * The base implementation only supports plain object actions. If you want to
+   * dispatch a Promise, an Observable, a thunk, or something else, you need to
+   * wrap your store creating function into the corresponding middleware. For
+   * example, see the documentation for the `redux-thunk` package. Even the
+   * middleware will eventually dispatch plain object actions using this method.
+   *
+   * @param {Object} action A plain object representing “what changed”. It is
+   * a good idea to keep actions serializable so you can record and replay user
+   * sessions, or use the time travelling `redux-devtools`. An action must have
+   * a `type` property which may not be `undefined`. It is a good idea to use
+   * string constants for action types.
+   *
+   * @returns {Object} For convenience, the same action object you dispatched.
+   *
+   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
+   * return something else (for example, a Promise you can await).
+   */
+
+
+  function dispatch(action) {
+    if (!isPlainObject(action)) {
+      throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');
+    }
+
+    if (typeof action.type === 'undefined') {
+      throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
+    }
+
+    if (isDispatching) {
+      throw new Error('Reducers may not dispatch actions.');
+    }
+
+    try {
+      isDispatching = true;
+      currentState = currentReducer(currentState, action);
+    } finally {
+      isDispatching = false;
+    }
+
+    var listeners = currentListeners = nextListeners;
+
+    for (var i = 0; i < listeners.length; i++) {
+      var listener = listeners[i];
+      listener();
+    }
+
+    return action;
+  }
+  /**
+   * Replaces the reducer currently used by the store to calculate the state.
+   *
+   * You might need this if your app implements code splitting and you want to
+   * load some of the reducers dynamically. You might also need this if you
+   * implement a hot reloading mechanism for Redux.
+   *
+   * @param {Function} nextReducer The reducer for the store to use instead.
+   * @returns {void}
+   */
+
+
+  function replaceReducer(nextReducer) {
+    if (typeof nextReducer !== 'function') {
+      throw new Error('Expected the nextReducer to be a function.');
+    }
+
+    currentReducer = nextReducer; // This action has a similiar effect to ActionTypes.INIT.
+    // Any reducers that existed in both the new and old rootReducer
+    // will receive the previous state. This effectively populates
+    // the new state tree with any relevant data from the old one.
+
+    dispatch({
+      type: ActionTypes.REPLACE
+    });
+  }
+  /**
+   * Interoperability point for observable/reactive libraries.
+   * @returns {observable} A minimal observable of state changes.
+   * For more information, see the observable proposal:
+   * https://github.com/tc39/proposal-observable
+   */
+
+
+  function observable() {
+    var _ref;
+
+    var outerSubscribe = subscribe;
+    return _ref = {
+      /**
+       * The minimal observable subscription method.
+       * @param {Object} observer Any object that can be used as an observer.
+       * The observer object should have a `next` method.
+       * @returns {subscription} An object with an `unsubscribe` method that can
+       * be used to unsubscribe the observable from the store, and prevent further
+       * emission of values from the observable.
+       */
+      subscribe: function subscribe(observer) {
+        if (typeof observer !== 'object' || observer === null) {
+          throw new TypeError('Expected the observer to be an object.');
+        }
+
+        function observeState() {
+          if (observer.next) {
+            observer.next(getState());
+          }
+        }
+
+        observeState();
+        var unsubscribe = outerSubscribe(observeState);
+        return {
+          unsubscribe: unsubscribe
+        };
+      }
+    }, _ref[es["a" /* default */]] = function () {
+      return this;
+    }, _ref;
+  } // When a store is created, an "INIT" action is dispatched so that every
+  // reducer returns their initial state. This effectively populates
+  // the initial state tree.
+
+
+  dispatch({
+    type: ActionTypes.INIT
+  });
+  return _ref2 = {
+    dispatch: dispatch,
+    subscribe: subscribe,
+    getState: getState,
+    replaceReducer: replaceReducer
+  }, _ref2[es["a" /* default */]] = observable, _ref2;
+}
+
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+
+
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+  } catch (e) {} // eslint-disable-line no-empty
+
+}
+
+function getUndefinedStateErrorMessage(key, action) {
+  var actionType = action && action.type;
+  var actionDescription = actionType && "action \"" + String(actionType) + "\"" || 'an action';
+  return "Given " + actionDescription + ", reducer \"" + key + "\" returned undefined. " + "To ignore an action, you must explicitly return the previous state. " + "If you want this reducer to hold no value, you can return null instead of undefined.";
+}
+
+function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
+  var reducerKeys = Object.keys(reducers);
+  var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
+
+  if (reducerKeys.length === 0) {
+    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
+  }
+
+  if (!isPlainObject(inputState)) {
+    return "The " + argumentName + " has unexpected type of \"" + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + "\". Expected argument to be an object with the following " + ("keys: \"" + reducerKeys.join('", "') + "\"");
+  }
+
+  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
+    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
+  });
+  unexpectedKeys.forEach(function (key) {
+    unexpectedKeyCache[key] = true;
+  });
+  if (action && action.type === ActionTypes.REPLACE) return;
+
+  if (unexpectedKeys.length > 0) {
+    return "Unexpected " + (unexpectedKeys.length > 1 ? 'keys' : 'key') + " " + ("\"" + unexpectedKeys.join('", "') + "\" found in " + argumentName + ". ") + "Expected to find one of the known reducer keys instead: " + ("\"" + reducerKeys.join('", "') + "\". Unexpected keys will be ignored.");
+  }
+}
+
+function assertReducerShape(reducers) {
+  Object.keys(reducers).forEach(function (key) {
+    var reducer = reducers[key];
+    var initialState = reducer(undefined, {
+      type: ActionTypes.INIT
+    });
+
+    if (typeof initialState === 'undefined') {
+      throw new Error("Reducer \"" + key + "\" returned undefined during initialization. " + "If the state passed to the reducer is undefined, you must " + "explicitly return the initial state. The initial state may " + "not be undefined. If you don't want to set a value for this reducer, " + "you can use null instead of undefined.");
+    }
+
+    if (typeof reducer(undefined, {
+      type: ActionTypes.PROBE_UNKNOWN_ACTION()
+    }) === 'undefined') {
+      throw new Error("Reducer \"" + key + "\" returned undefined when probed with a random type. " + ("Don't try to handle " + ActionTypes.INIT + " or other actions in \"redux/*\" ") + "namespace. They are considered private. Instead, you must return the " + "current state for any unknown actions, unless it is undefined, " + "in which case you must return the initial state, regardless of the " + "action type. The initial state may not be undefined, but can be null.");
+    }
+  });
+}
+/**
+ * Turns an object whose values are different reducer functions, into a single
+ * reducer function. It will call every child reducer, and gather their results
+ * into a single state object, whose keys correspond to the keys of the passed
+ * reducer functions.
+ *
+ * @param {Object} reducers An object whose values correspond to different
+ * reducer functions that need to be combined into one. One handy way to obtain
+ * it is to use ES6 `import * as reducers` syntax. The reducers may never return
+ * undefined for any action. Instead, they should return their initial state
+ * if the state passed to them was undefined, and the current state for any
+ * unrecognized action.
+ *
+ * @returns {Function} A reducer function that invokes every reducer inside the
+ * passed object, and builds a state object with the same shape.
+ */
+
+
+function combineReducers(reducers) {
+  var reducerKeys = Object.keys(reducers);
+  var finalReducers = {};
+
+  for (var i = 0; i < reducerKeys.length; i++) {
+    var key = reducerKeys[i];
+
+    if (false) {}
+
+    if (typeof reducers[key] === 'function') {
+      finalReducers[key] = reducers[key];
+    }
+  }
+
+  var finalReducerKeys = Object.keys(finalReducers); // This is used to make sure we don't warn about the same
+  // keys multiple times.
+
+  var unexpectedKeyCache;
+
+  if (false) {}
+
+  var shapeAssertionError;
+
+  try {
+    assertReducerShape(finalReducers);
+  } catch (e) {
+    shapeAssertionError = e;
+  }
+
+  return function combination(state, action) {
+    if (state === void 0) {
+      state = {};
+    }
+
+    if (shapeAssertionError) {
+      throw shapeAssertionError;
+    }
+
+    if (false) { var warningMessage; }
+
+    var hasChanged = false;
+    var nextState = {};
+
+    for (var _i = 0; _i < finalReducerKeys.length; _i++) {
+      var _key = finalReducerKeys[_i];
+      var reducer = finalReducers[_key];
+      var previousStateForKey = state[_key];
+      var nextStateForKey = reducer(previousStateForKey, action);
+
+      if (typeof nextStateForKey === 'undefined') {
+        var errorMessage = getUndefinedStateErrorMessage(_key, action);
+        throw new Error(errorMessage);
+      }
+
+      nextState[_key] = nextStateForKey;
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
+    }
+
+    hasChanged = hasChanged || finalReducerKeys.length !== Object.keys(state).length;
+    return hasChanged ? nextState : state;
+  };
+}
+
+function bindActionCreator(actionCreator, dispatch) {
+  return function () {
+    return dispatch(actionCreator.apply(this, arguments));
+  };
+}
+/**
+ * Turns an object whose values are action creators, into an object with the
+ * same keys, but with every function wrapped into a `dispatch` call so they
+ * may be invoked directly. This is just a convenience method, as you can call
+ * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
+ *
+ * For convenience, you can also pass an action creator as the first argument,
+ * and get a dispatch wrapped function in return.
+ *
+ * @param {Function|Object} actionCreators An object whose values are action
+ * creator functions. One handy way to obtain it is to use ES6 `import * as`
+ * syntax. You may also pass a single function.
+ *
+ * @param {Function} dispatch The `dispatch` function available on your Redux
+ * store.
+ *
+ * @returns {Function|Object} The object mimicking the original object, but with
+ * every action creator wrapped into the `dispatch` call. If you passed a
+ * function as `actionCreators`, the return value will also be a single
+ * function.
+ */
+
+
+function bindActionCreators(actionCreators, dispatch) {
+  if (typeof actionCreators === 'function') {
+    return bindActionCreator(actionCreators, dispatch);
+  }
+
+  if (typeof actionCreators !== 'object' || actionCreators === null) {
+    throw new Error("bindActionCreators expected an object or a function, instead received " + (actionCreators === null ? 'null' : typeof actionCreators) + ". " + "Did you write \"import ActionCreators from\" instead of \"import * as ActionCreators from\"?");
+  }
+
+  var boundActionCreators = {};
+
+  for (var key in actionCreators) {
+    var actionCreator = actionCreators[key];
+
+    if (typeof actionCreator === 'function') {
+      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
+    }
+  }
+
+  return boundActionCreators;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
 
   if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+    keys.push.apply(keys, Object.getOwnPropertySymbols(object));
+  }
 
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
+  if (enumerableOnly) keys = keys.filter(function (sym) {
+    return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+  });
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(source, true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(source).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
     }
   }
 
   return target;
 }
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
 
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
+/**
+ * Composes single-argument functions from right to left. The rightmost
+ * function can take multiple arguments as it provides the signature for
+ * the resulting composite function.
+ *
+ * @param {...Function} funcs The functions to compose.
+ * @returns {Function} A function obtained by composing the argument functions
+ * from right to left. For example, compose(f, g, h) is identical to doing
+ * (...args) => f(g(h(...args))).
+ */
+function redux_compose() {
+  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  if (funcs.length === 0) {
+    return function (arg) {
+      return arg;
+    };
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0];
+  }
+
+  return funcs.reduce(function (a, b) {
+    return function () {
+      return a(b.apply(void 0, arguments));
+    };
+  });
+}
+
+/**
+ * Creates a store enhancer that applies middleware to the dispatch method
+ * of the Redux store. This is handy for a variety of tasks, such as expressing
+ * asynchronous actions in a concise manner, or logging every action payload.
+ *
+ * See `redux-thunk` package as an example of the Redux middleware.
+ *
+ * Because middleware is potentially asynchronous, this should be the first
+ * store enhancer in the composition chain.
+ *
+ * Note that each middleware will be given the `dispatch` and `getState` functions
+ * as named arguments.
+ *
+ * @param {...Function} middlewares The middleware chain to be applied.
+ * @returns {Function} A store enhancer applying the middleware.
+ */
+
+function applyMiddleware() {
+  for (var _len = arguments.length, middlewares = new Array(_len), _key = 0; _key < _len; _key++) {
+    middlewares[_key] = arguments[_key];
+  }
+
+  return function (createStore) {
+    return function () {
+      var store = createStore.apply(void 0, arguments);
+
+      var _dispatch = function dispatch() {
+        throw new Error('Dispatching while constructing your middleware is not allowed. ' + 'Other middleware would not be applied to this dispatch.');
+      };
+
+      var middlewareAPI = {
+        getState: store.getState,
+        dispatch: function dispatch() {
+          return _dispatch.apply(void 0, arguments);
+        }
+      };
+      var chain = middlewares.map(function (middleware) {
+        return middleware(middlewareAPI);
+      });
+      _dispatch = redux_compose.apply(void 0, chain)(store.dispatch);
+      return _objectSpread2({}, store, {
+        dispatch: _dispatch
+      });
+    };
+  };
+}
+
+/*
+ * This is a dummy function to check if the function name has been altered by minification.
+ * If the function has been minified and NODE_ENV !== 'production', warn the user.
+ */
+
+function isCrushed() {}
+
+if (false) {}
+
+
+
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/isPlainObject.js
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+function isPlainObject_isPlainObject(obj) {
+  if (typeof obj !== 'object' || obj === null) return false;
+  var proto = Object.getPrototypeOf(obj);
+  if (proto === null) return true;
+  var baseProto = proto;
+
+  while (Object.getPrototypeOf(baseProto) !== null) {
+    baseProto = Object.getPrototypeOf(baseProto);
+  }
+
+  return proto === baseProto;
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/warning.js
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning_warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+
+
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+    /* eslint-disable no-empty */
+  } catch (e) {}
+  /* eslint-enable no-empty */
+
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/verifyPlainObject.js
+
+
+function verifyPlainObject(value, displayName, methodName) {
+  if (!isPlainObject_isPlainObject(value)) {
+    warning_warning(methodName + "() in " + displayName + " must return a plain object. Instead received " + value + ".");
+  }
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/wrapMapToProps.js
+
+function wrapMapToPropsConstant(getConstant) {
+  return function initConstantSelector(dispatch, options) {
+    var constant = getConstant(dispatch, options);
+
+    function constantSelector() {
+      return constant;
+    }
+
+    constantSelector.dependsOnOwnProps = false;
+    return constantSelector;
+  };
+} // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
+// to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
+// whether mapToProps needs to be invoked when props have changed.
+//
+// A length of one signals that mapToProps does not depend on props from the parent component.
+// A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
+// therefore not reporting its length accurately..
+
+function getDependsOnOwnProps(mapToProps) {
+  return mapToProps.dependsOnOwnProps !== null && mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
+} // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
+// this function wraps mapToProps in a proxy function which does several things:
+//
+//  * Detects whether the mapToProps function being called depends on props, which
+//    is used by selectorFactory to decide if it should reinvoke on props changes.
+//
+//  * On first call, handles mapToProps if returns another function, and treats that
+//    new function as the true mapToProps for subsequent calls.
+//
+//  * On first call, verifies the first result is a plain object, in order to warn
+//    the developer that their mapToProps function is not returning a valid result.
+//
+
+function wrapMapToPropsFunc(mapToProps, methodName) {
+  return function initProxySelector(dispatch, _ref) {
+    var displayName = _ref.displayName;
+
+    var proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
+      return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch);
+    }; // allow detectFactoryAndVerify to get ownProps
+
+
+    proxy.dependsOnOwnProps = true;
+
+    proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
+      proxy.mapToProps = mapToProps;
+      proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
+      var props = proxy(stateOrDispatch, ownProps);
+
+      if (typeof props === 'function') {
+        proxy.mapToProps = props;
+        proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
+        props = proxy(stateOrDispatch, ownProps);
+      }
+
+      if (false) {}
+      return props;
+    };
+
+    return proxy;
+  };
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mapDispatchToProps.js
+
+
+function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
+  return typeof mapDispatchToProps === 'function' ? wrapMapToPropsFunc(mapDispatchToProps, 'mapDispatchToProps') : undefined;
+}
+function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
+  return !mapDispatchToProps ? wrapMapToPropsConstant(function (dispatch) {
+    return {
+      dispatch: dispatch
+    };
+  }) : undefined;
+}
+function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
+  return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? wrapMapToPropsConstant(function (dispatch) {
+    return bindActionCreators(mapDispatchToProps, dispatch);
+  }) : undefined;
+}
+/* harmony default export */ var connect_mapDispatchToProps = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mapStateToProps.js
+
+function whenMapStateToPropsIsFunction(mapStateToProps) {
+  return typeof mapStateToProps === 'function' ? wrapMapToPropsFunc(mapStateToProps, 'mapStateToProps') : undefined;
+}
+function whenMapStateToPropsIsMissing(mapStateToProps) {
+  return !mapStateToProps ? wrapMapToPropsConstant(function () {
+    return {};
+  }) : undefined;
+}
+/* harmony default export */ var connect_mapStateToProps = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mergeProps.js
+
+
+function defaultMergeProps(stateProps, dispatchProps, ownProps) {
+  return Object(esm_extends["a" /* default */])({}, ownProps, stateProps, dispatchProps);
+}
+function wrapMergePropsFunc(mergeProps) {
+  return function initMergePropsProxy(dispatch, _ref) {
+    var displayName = _ref.displayName,
+        pure = _ref.pure,
+        areMergedPropsEqual = _ref.areMergedPropsEqual;
+    var hasRunOnce = false;
+    var mergedProps;
+    return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
+      var nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+
+      if (hasRunOnce) {
+        if (!pure || !areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
+      } else {
+        hasRunOnce = true;
+        mergedProps = nextMergedProps;
+        if (false) {}
+      }
+
+      return mergedProps;
+    };
+  };
+}
+function whenMergePropsIsFunction(mergeProps) {
+  return typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : undefined;
+}
+function whenMergePropsIsOmitted(mergeProps) {
+  return !mergeProps ? function () {
+    return defaultMergeProps;
+  } : undefined;
+}
+/* harmony default export */ var connect_mergeProps = ([whenMergePropsIsFunction, whenMergePropsIsOmitted]);
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/verifySubselectors.js
+
+
+function verify(selector, methodName, displayName) {
+  if (!selector) {
+    throw new Error("Unexpected value for " + methodName + " in " + displayName + ".");
+  } else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
+    if (!Object.prototype.hasOwnProperty.call(selector, 'dependsOnOwnProps')) {
+      warning_warning("The selector for " + methodName + " of " + displayName + " did not specify a value for dependsOnOwnProps.");
+    }
+  }
+}
+
+function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, displayName) {
+  verify(mapStateToProps, 'mapStateToProps', displayName);
+  verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
+  verify(mergeProps, 'mergeProps', displayName);
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/selectorFactory.js
+
+
+function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
+  return function impureFinalPropsSelector(state, ownProps) {
+    return mergeProps(mapStateToProps(state, ownProps), mapDispatchToProps(dispatch, ownProps), ownProps);
+  };
+}
+function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, _ref) {
+  var areStatesEqual = _ref.areStatesEqual,
+      areOwnPropsEqual = _ref.areOwnPropsEqual,
+      areStatePropsEqual = _ref.areStatePropsEqual;
+  var hasRunAtLeastOnce = false;
+  var state;
+  var ownProps;
+  var stateProps;
+  var dispatchProps;
+  var mergedProps;
+
+  function handleFirstCall(firstState, firstOwnProps) {
+    state = firstState;
+    ownProps = firstOwnProps;
+    stateProps = mapStateToProps(state, ownProps);
+    dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    hasRunAtLeastOnce = true;
+    return mergedProps;
+  }
+
+  function handleNewPropsAndNewState() {
+    stateProps = mapStateToProps(state, ownProps);
+    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleNewProps() {
+    if (mapStateToProps.dependsOnOwnProps) stateProps = mapStateToProps(state, ownProps);
+    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleNewState() {
+    var nextStateProps = mapStateToProps(state, ownProps);
+    var statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
+    stateProps = nextStateProps;
+    if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleSubsequentCalls(nextState, nextOwnProps) {
+    var propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
+    var stateChanged = !areStatesEqual(nextState, state);
+    state = nextState;
+    ownProps = nextOwnProps;
+    if (propsChanged && stateChanged) return handleNewPropsAndNewState();
+    if (propsChanged) return handleNewProps();
+    if (stateChanged) return handleNewState();
+    return mergedProps;
+  }
+
+  return function pureFinalPropsSelector(nextState, nextOwnProps) {
+    return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
+  };
+} // TODO: Add more comments
+// If pure is true, the selector returned by selectorFactory will memoize its results,
+// allowing connectAdvanced's shouldComponentUpdate to return false if final
+// props have not changed. If false, the selector will always return a new
+// object and shouldComponentUpdate will always return true.
+
+function finalPropsSelectorFactory(dispatch, _ref2) {
+  var initMapStateToProps = _ref2.initMapStateToProps,
+      initMapDispatchToProps = _ref2.initMapDispatchToProps,
+      initMergeProps = _ref2.initMergeProps,
+      options = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref2, ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"]);
+
+  var mapStateToProps = initMapStateToProps(dispatch, options);
+  var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
+  var mergeProps = initMergeProps(dispatch, options);
+
+  if (false) {}
+
+  var selectorFactory = options.pure ? pureFinalPropsSelectorFactory : impureFinalPropsSelectorFactory;
+  return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/connect.js
+
+
+
+
+
+
+
+
+/*
+  connect is a facade over connectAdvanced. It turns its args into a compatible
+  selectorFactory, which has the signature:
+
+    (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
+  
+  connect passes its args to connectAdvanced as options, which will in turn pass them to
+  selectorFactory each time a Connect component instance is instantiated or hot reloaded.
+
+  selectorFactory returns a final props selector from its mapStateToProps,
+  mapStateToPropsFactories, mapDispatchToProps, mapDispatchToPropsFactories, mergeProps,
+  mergePropsFactories, and pure args.
+
+  The resulting final props selector is called by the Connect component instance whenever
+  it receives new props or store state.
+ */
+
+function match(arg, factories, name) {
+  for (var i = factories.length - 1; i >= 0; i--) {
+    var result = factories[i](arg);
+    if (result) return result;
+  }
+
+  return function (dispatch, options) {
+    throw new Error("Invalid value of type " + typeof arg + " for " + name + " argument when connecting component " + options.wrappedComponentName + ".");
+  };
+}
+
+function strictEqual(a, b) {
+  return a === b;
+} // createConnect with default args builds the 'official' connect behavior. Calling it with
+// different options opens up some testing and extensibility scenarios
+
+
+function createConnect(_temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      _ref$connectHOC = _ref.connectHOC,
+      connectHOC = _ref$connectHOC === void 0 ? connectAdvanced : _ref$connectHOC,
+      _ref$mapStateToPropsF = _ref.mapStateToPropsFactories,
+      mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? connect_mapStateToProps : _ref$mapStateToPropsF,
+      _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories,
+      mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? connect_mapDispatchToProps : _ref$mapDispatchToPro,
+      _ref$mergePropsFactor = _ref.mergePropsFactories,
+      mergePropsFactories = _ref$mergePropsFactor === void 0 ? connect_mergeProps : _ref$mergePropsFactor,
+      _ref$selectorFactory = _ref.selectorFactory,
+      selectorFactory = _ref$selectorFactory === void 0 ? finalPropsSelectorFactory : _ref$selectorFactory;
+
+  return function connect(mapStateToProps, mapDispatchToProps, mergeProps, _ref2) {
+    if (_ref2 === void 0) {
+      _ref2 = {};
+    }
+
+    var _ref3 = _ref2,
+        _ref3$pure = _ref3.pure,
+        pure = _ref3$pure === void 0 ? true : _ref3$pure,
+        _ref3$areStatesEqual = _ref3.areStatesEqual,
+        areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual,
+        _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual,
+        areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? shallowEqual : _ref3$areOwnPropsEqua,
+        _ref3$areStatePropsEq = _ref3.areStatePropsEqual,
+        areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? shallowEqual : _ref3$areStatePropsEq,
+        _ref3$areMergedPropsE = _ref3.areMergedPropsEqual,
+        areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? shallowEqual : _ref3$areMergedPropsE,
+        extraOptions = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref3, ["pure", "areStatesEqual", "areOwnPropsEqual", "areStatePropsEqual", "areMergedPropsEqual"]);
+
+    var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
+    var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
+    var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
+    return connectHOC(selectorFactory, Object(esm_extends["a" /* default */])({
+      // used in error messages
+      methodName: 'connect',
+      // used to compute Connect's displayName from the wrapped component's displayName.
+      getDisplayName: function getDisplayName(name) {
+        return "Connect(" + name + ")";
+      },
+      // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
+      shouldHandleStateChanges: Boolean(mapStateToProps),
+      // passed through to selectorFactory
+      initMapStateToProps: initMapStateToProps,
+      initMapDispatchToProps: initMapDispatchToProps,
+      initMergeProps: initMergeProps,
+      pure: pure,
+      areStatesEqual: areStatesEqual,
+      areOwnPropsEqual: areOwnPropsEqual,
+      areStatePropsEqual: areStatePropsEqual,
+      areMergedPropsEqual: areMergedPropsEqual
+    }, extraOptions));
+  };
+}
+/* harmony default export */ var connect_connect = (/*#__PURE__*/createConnect());
+// CONCATENATED MODULE: ./node_modules/react-redux/es/hooks/useReduxContext.js
+
+
+/**
+ * A hook to access the value of the `ReactReduxContext`. This is a low-level
+ * hook that you should usually not need to call directly.
+ *
+ * @returns {any} the value of the `ReactReduxContext`
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useReduxContext } from 'react-redux'
+ *
+ * export const CounterComponent = ({ value }) => {
+ *   const { store } = useReduxContext()
+ *   return <div>{store.getState()}</div>
+ * }
+ */
+
+function useReduxContext_useReduxContext() {
+  var contextValue = Object(react["useContext"])(ReactReduxContext);
+
+  if (false) {}
+
+  return contextValue;
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/hooks/useStore.js
+
+
+
+/**
+ * Hook factory, which creates a `useStore` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useStore` hook bound to the specified context.
+ */
+
+function createStoreHook(context) {
+  if (context === void 0) {
+    context = ReactReduxContext;
+  }
+
+  var useReduxContext = context === ReactReduxContext ? useReduxContext_useReduxContext : function () {
+    return Object(react["useContext"])(context);
+  };
+  return function useStore() {
+    var _useReduxContext = useReduxContext(),
+        store = _useReduxContext.store;
+
+    return store;
+  };
+}
+/**
+ * A hook to access the redux store.
+ *
+ * @returns {any} the redux store
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useStore } from 'react-redux'
+ *
+ * export const ExampleComponent = () => {
+ *   const store = useStore()
+ *   return <div>{store.getState()}</div>
+ * }
+ */
+
+var useStore_useStore = /*#__PURE__*/createStoreHook();
+// CONCATENATED MODULE: ./node_modules/react-redux/es/hooks/useDispatch.js
+
+
+/**
+ * Hook factory, which creates a `useDispatch` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useDispatch` hook bound to the specified context.
+ */
+
+function createDispatchHook(context) {
+  if (context === void 0) {
+    context = ReactReduxContext;
+  }
+
+  var useStore = context === ReactReduxContext ? useStore_useStore : createStoreHook(context);
+  return function useDispatch() {
+    var store = useStore();
+    return store.dispatch;
+  };
+}
+/**
+ * A hook to access the redux `dispatch` function.
+ *
+ * @returns {any|function} redux store's `dispatch` function
+ *
+ * @example
+ *
+ * import React, { useCallback } from 'react'
+ * import { useDispatch } from 'react-redux'
+ *
+ * export const CounterComponent = ({ value }) => {
+ *   const dispatch = useDispatch()
+ *   const increaseCounter = useCallback(() => dispatch({ type: 'increase-counter' }), [])
+ *   return (
+ *     <div>
+ *       <span>{value}</span>
+ *       <button onClick={increaseCounter}>Increase counter</button>
+ *     </div>
+ *   )
+ * }
+ */
+
+var useDispatch = /*#__PURE__*/createDispatchHook();
+// CONCATENATED MODULE: ./node_modules/react-redux/es/hooks/useSelector.js
+
+
+
+
+
+
+var refEquality = function refEquality(a, b) {
+  return a === b;
+};
+
+function useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub) {
+  var _useReducer = Object(react["useReducer"])(function (s) {
+    return s + 1;
+  }, 0),
+      forceRender = _useReducer[1];
+
+  var subscription = Object(react["useMemo"])(function () {
+    return new Subscription(store, contextSub);
+  }, [store, contextSub]);
+  var latestSubscriptionCallbackError = Object(react["useRef"])();
+  var latestSelector = Object(react["useRef"])();
+  var latestStoreState = Object(react["useRef"])();
+  var latestSelectedState = Object(react["useRef"])();
+  var storeState = store.getState();
+  var selectedState;
+
+  try {
+    if (selector !== latestSelector.current || storeState !== latestStoreState.current || latestSubscriptionCallbackError.current) {
+      var newSelectedState = selector(storeState); // ensure latest selected state is reused so that a custom equality function can result in identical references
+
+      if (latestSelectedState.current === undefined || !equalityFn(newSelectedState, latestSelectedState.current)) {
+        selectedState = newSelectedState;
+      } else {
+        selectedState = latestSelectedState.current;
+      }
+    } else {
+      selectedState = latestSelectedState.current;
+    }
+  } catch (err) {
+    if (latestSubscriptionCallbackError.current) {
+      err.message += "\nThe error may be correlated with this previous error:\n" + latestSubscriptionCallbackError.current.stack + "\n\n";
+    }
+
+    throw err;
+  }
+
+  useIsomorphicLayoutEffect(function () {
+    latestSelector.current = selector;
+    latestStoreState.current = storeState;
+    latestSelectedState.current = selectedState;
+    latestSubscriptionCallbackError.current = undefined;
+  });
+  useIsomorphicLayoutEffect(function () {
+    function checkForUpdates() {
+      try {
+        var _newSelectedState = latestSelector.current(store.getState());
+
+        if (equalityFn(_newSelectedState, latestSelectedState.current)) {
+          return;
+        }
+
+        latestSelectedState.current = _newSelectedState;
+      } catch (err) {
+        // we ignore all errors here, since when the component
+        // is re-rendered, the selectors are called again, and
+        // will throw again, if neither props nor store state
+        // changed
+        latestSubscriptionCallbackError.current = err;
+      }
+
+      forceRender();
+    }
+
+    subscription.onStateChange = checkForUpdates;
+    subscription.trySubscribe();
+    checkForUpdates();
+    return function () {
+      return subscription.tryUnsubscribe();
+    };
+  }, [store, subscription]);
+  return selectedState;
+}
+/**
+ * Hook factory, which creates a `useSelector` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useSelector` hook bound to the specified context.
+ */
+
+
+function createSelectorHook(context) {
+  if (context === void 0) {
+    context = ReactReduxContext;
+  }
+
+  var useReduxContext = context === ReactReduxContext ? useReduxContext_useReduxContext : function () {
+    return Object(react["useContext"])(context);
+  };
+  return function useSelector(selector, equalityFn) {
+    if (equalityFn === void 0) {
+      equalityFn = refEquality;
+    }
+
+    if (false) {}
+
+    var _useReduxContext = useReduxContext(),
+        store = _useReduxContext.store,
+        contextSub = _useReduxContext.subscription;
+
+    var selectedState = useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub);
+    Object(react["useDebugValue"])(selectedState);
+    return selectedState;
+  };
+}
+/**
+ * A hook to access the redux store's state. This hook takes a selector function
+ * as an argument. The selector is called with the store state.
+ *
+ * This hook takes an optional equality comparison function as the second parameter
+ * that allows you to customize the way the selected state is compared to determine
+ * whether the component needs to be re-rendered.
+ *
+ * @param {Function} selector the selector function
+ * @param {Function=} equalityFn the function that will be used to determine equality
+ *
+ * @returns {any} the selected state
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useSelector } from 'react-redux'
+ *
+ * export const CounterComponent = () => {
+ *   const counter = useSelector(state => state.counter)
+ *   return <div>{counter}</div>
+ * }
+ */
+
+var useSelector_useSelector = /*#__PURE__*/createSelectorHook();
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/reactBatchedUpdates.js
+/* eslint-disable import/no-unresolved */
+
+// CONCATENATED MODULE: ./node_modules/react-redux/es/index.js
+
+
+
+
+
+
+
+
+
+
+setBatch(react_dom["unstable_batchedUpdates"]);
+
+// CONCATENATED MODULE: ./dev/store/actions.js
+var SET_HUMANS = 'SET_HUMANS';
+var SET_SPYS = 'SET_SPYS';
+var SET_SPY_ARRAY = 'SET_SPY_ARRAY';
+var SET_LOCATION = 'SET_LOCATION';
+var SET_TIMER = 'SET_TIMER';
+var SHOW_FINAL_MODAL = 'SHOW_FINAL_MODAL';
+var SET_GAME_PROGRESS = 'SET_GAME_PROGRESS';
+var SET_THEME = 'SET_THEME';
+var setTheme = function setTheme(bool) {
+  return {
+    type: SET_THEME,
+    payload: bool
+  };
+};
+var setHumans = function setHumans(bool) {
+  return {
+    type: SET_HUMANS,
+    payload: bool
+  };
+};
+var setSpys = function setSpys(bool) {
+  return {
+    type: SET_SPYS,
+    payload: bool
+  };
+};
+var setSpysArray = function setSpysArray(bool) {
+  return {
+    type: SET_SPY_ARRAY,
+    payload: bool
+  };
+};
+var setTimer = function setTimer(bool) {
+  return {
+    type: SET_TIMER,
+    payload: bool
+  };
+};
+var setLocation = function setLocation(bool) {
+  return {
+    type: SET_LOCATION,
+    payload: bool
+  };
+};
+var showFinalModal = function showFinalModal(bool) {
+  return {
+    type: SHOW_FINAL_MODAL,
+    payload: bool
+  };
+};
+var setGameProgress = function setGameProgress(bool) {
+  return {
+    type: SET_GAME_PROGRESS,
+    payload: bool
+  };
+};
+// CONCATENATED MODULE: ./dev/store/locations.js
+var locations = ["Автобус", "Автозаправка", "Автосалон", "Аквапарк", "Анонимное собрание", "Аэропорт", "Банк", "Бар", "Бар", "Бар", "Бассейн", "Библиотека", "Больница", "Вертолёт", "Воинская часть", "Вооенная база", "Встреча выпускников", "Гараж", "Горящяя квартира", "Детский садик", "Застрявший лифт", "Зоопарк", "Избирательный участок", "Казино", "Каток", "Кафе", "Киностудия", "Кинотеатр", "Конфетная фабрика", "Корабль", "Корпоратив", "Круизный корабль", "Лес", "Магазин сантехники", "Маршрутка", "Мастерская по ремонту телевизоров", "Метро", "Море", "Музей", "Музей", "Мясная фабрика", "Наркопритон", "Ночной клуб", "Орбитальная станция", "Отель", "Парк", "Парковка", "Пиратский корабль", "Подводная лодка", "Поезд", "Поезд", "Полицейский участок", "Рай", "Ресторан", "Рынок", "Салон красоты", "Самолёт", "Свадьба", "Стадион", "Стройка", "Стройка", "Студия программистов", "Супермаркет", "Такси", "Такси", "Театр", "Театр", "Тренажёрный зал", "Туристический автобус", "Тюрьма", "Университет", "Цирк", "Школа", "Школа", "Школа", "Школьный автобус", "Электрозаправка"];
+/* harmony default export */ var store_locations = (locations);
+// CONCATENATED MODULE: ./dev/components/App/pages/settings/settings.js
+
+
+
+
+
+
+
+
+
+var settings_settings_settings = function settings() {
+  function randomInteger(min, max) {
+    // случайное число от min до (max+1)
+    var rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+  }
+
+  var onSubmit = function onSubmit(data) {
+    getSpyArray();
+    dispatch(setLocation(store_locations[randomInteger(0, store_locations.length - 1)]));
+    dispatch(setGameProgress("cards"));
+  };
+
+  var humans = useSelector_useSelector(function (state) {
+    return state.humans;
+  });
+  var spys = useSelector_useSelector(function (state) {
+    return state.spys;
+  });
+  var dispatch = useDispatch();
+  var spyLost = spys;
+
+  var getSpyArray = function getSpyArray() {
+    var arr = [];
+    var humansIsSpy = [];
+    var hums = 0;
+
+    while (hums != humans) {
+      arr.push(hums);
+      humansIsSpy.push(false);
+      hums++;
+    }
+
+    while (spyLost) {
+      var rnd = randomInteger(0, humans - 1);
+
+      if (!humansIsSpy[rnd]) {
+        humansIsSpy[rnd] = true;
+        spyLost--;
+      }
+    }
+
+    dispatch(setSpysArray(humansIsSpy));
+  };
+
+  var isDarkTheme = useSelector_useSelector(function (state) {
+    return state.isDarkTheme;
+  });
+
+  var toggleTheme = function toggleTheme() {
+    if (isDarkTheme == false) {
+      dispatch(setTheme(true));
+    } else {
+      dispatch(setTheme(false));
+    }
+  };
+
+  return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(esm_Typography_Typography, {
+    component: "h2",
+    variant: "h4"
+  }, "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B"), /*#__PURE__*/react_default.a.createElement(Box_Box, {
+    component: "fieldset",
+    mb: 3,
+    borderColor: "transparent"
+  }, /*#__PURE__*/react_default.a.createElement(esm_Typography_Typography, {
+    component: "legend"
+  }, "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0438\u0433\u0440\u043E\u043A\u043E\u0432"), /*#__PURE__*/react_default.a.createElement(esm_Rating_Rating, {
+    name: "humans",
+    value: humans,
+    className: "humans",
+    icon: "\uD83E\uDDD2",
+    max: 10,
+    onChange: function onChange(event, newValue) {
+      if (newValue < 3) {
+        newValue = 3;
+      }
+
+      var floor = Math.floor(newValue / 2);
+
+      if (floor <= spys) {
+        dispatch(setSpys(floor));
+      }
+
+      dispatch(setHumans(newValue));
+      dispatch(setTimer(2 + newValue));
+    }
+  })), /*#__PURE__*/react_default.a.createElement(Box_Box, {
+    component: "fieldset",
+    mb: 3,
+    borderColor: "transparent"
+  }, /*#__PURE__*/react_default.a.createElement(esm_Typography_Typography, {
+    component: "legend"
+  }, "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0448\u043F\u0438\u043E\u043D\u043E\u0432"), /*#__PURE__*/react_default.a.createElement(esm_Rating_Rating, {
+    name: "spys",
+    value: spys,
+    icon: "\uD83D\uDD74\uFE0F",
+    max: Math.floor(humans / 2),
+    onChange: function onChange(event, newValue) {
+      dispatch(setSpys(newValue));
+    }
+  })), /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
+    variant: "contained",
+    onClick: onSubmit
+  }, "\u041D\u0430\u0447\u0430\u0442\u044C \u0438\u0433\u0440\u0443"), /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
+    variant: "outlined",
+    className: isDarkTheme ? "themeButton dark" : "themeButton",
+    onClick: toggleTheme
+  }, /*#__PURE__*/react_default.a.createElement("span", null, "\u2600\uFE0F"), /*#__PURE__*/react_default.a.createElement("span", null, "\uD83C\uDF19")));
+};
+
+/* harmony default export */ var pages_settings_settings = (settings_settings_settings);
+// EXTERNAL MODULE: ./dev/components/App/pages/cards/cards.scss
+var cards_cards = __webpack_require__(75);
+
+// CONCATENATED MODULE: ./dev/components/App/pages/cards/cards.js
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var cards_cards_cards = function cards() {
+  var spyArray = useSelector_useSelector(function (state) {
+    return state.spyArray;
+  });
+  var humans = useSelector_useSelector(function (state) {
+    return state.humans;
+  });
+  var location = useSelector_useSelector(function (state) {
+    return state.location;
+  });
+
+  var _useState = Object(react["useState"])(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      count = _useState2[0],
+      setCount = _useState2[1];
+
+  var dispatch = useDispatch(); //const humans = useSelector(state=>state.humans)
+
+  var clickHandler = function clickHandler() {
+    setFlipped(!flipped);
+    setTimeout(function () {
+      if (!flipped) {
+        if (humans - 1 == count) {
+          dispatch(setGameProgress("timer"));
+        } else {
+          setCount(function (count) {
+            return count + 1;
+          });
+        }
+      }
+    }, 300);
+  };
+
+  var _useState3 = Object(react["useState"])(true),
+      _useState4 = _slicedToArray(_useState3, 2),
+      flipped = _useState4[0],
+      setFlipped = _useState4[1];
+
+  return /*#__PURE__*/react_default.a.createElement("div", {
+    className: "page-container"
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    onClick: clickHandler,
+    className: "card-container" + (flipped ? " flipped" : "")
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: "back"
+  }, "\uD83D\uDD75\uFE0F\u200D\u2642\uFE0F"), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "front"
+  }, spyArray[count] ? /*#__PURE__*/react_default.a.createElement("span", {
+    className: "spyCard"
+  }, "\u0428\u043F\u0438\u043E\u043D") : location)));
+};
+
+/* harmony default export */ var pages_cards_cards = (cards_cards_cards);
+// EXTERNAL MODULE: ./dev/components/App/pages/timer/timer.scss
+var timer = __webpack_require__(76);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/getThemeProps/getThemeProps.js
+var getThemeProps = __webpack_require__(97);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/ownerDocument.js
+var ownerDocument = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/setRef.js
+var setRef = __webpack_require__(16);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Portal/Portal.js
+
+
+
+
+
+
+
+function getContainer(container) {
+  container = typeof container === 'function' ? container() : container; // #StrictMode ready
+
+  return react_dom["findDOMNode"](container);
+}
+
+var Portal_useEnhancedEffect = typeof window !== 'undefined' ? react["useLayoutEffect"] : react["useEffect"];
+/**
+ * Portals provide a first-class way to render children into a DOM node
+ * that exists outside the DOM hierarchy of the parent component.
+ */
+
+var Portal_Portal = /*#__PURE__*/react["forwardRef"](function Portal(props, ref) {
+  var children = props.children,
+      container = props.container,
+      _props$disablePortal = props.disablePortal,
+      disablePortal = _props$disablePortal === void 0 ? false : _props$disablePortal,
+      onRendered = props.onRendered;
+
+  var _React$useState = react["useState"](null),
+      mountNode = _React$useState[0],
+      setMountNode = _React$useState[1];
+
+  var handleRef = Object(useForkRef["a" /* default */])( /*#__PURE__*/react["isValidElement"](children) ? children.ref : null, ref);
+  Portal_useEnhancedEffect(function () {
+    if (!disablePortal) {
+      setMountNode(getContainer(container) || document.body);
+    }
+  }, [container, disablePortal]);
+  Portal_useEnhancedEffect(function () {
+    if (mountNode && !disablePortal) {
+      Object(setRef["a" /* default */])(ref, mountNode);
+      return function () {
+        Object(setRef["a" /* default */])(ref, null);
+      };
+    }
+
+    return undefined;
+  }, [ref, mountNode, disablePortal]);
+  Portal_useEnhancedEffect(function () {
+    if (onRendered && (mountNode || disablePortal)) {
+      onRendered();
+    }
+  }, [onRendered, mountNode, disablePortal]);
+
+  if (disablePortal) {
+    if ( /*#__PURE__*/react["isValidElement"](children)) {
+      return /*#__PURE__*/react["cloneElement"](children, {
+        ref: handleRef
+      });
+    }
+
+    return children;
+  }
+
+  return mountNode ? /*#__PURE__*/react_dom["createPortal"](children, mountNode) : mountNode;
+});
+ false ? undefined : void 0;
+
+if (false) {}
+
+/* harmony default export */ var esm_Portal_Portal = (Portal_Portal);
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/createChainedFunction.js
+var createChainedFunction = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/zIndex.js
+var styles_zIndex = __webpack_require__(32);
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
+var createClass = __webpack_require__(22);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/getScrollbarSize.js
+// A change of the browser zoom change the scrollbar size.
+// Credit https://github.com/twbs/bootstrap/blob/3ffe3a5d82f6f561b82ff78d82b32a7d14aed558/js/src/modal.js#L512-L519
+function getScrollbarSize() {
+  var scrollDiv = document.createElement('div');
+  scrollDiv.style.width = '99px';
+  scrollDiv.style.height = '99px';
+  scrollDiv.style.position = 'absolute';
+  scrollDiv.style.top = '-9999px';
+  scrollDiv.style.overflow = 'scroll';
+  document.body.appendChild(scrollDiv);
+  var scrollbarSize = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+  document.body.removeChild(scrollDiv);
+  return scrollbarSize;
+}
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/ownerWindow.js
+var ownerWindow = __webpack_require__(29);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Modal/ModalManager.js
+
+
+
+
+
+ // Is a vertical scrollbar displayed?
+
+function isOverflowing(container) {
+  var doc = Object(ownerDocument["a" /* default */])(container);
+
+  if (doc.body === container) {
+    return Object(ownerWindow["a" /* default */])(doc).innerWidth > doc.documentElement.clientWidth;
+  }
+
+  return container.scrollHeight > container.clientHeight;
+}
+
+function ariaHidden(node, show) {
+  if (show) {
+    node.setAttribute('aria-hidden', 'true');
+  } else {
+    node.removeAttribute('aria-hidden');
+  }
+}
+
+function getPaddingRight(node) {
+  return parseInt(window.getComputedStyle(node)['padding-right'], 10) || 0;
+}
+
+function ariaHiddenSiblings(container, mountNode, currentNode) {
+  var nodesToExclude = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
+  var show = arguments.length > 4 ? arguments[4] : undefined;
+  var blacklist = [mountNode, currentNode].concat(Object(toConsumableArray["a" /* default */])(nodesToExclude));
+  var blacklistTagNames = ['TEMPLATE', 'SCRIPT', 'STYLE'];
+  [].forEach.call(container.children, function (node) {
+    if (node.nodeType === 1 && blacklist.indexOf(node) === -1 && blacklistTagNames.indexOf(node.tagName) === -1) {
+      ariaHidden(node, show);
+    }
+  });
+}
+
+function findIndexOf(containerInfo, callback) {
+  var idx = -1;
+  containerInfo.some(function (item, index) {
+    if (callback(item)) {
+      idx = index;
+      return true;
+    }
+
+    return false;
+  });
+  return idx;
+}
+
+function handleContainer(containerInfo, props) {
+  var restoreStyle = [];
+  var restorePaddings = [];
+  var container = containerInfo.container;
+  var fixedNodes;
+
+  if (!props.disableScrollLock) {
+    if (isOverflowing(container)) {
+      // Compute the size before applying overflow hidden to avoid any scroll jumps.
+      var scrollbarSize = getScrollbarSize();
+      restoreStyle.push({
+        value: container.style.paddingRight,
+        key: 'padding-right',
+        el: container
+      }); // Use computed style, here to get the real padding to add our scrollbar width.
+
+      container.style['padding-right'] = "".concat(getPaddingRight(container) + scrollbarSize, "px"); // .mui-fixed is a global helper.
+
+      fixedNodes = Object(ownerDocument["a" /* default */])(container).querySelectorAll('.mui-fixed');
+      [].forEach.call(fixedNodes, function (node) {
+        restorePaddings.push(node.style.paddingRight);
+        node.style.paddingRight = "".concat(getPaddingRight(node) + scrollbarSize, "px");
+      });
+    } // Improve Gatsby support
+    // https://css-tricks.com/snippets/css/force-vertical-scrollbar/
+
+
+    var parent = container.parentElement;
+    var scrollContainer = parent.nodeName === 'HTML' && window.getComputedStyle(parent)['overflow-y'] === 'scroll' ? parent : container; // Block the scroll even if no scrollbar is visible to account for mobile keyboard
+    // screensize shrink.
+
+    restoreStyle.push({
+      value: scrollContainer.style.overflow,
+      key: 'overflow',
+      el: scrollContainer
+    });
+    scrollContainer.style.overflow = 'hidden';
+  }
+
+  var restore = function restore() {
+    if (fixedNodes) {
+      [].forEach.call(fixedNodes, function (node, i) {
+        if (restorePaddings[i]) {
+          node.style.paddingRight = restorePaddings[i];
+        } else {
+          node.style.removeProperty('padding-right');
+        }
+      });
+    }
+
+    restoreStyle.forEach(function (_ref) {
+      var value = _ref.value,
+          el = _ref.el,
+          key = _ref.key;
+
+      if (value) {
+        el.style.setProperty(key, value);
+      } else {
+        el.style.removeProperty(key);
+      }
+    });
+  };
+
+  return restore;
+}
+
+function getHiddenSiblings(container) {
+  var hiddenSiblings = [];
+  [].forEach.call(container.children, function (node) {
+    if (node.getAttribute && node.getAttribute('aria-hidden') === 'true') {
+      hiddenSiblings.push(node);
+    }
+  });
+  return hiddenSiblings;
+}
+/**
+ * @ignore - do not document.
+ *
+ * Proper state management for containers and the modals in those containers.
+ * Simplified, but inspired by react-overlay's ModalManager class.
+ * Used by the Modal to ensure proper styling of containers.
+ */
+
+
+var ModalManager_ModalManager = /*#__PURE__*/function () {
+  function ModalManager() {
+    _classCallCheck(this, ModalManager);
+
+    // this.modals[modalIndex] = modal
+    this.modals = []; // this.containers[containerIndex] = {
+    //   modals: [],
+    //   container,
+    //   restore: null,
+    // }
+
+    this.containers = [];
+  }
+
+  Object(createClass["a" /* default */])(ModalManager, [{
+    key: "add",
+    value: function add(modal, container) {
+      var modalIndex = this.modals.indexOf(modal);
+
+      if (modalIndex !== -1) {
+        return modalIndex;
+      }
+
+      modalIndex = this.modals.length;
+      this.modals.push(modal); // If the modal we are adding is already in the DOM.
+
+      if (modal.modalRef) {
+        ariaHidden(modal.modalRef, false);
+      }
+
+      var hiddenSiblingNodes = getHiddenSiblings(container);
+      ariaHiddenSiblings(container, modal.mountNode, modal.modalRef, hiddenSiblingNodes, true);
+      var containerIndex = findIndexOf(this.containers, function (item) {
+        return item.container === container;
+      });
+
+      if (containerIndex !== -1) {
+        this.containers[containerIndex].modals.push(modal);
+        return modalIndex;
+      }
+
+      this.containers.push({
+        modals: [modal],
+        container: container,
+        restore: null,
+        hiddenSiblingNodes: hiddenSiblingNodes
+      });
+      return modalIndex;
+    }
+  }, {
+    key: "mount",
+    value: function mount(modal, props) {
+      var containerIndex = findIndexOf(this.containers, function (item) {
+        return item.modals.indexOf(modal) !== -1;
+      });
+      var containerInfo = this.containers[containerIndex];
+
+      if (!containerInfo.restore) {
+        containerInfo.restore = handleContainer(containerInfo, props);
+      }
+    }
+  }, {
+    key: "remove",
+    value: function remove(modal) {
+      var modalIndex = this.modals.indexOf(modal);
+
+      if (modalIndex === -1) {
+        return modalIndex;
+      }
+
+      var containerIndex = findIndexOf(this.containers, function (item) {
+        return item.modals.indexOf(modal) !== -1;
+      });
+      var containerInfo = this.containers[containerIndex];
+      containerInfo.modals.splice(containerInfo.modals.indexOf(modal), 1);
+      this.modals.splice(modalIndex, 1); // If that was the last modal in a container, clean up the container.
+
+      if (containerInfo.modals.length === 0) {
+        // The modal might be closed before it had the chance to be mounted in the DOM.
+        if (containerInfo.restore) {
+          containerInfo.restore();
+        }
+
+        if (modal.modalRef) {
+          // In case the modal wasn't in the DOM yet.
+          ariaHidden(modal.modalRef, true);
+        }
+
+        ariaHiddenSiblings(containerInfo.container, modal.mountNode, modal.modalRef, containerInfo.hiddenSiblingNodes, false);
+        this.containers.splice(containerIndex, 1);
+      } else {
+        // Otherwise make sure the next top modal is visible to a screen reader.
+        var nextTop = containerInfo.modals[containerInfo.modals.length - 1]; // as soon as a modal is adding its modalRef is undefined. it can't set
+        // aria-hidden because the dom element doesn't exist either
+        // when modal was unmounted before modalRef gets null
+
+        if (nextTop.modalRef) {
+          ariaHidden(nextTop.modalRef, false);
+        }
+      }
+
+      return modalIndex;
+    }
+  }, {
+    key: "isTopModal",
+    value: function isTopModal(modal) {
+      return this.modals.length > 0 && this.modals[this.modals.length - 1] === modal;
+    }
+  }]);
+
+  return ModalManager;
+}();
+
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Unstable_TrapFocus/Unstable_TrapFocus.js
+/* eslint-disable consistent-return, jsx-a11y/no-noninteractive-tabindex, camelcase */
+
+
+
+
+
+
+/**
+ * Utility component that locks focus inside the component.
+ */
+
+function Unstable_TrapFocus(props) {
+  var children = props.children,
+      _props$disableAutoFoc = props.disableAutoFocus,
+      disableAutoFocus = _props$disableAutoFoc === void 0 ? false : _props$disableAutoFoc,
+      _props$disableEnforce = props.disableEnforceFocus,
+      disableEnforceFocus = _props$disableEnforce === void 0 ? false : _props$disableEnforce,
+      _props$disableRestore = props.disableRestoreFocus,
+      disableRestoreFocus = _props$disableRestore === void 0 ? false : _props$disableRestore,
+      getDoc = props.getDoc,
+      isEnabled = props.isEnabled,
+      open = props.open;
+  var ignoreNextEnforceFocus = react["useRef"]();
+  var sentinelStart = react["useRef"](null);
+  var sentinelEnd = react["useRef"](null);
+  var nodeToRestore = react["useRef"]();
+  var rootRef = react["useRef"](null); // can be removed once we drop support for non ref forwarding class components
+
+  var handleOwnRef = react["useCallback"](function (instance) {
+    // #StrictMode ready
+    rootRef.current = react_dom["findDOMNode"](instance);
+  }, []);
+  var handleRef = Object(useForkRef["a" /* default */])(children.ref, handleOwnRef);
+  var prevOpenRef = react["useRef"]();
+  react["useEffect"](function () {
+    prevOpenRef.current = open;
+  }, [open]);
+
+  if (!prevOpenRef.current && open && typeof window !== 'undefined') {
+    // WARNING: Potentially unsafe in concurrent mode.
+    // The way the read on `nodeToRestore` is setup could make this actually safe.
+    // Say we render `open={false}` -> `open={true}` but never commit.
+    // We have now written a state that wasn't committed. But no committed effect
+    // will read this wrong value. We only read from `nodeToRestore` in effects
+    // that were committed on `open={true}`
+    // WARNING: Prevents the instance from being garbage collected. Should only
+    // hold a weak ref.
+    nodeToRestore.current = getDoc().activeElement;
+  }
+
+  react["useEffect"](function () {
+    if (!open) {
+      return;
+    }
+
+    var doc = Object(ownerDocument["a" /* default */])(rootRef.current); // We might render an empty child.
+
+    if (!disableAutoFocus && rootRef.current && !rootRef.current.contains(doc.activeElement)) {
+      if (!rootRef.current.hasAttribute('tabIndex')) {
+        if (false) {}
+
+        rootRef.current.setAttribute('tabIndex', -1);
+      }
+
+      rootRef.current.focus();
+    }
+
+    var contain = function contain() {
+      var rootElement = rootRef.current; // Cleanup functions are executed lazily in React 17.
+      // Contain can be called between the component being unmounted and its cleanup function being run.
+
+      if (rootElement === null) {
+        return;
+      }
+
+      if (!doc.hasFocus() || disableEnforceFocus || !isEnabled() || ignoreNextEnforceFocus.current) {
+        ignoreNextEnforceFocus.current = false;
+        return;
+      }
+
+      if (rootRef.current && !rootRef.current.contains(doc.activeElement)) {
+        rootRef.current.focus();
+      }
+    };
+
+    var loopFocus = function loopFocus(event) {
+      // 9 = Tab
+      if (disableEnforceFocus || !isEnabled() || event.keyCode !== 9) {
+        return;
+      } // Make sure the next tab starts from the right place.
+
+
+      if (doc.activeElement === rootRef.current) {
+        // We need to ignore the next contain as
+        // it will try to move the focus back to the rootRef element.
+        ignoreNextEnforceFocus.current = true;
+
+        if (event.shiftKey) {
+          sentinelEnd.current.focus();
+        } else {
+          sentinelStart.current.focus();
+        }
+      }
+    };
+
+    doc.addEventListener('focus', contain, true);
+    doc.addEventListener('keydown', loopFocus, true); // With Edge, Safari and Firefox, no focus related events are fired when the focused area stops being a focused area
+    // e.g. https://bugzilla.mozilla.org/show_bug.cgi?id=559561.
+    //
+    // The whatwg spec defines how the browser should behave but does not explicitly mention any events:
+    // https://html.spec.whatwg.org/multipage/interaction.html#focus-fixup-rule.
+
+    var interval = setInterval(function () {
+      contain();
+    }, 50);
+    return function () {
+      clearInterval(interval);
+      doc.removeEventListener('focus', contain, true);
+      doc.removeEventListener('keydown', loopFocus, true); // restoreLastFocus()
+
+      if (!disableRestoreFocus) {
+        // In IE 11 it is possible for document.activeElement to be null resulting
+        // in nodeToRestore.current being null.
+        // Not all elements in IE 11 have a focus method.
+        // Once IE 11 support is dropped the focus() call can be unconditional.
+        if (nodeToRestore.current && nodeToRestore.current.focus) {
+          nodeToRestore.current.focus();
+        }
+
+        nodeToRestore.current = null;
+      }
+    };
+  }, [disableAutoFocus, disableEnforceFocus, disableRestoreFocus, isEnabled, open]);
+  return /*#__PURE__*/react["createElement"](react["Fragment"], null, /*#__PURE__*/react["createElement"]("div", {
+    tabIndex: 0,
+    ref: sentinelStart,
+    "data-test": "sentinelStart"
+  }), /*#__PURE__*/react["cloneElement"](children, {
+    ref: handleRef
+  }), /*#__PURE__*/react["createElement"]("div", {
+    tabIndex: 0,
+    ref: sentinelEnd,
+    "data-test": "sentinelEnd"
+  }));
+}
+
+ false ? undefined : void 0;
+
+if (false) {}
+
+/* harmony default export */ var Unstable_TrapFocus_Unstable_TrapFocus = (Unstable_TrapFocus);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Modal/SimpleBackdrop.js
+
+
+
+
+var SimpleBackdrop_styles = {
+  /* Styles applied to the root element. */
+  root: {
+    zIndex: -1,
+    position: 'fixed',
+    right: 0,
+    bottom: 0,
+    top: 0,
+    left: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    WebkitTapHighlightColor: 'transparent'
+  },
+
+  /* Styles applied to the root element if `invisible={true}`. */
+  invisible: {
+    backgroundColor: 'transparent'
+  }
+};
+/**
+ * @ignore - internal component.
+ */
+
+var SimpleBackdrop_SimpleBackdrop = /*#__PURE__*/react["forwardRef"](function SimpleBackdrop(props, ref) {
+  var _props$invisible = props.invisible,
+      invisible = _props$invisible === void 0 ? false : _props$invisible,
+      open = props.open,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["invisible", "open"]);
+
+  return open ? /*#__PURE__*/react["createElement"]("div", Object(esm_extends["a" /* default */])({
+    "aria-hidden": true,
+    ref: ref
+  }, other, {
+    style: Object(esm_extends["a" /* default */])({}, SimpleBackdrop_styles.root, invisible ? SimpleBackdrop_styles.invisible : {}, other.style)
+  })) : null;
+});
+ false ? undefined : void 0;
+/* harmony default export */ var Modal_SimpleBackdrop = (SimpleBackdrop_SimpleBackdrop);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Modal/Modal.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Modal_getContainer(container) {
+  container = typeof container === 'function' ? container() : container;
+  return react_dom["findDOMNode"](container);
+}
+
+function getHasTransition(props) {
+  return props.children ? props.children.props.hasOwnProperty('in') : false;
+} // A modal manager used to track and manage the state of open Modals.
+// Modals don't open on the server so this won't conflict with concurrent requests.
+
+
+var defaultManager = new ModalManager_ModalManager();
+var Modal_styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      position: 'fixed',
+      zIndex: theme.zIndex.modal,
+      right: 0,
+      bottom: 0,
+      top: 0,
+      left: 0
+    },
+
+    /* Styles applied to the root element if the `Modal` has exited. */
+    hidden: {
+      visibility: 'hidden'
+    }
+  };
+};
+/**
+ * Modal is a lower-level construct that is leveraged by the following components:
+ *
+ * - [Dialog](/api/dialog/)
+ * - [Drawer](/api/drawer/)
+ * - [Menu](/api/menu/)
+ * - [Popover](/api/popover/)
+ *
+ * If you are creating a modal dialog, you probably want to use the [Dialog](/api/dialog/) component
+ * rather than directly using Modal.
+ *
+ * This component shares many concepts with [react-overlays](https://react-bootstrap.github.io/react-overlays/#modals).
+ */
+
+var Modal_Modal = /*#__PURE__*/react["forwardRef"](function Modal(inProps, ref) {
+  var theme = Object(useTheme["a" /* default */])();
+  var props = Object(getThemeProps["a" /* default */])({
+    name: 'MuiModal',
+    props: Object(esm_extends["a" /* default */])({}, inProps),
+    theme: theme
+  });
+
+  var _props$BackdropCompon = props.BackdropComponent,
+      BackdropComponent = _props$BackdropCompon === void 0 ? Modal_SimpleBackdrop : _props$BackdropCompon,
+      BackdropProps = props.BackdropProps,
+      children = props.children,
+      _props$closeAfterTran = props.closeAfterTransition,
+      closeAfterTransition = _props$closeAfterTran === void 0 ? false : _props$closeAfterTran,
+      container = props.container,
+      _props$disableAutoFoc = props.disableAutoFocus,
+      disableAutoFocus = _props$disableAutoFoc === void 0 ? false : _props$disableAutoFoc,
+      _props$disableBackdro = props.disableBackdropClick,
+      disableBackdropClick = _props$disableBackdro === void 0 ? false : _props$disableBackdro,
+      _props$disableEnforce = props.disableEnforceFocus,
+      disableEnforceFocus = _props$disableEnforce === void 0 ? false : _props$disableEnforce,
+      _props$disableEscapeK = props.disableEscapeKeyDown,
+      disableEscapeKeyDown = _props$disableEscapeK === void 0 ? false : _props$disableEscapeK,
+      _props$disablePortal = props.disablePortal,
+      disablePortal = _props$disablePortal === void 0 ? false : _props$disablePortal,
+      _props$disableRestore = props.disableRestoreFocus,
+      disableRestoreFocus = _props$disableRestore === void 0 ? false : _props$disableRestore,
+      _props$disableScrollL = props.disableScrollLock,
+      disableScrollLock = _props$disableScrollL === void 0 ? false : _props$disableScrollL,
+      _props$hideBackdrop = props.hideBackdrop,
+      hideBackdrop = _props$hideBackdrop === void 0 ? false : _props$hideBackdrop,
+      _props$keepMounted = props.keepMounted,
+      keepMounted = _props$keepMounted === void 0 ? false : _props$keepMounted,
+      _props$manager = props.manager,
+      manager = _props$manager === void 0 ? defaultManager : _props$manager,
+      onBackdropClick = props.onBackdropClick,
+      onClose = props.onClose,
+      onEscapeKeyDown = props.onEscapeKeyDown,
+      onRendered = props.onRendered,
+      open = props.open,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["BackdropComponent", "BackdropProps", "children", "closeAfterTransition", "container", "disableAutoFocus", "disableBackdropClick", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onEscapeKeyDown", "onRendered", "open"]);
+
+  var _React$useState = react["useState"](true),
+      exited = _React$useState[0],
+      setExited = _React$useState[1];
+
+  var modal = react["useRef"]({});
+  var mountNodeRef = react["useRef"](null);
+  var modalRef = react["useRef"](null);
+  var handleRef = Object(useForkRef["a" /* default */])(modalRef, ref);
+  var hasTransition = getHasTransition(props);
+
+  var getDoc = function getDoc() {
+    return Object(ownerDocument["a" /* default */])(mountNodeRef.current);
+  };
+
+  var getModal = function getModal() {
+    modal.current.modalRef = modalRef.current;
+    modal.current.mountNode = mountNodeRef.current;
+    return modal.current;
+  };
+
+  var handleMounted = function handleMounted() {
+    manager.mount(getModal(), {
+      disableScrollLock: disableScrollLock
+    }); // Fix a bug on Chrome where the scroll isn't initially 0.
+
+    modalRef.current.scrollTop = 0;
+  };
+
+  var handleOpen = Object(useEventCallback["a" /* default */])(function () {
+    var resolvedContainer = Modal_getContainer(container) || getDoc().body;
+    manager.add(getModal(), resolvedContainer); // The element was already mounted.
+
+    if (modalRef.current) {
+      handleMounted();
+    }
+  });
+  var isTopModal = react["useCallback"](function () {
+    return manager.isTopModal(getModal());
+  }, [manager]);
+  var handlePortalRef = Object(useEventCallback["a" /* default */])(function (node) {
+    mountNodeRef.current = node;
+
+    if (!node) {
+      return;
+    }
+
+    if (onRendered) {
+      onRendered();
+    }
+
+    if (open && isTopModal()) {
+      handleMounted();
+    } else {
+      ariaHidden(modalRef.current, true);
+    }
+  });
+  var handleClose = react["useCallback"](function () {
+    manager.remove(getModal());
+  }, [manager]);
+  react["useEffect"](function () {
+    return function () {
+      handleClose();
+    };
+  }, [handleClose]);
+  react["useEffect"](function () {
+    if (open) {
+      handleOpen();
+    } else if (!hasTransition || !closeAfterTransition) {
+      handleClose();
+    }
+  }, [open, handleClose, hasTransition, closeAfterTransition, handleOpen]);
+
+  if (!keepMounted && !open && (!hasTransition || exited)) {
+    return null;
+  }
+
+  var handleEnter = function handleEnter() {
+    setExited(false);
+  };
+
+  var handleExited = function handleExited() {
+    setExited(true);
+
+    if (closeAfterTransition) {
+      handleClose();
+    }
+  };
+
+  var handleBackdropClick = function handleBackdropClick(event) {
+    if (event.target !== event.currentTarget) {
+      return;
+    }
+
+    if (onBackdropClick) {
+      onBackdropClick(event);
+    }
+
+    if (!disableBackdropClick && onClose) {
+      onClose(event, 'backdropClick');
+    }
+  };
+
+  var handleKeyDown = function handleKeyDown(event) {
+    // The handler doesn't take event.defaultPrevented into account:
+    //
+    // event.preventDefault() is meant to stop default behaviours like
+    // clicking a checkbox to check it, hitting a button to submit a form,
+    // and hitting left arrow to move the cursor in a text input etc.
+    // Only special HTML elements have these default behaviors.
+    if (event.key !== 'Escape' || !isTopModal()) {
+      return;
+    }
+
+    if (onEscapeKeyDown) {
+      onEscapeKeyDown(event);
+    }
+
+    if (!disableEscapeKeyDown) {
+      // Swallow the event, in case someone is listening for the escape key on the body.
+      event.stopPropagation();
+
+      if (onClose) {
+        onClose(event, 'escapeKeyDown');
+      }
+    }
+  };
+
+  var inlineStyle = Modal_styles(theme || {
+    zIndex: styles_zIndex["a" /* default */]
+  });
+  var childProps = {};
+
+  if (children.props.tabIndex === undefined) {
+    childProps.tabIndex = children.props.tabIndex || '-1';
+  } // It's a Transition like component
+
+
+  if (hasTransition) {
+    childProps.onEnter = Object(createChainedFunction["a" /* default */])(handleEnter, children.props.onEnter);
+    childProps.onExited = Object(createChainedFunction["a" /* default */])(handleExited, children.props.onExited);
+  }
+
+  return /*#__PURE__*/react["createElement"](esm_Portal_Portal, {
+    ref: handlePortalRef,
+    container: container,
+    disablePortal: disablePortal
+  }, /*#__PURE__*/react["createElement"]("div", Object(esm_extends["a" /* default */])({
+    ref: handleRef,
+    onKeyDown: handleKeyDown,
+    role: "presentation"
+  }, other, {
+    style: Object(esm_extends["a" /* default */])({}, inlineStyle.root, !open && exited ? inlineStyle.hidden : {}, other.style)
+  }), hideBackdrop ? null : /*#__PURE__*/react["createElement"](BackdropComponent, Object(esm_extends["a" /* default */])({
+    open: open,
+    onClick: handleBackdropClick
+  }, BackdropProps)), /*#__PURE__*/react["createElement"](Unstable_TrapFocus_Unstable_TrapFocus, {
+    disableEnforceFocus: disableEnforceFocus,
+    disableAutoFocus: disableAutoFocus,
+    disableRestoreFocus: disableRestoreFocus,
+    getDoc: getDoc,
+    isEnabled: isTopModal,
+    open: open
+  }, /*#__PURE__*/react["cloneElement"](children, childProps))));
+});
+ false ? undefined : void 0;
+/* harmony default export */ var esm_Modal_Modal = (Modal_Modal);
+// EXTERNAL MODULE: ./dev/components/Modal/Modal.scss
+var components_Modal_Modal = __webpack_require__(77);
+
+// CONCATENATED MODULE: ./node_modules/react-transition-group/esm/config.js
+/* harmony default export */ var config = ({
+  disabled: false
+});
+// CONCATENATED MODULE: ./node_modules/react-transition-group/esm/Transition.js
+
+
+
+
+
+
+
+
+var UNMOUNTED = 'unmounted';
+var EXITED = 'exited';
+var ENTERING = 'entering';
+var ENTERED = 'entered';
+var EXITING = 'exiting';
+/**
+ * The Transition component lets you describe a transition from one component
+ * state to another _over time_ with a simple declarative API. Most commonly
+ * it's used to animate the mounting and unmounting of a component, but can also
+ * be used to describe in-place transition states as well.
+ *
+ * ---
+ *
+ * **Note**: `Transition` is a platform-agnostic base component. If you're using
+ * transitions in CSS, you'll probably want to use
+ * [`CSSTransition`](https://reactcommunity.org/react-transition-group/css-transition)
+ * instead. It inherits all the features of `Transition`, but contains
+ * additional features necessary to play nice with CSS transitions (hence the
+ * name of the component).
+ *
+ * ---
+ *
+ * By default the `Transition` component does not alter the behavior of the
+ * component it renders, it only tracks "enter" and "exit" states for the
+ * components. It's up to you to give meaning and effect to those states. For
+ * example we can add styles to a component when it enters or exits:
+ *
+ * ```jsx
+ * import { Transition } from 'react-transition-group';
+ *
+ * const duration = 300;
+ *
+ * const defaultStyle = {
+ *   transition: `opacity ${duration}ms ease-in-out`,
+ *   opacity: 0,
+ * }
+ *
+ * const transitionStyles = {
+ *   entering: { opacity: 1 },
+ *   entered:  { opacity: 1 },
+ *   exiting:  { opacity: 0 },
+ *   exited:  { opacity: 0 },
+ * };
+ *
+ * const Fade = ({ in: inProp }) => (
+ *   <Transition in={inProp} timeout={duration}>
+ *     {state => (
+ *       <div style={{
+ *         ...defaultStyle,
+ *         ...transitionStyles[state]
+ *       }}>
+ *         I'm a fade Transition!
+ *       </div>
+ *     )}
+ *   </Transition>
+ * );
+ * ```
+ *
+ * There are 4 main states a Transition can be in:
+ *  - `'entering'`
+ *  - `'entered'`
+ *  - `'exiting'`
+ *  - `'exited'`
+ *
+ * Transition state is toggled via the `in` prop. When `true` the component
+ * begins the "Enter" stage. During this stage, the component will shift from
+ * its current transition state, to `'entering'` for the duration of the
+ * transition and then to the `'entered'` stage once it's complete. Let's take
+ * the following example (we'll use the
+ * [useState](https://reactjs.org/docs/hooks-reference.html#usestate) hook):
+ *
+ * ```jsx
+ * function App() {
+ *   const [inProp, setInProp] = useState(false);
+ *   return (
+ *     <div>
+ *       <Transition in={inProp} timeout={500}>
+ *         {state => (
+ *           // ...
+ *         )}
+ *       </Transition>
+ *       <button onClick={() => setInProp(true)}>
+ *         Click to Enter
+ *       </button>
+ *     </div>
+ *   );
+ * }
+ * ```
+ *
+ * When the button is clicked the component will shift to the `'entering'` state
+ * and stay there for 500ms (the value of `timeout`) before it finally switches
+ * to `'entered'`.
+ *
+ * When `in` is `false` the same thing happens except the state moves from
+ * `'exiting'` to `'exited'`.
+ */
+
+var Transition_Transition = /*#__PURE__*/function (_React$Component) {
+  Object(inheritsLoose["a" /* default */])(Transition, _React$Component);
+
+  function Transition(props, context) {
+    var _this;
+
+    _this = _React$Component.call(this, props, context) || this;
+    var parentGroup = context; // In the context of a TransitionGroup all enters are really appears
+
+    var appear = parentGroup && !parentGroup.isMounting ? props.enter : props.appear;
+    var initialStatus;
+    _this.appearStatus = null;
+
+    if (props.in) {
+      if (appear) {
+        initialStatus = EXITED;
+        _this.appearStatus = ENTERING;
+      } else {
+        initialStatus = ENTERED;
+      }
+    } else {
+      if (props.unmountOnExit || props.mountOnEnter) {
+        initialStatus = UNMOUNTED;
+      } else {
+        initialStatus = EXITED;
+      }
+    }
+
+    _this.state = {
+      status: initialStatus
+    };
+    _this.nextCallback = null;
+    return _this;
+  }
+
+  Transition.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
+    var nextIn = _ref.in;
+
+    if (nextIn && prevState.status === UNMOUNTED) {
+      return {
+        status: EXITED
+      };
+    }
+
+    return null;
+  } // getSnapshotBeforeUpdate(prevProps) {
+  //   let nextStatus = null
+  //   if (prevProps !== this.props) {
+  //     const { status } = this.state
+  //     if (this.props.in) {
+  //       if (status !== ENTERING && status !== ENTERED) {
+  //         nextStatus = ENTERING
+  //       }
+  //     } else {
+  //       if (status === ENTERING || status === ENTERED) {
+  //         nextStatus = EXITING
+  //       }
+  //     }
+  //   }
+  //   return { nextStatus }
+  // }
+  ;
+
+  var _proto = Transition.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    this.updateStatus(true, this.appearStatus);
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    var nextStatus = null;
+
+    if (prevProps !== this.props) {
+      var status = this.state.status;
+
+      if (this.props.in) {
+        if (status !== ENTERING && status !== ENTERED) {
+          nextStatus = ENTERING;
+        }
+      } else {
+        if (status === ENTERING || status === ENTERED) {
+          nextStatus = EXITING;
         }
       }
     }
 
-    return target;
+    this.updateStatus(false, nextStatus);
   };
 
-  return _extends.apply(this, arguments);
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    this.cancelNextCallback();
+  };
+
+  _proto.getTimeouts = function getTimeouts() {
+    var timeout = this.props.timeout;
+    var exit, enter, appear;
+    exit = enter = appear = timeout;
+
+    if (timeout != null && typeof timeout !== 'number') {
+      exit = timeout.exit;
+      enter = timeout.enter; // TODO: remove fallback for next major
+
+      appear = timeout.appear !== undefined ? timeout.appear : enter;
+    }
+
+    return {
+      exit: exit,
+      enter: enter,
+      appear: appear
+    };
+  };
+
+  _proto.updateStatus = function updateStatus(mounting, nextStatus) {
+    if (mounting === void 0) {
+      mounting = false;
+    }
+
+    if (nextStatus !== null) {
+      // nextStatus will always be ENTERING or EXITING.
+      this.cancelNextCallback();
+
+      if (nextStatus === ENTERING) {
+        this.performEnter(mounting);
+      } else {
+        this.performExit();
+      }
+    } else if (this.props.unmountOnExit && this.state.status === EXITED) {
+      this.setState({
+        status: UNMOUNTED
+      });
+    }
+  };
+
+  _proto.performEnter = function performEnter(mounting) {
+    var _this2 = this;
+
+    var enter = this.props.enter;
+    var appearing = this.context ? this.context.isMounting : mounting;
+
+    var _ref2 = this.props.nodeRef ? [appearing] : [react_dom_default.a.findDOMNode(this), appearing],
+        maybeNode = _ref2[0],
+        maybeAppearing = _ref2[1];
+
+    var timeouts = this.getTimeouts();
+    var enterTimeout = appearing ? timeouts.appear : timeouts.enter; // no enter animation skip right to ENTERED
+    // if we are mounting and running this it means appear _must_ be set
+
+    if (!mounting && !enter || config.disabled) {
+      this.safeSetState({
+        status: ENTERED
+      }, function () {
+        _this2.props.onEntered(maybeNode);
+      });
+      return;
+    }
+
+    this.props.onEnter(maybeNode, maybeAppearing);
+    this.safeSetState({
+      status: ENTERING
+    }, function () {
+      _this2.props.onEntering(maybeNode, maybeAppearing);
+
+      _this2.onTransitionEnd(enterTimeout, function () {
+        _this2.safeSetState({
+          status: ENTERED
+        }, function () {
+          _this2.props.onEntered(maybeNode, maybeAppearing);
+        });
+      });
+    });
+  };
+
+  _proto.performExit = function performExit() {
+    var _this3 = this;
+
+    var exit = this.props.exit;
+    var timeouts = this.getTimeouts();
+    var maybeNode = this.props.nodeRef ? undefined : react_dom_default.a.findDOMNode(this); // no exit animation skip right to EXITED
+
+    if (!exit || config.disabled) {
+      this.safeSetState({
+        status: EXITED
+      }, function () {
+        _this3.props.onExited(maybeNode);
+      });
+      return;
+    }
+
+    this.props.onExit(maybeNode);
+    this.safeSetState({
+      status: EXITING
+    }, function () {
+      _this3.props.onExiting(maybeNode);
+
+      _this3.onTransitionEnd(timeouts.exit, function () {
+        _this3.safeSetState({
+          status: EXITED
+        }, function () {
+          _this3.props.onExited(maybeNode);
+        });
+      });
+    });
+  };
+
+  _proto.cancelNextCallback = function cancelNextCallback() {
+    if (this.nextCallback !== null) {
+      this.nextCallback.cancel();
+      this.nextCallback = null;
+    }
+  };
+
+  _proto.safeSetState = function safeSetState(nextState, callback) {
+    // This shouldn't be necessary, but there are weird race conditions with
+    // setState callbacks and unmounting in testing, so always make sure that
+    // we can cancel any pending setState callbacks after we unmount.
+    callback = this.setNextCallback(callback);
+    this.setState(nextState, callback);
+  };
+
+  _proto.setNextCallback = function setNextCallback(callback) {
+    var _this4 = this;
+
+    var active = true;
+
+    this.nextCallback = function (event) {
+      if (active) {
+        active = false;
+        _this4.nextCallback = null;
+        callback(event);
+      }
+    };
+
+    this.nextCallback.cancel = function () {
+      active = false;
+    };
+
+    return this.nextCallback;
+  };
+
+  _proto.onTransitionEnd = function onTransitionEnd(timeout, handler) {
+    this.setNextCallback(handler);
+    var node = this.props.nodeRef ? this.props.nodeRef.current : react_dom_default.a.findDOMNode(this);
+    var doesNotHaveTimeoutOrListener = timeout == null && !this.props.addEndListener;
+
+    if (!node || doesNotHaveTimeoutOrListener) {
+      setTimeout(this.nextCallback, 0);
+      return;
+    }
+
+    if (this.props.addEndListener) {
+      var _ref3 = this.props.nodeRef ? [this.nextCallback] : [node, this.nextCallback],
+          maybeNode = _ref3[0],
+          maybeNextCallback = _ref3[1];
+
+      this.props.addEndListener(maybeNode, maybeNextCallback);
+    }
+
+    if (timeout != null) {
+      setTimeout(this.nextCallback, timeout);
+    }
+  };
+
+  _proto.render = function render() {
+    var status = this.state.status;
+
+    if (status === UNMOUNTED) {
+      return null;
+    }
+
+    var _this$props = this.props,
+        children = _this$props.children,
+        _in = _this$props.in,
+        _mountOnEnter = _this$props.mountOnEnter,
+        _unmountOnExit = _this$props.unmountOnExit,
+        _appear = _this$props.appear,
+        _enter = _this$props.enter,
+        _exit = _this$props.exit,
+        _timeout = _this$props.timeout,
+        _addEndListener = _this$props.addEndListener,
+        _onEnter = _this$props.onEnter,
+        _onEntering = _this$props.onEntering,
+        _onEntered = _this$props.onEntered,
+        _onExit = _this$props.onExit,
+        _onExiting = _this$props.onExiting,
+        _onExited = _this$props.onExited,
+        _nodeRef = _this$props.nodeRef,
+        childProps = Object(objectWithoutPropertiesLoose["a" /* default */])(_this$props, ["children", "in", "mountOnEnter", "unmountOnExit", "appear", "enter", "exit", "timeout", "addEndListener", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "nodeRef"]);
+
+    return (
+      /*#__PURE__*/
+      // allows for nested Transitions
+      react_default.a.createElement(TransitionGroupContext.Provider, {
+        value: null
+      }, typeof children === 'function' ? children(status, childProps) : react_default.a.cloneElement(react_default.a.Children.only(children), childProps))
+    );
+  };
+
+  return Transition;
+}(react_default.a.Component);
+
+Transition_Transition.contextType = TransitionGroupContext;
+Transition_Transition.propTypes =  false ? undefined : {}; // Name the function so it is clearer in the documentation
+
+function noop() {}
+
+Transition_Transition.defaultProps = {
+  in: false,
+  mountOnEnter: false,
+  unmountOnExit: false,
+  appear: false,
+  enter: true,
+  exit: true,
+  onEnter: noop,
+  onEntering: noop,
+  onEntered: noop,
+  onExit: noop,
+  onExiting: noop,
+  onExited: noop
+};
+Transition_Transition.UNMOUNTED = UNMOUNTED;
+Transition_Transition.EXITED = EXITED;
+Transition_Transition.ENTERING = ENTERING;
+Transition_Transition.ENTERED = ENTERED;
+Transition_Transition.EXITING = EXITING;
+/* harmony default export */ var esm_Transition = (Transition_Transition);
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/transitions.js
+var transitions = __webpack_require__(27);
+
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/transitions/utils.js
+var reflow = function reflow(node) {
+  return node.scrollTop;
+};
+function getTransitionProps(props, options) {
+  var timeout = props.timeout,
+      _props$style = props.style,
+      style = _props$style === void 0 ? {} : _props$style;
+  return {
+    duration: style.transitionDuration || typeof timeout === 'number' ? timeout : timeout[options.mode] || 0,
+    delay: style.transitionDelay
+  };
 }
-// EXTERNAL MODULE: ./node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Fade/Fade.js
 
-// CONCATENATED MODULE: ./node_modules/clsx/dist/clsx.m.js
-function toVal(mix) {
-	var k, y, str='';
 
-	if (typeof mix === 'string' || typeof mix === 'number') {
-		str += mix;
-	} else if (typeof mix === 'object') {
-		if (Array.isArray(mix)) {
-			for (k=0; k < mix.length; k++) {
-				if (mix[k]) {
-					if (y = toVal(mix[k])) {
-						str && (str += ' ');
-						str += y;
-					}
-				}
-			}
-		} else {
-			for (k in mix) {
-				if (mix[k]) {
-					str && (str += ' ');
-					str += k;
-				}
-			}
-		}
-	}
 
-	return str;
-}
 
-/* harmony default export */ var clsx_m = (function () {
-	var i=0, tmp, x, str='';
-	while (i < arguments.length) {
-		if (tmp = arguments[i++]) {
-			if (x = toVal(tmp)) {
-				str && (str += ' ');
-				str += x
-			}
-		}
-	}
-	return str;
+
+
+
+
+
+
+var Fade_styles = {
+  entering: {
+    opacity: 1
+  },
+  entered: {
+    opacity: 1
+  }
+};
+var defaultTimeout = {
+  enter: transitions["b" /* duration */].enteringScreen,
+  exit: transitions["b" /* duration */].leavingScreen
+};
+/**
+ * The Fade transition is used by the [Modal](/components/modal/) component.
+ * It uses [react-transition-group](https://github.com/reactjs/react-transition-group) internally.
+ */
+
+var Fade_Fade = /*#__PURE__*/react["forwardRef"](function Fade(props, ref) {
+  var children = props.children,
+      _props$disableStrictM = props.disableStrictModeCompat,
+      disableStrictModeCompat = _props$disableStrictM === void 0 ? false : _props$disableStrictM,
+      inProp = props.in,
+      onEnter = props.onEnter,
+      onEntered = props.onEntered,
+      onEntering = props.onEntering,
+      onExit = props.onExit,
+      onExited = props.onExited,
+      onExiting = props.onExiting,
+      style = props.style,
+      _props$TransitionComp = props.TransitionComponent,
+      TransitionComponent = _props$TransitionComp === void 0 ? esm_Transition : _props$TransitionComp,
+      _props$timeout = props.timeout,
+      timeout = _props$timeout === void 0 ? defaultTimeout : _props$timeout,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["children", "disableStrictModeCompat", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "TransitionComponent", "timeout"]);
+
+  var theme = useTheme_useTheme();
+  var enableStrictModeCompat = theme.unstable_strictMode && !disableStrictModeCompat;
+  var nodeRef = react["useRef"](null);
+  var foreignRef = Object(useForkRef["a" /* default */])(children.ref, ref);
+  var handleRef = Object(useForkRef["a" /* default */])(enableStrictModeCompat ? nodeRef : undefined, foreignRef);
+
+  var normalizedTransitionCallback = function normalizedTransitionCallback(callback) {
+    return function (nodeOrAppearing, maybeAppearing) {
+      if (callback) {
+        var _ref = enableStrictModeCompat ? [nodeRef.current, nodeOrAppearing] : [nodeOrAppearing, maybeAppearing],
+            _ref2 = Object(slicedToArray["a" /* default */])(_ref, 2),
+            node = _ref2[0],
+            isAppearing = _ref2[1]; // onEnterXxx and onExitXxx callbacks have a different arguments.length value.
+
+
+        if (isAppearing === undefined) {
+          callback(node);
+        } else {
+          callback(node, isAppearing);
+        }
+      }
+    };
+  };
+
+  var handleEntering = normalizedTransitionCallback(onEntering);
+  var handleEnter = normalizedTransitionCallback(function (node, isAppearing) {
+    reflow(node); // So the animation always start from the start.
+
+    var transitionProps = getTransitionProps({
+      style: style,
+      timeout: timeout
+    }, {
+      mode: 'enter'
+    });
+    node.style.webkitTransition = theme.transitions.create('opacity', transitionProps);
+    node.style.transition = theme.transitions.create('opacity', transitionProps);
+
+    if (onEnter) {
+      onEnter(node, isAppearing);
+    }
+  });
+  var handleEntered = normalizedTransitionCallback(onEntered);
+  var handleExiting = normalizedTransitionCallback(onExiting);
+  var handleExit = normalizedTransitionCallback(function (node) {
+    var transitionProps = getTransitionProps({
+      style: style,
+      timeout: timeout
+    }, {
+      mode: 'exit'
+    });
+    node.style.webkitTransition = theme.transitions.create('opacity', transitionProps);
+    node.style.transition = theme.transitions.create('opacity', transitionProps);
+
+    if (onExit) {
+      onExit(node);
+    }
+  });
+  var handleExited = normalizedTransitionCallback(onExited);
+  return /*#__PURE__*/react["createElement"](TransitionComponent, Object(esm_extends["a" /* default */])({
+    appear: true,
+    in: inProp,
+    nodeRef: enableStrictModeCompat ? nodeRef : undefined,
+    onEnter: handleEnter,
+    onEntered: handleEntered,
+    onEntering: handleEntering,
+    onExit: handleExit,
+    onExited: handleExited,
+    onExiting: handleExiting,
+    timeout: timeout
+  }, other), function (state, childProps) {
+    return /*#__PURE__*/react["cloneElement"](children, Object(esm_extends["a" /* default */])({
+      style: Object(esm_extends["a" /* default */])({
+        opacity: 0,
+        visibility: state === 'exited' && !inProp ? 'hidden' : undefined
+      }, Fade_styles[state], style, children.props.style),
+      ref: handleRef
+    }, childProps));
+  });
 });
+ false ? undefined : void 0;
+/* harmony default export */ var esm_Fade_Fade = (Fade_Fade);
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Backdrop/Backdrop.js
 
-// EXTERNAL MODULE: ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
-var hoist_non_react_statics_cjs = __webpack_require__(4);
-var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
+
+
+
+
+
+
+var Backdrop_styles = {
+  /* Styles applied to the root element. */
+  root: {
+    // Improve scrollable dialog support.
+    zIndex: -1,
+    position: 'fixed',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    right: 0,
+    bottom: 0,
+    top: 0,
+    left: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    WebkitTapHighlightColor: 'transparent'
+  },
+
+  /* Styles applied to the root element if `invisible={true}`. */
+  invisible: {
+    backgroundColor: 'transparent'
+  }
+};
+var Backdrop_Backdrop = /*#__PURE__*/react["forwardRef"](function Backdrop(props, ref) {
+  var children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$invisible = props.invisible,
+      invisible = _props$invisible === void 0 ? false : _props$invisible,
+      open = props.open,
+      transitionDuration = props.transitionDuration,
+      _props$TransitionComp = props.TransitionComponent,
+      TransitionComponent = _props$TransitionComp === void 0 ? esm_Fade_Fade : _props$TransitionComp,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["children", "classes", "className", "invisible", "open", "transitionDuration", "TransitionComponent"]);
+
+  return /*#__PURE__*/react["createElement"](TransitionComponent, Object(esm_extends["a" /* default */])({
+    in: open,
+    timeout: transitionDuration
+  }, other), /*#__PURE__*/react["createElement"]("div", {
+    className: Object(clsx_m["a" /* default */])(classes.root, className, invisible && classes.invisible),
+    "aria-hidden": true,
+    ref: ref
+  }, children));
+});
+ false ? undefined : void 0;
+/* harmony default export */ var esm_Backdrop_Backdrop = (Object(withStyles["a" /* default */])(Backdrop_styles, {
+  name: 'MuiBackdrop'
+})(Backdrop_Backdrop));
+// CONCATENATED MODULE: ./dev/components/Modal/Modal.js
+
+
+
+ //import {WrapedUserError} from '../UserLoginErrorModal/UserLoginErrorModal'
+
+
+
+
+
+function LoginModal() {
+  var open = useSelector_useSelector(function (state) {
+    return state.showModal;
+  });
+  var location = useSelector_useSelector(function (state) {
+    return state.location;
+  });
+  var spys = useSelector_useSelector(function (state) {
+    return state.spys;
+  });
+  var spyArray = useSelector_useSelector(function (state) {
+    return state.spyArray;
+  });
+  var dispatch = useDispatch();
+  var isDarkTheme = useSelector_useSelector(function (state) {
+    return state.isDarkTheme;
+  });
+
+  var handleClose = function handleClose() {
+    dispatch(showFinalModal(false));
+    dispatch(setGameProgress('settings'));
+  };
+
+  return /*#__PURE__*/react_default.a.createElement(esm_Modal_Modal, {
+    "aria-labelledby": "transition-modal-title",
+    "aria-describedby": "transition-modal-description",
+    className: 'modal',
+    open: open,
+    closeAfterTransition: true,
+    BackdropComponent: esm_Backdrop_Backdrop,
+    BackdropProps: {
+      timeout: 500
+    } // disableScrollLock={true}
+
+  }, /*#__PURE__*/react_default.a.createElement(esm_Fade_Fade, {
+    "in": open
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: isDarkTheme ? "modalWindow dark" : "modalWindow"
+  }, /*#__PURE__*/react_default.a.createElement("h3", {
+    id: "transition-modal-title",
+    className: "light"
+  }, "\u0418\u0433\u0440\u0430 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0430!"), /*#__PURE__*/react_default.a.createElement("h4", {
+    className: "light"
+  }, "\u041B\u043E\u043A\u0430\u0446\u0438\u044F: ", /*#__PURE__*/react_default.a.createElement("b", null, location)), /*#__PURE__*/react_default.a.createElement("h4", {
+    className: "light"
+  }, "\u0428\u043F\u0438\u043E\u043D", spys > 1 ? "ы" : null, ":"), spyArray.map(function (isSpy, index) {
+    if (isSpy) {
+      return /*#__PURE__*/react_default.a.createElement("p", {
+        key: index
+      }, "\u0418\u0433\u0440\u043E\u043A ", ++index);
+      return null;
+    }
+  }), /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
+    onClick: handleClose,
+    variant: "contained"
+  }, "\u0421\u044B\u0433\u0440\u0430\u0442\u044C \u0435\u0449\u0451 \u0440\u0430\u0437"))));
+}
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/IconButton/IconButton.js
+
+
+
+
+
+
+
+
+
+
+var IconButton_styles = function styles(theme) {
+  return {
+    /* Styles applied to the root element. */
+    root: {
+      textAlign: 'center',
+      flex: '0 0 auto',
+      fontSize: theme.typography.pxToRem(24),
+      padding: 12,
+      borderRadius: '50%',
+      overflow: 'visible',
+      // Explicitly set the default value to solve a bug on IE 11.
+      color: theme.palette.action.active,
+      transition: theme.transitions.create('background-color', {
+        duration: theme.transitions.duration.shortest
+      }),
+      '&:hover': {
+        backgroundColor: Object(colorManipulator["b" /* fade */])(theme.palette.action.active, theme.palette.action.hoverOpacity),
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        }
+      },
+      '&$disabled': {
+        backgroundColor: 'transparent',
+        color: theme.palette.action.disabled
+      }
+    },
+
+    /* Styles applied to the root element if `edge="start"`. */
+    edgeStart: {
+      marginLeft: -12,
+      '$sizeSmall&': {
+        marginLeft: -3
+      }
+    },
+
+    /* Styles applied to the root element if `edge="end"`. */
+    edgeEnd: {
+      marginRight: -12,
+      '$sizeSmall&': {
+        marginRight: -3
+      }
+    },
+
+    /* Styles applied to the root element if `color="inherit"`. */
+    colorInherit: {
+      color: 'inherit'
+    },
+
+    /* Styles applied to the root element if `color="primary"`. */
+    colorPrimary: {
+      color: theme.palette.primary.main,
+      '&:hover': {
+        backgroundColor: Object(colorManipulator["b" /* fade */])(theme.palette.primary.main, theme.palette.action.hoverOpacity),
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        }
+      }
+    },
+
+    /* Styles applied to the root element if `color="secondary"`. */
+    colorSecondary: {
+      color: theme.palette.secondary.main,
+      '&:hover': {
+        backgroundColor: Object(colorManipulator["b" /* fade */])(theme.palette.secondary.main, theme.palette.action.hoverOpacity),
+        // Reset on touch devices, it doesn't add specificity
+        '@media (hover: none)': {
+          backgroundColor: 'transparent'
+        }
+      }
+    },
+
+    /* Pseudo-class applied to the root element if `disabled={true}`. */
+    disabled: {},
+
+    /* Styles applied to the root element if `size="small"`. */
+    sizeSmall: {
+      padding: 3,
+      fontSize: theme.typography.pxToRem(18)
+    },
+
+    /* Styles applied to the children container element. */
+    label: {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'inherit',
+      justifyContent: 'inherit'
+    }
+  };
+};
+/**
+ * Refer to the [Icons](/components/icons/) section of the documentation
+ * regarding the available icon options.
+ */
+
+var IconButton_IconButton = /*#__PURE__*/react["forwardRef"](function IconButton(props, ref) {
+  var _props$edge = props.edge,
+      edge = _props$edge === void 0 ? false : _props$edge,
+      children = props.children,
+      classes = props.classes,
+      className = props.className,
+      _props$color = props.color,
+      color = _props$color === void 0 ? 'default' : _props$color,
+      _props$disabled = props.disabled,
+      disabled = _props$disabled === void 0 ? false : _props$disabled,
+      _props$disableFocusRi = props.disableFocusRipple,
+      disableFocusRipple = _props$disableFocusRi === void 0 ? false : _props$disableFocusRi,
+      _props$size = props.size,
+      size = _props$size === void 0 ? 'medium' : _props$size,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["edge", "children", "classes", "className", "color", "disabled", "disableFocusRipple", "size"]);
+
+  return /*#__PURE__*/react["createElement"](esm_ButtonBase_ButtonBase, Object(esm_extends["a" /* default */])({
+    className: Object(clsx_m["a" /* default */])(classes.root, className, color !== 'default' && classes["color".concat(Object(capitalize["a" /* default */])(color))], disabled && classes.disabled, size === "small" && classes["size".concat(Object(capitalize["a" /* default */])(size))], {
+      'start': classes.edgeStart,
+      'end': classes.edgeEnd
+    }[edge]),
+    centerRipple: true,
+    focusRipple: !disableFocusRipple,
+    disabled: disabled,
+    ref: ref
+  }, other), /*#__PURE__*/react["createElement"]("span", {
+    className: classes.label
+  }, children));
+});
+ false ? undefined : void 0;
+/* harmony default export */ var esm_IconButton_IconButton = (Object(withStyles["a" /* default */])(IconButton_styles, {
+  name: 'MuiIconButton'
+})(IconButton_IconButton));
+// EXTERNAL MODULE: ./node_modules/@material-ui/icons/PlayCircleOutline.js
+var PlayCircleOutline = __webpack_require__(51);
+var PlayCircleOutline_default = /*#__PURE__*/__webpack_require__.n(PlayCircleOutline);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/icons/PauseCircleOutline.js
+var PauseCircleOutline = __webpack_require__(52);
+var PauseCircleOutline_default = /*#__PURE__*/__webpack_require__.n(PauseCircleOutline);
+
+// CONCATENATED MODULE: ./dev/components/App/pages/timer/timer.js
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function timer_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+ // import cn from 'classnames/bind'
+
+
+ //const cx = cn.bind(styles)
+
+
+
+
+
+
+
+
+
+var timer_CountDown = /*#__PURE__*/function (_Component) {
+  _inherits(CountDown, _Component);
+
+  var _super = _createSuper(CountDown);
+
+  function CountDown(props) {
+    var _this;
+
+    timer_classCallCheck(this, CountDown);
+
+    _this = _super.call(this, props);
+    _this.count = _this.count.bind(_assertThisInitialized(_this));
+    _this.timeIsUp = _this.timeIsUp.bind(_assertThisInitialized(_this));
+    _this.timerPause = _this.timerPause.bind(_assertThisInitialized(_this));
+    _this.state = {
+      minutes: 0,
+      secounds: 0,
+      active: false
+    };
+
+    var getWord = function getWord() {
+      if (_this.props.spys == 1) {
+        return "шпиона";
+      } else {
+        return _this.props.spys + "х шпионов";
+      }
+    };
+
+    _this.title = "Вычислите среди игроков " + getWord();
+    _this.deadline = props.timer * 60 * 1000;
+    _this.x = null;
+    return _this;
+  }
+
+  _createClass(CountDown, [{
+    key: "count",
+    value: function count() {
+      this.deadline -= 1000;
+      var minutes = Math.floor(this.deadline % (1000 * 60 * 60) / (1000 * 60));
+      var seconds = Math.floor(this.deadline % (1000 * 60) / 1000);
+      this.setState({
+        minutes: minutes,
+        seconds: seconds
+      });
+
+      if (this.deadline < 0) {
+        this.timeIsUp();
+      }
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.count();
+      this.x = setInterval(this.count, 1000);
+      this.setState({
+        active: true
+      });
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearInterval(this.x);
+      this.x = null;
+    }
+  }, {
+    key: "timerPause",
+    value: function timerPause() {
+      if (this.state.active) {
+        this.setState({
+          active: false
+        });
+        clearInterval(this.x);
+        this.x = null;
+      } else {
+        this.setState({
+          active: true
+        });
+        this.x = setInterval(this.count, 1000);
+      }
+    }
+  }, {
+    key: "timeIsUp",
+    value: function timeIsUp() {
+      this.props.showFinalModal(true);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+          seconds = _this$state.seconds,
+          minutes = _this$state.minutes,
+          active = _this$state.active;
+      return /*#__PURE__*/react_default.a.createElement("div", {
+        className: "timer"
+      }, /*#__PURE__*/react_default.a.createElement("h1", null, this.title), /*#__PURE__*/react_default.a.createElement(esm_IconButton_IconButton, {
+        onClick: this.timerPause,
+        "aria-label": "upload picture",
+        component: "span"
+      }, active ? /*#__PURE__*/react_default.a.createElement(PlayCircleOutline_default.a, {
+        className: "button active"
+      }) : /*#__PURE__*/react_default.a.createElement(PauseCircleOutline_default.a, {
+        className: "button"
+      })), /*#__PURE__*/react_default.a.createElement("div", {
+        id: "clockdiv",
+        className: active ? "active" : null,
+        onClick: this.timerPause
+      }, /*#__PURE__*/react_default.a.createElement("span", {
+        className: "minutes",
+        id: "minute"
+      }, minutes), /*#__PURE__*/react_default.a.createElement("span", {
+        className: "seconds",
+        id: "second"
+      }, seconds)), /*#__PURE__*/react_default.a.createElement(LoginModal, null), /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
+        variant: "contained",
+        onClick: this.timeIsUp
+      }, "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C"));
+    }
+  }]);
+
+  return CountDown;
+}(react["Component"]);
+
+var timer_mapStateToProps = function mapStateToProps(state) {
+  return {
+    timer: state.timer,
+    spys: state.spys
+  };
+};
+
+var timer_putActionsToProps = function putActionsToProps(dispatch) {
+  return {
+    showFinalModal: bindActionCreators(showFinalModal, dispatch)
+  };
+};
+
+/* harmony default export */ var timer_timer = (connect_connect(timer_mapStateToProps, timer_putActionsToProps)(timer_CountDown));
+// CONCATENATED MODULE: ./dev/store/reducers.js
+function reducers_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { reducers_ownKeys(Object(source), true).forEach(function (key) { reducers_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { reducers_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function reducers_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+ // Or with Immutablejs:
+
+var initialState = {
+  humans: 3,
+  spys: 1,
+  spyArray: [true, false, true],
+  location: "Кафе",
+  timer: 5,
+  showModal: false,
+  gameProgress: "settings",
+  isDarkTheme: true
+};
+var reducers_rootRedducer = function rootRedducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case SET_HUMANS:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        humans: action.payload
+      });
+
+    case SET_SPYS:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        spys: action.payload
+      });
+
+    case SET_SPY_ARRAY:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        spyArray: action.payload
+      });
+
+    case SET_TIMER:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        timer: action.payload
+      });
+
+    case SET_LOCATION:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        location: action.payload
+      });
+
+    case SHOW_FINAL_MODAL:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        showModal: action.payload
+      });
+
+    case SET_GAME_PROGRESS:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        gameProgress: action.payload
+      });
+
+    case SET_THEME:
+      console.log(action);
+      return _objectSpread(_objectSpread({}, state), {}, {
+        isDarkTheme: action.payload
+      });
+  }
+
+  return state;
+}; // const reducers = {
+//   data: rootRedducer,
+//   form: formReducer,
+// };
+//export const reducer = combineReducers(reducers);
+// CONCATENATED MODULE: ./dev/store/store.js
+
+
+var user = {
+  firstName: 'Владимир',
+  cheki: 50,
+  prizi: 4,
+  phone: '+7 888 555 6666',
+  email: 'sqs@sa.ssa'
+};
+var store_store = createStore(reducers_rootRedducer);
+// CONCATENATED MODULE: ./dev/components/App/App.js
+ // import Main from '../pages/main/main'
+// import Header from './Header/Header'
+// import Footer from './Footer/Footer'
+// import Registration from '../pages/Registration/Registration'
+// import Cabinet from '../pages/Cabinet/Cabinet'
+
+
+ //import ScrollSection from './scroll-section/scroll-section'
+//import FAQ from '../pages/faq/faq'
+
+
+
+
+var DataContext = /*#__PURE__*/Object(react["createContext"])();
+
+
+
+var App_App_App = function App() {
+  return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(components_Provider, {
+    store: store_store
+  }, /*#__PURE__*/react_default.a.createElement(App_PageWrapper, null)));
+};
+
+var App_PageWrapper = function PageWrapper() {
+  var isDarkTheme = useSelector_useSelector(function (state) {
+    return state.isDarkTheme;
+  });
+  return /*#__PURE__*/react_default.a.createElement(esm_Grid_Grid, {
+    container: true,
+    className: isDarkTheme ? "appContainer dark" : "appContainer",
+    direction: "column",
+    justify: "center",
+    alignItems: "center"
+  }, /*#__PURE__*/react_default.a.createElement(esm_Grid_Grid, {
+    item: true,
+    className: "appWpap"
+  }, /*#__PURE__*/react_default.a.createElement(App_GetGameProgress, null)));
+};
+
+var App_GetGameProgress = function GetGameProgress() {
+  var gameProgress = useSelector_useSelector(function (state) {
+    return state.gameProgress;
+  });
+
+  switch (gameProgress) {
+    case "settings":
+      return /*#__PURE__*/react_default.a.createElement(pages_settings_settings, null);
+
+    case "cards":
+      return /*#__PURE__*/react_default.a.createElement(pages_cards_cards, null);
+
+    case "timer":
+      return /*#__PURE__*/react_default.a.createElement(timer_timer, null);
+  }
+};
+
+/* harmony default export */ var components_App_App = (App_App_App);
+// EXTERNAL MODULE: ./dev/index.scss
+var dev = __webpack_require__(79);
+
+// CONCATENATED MODULE: ./dev/index.js
+
+
+ //import Log from "./components/Modal/LoginModal/LoginModal";
+//import list from "./components/Header/List/List";
+
+
+react_dom_default.a.render( /*#__PURE__*/react_default.a.createElement(components_App_App, null), document.getElementById("root")); //import Main from './components/pages/main/main' //++
+// import Rules from './components/Rules/Rules'//++
+// import Top from './components/Top/Top' //++
+// import Priz from './components/Priz/Priz' //++
+// import Random sfrom './components/Random/Random' //++
+// import Winners from './components/Winners/Winners' //++
+
+/***/ }),
+/* 81 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export isPlainObject */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return deepmerge; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+
+
+function isPlainObject(item) {
+  return item && Object(_babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(item) === 'object' && item.constructor === Object;
+}
+function deepmerge(target, source) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {
+    clone: true
+  };
+  var output = options.clone ? Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({}, target) : target;
+
+  if (isPlainObject(target) && isPlainObject(source)) {
+    Object.keys(source).forEach(function (key) {
+      // Avoid prototype pollution
+      if (key === '__proto__') {
+        return;
+      }
+
+      if (isPlainObject(source[key]) && key in target) {
+        output[key] = deepmerge(target[key], source[key], options);
+      } else {
+        output[key] = source[key];
+      }
+    });
+  }
+
+  return output;
+}
+
+/***/ }),
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getThemeProps; });
+/* eslint-disable no-restricted-syntax */
+function getThemeProps(params) {
+  var theme = params.theme,
+      name = params.name,
+      props = params.props;
+
+  if (!theme || !theme.props || !theme.props[name]) {
+    return props;
+  } // Resolve default props, code borrow from React source.
+  // https://github.com/facebook/react/blob/15a8f031838a553e41c0b66eb1bcf1da8448104d/packages/react/src/ReactElement.js#L221
+
+
+  var defaultProps = theme.props[name];
+  var propName;
+
+  for (propName in defaultProps) {
+    if (props[propName] === undefined) {
+      props[propName] = defaultProps[propName];
+    }
+  }
+
+  return props;
+}
+
+/***/ }),
+/* 98 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ makeStyles; });
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+var objectWithoutProperties = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+var esm_extends = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(0);
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // CONCATENATED MODULE: ./node_modules/is-in-browser/dist/module.js
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -1258,7 +10844,7 @@ var isBrowser = (typeof window === "undefined" ? "undefined" : _typeof(window)) 
 
 // CONCATENATED MODULE: ./node_modules/tiny-warning/dist/tiny-warning.esm.js
 var isProduction = "production" === 'production';
-function tiny_warning_esm_warning(condition, message) {
+function warning(condition, message) {
   if (!isProduction) {
     if (condition) {
       return;
@@ -1276,36 +10862,19 @@ function tiny_warning_esm_warning(condition, message) {
   }
 }
 
-/* harmony default export */ var tiny_warning_esm = (tiny_warning_esm_warning);
+/* harmony default export */ var tiny_warning_esm = (warning);
 
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
+var createClass = __webpack_require__(22);
 
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js
-var setPrototypeOf = __webpack_require__(14);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
+var inheritsLoose = __webpack_require__(18);
 
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
-
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  Object(setPrototypeOf["a" /* default */])(subClass, superClass);
-}
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
-var assertThisInitialized = __webpack_require__(5);
+var assertThisInitialized = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+var objectWithoutPropertiesLoose = __webpack_require__(10);
 
 // CONCATENATED MODULE: ./node_modules/jss/dist/jss.esm.js
 
@@ -1543,7 +11112,7 @@ function () {
 var jss_esm_StyleRule =
 /*#__PURE__*/
 function (_BaseStyleRule) {
-  _inheritsLoose(StyleRule, _BaseStyleRule);
+  Object(inheritsLoose["a" /* default */])(StyleRule, _BaseStyleRule);
 
   function StyleRule(key, style, options) {
     var _this;
@@ -1616,13 +11185,13 @@ function (_BaseStyleRule) {
   _proto2.toString = function toString(options) {
     var sheet = this.options.sheet;
     var link = sheet ? sheet.options.link : false;
-    var opts = link ? _extends({}, options, {
+    var opts = link ? Object(esm_extends["a" /* default */])({}, options, {
       allowEmpty: true
     }) : options;
     return toCss(this.selectorText, this.style, opts);
   };
 
-  _createClass(StyleRule, [{
+  Object(createClass["a" /* default */])(StyleRule, [{
     key: "selector",
     set: function set(selector) {
       if (selector === this.selectorText) return;
@@ -1684,7 +11253,7 @@ function () {
 
     this.query = options.name || "@" + this.at;
     this.options = options;
-    this.rules = new jss_esm_RuleList(_extends({}, options, {
+    this.rules = new jss_esm_RuleList(Object(esm_extends["a" /* default */])({}, options, {
       parent: this
     }));
 
@@ -1790,12 +11359,12 @@ function () {
         sheet = options.sheet,
         generateId = options.generateId;
     this.id = scoped === false ? this.name : jss_esm_escape(generateId(this, sheet));
-    this.rules = new jss_esm_RuleList(_extends({}, options, {
+    this.rules = new jss_esm_RuleList(Object(esm_extends["a" /* default */])({}, options, {
       parent: this
     }));
 
     for (var name in frames) {
-      this.rules.add(name, frames[name], _extends({}, options, {
+      this.rules.add(name, frames[name], Object(esm_extends["a" /* default */])({}, options, {
         parent: this
       }));
     }
@@ -1893,7 +11462,7 @@ var jss_esm_plugin = {
 var jss_esm_KeyframeRule =
 /*#__PURE__*/
 function (_BaseStyleRule) {
-  _inheritsLoose(KeyframeRule, _BaseStyleRule);
+  Object(inheritsLoose["a" /* default */])(KeyframeRule, _BaseStyleRule);
 
   function KeyframeRule() {
     var _this;
@@ -1915,7 +11484,7 @@ function (_BaseStyleRule) {
   _proto.toString = function toString(options) {
     var sheet = this.options.sheet;
     var link = sheet ? sheet.options.link : false;
-    var opts = link ? _extends({}, options, {
+    var opts = link ? Object(esm_extends["a" /* default */])({}, options, {
       allowEmpty: true
     }) : options;
     return toCss(this.key, this.style, opts);
@@ -2115,7 +11684,7 @@ function () {
         generateId = _this$options.generateId,
         scoped = _this$options.scoped;
 
-    var options = _extends({
+    var options = Object(esm_extends["a" /* default */])({
       classes: this.classes,
       parent: parent,
       sheet: sheet,
@@ -2341,7 +11910,7 @@ function () {
     this.deployed = false;
     this.classes = {};
     this.keyframes = {};
-    this.options = _extends({}, options, {
+    this.options = Object(esm_extends["a" /* default */])({}, options, {
       sheet: this,
       parent: this,
       classes: this.classes,
@@ -2715,7 +12284,7 @@ function () {
   _proto.toString = function toString(_temp) {
     var _ref = _temp === void 0 ? {} : _temp,
         attached = _ref.attached,
-        options = _objectWithoutPropertiesLoose(_ref, ["attached"]);
+        options = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref, ["attached"]);
 
     var css = '';
 
@@ -2733,7 +12302,7 @@ function () {
     return css;
   };
 
-  _createClass(SheetsRegistry, [{
+  Object(createClass["a" /* default */])(SheetsRegistry, [{
     key: "index",
 
     /**
@@ -3328,7 +12897,7 @@ function () {
     }
 
     if (options.id) {
-      this.options.id = _extends({}, this.options.id, options.id);
+      this.options.id = Object(esm_extends["a" /* default */])({}, this.options.id, options.id);
     }
 
     if (options.createGenerateId || options.id) {
@@ -3362,7 +12931,7 @@ function () {
       index = registry.index === 0 ? 0 : registry.index + 1;
     }
 
-    var sheet = new jss_esm_StyleSheet(styles, _extends({}, options, {
+    var sheet = new jss_esm_StyleSheet(styles, Object(esm_extends["a" /* default */])({}, options, {
       jss: this,
       generateId: options.generateId || this.generateId,
       insertionPoint: this.options.insertionPoint,
@@ -3404,7 +12973,7 @@ function () {
     } // $FlowFixMe[incompatible-type]
 
 
-    var ruleOptions = _extends({}, options, {
+    var ruleOptions = Object(esm_extends["a" /* default */])({}, options, {
       name: name,
       jss: this,
       Renderer: this.options.Renderer
@@ -3523,7 +13092,7 @@ function () {
     }
   };
 
-  _createClass(SheetsManager, [{
+  Object(createClass["a" /* default */])(SheetsManager, [{
     key: "size",
     get: function get() {
       return this.length;
@@ -3575,7 +13144,7 @@ function mergeClasses() {
     return baseClasses;
   }
 
-  var nextClasses = _extends({}, baseClasses);
+  var nextClasses = Object(esm_extends["a" /* default */])({}, baseClasses);
 
   if (false) {}
 
@@ -3611,23 +13180,12 @@ var multiKeyStore = {
   }
 };
 /* harmony default export */ var makeStyles_multiKeyStore = (multiKeyStore);
-// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/useTheme/ThemeContext.js
+// EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/useTheme/useTheme.js + 1 modules
+var useTheme = __webpack_require__(99);
 
-var ThemeContext = react_default.a.createContext(null);
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+var prop_types = __webpack_require__(4);
 
-if (false) {}
-
-/* harmony default export */ var useTheme_ThemeContext = (ThemeContext);
-// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/useTheme/useTheme.js
-
-
-function useTheme() {
-  var theme = react_default.a.useContext(useTheme_ThemeContext);
-
-  if (false) {}
-
-  return theme;
-}
 // CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/ThemeProvider/nested.js
 var hasSymbol = typeof Symbol === 'function' && Symbol.for;
 /* harmony default export */ var nested = (hasSymbol ? Symbol.for('mui.nested') : '__THEME_NESTED__');
@@ -3643,7 +13201,7 @@ var hasSymbol = typeof Symbol === 'function' && Symbol.for;
  * being untouched by simple user overrides.
  */
 
-var createGenerateClassName_pseudoClasses = ['checked', 'disabled', 'error', 'focused', 'focusVisible', 'required', 'expanded', 'selected']; // Returns a function which generates unique class names based on counters.
+var pseudoClasses = ['checked', 'disabled', 'error', 'focused', 'focusVisible', 'required', 'expanded', 'selected']; // Returns a function which generates unique class names based on counters.
 // When new generator function is created, rule counter is reset.
 // We need to reset the rule counter for SSR for each request.
 //
@@ -3674,7 +13232,7 @@ function createGenerateClassName() {
 
     if (name && name.indexOf('Mui') === 0 && !styleSheet.options.link && !disableGlobal) {
       // We can use a shorthand class name, we never use the keys to style the components.
-      if (createGenerateClassName_pseudoClasses.indexOf(rule.key) !== -1) {
+      if (pseudoClasses.indexOf(rule.key) !== -1) {
         return "Mui-".concat(rule.key);
       }
 
@@ -3782,7 +13340,7 @@ function () {
     this.isProcessed = false;
     this.key = key;
     this.options = options;
-    this.rules = new jss_esm_RuleList(_extends({}, options, {
+    this.rules = new jss_esm_RuleList(Object(esm_extends["a" /* default */])({}, options, {
       parent: this
     }));
 
@@ -3845,7 +13403,7 @@ function () {
     this.key = key;
     this.options = options;
     var selector = key.substr(atPrefix.length);
-    this.rule = options.jss.createRule(selector, style, _extends({}, options, {
+    this.rule = options.jss.createRule(selector, style, Object(esm_extends["a" /* default */])({}, options, {
       parent: this
     }));
   }
@@ -3880,7 +13438,7 @@ function handleNestedGlobalContainerRule(rule, sheet) {
   if (!rules) return;
 
   for (var name in rules) {
-    sheet.addRule(name, rules[name], _extends({}, options, {
+    sheet.addRule(name, rules[name], Object(esm_extends["a" /* default */])({}, options, {
       selector: addScope(name, rule.selector)
     }));
   }
@@ -3895,7 +13453,7 @@ function handlePrefixedGlobalRule(rule, sheet) {
   for (var prop in style) {
     if (prop[0] !== '@' || prop.substr(0, at.length) !== at) continue;
     var selector = addScope(prop.substr(at.length), rule.selector);
-    sheet.addRule(selector, style[prop], _extends({}, options, {
+    sheet.addRule(selector, style[prop], Object(esm_extends["a" /* default */])({}, options, {
       selector: selector
     }));
     delete style[prop];
@@ -4001,14 +13559,14 @@ function jssNested() {
 
   function getOptions(rule, container, prevOptions) {
     // Options has been already created, now we only increase index.
-    if (prevOptions) return _extends({}, prevOptions, {
+    if (prevOptions) return Object(esm_extends["a" /* default */])({}, prevOptions, {
       index: prevOptions.index + 1 // $FlowFixMe[prop-missing]
 
     });
     var nestingLevel = rule.options.nestingLevel;
     nestingLevel = nestingLevel === undefined ? 1 : nestingLevel + 1;
 
-    var options = _extends({}, rule.options, {
+    var options = Object(esm_extends["a" /* default */])({}, rule.options, {
       nestingLevel: nestingLevel,
       index: container.indexOf(rule) + 1 // We don't need the parent name to be set options for chlid.
 
@@ -4038,7 +13596,7 @@ function jssNested() {
         if (!replaceRef) replaceRef = getReplaceRef(container, sheet); // Replace all $refs.
 
         selector = selector.replace(jss_plugin_nested_esm_refRegExp, replaceRef);
-        container.addRule(selector, style[prop], _extends({}, options, {
+        container.addRule(selector, style[prop], Object(esm_extends["a" /* default */])({}, options, {
           selector: selector
         }));
       } else if (isNestedConditional) {
@@ -4406,32 +13964,9 @@ function defaultUnit(options) {
 
 /* harmony default export */ var jss_plugin_default_unit_esm = (defaultUnit);
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
-var arrayLikeToArray = __webpack_require__(6);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
+var toConsumableArray = __webpack_require__(14);
 
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return Object(arrayLikeToArray["a" /* default */])(arr);
-}
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js
-var iterableToArray = __webpack_require__(15);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
-var unsupportedIterableToArray = __webpack_require__(7);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js
-
-
-
-
-function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || Object(iterableToArray["a" /* default */])(arr) || Object(unsupportedIterableToArray["a" /* default */])(arr) || _nonIterableSpread();
-}
 // CONCATENATED MODULE: ./node_modules/css-vendor/dist/css-vendor.esm.js
 
 
@@ -4612,7 +14147,7 @@ var textOrientation = {
 
 // https://caniuse.com/#search=transform
 
-var css_vendor_esm_transform = {
+var transform = {
   noPrefill: ['transform'],
   supportedProperty: function supportedProperty(prop, style, options) {
     if (prop !== 'transform') return false;
@@ -4831,7 +14366,7 @@ var flex2009 = {
 // 'flex2009' going after 'flex2012'.
 // 'prefixed' going after 'unprefixed'
 
-var css_vendor_esm_plugins = [appearence, colorAdjust, mask, textOrientation, css_vendor_esm_transform, transition, writingMode, userSelect, breakPropsOld, inlineLogicalOld, unprefixed, prefixed, scrollSnap, overscrollBehavior, flex2012, flex2009];
+var css_vendor_esm_plugins = [appearence, colorAdjust, mask, textOrientation, transform, transition, writingMode, userSelect, breakPropsOld, inlineLogicalOld, unprefixed, prefixed, scrollSnap, overscrollBehavior, flex2012, flex2009];
 var propertyDetectors = css_vendor_esm_plugins.filter(function (p) {
   return p.supportedProperty;
 }).map(function (p) {
@@ -4840,7 +14375,7 @@ var propertyDetectors = css_vendor_esm_plugins.filter(function (p) {
 var noPrefill = css_vendor_esm_plugins.filter(function (p) {
   return p.noPrefill;
 }).reduce(function (a, p) {
-  a.push.apply(a, _toConsumableArray(p.noPrefill));
+  a.push.apply(a, Object(toConsumableArray["a" /* default */])(p.noPrefill));
   return a;
 }, []);
 
@@ -5152,11 +14687,11 @@ function StylesProvider(props) {
       injectFirst = _props$injectFirst === void 0 ? false : _props$injectFirst,
       _props$disableGenerat = props.disableGeneration,
       disableGeneration = _props$disableGenerat === void 0 ? false : _props$disableGenerat,
-      localOptions = _objectWithoutProperties(props, ["children", "injectFirst", "disableGeneration"]);
+      localOptions = Object(objectWithoutProperties["a" /* default */])(props, ["children", "injectFirst", "disableGeneration"]);
 
   var outerOptions = react_default.a.useContext(StylesContext);
 
-  var context = _extends({}, outerOptions, {
+  var context = Object(esm_extends["a" /* default */])({}, outerOptions, {
     disableGeneration: disableGeneration
   }, localOptions);
 
@@ -5204,51 +14739,12 @@ function increment() {
 
   return indexCounter;
 }
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
-function typeof_typeof(obj) {
-  "@babel/helpers - typeof";
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
+var esm_typeof = __webpack_require__(23);
 
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    typeof_typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    typeof_typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
+// EXTERNAL MODULE: ./node_modules/@material-ui/utils/esm/deepmerge.js
+var deepmerge = __webpack_require__(81);
 
-  return typeof_typeof(obj);
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/utils/esm/deepmerge.js
-
-
-function isPlainObject(item) {
-  return item && typeof_typeof(item) === 'object' && item.constructor === Object;
-}
-function deepmerge(target, source) {
-  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {
-    clone: true
-  };
-  var output = options.clone ? _extends({}, target) : target;
-
-  if (isPlainObject(target) && isPlainObject(source)) {
-    Object.keys(source).forEach(function (key) {
-      // Avoid prototype pollution
-      if (key === '__proto__') {
-        return;
-      }
-
-      if (isPlainObject(source[key]) && key in target) {
-        output[key] = deepmerge(target[key], source[key], options);
-      } else {
-        output[key] = source[key];
-      }
-    });
-  }
-
-  return output;
-}
 // CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/getStylesCreator/getStylesCreator.js
 
 
@@ -5277,12 +14773,12 @@ function getStylesCreator(stylesOrCreator) {
 
       var overrides = theme.overrides[name];
 
-      var stylesWithOverrides = _extends({}, styles);
+      var stylesWithOverrides = Object(esm_extends["a" /* default */])({}, styles);
 
       Object.keys(overrides).forEach(function (key) {
         if (false) {}
 
-        stylesWithOverrides[key] = deepmerge(stylesWithOverrides[key], overrides[key]);
+        stylesWithOverrides[key] = Object(deepmerge["a" /* default */])(stylesWithOverrides[key], overrides[key]);
       });
       return stylesWithOverrides;
     },
@@ -5372,7 +14868,7 @@ function attach(_ref2, props) {
     makeStyles_multiKeyStore.set(stylesOptions.sheetsManager, stylesCreator, theme, sheetManager);
   }
 
-  var options = _extends({}, stylesCreator.options, stylesOptions, {
+  var options = Object(esm_extends["a" /* default */])({}, stylesCreator.options, stylesOptions, {
     theme: theme,
     flip: typeof stylesOptions.flip === 'boolean' ? stylesOptions.flip : theme.direction === 'rtl'
   });
@@ -5390,7 +14886,7 @@ function attach(_ref2, props) {
     var styles = stylesCreator.create(theme, name);
 
     if (!staticSheet) {
-      staticSheet = stylesOptions.jss.createStyleSheet(styles, _extends({
+      staticSheet = stylesOptions.jss.createStyleSheet(styles, Object(esm_extends["a" /* default */])({
         link: false
       }, options));
       staticSheet.attach();
@@ -5409,7 +14905,7 @@ function attach(_ref2, props) {
   }
 
   if (sheetManager.dynamicStyles) {
-    var dynamicSheet = stylesOptions.jss.createStyleSheet(sheetManager.dynamicStyles, _extends({
+    var dynamicSheet = stylesOptions.jss.createStyleSheet(sheetManager.dynamicStyles, Object(esm_extends["a" /* default */])({
       link: true
     }, options));
     dynamicSheet.update(props);
@@ -5502,7 +14998,7 @@ function makeStyles(stylesOrCreator) {
       Component = options.Component,
       _options$defaultTheme = options.defaultTheme,
       defaultTheme = _options$defaultTheme === void 0 ? getStylesCreator_noopTheme : _options$defaultTheme,
-      stylesOptions2 = _objectWithoutProperties(options, ["name", "classNamePrefix", "Component", "defaultTheme"]);
+      stylesOptions2 = Object(objectWithoutProperties["a" /* default */])(options, ["name", "classNamePrefix", "Component", "defaultTheme"]);
 
   var stylesCreator = getStylesCreator(stylesOrCreator);
   var classNamePrefix = name || classNamePrefixOption || 'makeStyles';
@@ -5515,9 +15011,9 @@ function makeStyles(stylesOrCreator) {
 
   var useStyles = function useStyles() {
     var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    var theme = useTheme() || defaultTheme;
+    var theme = Object(useTheme["a" /* default */])() || defaultTheme;
 
-    var stylesOptions = _extends({}, react_default.a.useContext(StylesContext), stylesOptions2);
+    var stylesOptions = Object(esm_extends["a" /* default */])({}, react_default.a.useContext(StylesContext), stylesOptions2);
 
     var instance = react_default.a.useRef();
     var shouldUpdate = react_default.a.useRef();
@@ -5552,1126 +15048,58 @@ function makeStyles(stylesOrCreator) {
 
   return useStyles;
 }
-// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/getThemeProps/getThemeProps.js
-/* eslint-disable no-restricted-syntax */
-function getThemeProps(params) {
-  var theme = params.theme,
-      name = params.name,
-      props = params.props;
 
-  if (!theme || !theme.props || !theme.props[name]) {
-    return props;
-  } // Resolve default props, code borrow from React source.
-  // https://github.com/facebook/react/blob/15a8f031838a553e41c0b66eb1bcf1da8448104d/packages/react/src/ReactElement.js#L221
+/***/ }),
+/* 99 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
 
-  var defaultProps = theme.props[name];
-  var propName;
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ useTheme; });
 
-  for (propName in defaultProps) {
-    if (props[propName] === undefined) {
-      props[propName] = defaultProps[propName];
-    }
-  }
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(0);
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
-  return props;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/withStyles/withStyles.js
+// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/useTheme/ThemeContext.js
+
+var ThemeContext = react_default.a.createContext(null);
+
+if (false) {}
+
+/* harmony default export */ var useTheme_ThemeContext = (ThemeContext);
+// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/useTheme/useTheme.js
 
 
-
-
-
-
-
-
- // Link a style sheet with a component.
-// It does not modify the component passed to it;
-// instead, it returns a new component, with a `classes` property.
-
-var withStyles_withStyles = function withStyles(stylesOrCreator) {
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  return function (Component) {
-    var defaultTheme = options.defaultTheme,
-        _options$withTheme = options.withTheme,
-        withTheme = _options$withTheme === void 0 ? false : _options$withTheme,
-        name = options.name,
-        stylesOptions = _objectWithoutProperties(options, ["defaultTheme", "withTheme", "name"]);
-
-    if (false) {}
-
-    var classNamePrefix = name;
-
-    if (false) { var displayName; }
-
-    var useStyles = makeStyles(stylesOrCreator, _extends({
-      defaultTheme: defaultTheme,
-      Component: Component,
-      name: name || Component.displayName,
-      classNamePrefix: classNamePrefix
-    }, stylesOptions));
-    var WithStyles = /*#__PURE__*/react_default.a.forwardRef(function WithStyles(props, ref) {
-      var classesProp = props.classes,
-          innerRef = props.innerRef,
-          other = _objectWithoutProperties(props, ["classes", "innerRef"]); // The wrapper receives only user supplied props, which could be a subset of
-      // the actual props Component might receive due to merging with defaultProps.
-      // So copying it here would give us the same result in the wrapper as well.
-
-
-      var classes = useStyles(_extends({}, Component.defaultProps, props));
-      var theme;
-      var more = other;
-
-      if (typeof name === 'string' || withTheme) {
-        // name and withTheme are invariant in the outer scope
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        theme = useTheme() || defaultTheme;
-
-        if (name) {
-          more = getThemeProps({
-            theme: theme,
-            name: name,
-            props: other
-          });
-        } // Provide the theme to the wrapped component.
-        // So we don't have to use the `withTheme()` Higher-order Component.
-
-
-        if (withTheme && !more.theme) {
-          more.theme = theme;
-        }
-      }
-
-      return /*#__PURE__*/react_default.a.createElement(Component, _extends({
-        ref: innerRef || ref,
-        classes: classes
-      }, more));
-    });
-     false ? undefined : void 0;
-
-    if (false) {}
-
-    hoist_non_react_statics_cjs_default()(WithStyles, Component);
-
-    if (false) {}
-
-    return WithStyles;
-  };
-};
-
-/* harmony default export */ var esm_withStyles_withStyles = (withStyles_withStyles);
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createBreakpoints.js
-
-
-// Sorted ASC by size. That's important.
-// It can't be configured as it's used statically for propTypes.
-var keys = ['xs', 'sm', 'md', 'lg', 'xl']; // Keep in mind that @media is inclusive by the CSS specification.
-
-function createBreakpoints(breakpoints) {
-  var _breakpoints$values = breakpoints.values,
-      values = _breakpoints$values === void 0 ? {
-    xs: 0,
-    sm: 600,
-    md: 960,
-    lg: 1280,
-    xl: 1920
-  } : _breakpoints$values,
-      _breakpoints$unit = breakpoints.unit,
-      unit = _breakpoints$unit === void 0 ? 'px' : _breakpoints$unit,
-      _breakpoints$step = breakpoints.step,
-      step = _breakpoints$step === void 0 ? 5 : _breakpoints$step,
-      other = _objectWithoutProperties(breakpoints, ["values", "unit", "step"]);
-
-  function up(key) {
-    var value = typeof values[key] === 'number' ? values[key] : key;
-    return "@media (min-width:".concat(value).concat(unit, ")");
-  }
-
-  function down(key) {
-    var endIndex = keys.indexOf(key) + 1;
-    var upperbound = values[keys[endIndex]];
-
-    if (endIndex === keys.length) {
-      // xl down applies to all sizes
-      return up('xs');
-    }
-
-    var value = typeof upperbound === 'number' && endIndex > 0 ? upperbound : key;
-    return "@media (max-width:".concat(value - step / 100).concat(unit, ")");
-  }
-
-  function between(start, end) {
-    var endIndex = keys.indexOf(end);
-
-    if (endIndex === keys.length - 1) {
-      return up(start);
-    }
-
-    return "@media (min-width:".concat(typeof values[start] === 'number' ? values[start] : start).concat(unit, ") and ") + "(max-width:".concat((endIndex !== -1 && typeof values[keys[endIndex + 1]] === 'number' ? values[keys[endIndex + 1]] : end) - step / 100).concat(unit, ")");
-  }
-
-  function only(key) {
-    return between(key, key);
-  }
-
-  function width(key) {
-    return values[key];
-  }
-
-  return _extends({
-    keys: keys,
-    values: values,
-    up: up,
-    down: down,
-    between: between,
-    only: only,
-    width: width
-  }, other);
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createMixins.js
-
-
-function createMixins(breakpoints, spacing, mixins) {
-  var _toolbar;
-
-  return _extends({
-    gutters: function gutters() {
-      var styles = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-      // To deprecate in v4.1
-      //       warning(
-      //         false,
-      //         [
-      //           'Material-UI: Theme.mixins.gutters() is deprecated.',
-      //           'You can use the source of the mixin directly:',
-      //           `
-      // paddingLeft: theme.spacing(2),
-      // paddingRight: theme.spacing(2),
-      // [theme.breakpoints.up('sm')]: {
-      //   paddingLeft: theme.spacing(3),
-      //   paddingRight: theme.spacing(3),
-      // },
-      // `,
-      //         ].join('\n'),
-      //       );
-      return _extends({
-        paddingLeft: spacing(2),
-        paddingRight: spacing(2)
-      }, styles, _defineProperty({}, breakpoints.up('sm'), _extends({
-        paddingLeft: spacing(3),
-        paddingRight: spacing(3)
-      }, styles[breakpoints.up('sm')])));
-    },
-    toolbar: (_toolbar = {
-      minHeight: 56
-    }, _defineProperty(_toolbar, "".concat(breakpoints.up('xs'), " and (orientation: landscape)"), {
-      minHeight: 48
-    }), _defineProperty(_toolbar, breakpoints.up('sm'), {
-      minHeight: 64
-    }), _toolbar)
-  }, mixins);
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/utils/esm/formatMuiErrorMessage.js
-/**
- * WARNING: Don't import this directly.
- * Use `MuiError` from `@material-ui/utils/macros/MuiError.macro` instead.
- * @param {number} code
- */
-function formatMuiErrorMessage(code) {
-  // Apply babel-plugin-transform-template-literals in loose mode
-  // loose mode is safe iff we're concatenating primitives
-  // see https://babeljs.io/docs/en/babel-plugin-transform-template-literals#loose
-
-  /* eslint-disable prefer-template */
-  var url = 'https://material-ui.com/production-error/?code=' + code;
-
-  for (var i = 1; i < arguments.length; i += 1) {
-    // rest params over-transpile for this case
-    // eslint-disable-next-line prefer-rest-params
-    url += '&args[]=' + encodeURIComponent(arguments[i]);
-  }
-
-  return 'Minified Material-UI error #' + code + '; visit ' + url + ' for the full message.';
-  /* eslint-enable prefer-template */
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/common.js
-var common = {
-  black: '#000',
-  white: '#fff'
-};
-/* harmony default export */ var colors_common = (common);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/grey.js
-var grey = {
-  50: '#fafafa',
-  100: '#f5f5f5',
-  200: '#eeeeee',
-  300: '#e0e0e0',
-  400: '#bdbdbd',
-  500: '#9e9e9e',
-  600: '#757575',
-  700: '#616161',
-  800: '#424242',
-  900: '#212121',
-  A100: '#d5d5d5',
-  A200: '#aaaaaa',
-  A400: '#303030',
-  A700: '#616161'
-};
-/* harmony default export */ var colors_grey = (grey);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/indigo.js
-var indigo = {
-  50: '#e8eaf6',
-  100: '#c5cae9',
-  200: '#9fa8da',
-  300: '#7986cb',
-  400: '#5c6bc0',
-  500: '#3f51b5',
-  600: '#3949ab',
-  700: '#303f9f',
-  800: '#283593',
-  900: '#1a237e',
-  A100: '#8c9eff',
-  A200: '#536dfe',
-  A400: '#3d5afe',
-  A700: '#304ffe'
-};
-/* harmony default export */ var colors_indigo = (indigo);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/pink.js
-var pink = {
-  50: '#fce4ec',
-  100: '#f8bbd0',
-  200: '#f48fb1',
-  300: '#f06292',
-  400: '#ec407a',
-  500: '#e91e63',
-  600: '#d81b60',
-  700: '#c2185b',
-  800: '#ad1457',
-  900: '#880e4f',
-  A100: '#ff80ab',
-  A200: '#ff4081',
-  A400: '#f50057',
-  A700: '#c51162'
-};
-/* harmony default export */ var colors_pink = (pink);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/red.js
-var red = {
-  50: '#ffebee',
-  100: '#ffcdd2',
-  200: '#ef9a9a',
-  300: '#e57373',
-  400: '#ef5350',
-  500: '#f44336',
-  600: '#e53935',
-  700: '#d32f2f',
-  800: '#c62828',
-  900: '#b71c1c',
-  A100: '#ff8a80',
-  A200: '#ff5252',
-  A400: '#ff1744',
-  A700: '#d50000'
-};
-/* harmony default export */ var colors_red = (red);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/orange.js
-var orange = {
-  50: '#fff3e0',
-  100: '#ffe0b2',
-  200: '#ffcc80',
-  300: '#ffb74d',
-  400: '#ffa726',
-  500: '#ff9800',
-  600: '#fb8c00',
-  700: '#f57c00',
-  800: '#ef6c00',
-  900: '#e65100',
-  A100: '#ffd180',
-  A200: '#ffab40',
-  A400: '#ff9100',
-  A700: '#ff6d00'
-};
-/* harmony default export */ var colors_orange = (orange);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/blue.js
-var blue = {
-  50: '#e3f2fd',
-  100: '#bbdefb',
-  200: '#90caf9',
-  300: '#64b5f6',
-  400: '#42a5f5',
-  500: '#2196f3',
-  600: '#1e88e5',
-  700: '#1976d2',
-  800: '#1565c0',
-  900: '#0d47a1',
-  A100: '#82b1ff',
-  A200: '#448aff',
-  A400: '#2979ff',
-  A700: '#2962ff'
-};
-/* harmony default export */ var colors_blue = (blue);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/colors/green.js
-var green = {
-  50: '#e8f5e9',
-  100: '#c8e6c9',
-  200: '#a5d6a7',
-  300: '#81c784',
-  400: '#66bb6a',
-  500: '#4caf50',
-  600: '#43a047',
-  700: '#388e3c',
-  800: '#2e7d32',
-  900: '#1b5e20',
-  A100: '#b9f6ca',
-  A200: '#69f0ae',
-  A400: '#00e676',
-  A700: '#00c853'
-};
-/* harmony default export */ var colors_green = (green);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/colorManipulator.js
-
-
-/* eslint-disable no-use-before-define */
-
-/**
- * Returns a number whose value is limited to the given range.
- *
- * @param {number} value The value to be clamped
- * @param {number} min The lower boundary of the output range
- * @param {number} max The upper boundary of the output range
- * @returns {number} A number in the range [min, max]
- */
-function clamp(value) {
-  var min = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var max = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+function useTheme() {
+  var theme = react_default.a.useContext(useTheme_ThemeContext);
 
   if (false) {}
 
-  return Math.min(Math.max(min, value), max);
-}
-/**
- * Converts a color from CSS hex format to CSS rgb format.
- *
- * @param {string} color - Hex color, i.e. #nnn or #nnnnnn
- * @returns {string} A CSS rgb color string
- */
-
-
-function hexToRgb(color) {
-  color = color.substr(1);
-  var re = new RegExp(".{1,".concat(color.length >= 6 ? 2 : 1, "}"), 'g');
-  var colors = color.match(re);
-
-  if (colors && colors[0].length === 1) {
-    colors = colors.map(function (n) {
-      return n + n;
-    });
-  }
-
-  return colors ? "rgb".concat(colors.length === 4 ? 'a' : '', "(").concat(colors.map(function (n, index) {
-    return index < 3 ? parseInt(n, 16) : Math.round(parseInt(n, 16) / 255 * 1000) / 1000;
-  }).join(', '), ")") : '';
+  return theme;
 }
 
-function intToHex(int) {
-  var hex = int.toString(16);
-  return hex.length === 1 ? "0".concat(hex) : hex;
-}
-/**
- * Converts a color from CSS rgb format to CSS hex format.
- *
- * @param {string} color - RGB color, i.e. rgb(n, n, n)
- * @returns {string} A CSS rgb color string, i.e. #nnnnnn
- */
+/***/ }),
+/* 100 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
 
-function rgbToHex(color) {
-  // Idempotent
-  if (color.indexOf('#') === 0) {
-    return color;
-  }
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ createUnarySpacing; });
 
-  var _decomposeColor = decomposeColor(color),
-      values = _decomposeColor.values;
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
+var slicedToArray = __webpack_require__(21);
 
-  return "#".concat(values.map(function (n) {
-    return intToHex(n);
-  }).join(''));
-}
-/**
- * Converts a color from hsl format to rgb format.
- *
- * @param {string} color - HSL color values
- * @returns {string} rgb color values
- */
+// EXTERNAL MODULE: ./node_modules/@material-ui/system/esm/breakpoints.js
+var breakpoints = __webpack_require__(31);
 
-function hslToRgb(color) {
-  color = decomposeColor(color);
-  var _color = color,
-      values = _color.values;
-  var h = values[0];
-  var s = values[1] / 100;
-  var l = values[2] / 100;
-  var a = s * Math.min(l, 1 - l);
+// EXTERNAL MODULE: ./node_modules/@material-ui/system/esm/merge.js
+var merge = __webpack_require__(15);
 
-  var f = function f(n) {
-    var k = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : (n + h / 30) % 12;
-    return l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-  };
-
-  var type = 'rgb';
-  var rgb = [Math.round(f(0) * 255), Math.round(f(8) * 255), Math.round(f(4) * 255)];
-
-  if (color.type === 'hsla') {
-    type += 'a';
-    rgb.push(values[3]);
-  }
-
-  return recomposeColor({
-    type: type,
-    values: rgb
-  });
-}
-/**
- * Returns an object with the type and values of a color.
- *
- * Note: Does not support rgb % values.
- *
- * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
- * @returns {object} - A MUI color object: {type: string, values: number[]}
- */
-
-function decomposeColor(color) {
-  // Idempotent
-  if (color.type) {
-    return color;
-  }
-
-  if (color.charAt(0) === '#') {
-    return decomposeColor(hexToRgb(color));
-  }
-
-  var marker = color.indexOf('(');
-  var type = color.substring(0, marker);
-
-  if (['rgb', 'rgba', 'hsl', 'hsla'].indexOf(type) === -1) {
-    throw new Error( false ? undefined : formatMuiErrorMessage(3, color));
-  }
-
-  var values = color.substring(marker + 1, color.length - 1).split(',');
-  values = values.map(function (value) {
-    return parseFloat(value);
-  });
-  return {
-    type: type,
-    values: values
-  };
-}
-/**
- * Converts a color object with type and values to a string.
- *
- * @param {object} color - Decomposed color
- * @param {string} color.type - One of: 'rgb', 'rgba', 'hsl', 'hsla'
- * @param {array} color.values - [n,n,n] or [n,n,n,n]
- * @returns {string} A CSS color string
- */
-
-function recomposeColor(color) {
-  var type = color.type;
-  var values = color.values;
-
-  if (type.indexOf('rgb') !== -1) {
-    // Only convert the first 3 values to int (i.e. not alpha)
-    values = values.map(function (n, i) {
-      return i < 3 ? parseInt(n, 10) : n;
-    });
-  } else if (type.indexOf('hsl') !== -1) {
-    values[1] = "".concat(values[1], "%");
-    values[2] = "".concat(values[2], "%");
-  }
-
-  return "".concat(type, "(").concat(values.join(', '), ")");
-}
-/**
- * Calculates the contrast ratio between two colors.
- *
- * Formula: https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
- *
- * @param {string} foreground - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
- * @param {string} background - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
- * @returns {number} A contrast ratio value in the range 0 - 21.
- */
-
-function getContrastRatio(foreground, background) {
-  var lumA = getLuminance(foreground);
-  var lumB = getLuminance(background);
-  return (Math.max(lumA, lumB) + 0.05) / (Math.min(lumA, lumB) + 0.05);
-}
-/**
- * The relative brightness of any point in a color space,
- * normalized to 0 for darkest black and 1 for lightest white.
- *
- * Formula: https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
- *
- * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
- * @returns {number} The relative brightness of the color in the range 0 - 1
- */
-
-function getLuminance(color) {
-  color = decomposeColor(color);
-  var rgb = color.type === 'hsl' ? decomposeColor(hslToRgb(color)).values : color.values;
-  rgb = rgb.map(function (val) {
-    val /= 255; // normalized
-
-    return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
-  }); // Truncate at 3 digits
-
-  return Number((0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2]).toFixed(3));
-}
-/**
- * Darken or lighten a color, depending on its luminance.
- * Light colors are darkened, dark colors are lightened.
- *
- * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
- * @param {number} coefficient=0.15 - multiplier in the range 0 - 1
- * @returns {string} A CSS color string. Hex input values are returned as rgb
- */
-
-function emphasize(color) {
-  var coefficient = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0.15;
-  return getLuminance(color) > 0.5 ? darken(color, coefficient) : lighten(color, coefficient);
-}
-/**
- * Set the absolute transparency of a color.
- * Any existing alpha values are overwritten.
- *
- * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
- * @param {number} value - value to set the alpha channel to in the range 0 -1
- * @returns {string} A CSS color string. Hex input values are returned as rgb
- */
-
-function fade(color, value) {
-  color = decomposeColor(color);
-  value = clamp(value);
-
-  if (color.type === 'rgb' || color.type === 'hsl') {
-    color.type += 'a';
-  }
-
-  color.values[3] = value;
-  return recomposeColor(color);
-}
-/**
- * Darkens a color.
- *
- * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
- * @param {number} coefficient - multiplier in the range 0 - 1
- * @returns {string} A CSS color string. Hex input values are returned as rgb
- */
-
-function darken(color, coefficient) {
-  color = decomposeColor(color);
-  coefficient = clamp(coefficient);
-
-  if (color.type.indexOf('hsl') !== -1) {
-    color.values[2] *= 1 - coefficient;
-  } else if (color.type.indexOf('rgb') !== -1) {
-    for (var i = 0; i < 3; i += 1) {
-      color.values[i] *= 1 - coefficient;
-    }
-  }
-
-  return recomposeColor(color);
-}
-/**
- * Lightens a color.
- *
- * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
- * @param {number} coefficient - multiplier in the range 0 - 1
- * @returns {string} A CSS color string. Hex input values are returned as rgb
- */
-
-function lighten(color, coefficient) {
-  color = decomposeColor(color);
-  coefficient = clamp(coefficient);
-
-  if (color.type.indexOf('hsl') !== -1) {
-    color.values[2] += (100 - color.values[2]) * coefficient;
-  } else if (color.type.indexOf('rgb') !== -1) {
-    for (var i = 0; i < 3; i += 1) {
-      color.values[i] += (255 - color.values[i]) * coefficient;
-    }
-  }
-
-  return recomposeColor(color);
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createPalette.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-var light = {
-  // The colors used to style the text.
-  text: {
-    // The most important text.
-    primary: 'rgba(0, 0, 0, 0.87)',
-    // Secondary text.
-    secondary: 'rgba(0, 0, 0, 0.54)',
-    // Disabled text have even lower visual prominence.
-    disabled: 'rgba(0, 0, 0, 0.38)',
-    // Text hints.
-    hint: 'rgba(0, 0, 0, 0.38)'
-  },
-  // The color used to divide different elements.
-  divider: 'rgba(0, 0, 0, 0.12)',
-  // The background colors used to style the surfaces.
-  // Consistency between these values is important.
-  background: {
-    paper: colors_common.white,
-    default: colors_grey[50]
-  },
-  // The colors used to style the action elements.
-  action: {
-    // The color of an active action like an icon button.
-    active: 'rgba(0, 0, 0, 0.54)',
-    // The color of an hovered action.
-    hover: 'rgba(0, 0, 0, 0.04)',
-    hoverOpacity: 0.04,
-    // The color of a selected action.
-    selected: 'rgba(0, 0, 0, 0.08)',
-    selectedOpacity: 0.08,
-    // The color of a disabled action.
-    disabled: 'rgba(0, 0, 0, 0.26)',
-    // The background color of a disabled action.
-    disabledBackground: 'rgba(0, 0, 0, 0.12)',
-    disabledOpacity: 0.38,
-    focus: 'rgba(0, 0, 0, 0.12)',
-    focusOpacity: 0.12,
-    activatedOpacity: 0.12
-  }
-};
-var dark = {
-  text: {
-    primary: colors_common.white,
-    secondary: 'rgba(255, 255, 255, 0.7)',
-    disabled: 'rgba(255, 255, 255, 0.5)',
-    hint: 'rgba(255, 255, 255, 0.5)',
-    icon: 'rgba(255, 255, 255, 0.5)'
-  },
-  divider: 'rgba(255, 255, 255, 0.12)',
-  background: {
-    paper: colors_grey[800],
-    default: '#303030'
-  },
-  action: {
-    active: colors_common.white,
-    hover: 'rgba(255, 255, 255, 0.08)',
-    hoverOpacity: 0.08,
-    selected: 'rgba(255, 255, 255, 0.16)',
-    selectedOpacity: 0.16,
-    disabled: 'rgba(255, 255, 255, 0.3)',
-    disabledBackground: 'rgba(255, 255, 255, 0.12)',
-    disabledOpacity: 0.38,
-    focus: 'rgba(255, 255, 255, 0.12)',
-    focusOpacity: 0.12,
-    activatedOpacity: 0.24
-  }
-};
-
-function addLightOrDark(intent, direction, shade, tonalOffset) {
-  var tonalOffsetLight = tonalOffset.light || tonalOffset;
-  var tonalOffsetDark = tonalOffset.dark || tonalOffset * 1.5;
-
-  if (!intent[direction]) {
-    if (intent.hasOwnProperty(shade)) {
-      intent[direction] = intent[shade];
-    } else if (direction === 'light') {
-      intent.light = lighten(intent.main, tonalOffsetLight);
-    } else if (direction === 'dark') {
-      intent.dark = darken(intent.main, tonalOffsetDark);
-    }
-  }
-}
-
-function createPalette(palette) {
-  var _palette$primary = palette.primary,
-      primary = _palette$primary === void 0 ? {
-    light: colors_indigo[300],
-    main: colors_indigo[500],
-    dark: colors_indigo[700]
-  } : _palette$primary,
-      _palette$secondary = palette.secondary,
-      secondary = _palette$secondary === void 0 ? {
-    light: colors_pink.A200,
-    main: colors_pink.A400,
-    dark: colors_pink.A700
-  } : _palette$secondary,
-      _palette$error = palette.error,
-      error = _palette$error === void 0 ? {
-    light: colors_red[300],
-    main: colors_red[500],
-    dark: colors_red[700]
-  } : _palette$error,
-      _palette$warning = palette.warning,
-      warning = _palette$warning === void 0 ? {
-    light: colors_orange[300],
-    main: colors_orange[500],
-    dark: colors_orange[700]
-  } : _palette$warning,
-      _palette$info = palette.info,
-      info = _palette$info === void 0 ? {
-    light: colors_blue[300],
-    main: colors_blue[500],
-    dark: colors_blue[700]
-  } : _palette$info,
-      _palette$success = palette.success,
-      success = _palette$success === void 0 ? {
-    light: colors_green[300],
-    main: colors_green[500],
-    dark: colors_green[700]
-  } : _palette$success,
-      _palette$type = palette.type,
-      type = _palette$type === void 0 ? 'light' : _palette$type,
-      _palette$contrastThre = palette.contrastThreshold,
-      contrastThreshold = _palette$contrastThre === void 0 ? 3 : _palette$contrastThre,
-      _palette$tonalOffset = palette.tonalOffset,
-      tonalOffset = _palette$tonalOffset === void 0 ? 0.2 : _palette$tonalOffset,
-      other = _objectWithoutProperties(palette, ["primary", "secondary", "error", "warning", "info", "success", "type", "contrastThreshold", "tonalOffset"]); // Use the same logic as
-  // Bootstrap: https://github.com/twbs/bootstrap/blob/1d6e3710dd447de1a200f29e8fa521f8a0908f70/scss/_functions.scss#L59
-  // and material-components-web https://github.com/material-components/material-components-web/blob/ac46b8863c4dab9fc22c4c662dc6bd1b65dd652f/packages/mdc-theme/_functions.scss#L54
-
-
-  function getContrastText(background) {
-    var contrastText = getContrastRatio(background, dark.text.primary) >= contrastThreshold ? dark.text.primary : light.text.primary;
-
-    if (false) { var contrast; }
-
-    return contrastText;
-  }
-
-  var augmentColor = function augmentColor(color) {
-    var mainShade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;
-    var lightShade = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 300;
-    var darkShade = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 700;
-    color = _extends({}, color);
-
-    if (!color.main && color[mainShade]) {
-      color.main = color[mainShade];
-    }
-
-    if (!color.main) {
-      throw new Error( false ? undefined : formatMuiErrorMessage(4, mainShade));
-    }
-
-    if (typeof color.main !== 'string') {
-      throw new Error( false ? undefined : formatMuiErrorMessage(5, JSON.stringify(color.main)));
-    }
-
-    addLightOrDark(color, 'light', lightShade, tonalOffset);
-    addLightOrDark(color, 'dark', darkShade, tonalOffset);
-
-    if (!color.contrastText) {
-      color.contrastText = getContrastText(color.main);
-    }
-
-    return color;
-  };
-
-  var types = {
-    dark: dark,
-    light: light
-  };
-
-  if (false) {}
-
-  var paletteOutput = deepmerge(_extends({
-    // A collection of common colors.
-    common: colors_common,
-    // The palette type, can be light or dark.
-    type: type,
-    // The colors used to represent primary interface elements for a user.
-    primary: augmentColor(primary),
-    // The colors used to represent secondary interface elements for a user.
-    secondary: augmentColor(secondary, 'A400', 'A200', 'A700'),
-    // The colors used to represent interface elements that the user should be made aware of.
-    error: augmentColor(error),
-    // The colors used to represent potentially dangerous actions or important messages.
-    warning: augmentColor(warning),
-    // The colors used to present information to the user that is neutral and not necessarily important.
-    info: augmentColor(info),
-    // The colors used to indicate the successful completion of an action that user triggered.
-    success: augmentColor(success),
-    // The grey colors.
-    grey: colors_grey,
-    // Used by `getContrastText()` to maximize the contrast between
-    // the background and the text.
-    contrastThreshold: contrastThreshold,
-    // Takes a background color and returns the text color that maximizes the contrast.
-    getContrastText: getContrastText,
-    // Generate a rich color object.
-    augmentColor: augmentColor,
-    // Used by the functions below to shift a color's luminance by approximately
-    // two indexes within its tonal palette.
-    // E.g., shift from Red 500 to Red 300 or Red 700.
-    tonalOffset: tonalOffset
-  }, types[type]), other);
-  return paletteOutput;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createTypography.js
-
-
-
-
-function round(value) {
-  return Math.round(value * 1e5) / 1e5;
-}
-
-var caseAllCaps = {
-  textTransform: 'uppercase'
-};
-var defaultFontFamily = '"Roboto", "Helvetica", "Arial", sans-serif';
-/**
- * @see @link{https://material.io/design/typography/the-type-system.html}
- * @see @link{https://material.io/design/typography/understanding-typography.html}
- */
-
-function createTypography(palette, typography) {
-  var _ref = typeof typography === 'function' ? typography(palette) : typography,
-      _ref$fontFamily = _ref.fontFamily,
-      fontFamily = _ref$fontFamily === void 0 ? defaultFontFamily : _ref$fontFamily,
-      _ref$fontSize = _ref.fontSize,
-      fontSize = _ref$fontSize === void 0 ? 14 : _ref$fontSize,
-      _ref$fontWeightLight = _ref.fontWeightLight,
-      fontWeightLight = _ref$fontWeightLight === void 0 ? 300 : _ref$fontWeightLight,
-      _ref$fontWeightRegula = _ref.fontWeightRegular,
-      fontWeightRegular = _ref$fontWeightRegula === void 0 ? 400 : _ref$fontWeightRegula,
-      _ref$fontWeightMedium = _ref.fontWeightMedium,
-      fontWeightMedium = _ref$fontWeightMedium === void 0 ? 500 : _ref$fontWeightMedium,
-      _ref$fontWeightBold = _ref.fontWeightBold,
-      fontWeightBold = _ref$fontWeightBold === void 0 ? 700 : _ref$fontWeightBold,
-      _ref$htmlFontSize = _ref.htmlFontSize,
-      htmlFontSize = _ref$htmlFontSize === void 0 ? 16 : _ref$htmlFontSize,
-      allVariants = _ref.allVariants,
-      pxToRem2 = _ref.pxToRem,
-      other = _objectWithoutProperties(_ref, ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"]);
-
-  if (false) {}
-
-  var coef = fontSize / 14;
-
-  var pxToRem = pxToRem2 || function (size) {
-    return "".concat(size / htmlFontSize * coef, "rem");
-  };
-
-  var buildVariant = function buildVariant(fontWeight, size, lineHeight, letterSpacing, casing) {
-    return _extends({
-      fontFamily: fontFamily,
-      fontWeight: fontWeight,
-      fontSize: pxToRem(size),
-      // Unitless following https://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
-      lineHeight: lineHeight
-    }, fontFamily === defaultFontFamily ? {
-      letterSpacing: "".concat(round(letterSpacing / size), "em")
-    } : {}, casing, allVariants);
-  };
-
-  var variants = {
-    h1: buildVariant(fontWeightLight, 96, 1.167, -1.5),
-    h2: buildVariant(fontWeightLight, 60, 1.2, -0.5),
-    h3: buildVariant(fontWeightRegular, 48, 1.167, 0),
-    h4: buildVariant(fontWeightRegular, 34, 1.235, 0.25),
-    h5: buildVariant(fontWeightRegular, 24, 1.334, 0),
-    h6: buildVariant(fontWeightMedium, 20, 1.6, 0.15),
-    subtitle1: buildVariant(fontWeightRegular, 16, 1.75, 0.15),
-    subtitle2: buildVariant(fontWeightMedium, 14, 1.57, 0.1),
-    body1: buildVariant(fontWeightRegular, 16, 1.5, 0.15),
-    body2: buildVariant(fontWeightRegular, 14, 1.43, 0.15),
-    button: buildVariant(fontWeightMedium, 14, 1.75, 0.4, caseAllCaps),
-    caption: buildVariant(fontWeightRegular, 12, 1.66, 0.4),
-    overline: buildVariant(fontWeightRegular, 12, 2.66, 1, caseAllCaps)
-  };
-  return deepmerge(_extends({
-    htmlFontSize: htmlFontSize,
-    pxToRem: pxToRem,
-    round: round,
-    // TODO v5: remove
-    fontFamily: fontFamily,
-    fontSize: fontSize,
-    fontWeightLight: fontWeightLight,
-    fontWeightRegular: fontWeightRegular,
-    fontWeightMedium: fontWeightMedium,
-    fontWeightBold: fontWeightBold
-  }, variants), other, {
-    clone: false // No need to clone deep
-
-  });
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/shadows.js
-var shadowKeyUmbraOpacity = 0.2;
-var shadowKeyPenumbraOpacity = 0.14;
-var shadowAmbientShadowOpacity = 0.12;
-
-function createShadow() {
-  return ["".concat(arguments.length <= 0 ? undefined : arguments[0], "px ").concat(arguments.length <= 1 ? undefined : arguments[1], "px ").concat(arguments.length <= 2 ? undefined : arguments[2], "px ").concat(arguments.length <= 3 ? undefined : arguments[3], "px rgba(0,0,0,").concat(shadowKeyUmbraOpacity, ")"), "".concat(arguments.length <= 4 ? undefined : arguments[4], "px ").concat(arguments.length <= 5 ? undefined : arguments[5], "px ").concat(arguments.length <= 6 ? undefined : arguments[6], "px ").concat(arguments.length <= 7 ? undefined : arguments[7], "px rgba(0,0,0,").concat(shadowKeyPenumbraOpacity, ")"), "".concat(arguments.length <= 8 ? undefined : arguments[8], "px ").concat(arguments.length <= 9 ? undefined : arguments[9], "px ").concat(arguments.length <= 10 ? undefined : arguments[10], "px ").concat(arguments.length <= 11 ? undefined : arguments[11], "px rgba(0,0,0,").concat(shadowAmbientShadowOpacity, ")")].join(',');
-} // Values from https://github.com/material-components/material-components-web/blob/be8747f94574669cb5e7add1a7c54fa41a89cec7/packages/mdc-elevation/_variables.scss
-
-
-var shadows = ['none', createShadow(0, 2, 1, -1, 0, 1, 1, 0, 0, 1, 3, 0), createShadow(0, 3, 1, -2, 0, 2, 2, 0, 0, 1, 5, 0), createShadow(0, 3, 3, -2, 0, 3, 4, 0, 0, 1, 8, 0), createShadow(0, 2, 4, -1, 0, 4, 5, 0, 0, 1, 10, 0), createShadow(0, 3, 5, -1, 0, 5, 8, 0, 0, 1, 14, 0), createShadow(0, 3, 5, -1, 0, 6, 10, 0, 0, 1, 18, 0), createShadow(0, 4, 5, -2, 0, 7, 10, 1, 0, 2, 16, 1), createShadow(0, 5, 5, -3, 0, 8, 10, 1, 0, 3, 14, 2), createShadow(0, 5, 6, -3, 0, 9, 12, 1, 0, 3, 16, 2), createShadow(0, 6, 6, -3, 0, 10, 14, 1, 0, 4, 18, 3), createShadow(0, 6, 7, -4, 0, 11, 15, 1, 0, 4, 20, 3), createShadow(0, 7, 8, -4, 0, 12, 17, 2, 0, 5, 22, 4), createShadow(0, 7, 8, -4, 0, 13, 19, 2, 0, 5, 24, 4), createShadow(0, 7, 9, -4, 0, 14, 21, 2, 0, 5, 26, 4), createShadow(0, 8, 9, -5, 0, 15, 22, 2, 0, 6, 28, 5), createShadow(0, 8, 10, -5, 0, 16, 24, 2, 0, 6, 30, 5), createShadow(0, 8, 11, -5, 0, 17, 26, 2, 0, 6, 32, 5), createShadow(0, 9, 11, -5, 0, 18, 28, 2, 0, 7, 34, 6), createShadow(0, 9, 12, -6, 0, 19, 29, 2, 0, 7, 36, 6), createShadow(0, 10, 13, -6, 0, 20, 31, 3, 0, 8, 38, 7), createShadow(0, 10, 13, -6, 0, 21, 33, 3, 0, 8, 40, 7), createShadow(0, 10, 14, -6, 0, 22, 35, 3, 0, 8, 42, 7), createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8), createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8)];
-/* harmony default export */ var styles_shadows = (shadows);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/shape.js
-var shape = {
-  borderRadius: 4
-};
-/* harmony default export */ var styles_shape = (shape);
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
-var arrayWithHoles = __webpack_require__(16);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
-var nonIterableRest = __webpack_require__(17);
-
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js
-
-
-
-
-function _slicedToArray(arr, i) {
-  return Object(arrayWithHoles["a" /* default */])(arr) || _iterableToArrayLimit(arr, i) || Object(unsupportedIterableToArray["a" /* default */])(arr, i) || Object(nonIterableRest["a" /* default */])();
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/merge.js
-
-
-function merge(acc, item) {
-  if (!item) {
-    return acc;
-  }
-
-  return deepmerge(acc, item, {
-    clone: false // No need to clone deep, it's way faster.
-
-  });
-}
-
-/* harmony default export */ var esm_merge = (merge);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/breakpoints.js
-
-
-
-
- // The breakpoint **start** at this value.
-// For instance with the first breakpoint xs: [xs, sm[.
-
-var breakpoints_values = {
-  xs: 0,
-  sm: 600,
-  md: 960,
-  lg: 1280,
-  xl: 1920
-};
-var defaultBreakpoints = {
-  // Sorted ASC by size. That's important.
-  // It can't be configured as it's used statically for propTypes.
-  keys: ['xs', 'sm', 'md', 'lg', 'xl'],
-  up: function up(key) {
-    return "@media (min-width:".concat(breakpoints_values[key], "px)");
-  }
-};
-function handleBreakpoints(props, propValue, styleFromPropValue) {
-  if (false) {}
-
-  if (Array.isArray(propValue)) {
-    var themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
-    return propValue.reduce(function (acc, item, index) {
-      acc[themeBreakpoints.up(themeBreakpoints.keys[index])] = styleFromPropValue(propValue[index]);
-      return acc;
-    }, {});
-  }
-
-  if (typeof_typeof(propValue) === 'object') {
-    var _themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
-
-    return Object.keys(propValue).reduce(function (acc, breakpoint) {
-      acc[_themeBreakpoints.up(breakpoint)] = styleFromPropValue(propValue[breakpoint]);
-      return acc;
-    }, {});
-  }
-
-  var output = styleFromPropValue(propValue);
-  return output;
-}
-
-function breakpoints_breakpoints(styleFunction) {
-  var newStyleFunction = function newStyleFunction(props) {
-    var base = styleFunction(props);
-    var themeBreakpoints = props.theme.breakpoints || defaultBreakpoints;
-    var extended = themeBreakpoints.keys.reduce(function (acc, key) {
-      if (props[key]) {
-        acc = acc || {};
-        acc[themeBreakpoints.up(key)] = styleFunction(_extends({
-          theme: props.theme
-        }, props[key]));
-      }
-
-      return acc;
-    }, null);
-    return esm_merge(base, extended);
-  };
-
-  newStyleFunction.propTypes =  false ? undefined : {};
-  newStyleFunction.filterProps = ['xs', 'sm', 'md', 'lg', 'xl'].concat(_toConsumableArray(styleFunction.filterProps));
-  return newStyleFunction;
-}
-
-/* harmony default export */ var esm_breakpoints = (breakpoints_breakpoints);
 // CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/memoize.js
-function memoize_memoize(fn) {
+function memoize(fn) {
   var cache = {};
   return function (arg) {
     if (cache[arg] === undefined) {
@@ -6708,7 +15136,7 @@ var aliases = {
 // From 300,000 ops/sec
 // To 350,000 ops/sec
 
-var getCssProperties = memoize_memoize(function (prop) {
+var getCssProperties = memoize(function (prop) {
   // It's not a shorthand notation.
   if (prop.length > 2) {
     if (aliases[prop]) {
@@ -6719,7 +15147,7 @@ var getCssProperties = memoize_memoize(function (prop) {
   }
 
   var _prop$split = prop.split(''),
-      _prop$split2 = _slicedToArray(_prop$split, 2),
+      _prop$split2 = Object(slicedToArray["a" /* default */])(_prop$split, 2),
       a = _prop$split2[0],
       b = _prop$split2[1];
 
@@ -6788,7 +15216,7 @@ function getStyleFromPropValue(cssProperties, transformer) {
   };
 }
 
-function spacing_spacing(props) {
+function spacing(props) {
   var theme = props.theme;
   var transformer = createUnarySpacing(theme);
   return Object.keys(props).map(function (prop) {
@@ -6801,7367 +15229,13 @@ function spacing_spacing(props) {
     var cssProperties = getCssProperties(prop);
     var styleFromPropValue = getStyleFromPropValue(cssProperties, transformer);
     var propValue = props[prop];
-    return handleBreakpoints(props, propValue, styleFromPropValue);
-  }).reduce(esm_merge, {});
+    return Object(breakpoints["a" /* handleBreakpoints */])(props, propValue, styleFromPropValue);
+  }).reduce(merge["a" /* default */], {});
 }
 
-spacing_spacing.propTypes =  false ? undefined : {};
-spacing_spacing.filterProps = spacingKeys;
-/* harmony default export */ var esm_spacing = (spacing_spacing);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createSpacing.js
-
-var warnOnce;
-function createSpacing() {
-  var spacingInput = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 8;
-
-  // Already transformed.
-  if (spacingInput.mui) {
-    return spacingInput;
-  } // Material Design layouts are visually balanced. Most measurements align to an 8dp grid applied, which aligns both spacing and the overall layout.
-  // Smaller components, such as icons and type, can align to a 4dp grid.
-  // https://material.io/design/layout/understanding-layout.html#usage
-
-
-  var transform = createUnarySpacing({
-    spacing: spacingInput
-  });
-
-  var spacing = function spacing() {
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    if (false) {}
-
-    if (args.length === 0) {
-      return transform(1);
-    }
-
-    if (args.length === 1) {
-      return transform(args[0]);
-    }
-
-    return args.map(function (argument) {
-      if (typeof argument === 'string') {
-        return argument;
-      }
-
-      var output = transform(argument);
-      return typeof output === 'number' ? "".concat(output, "px") : output;
-    }).join(' ');
-  }; // Backward compatibility, to remove in v5.
-
-
-  Object.defineProperty(spacing, 'unit', {
-    get: function get() {
-      if (false) {}
-
-      return spacingInput;
-    }
-  });
-  spacing.mui = true;
-  return spacing;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/transitions.js
-
-// Follow https://material.google.com/motion/duration-easing.html#duration-easing-natural-easing-curves
-// to learn the context in which each easing should be used.
-var easing = {
-  // This is the most common easing curve.
-  easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  // Objects enter the screen at full velocity from off-screen and
-  // slowly decelerate to a resting point.
-  easeOut: 'cubic-bezier(0.0, 0, 0.2, 1)',
-  // Objects leave the screen at full velocity. They do not decelerate when off-screen.
-  easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
-  // The sharp curve is used by objects that may return to the screen at any time.
-  sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
-}; // Follow https://material.io/guidelines/motion/duration-easing.html#duration-easing-common-durations
-// to learn when use what timing
-
-var duration = {
-  shortest: 150,
-  shorter: 200,
-  short: 250,
-  // most basic recommended timing
-  standard: 300,
-  // this is to be used in complex animations
-  complex: 375,
-  // recommended when something is entering screen
-  enteringScreen: 225,
-  // recommended when something is leaving screen
-  leavingScreen: 195
-};
-
-function formatMs(milliseconds) {
-  return "".concat(Math.round(milliseconds), "ms");
-}
-/**
- * @param {string|Array} props
- * @param {object} param
- * @param {string} param.prop
- * @param {number} param.duration
- * @param {string} param.easing
- * @param {number} param.delay
- */
-
-
-/* harmony default export */ var transitions = ({
-  easing: easing,
-  duration: duration,
-  create: function create() {
-    var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : ['all'];
-    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-    var _options$duration = options.duration,
-        durationOption = _options$duration === void 0 ? duration.standard : _options$duration,
-        _options$easing = options.easing,
-        easingOption = _options$easing === void 0 ? easing.easeInOut : _options$easing,
-        _options$delay = options.delay,
-        delay = _options$delay === void 0 ? 0 : _options$delay,
-        other = _objectWithoutProperties(options, ["duration", "easing", "delay"]);
-
-    if (false) { var isNumber, isString; }
-
-    return (Array.isArray(props) ? props : [props]).map(function (animatedProp) {
-      return "".concat(animatedProp, " ").concat(typeof durationOption === 'string' ? durationOption : formatMs(durationOption), " ").concat(easingOption, " ").concat(typeof delay === 'string' ? delay : formatMs(delay));
-    }).join(',');
-  },
-  getAutoHeightDuration: function getAutoHeightDuration(height) {
-    if (!height) {
-      return 0;
-    }
-
-    var constant = height / 36; // https://www.wolframalpha.com/input/?i=(4+%2B+15+*+(x+%2F+36+)+**+0.25+%2B+(x+%2F+36)+%2F+5)+*+10
-
-    return Math.round((4 + 15 * Math.pow(constant, 0.25) + constant / 5) * 10);
-  }
-});
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/zIndex.js
-// We need to centralize the zIndex definitions as they work
-// like global values in the browser.
-var zIndex = {
-  mobileStepper: 1000,
-  speedDial: 1050,
-  appBar: 1100,
-  drawer: 1200,
-  modal: 1300,
-  snackbar: 1400,
-  tooltip: 1500
-};
-/* harmony default export */ var styles_zIndex = (zIndex);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createMuiTheme.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-function createMuiTheme() {
-  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-  var _options$breakpoints = options.breakpoints,
-      breakpointsInput = _options$breakpoints === void 0 ? {} : _options$breakpoints,
-      _options$mixins = options.mixins,
-      mixinsInput = _options$mixins === void 0 ? {} : _options$mixins,
-      _options$palette = options.palette,
-      paletteInput = _options$palette === void 0 ? {} : _options$palette,
-      spacingInput = options.spacing,
-      _options$typography = options.typography,
-      typographyInput = _options$typography === void 0 ? {} : _options$typography,
-      other = _objectWithoutProperties(options, ["breakpoints", "mixins", "palette", "spacing", "typography"]);
-
-  var palette = createPalette(paletteInput);
-  var breakpoints = createBreakpoints(breakpointsInput);
-  var spacing = createSpacing(spacingInput);
-  var muiTheme = deepmerge({
-    breakpoints: breakpoints,
-    direction: 'ltr',
-    mixins: createMixins(breakpoints, spacing, mixinsInput),
-    overrides: {},
-    // Inject custom styles
-    palette: palette,
-    props: {},
-    // Provide default props
-    shadows: styles_shadows,
-    typography: createTypography(palette, typographyInput),
-    spacing: spacing,
-    shape: styles_shape,
-    transitions: transitions,
-    zIndex: styles_zIndex
-  }, other);
-
-  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-    args[_key - 1] = arguments[_key];
-  }
-
-  muiTheme = args.reduce(function (acc, argument) {
-    return deepmerge(acc, argument);
-  }, muiTheme);
-
-  if (false) { var traverse, pseudoClasses; }
-
-  return muiTheme;
-}
-
-/* harmony default export */ var styles_createMuiTheme = (createMuiTheme);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/defaultTheme.js
-
-var defaultTheme_defaultTheme = styles_createMuiTheme();
-/* harmony default export */ var styles_defaultTheme = (defaultTheme_defaultTheme);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/withStyles.js
-
-
-
-
-function styles_withStyles_withStyles(stylesOrCreator, options) {
-  return esm_withStyles_withStyles(stylesOrCreator, _extends({
-    defaultTheme: styles_defaultTheme
-  }, options));
-}
-
-/* harmony default export */ var styles_withStyles = (styles_withStyles_withStyles);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Grid/Grid.js
-
-
-// A grid component using the following libs as inspiration.
-//
-// For the implementation:
-// - https://getbootstrap.com/docs/4.3/layout/grid/
-// - https://github.com/kristoferjoseph/flexboxgrid/blob/master/src/css/flexboxgrid.css
-// - https://github.com/roylee0704/react-flexbox-grid
-// - https://material.angularjs.org/latest/layout/introduction
-//
-// Follow this flexbox Guide to better understand the underlying model:
-// - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
-
-
-
-
-var SPACINGS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var GRID_SIZES = ['auto', true, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-
-function generateGrid(globalStyles, theme, breakpoint) {
-  var styles = {};
-  GRID_SIZES.forEach(function (size) {
-    var key = "grid-".concat(breakpoint, "-").concat(size);
-
-    if (size === true) {
-      // For the auto layouting
-      styles[key] = {
-        flexBasis: 0,
-        flexGrow: 1,
-        maxWidth: '100%'
-      };
-      return;
-    }
-
-    if (size === 'auto') {
-      styles[key] = {
-        flexBasis: 'auto',
-        flexGrow: 0,
-        maxWidth: 'none'
-      };
-      return;
-    } // Keep 7 significant numbers.
-
-
-    var width = "".concat(Math.round(size / 12 * 10e7) / 10e5, "%"); // Close to the bootstrap implementation:
-    // https://github.com/twbs/bootstrap/blob/8fccaa2439e97ec72a4b7dc42ccc1f649790adb0/scss/mixins/_grid.scss#L41
-
-    styles[key] = {
-      flexBasis: width,
-      flexGrow: 0,
-      maxWidth: width
-    };
-  }); // No need for a media query for the first size.
-
-  if (breakpoint === 'xs') {
-    _extends(globalStyles, styles);
-  } else {
-    globalStyles[theme.breakpoints.up(breakpoint)] = styles;
-  }
-}
-
-function getOffset(val) {
-  var div = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-  var parse = parseFloat(val);
-  return "".concat(parse / div).concat(String(val).replace(String(parse), '') || 'px');
-}
-
-function generateGutter(theme, breakpoint) {
-  var styles = {};
-  SPACINGS.forEach(function (spacing) {
-    var themeSpacing = theme.spacing(spacing);
-
-    if (themeSpacing === 0) {
-      return;
-    }
-
-    styles["spacing-".concat(breakpoint, "-").concat(spacing)] = {
-      margin: "-".concat(getOffset(themeSpacing, 2)),
-      width: "calc(100% + ".concat(getOffset(themeSpacing), ")"),
-      '& > $item': {
-        padding: getOffset(themeSpacing, 2)
-      }
-    };
-  });
-  return styles;
-} // Default CSS values
-// flex: '0 1 auto',
-// flexDirection: 'row',
-// alignItems: 'flex-start',
-// flexWrap: 'nowrap',
-// justifyContent: 'flex-start',
-
-
-var Grid_styles = function styles(theme) {
-  return _extends({
-    /* Styles applied to the root element. */
-    root: {},
-
-    /* Styles applied to the root element if `container={true}`. */
-    container: {
-      boxSizing: 'border-box',
-      display: 'flex',
-      flexWrap: 'wrap',
-      width: '100%'
-    },
-
-    /* Styles applied to the root element if `item={true}`. */
-    item: {
-      boxSizing: 'border-box',
-      margin: '0' // For instance, it's useful when used with a `figure` element.
-
-    },
-
-    /* Styles applied to the root element if `zeroMinWidth={true}`. */
-    zeroMinWidth: {
-      minWidth: 0
-    },
-
-    /* Styles applied to the root element if `direction="column"`. */
-    'direction-xs-column': {
-      flexDirection: 'column'
-    },
-
-    /* Styles applied to the root element if `direction="column-reverse"`. */
-    'direction-xs-column-reverse': {
-      flexDirection: 'column-reverse'
-    },
-
-    /* Styles applied to the root element if `direction="row-reverse"`. */
-    'direction-xs-row-reverse': {
-      flexDirection: 'row-reverse'
-    },
-
-    /* Styles applied to the root element if `wrap="nowrap"`. */
-    'wrap-xs-nowrap': {
-      flexWrap: 'nowrap'
-    },
-
-    /* Styles applied to the root element if `wrap="reverse"`. */
-    'wrap-xs-wrap-reverse': {
-      flexWrap: 'wrap-reverse'
-    },
-
-    /* Styles applied to the root element if `alignItems="center"`. */
-    'align-items-xs-center': {
-      alignItems: 'center'
-    },
-
-    /* Styles applied to the root element if `alignItems="flex-start"`. */
-    'align-items-xs-flex-start': {
-      alignItems: 'flex-start'
-    },
-
-    /* Styles applied to the root element if `alignItems="flex-end"`. */
-    'align-items-xs-flex-end': {
-      alignItems: 'flex-end'
-    },
-
-    /* Styles applied to the root element if `alignItems="baseline"`. */
-    'align-items-xs-baseline': {
-      alignItems: 'baseline'
-    },
-
-    /* Styles applied to the root element if `alignContent="center"`. */
-    'align-content-xs-center': {
-      alignContent: 'center'
-    },
-
-    /* Styles applied to the root element if `alignContent="flex-start"`. */
-    'align-content-xs-flex-start': {
-      alignContent: 'flex-start'
-    },
-
-    /* Styles applied to the root element if `alignContent="flex-end"`. */
-    'align-content-xs-flex-end': {
-      alignContent: 'flex-end'
-    },
-
-    /* Styles applied to the root element if `alignContent="space-between"`. */
-    'align-content-xs-space-between': {
-      alignContent: 'space-between'
-    },
-
-    /* Styles applied to the root element if `alignContent="space-around"`. */
-    'align-content-xs-space-around': {
-      alignContent: 'space-around'
-    },
-
-    /* Styles applied to the root element if `justify="center"`. */
-    'justify-xs-center': {
-      justifyContent: 'center'
-    },
-
-    /* Styles applied to the root element if `justify="flex-end"`. */
-    'justify-xs-flex-end': {
-      justifyContent: 'flex-end'
-    },
-
-    /* Styles applied to the root element if `justify="space-between"`. */
-    'justify-xs-space-between': {
-      justifyContent: 'space-between'
-    },
-
-    /* Styles applied to the root element if `justify="space-around"`. */
-    'justify-xs-space-around': {
-      justifyContent: 'space-around'
-    },
-
-    /* Styles applied to the root element if `justify="space-evenly"`. */
-    'justify-xs-space-evenly': {
-      justifyContent: 'space-evenly'
-    }
-  }, generateGutter(theme, 'xs'), theme.breakpoints.keys.reduce(function (accumulator, key) {
-    // Use side effect over immutability for better performance.
-    generateGrid(accumulator, theme, key);
-    return accumulator;
-  }, {}));
-};
-var Grid_Grid = /*#__PURE__*/react["forwardRef"](function Grid(props, ref) {
-  var _props$alignContent = props.alignContent,
-      alignContent = _props$alignContent === void 0 ? 'stretch' : _props$alignContent,
-      _props$alignItems = props.alignItems,
-      alignItems = _props$alignItems === void 0 ? 'stretch' : _props$alignItems,
-      classes = props.classes,
-      classNameProp = props.className,
-      _props$component = props.component,
-      Component = _props$component === void 0 ? 'div' : _props$component,
-      _props$container = props.container,
-      container = _props$container === void 0 ? false : _props$container,
-      _props$direction = props.direction,
-      direction = _props$direction === void 0 ? 'row' : _props$direction,
-      _props$item = props.item,
-      item = _props$item === void 0 ? false : _props$item,
-      _props$justify = props.justify,
-      justify = _props$justify === void 0 ? 'flex-start' : _props$justify,
-      _props$lg = props.lg,
-      lg = _props$lg === void 0 ? false : _props$lg,
-      _props$md = props.md,
-      md = _props$md === void 0 ? false : _props$md,
-      _props$sm = props.sm,
-      sm = _props$sm === void 0 ? false : _props$sm,
-      _props$spacing = props.spacing,
-      spacing = _props$spacing === void 0 ? 0 : _props$spacing,
-      _props$wrap = props.wrap,
-      wrap = _props$wrap === void 0 ? 'wrap' : _props$wrap,
-      _props$xl = props.xl,
-      xl = _props$xl === void 0 ? false : _props$xl,
-      _props$xs = props.xs,
-      xs = _props$xs === void 0 ? false : _props$xs,
-      _props$zeroMinWidth = props.zeroMinWidth,
-      zeroMinWidth = _props$zeroMinWidth === void 0 ? false : _props$zeroMinWidth,
-      other = _objectWithoutProperties(props, ["alignContent", "alignItems", "classes", "className", "component", "container", "direction", "item", "justify", "lg", "md", "sm", "spacing", "wrap", "xl", "xs", "zeroMinWidth"]);
-
-  var className = clsx_m(classes.root, classNameProp, container && [classes.container, spacing !== 0 && classes["spacing-xs-".concat(String(spacing))]], item && classes.item, zeroMinWidth && classes.zeroMinWidth, direction !== 'row' && classes["direction-xs-".concat(String(direction))], wrap !== 'wrap' && classes["wrap-xs-".concat(String(wrap))], alignItems !== 'stretch' && classes["align-items-xs-".concat(String(alignItems))], alignContent !== 'stretch' && classes["align-content-xs-".concat(String(alignContent))], justify !== 'flex-start' && classes["justify-xs-".concat(String(justify))], xs !== false && classes["grid-xs-".concat(String(xs))], sm !== false && classes["grid-sm-".concat(String(sm))], md !== false && classes["grid-md-".concat(String(md))], lg !== false && classes["grid-lg-".concat(String(lg))], xl !== false && classes["grid-xl-".concat(String(xl))]);
-  return /*#__PURE__*/react["createElement"](Component, _extends({
-    className: className,
-    ref: ref
-  }, other));
-});
- false ? undefined : void 0;
-var StyledGrid = styles_withStyles(Grid_styles, {
-  name: 'MuiGrid'
-})(Grid_Grid);
-
-if (false) { var requireProp; }
-
-/* harmony default export */ var esm_Grid_Grid = (StyledGrid);
-// EXTERNAL MODULE: ./dev/components/App/App.scss
-var App_App = __webpack_require__(29);
-
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/capitalize.js
-
-// It should to be noted that this function isn't equivalent to `text-transform: capitalize`.
-//
-// A strict capitalization should uppercase the first letter of each word a the sentence.
-// We only handle the first word.
-function capitalize(string) {
-  if (typeof string !== 'string') {
-    throw new Error( false ? undefined : formatMuiErrorMessage(7));
-  }
-
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Typography/Typography.js
-
-
-
-
-
-
-
-var Typography_styles = function styles(theme) {
-  return {
-    /* Styles applied to the root element. */
-    root: {
-      margin: 0
-    },
-
-    /* Styles applied to the root element if `variant="body2"`. */
-    body2: theme.typography.body2,
-
-    /* Styles applied to the root element if `variant="body1"`. */
-    body1: theme.typography.body1,
-
-    /* Styles applied to the root element if `variant="caption"`. */
-    caption: theme.typography.caption,
-
-    /* Styles applied to the root element if `variant="button"`. */
-    button: theme.typography.button,
-
-    /* Styles applied to the root element if `variant="h1"`. */
-    h1: theme.typography.h1,
-
-    /* Styles applied to the root element if `variant="h2"`. */
-    h2: theme.typography.h2,
-
-    /* Styles applied to the root element if `variant="h3"`. */
-    h3: theme.typography.h3,
-
-    /* Styles applied to the root element if `variant="h4"`. */
-    h4: theme.typography.h4,
-
-    /* Styles applied to the root element if `variant="h5"`. */
-    h5: theme.typography.h5,
-
-    /* Styles applied to the root element if `variant="h6"`. */
-    h6: theme.typography.h6,
-
-    /* Styles applied to the root element if `variant="subtitle1"`. */
-    subtitle1: theme.typography.subtitle1,
-
-    /* Styles applied to the root element if `variant="subtitle2"`. */
-    subtitle2: theme.typography.subtitle2,
-
-    /* Styles applied to the root element if `variant="overline"`. */
-    overline: theme.typography.overline,
-
-    /* Styles applied to the root element if `variant="srOnly"`. Only accessible to screen readers. */
-    srOnly: {
-      position: 'absolute',
-      height: 1,
-      width: 1,
-      overflow: 'hidden'
-    },
-
-    /* Styles applied to the root element if `align="left"`. */
-    alignLeft: {
-      textAlign: 'left'
-    },
-
-    /* Styles applied to the root element if `align="center"`. */
-    alignCenter: {
-      textAlign: 'center'
-    },
-
-    /* Styles applied to the root element if `align="right"`. */
-    alignRight: {
-      textAlign: 'right'
-    },
-
-    /* Styles applied to the root element if `align="justify"`. */
-    alignJustify: {
-      textAlign: 'justify'
-    },
-
-    /* Styles applied to the root element if `nowrap={true}`. */
-    noWrap: {
-      overflow: 'hidden',
-      textOverflow: 'ellipsis',
-      whiteSpace: 'nowrap'
-    },
-
-    /* Styles applied to the root element if `gutterBottom={true}`. */
-    gutterBottom: {
-      marginBottom: '0.35em'
-    },
-
-    /* Styles applied to the root element if `paragraph={true}`. */
-    paragraph: {
-      marginBottom: 16
-    },
-
-    /* Styles applied to the root element if `color="inherit"`. */
-    colorInherit: {
-      color: 'inherit'
-    },
-
-    /* Styles applied to the root element if `color="primary"`. */
-    colorPrimary: {
-      color: theme.palette.primary.main
-    },
-
-    /* Styles applied to the root element if `color="secondary"`. */
-    colorSecondary: {
-      color: theme.palette.secondary.main
-    },
-
-    /* Styles applied to the root element if `color="textPrimary"`. */
-    colorTextPrimary: {
-      color: theme.palette.text.primary
-    },
-
-    /* Styles applied to the root element if `color="textSecondary"`. */
-    colorTextSecondary: {
-      color: theme.palette.text.secondary
-    },
-
-    /* Styles applied to the root element if `color="error"`. */
-    colorError: {
-      color: theme.palette.error.main
-    },
-
-    /* Styles applied to the root element if `display="inline"`. */
-    displayInline: {
-      display: 'inline'
-    },
-
-    /* Styles applied to the root element if `display="block"`. */
-    displayBlock: {
-      display: 'block'
-    }
-  };
-};
-var defaultVariantMapping = {
-  h1: 'h1',
-  h2: 'h2',
-  h3: 'h3',
-  h4: 'h4',
-  h5: 'h5',
-  h6: 'h6',
-  subtitle1: 'h6',
-  subtitle2: 'h6',
-  body1: 'p',
-  body2: 'p'
-};
-var Typography_Typography = /*#__PURE__*/react["forwardRef"](function Typography(props, ref) {
-  var _props$align = props.align,
-      align = _props$align === void 0 ? 'inherit' : _props$align,
-      classes = props.classes,
-      className = props.className,
-      _props$color = props.color,
-      color = _props$color === void 0 ? 'initial' : _props$color,
-      component = props.component,
-      _props$display = props.display,
-      display = _props$display === void 0 ? 'initial' : _props$display,
-      _props$gutterBottom = props.gutterBottom,
-      gutterBottom = _props$gutterBottom === void 0 ? false : _props$gutterBottom,
-      _props$noWrap = props.noWrap,
-      noWrap = _props$noWrap === void 0 ? false : _props$noWrap,
-      _props$paragraph = props.paragraph,
-      paragraph = _props$paragraph === void 0 ? false : _props$paragraph,
-      _props$variant = props.variant,
-      variant = _props$variant === void 0 ? 'body1' : _props$variant,
-      _props$variantMapping = props.variantMapping,
-      variantMapping = _props$variantMapping === void 0 ? defaultVariantMapping : _props$variantMapping,
-      other = _objectWithoutProperties(props, ["align", "classes", "className", "color", "component", "display", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"]);
-
-  var Component = component || (paragraph ? 'p' : variantMapping[variant] || defaultVariantMapping[variant]) || 'span';
-  return /*#__PURE__*/react["createElement"](Component, _extends({
-    className: clsx_m(classes.root, className, variant !== 'inherit' && classes[variant], color !== 'initial' && classes["color".concat(capitalize(color))], noWrap && classes.noWrap, gutterBottom && classes.gutterBottom, paragraph && classes.paragraph, align !== 'inherit' && classes["align".concat(capitalize(align))], display !== 'initial' && classes["display".concat(capitalize(display))]),
-    ref: ref
-  }, other));
-});
- false ? undefined : void 0;
-/* harmony default export */ var esm_Typography_Typography = (styles_withStyles(Typography_styles, {
-  name: 'MuiTypography'
-})(Typography_Typography));
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/css.js
-
-
-
-
-
-function omit(input, fields) {
-  var output = {};
-  Object.keys(input).forEach(function (prop) {
-    if (fields.indexOf(prop) === -1) {
-      output[prop] = input[prop];
-    }
-  });
-  return output;
-}
-
-function css_css(styleFunction) {
-  var newStyleFunction = function newStyleFunction(props) {
-    var output = styleFunction(props);
-
-    if (props.css) {
-      return _extends({}, esm_merge(output, styleFunction(_extends({
-        theme: props.theme
-      }, props.css))), omit(props.css, [styleFunction.filterProps]));
-    }
-
-    return output;
-  };
-
-  newStyleFunction.propTypes =  false ? undefined : {};
-  newStyleFunction.filterProps = ['css'].concat(_toConsumableArray(styleFunction.filterProps));
-  return newStyleFunction;
-}
-
-/* harmony default export */ var esm_css = (css_css);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/compose.js
-
-
-
-function compose() {
-  for (var _len = arguments.length, styles = new Array(_len), _key = 0; _key < _len; _key++) {
-    styles[_key] = arguments[_key];
-  }
-
-  var fn = function fn(props) {
-    return styles.reduce(function (acc, style) {
-      var output = style(props);
-
-      if (output) {
-        return esm_merge(acc, output);
-      }
-
-      return acc;
-    }, {});
-  }; // Alternative approach that doesn't yield any performance gain.
-  // const handlers = styles.reduce((acc, style) => {
-  //   style.filterProps.forEach(prop => {
-  //     acc[prop] = style;
-  //   });
-  //   return acc;
-  // }, {});
-  // const fn = props => {
-  //   return Object.keys(props).reduce((acc, prop) => {
-  //     if (handlers[prop]) {
-  //       return merge(acc, handlers[prop](props));
-  //     }
-  //     return acc;
-  //   }, {});
-  // };
-
-
-  fn.propTypes =  false ? undefined : {};
-  fn.filterProps = styles.reduce(function (acc, style) {
-    return acc.concat(style.filterProps);
-  }, []);
-  return fn;
-}
-
-/* harmony default export */ var esm_compose = (compose);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/style.js
-
-
-
-
-function getPath(obj, path) {
-  if (!path || typeof path !== 'string') {
-    return null;
-  }
-
-  return path.split('.').reduce(function (acc, item) {
-    return acc && acc[item] ? acc[item] : null;
-  }, obj);
-}
-
-function style_style(options) {
-  var prop = options.prop,
-      _options$cssProperty = options.cssProperty,
-      cssProperty = _options$cssProperty === void 0 ? options.prop : _options$cssProperty,
-      themeKey = options.themeKey,
-      transform = options.transform;
-
-  var fn = function fn(props) {
-    if (props[prop] == null) {
-      return null;
-    }
-
-    var propValue = props[prop];
-    var theme = props.theme;
-    var themeMapping = getPath(theme, themeKey) || {};
-
-    var styleFromPropValue = function styleFromPropValue(propValueFinal) {
-      var value;
-
-      if (typeof themeMapping === 'function') {
-        value = themeMapping(propValueFinal);
-      } else if (Array.isArray(themeMapping)) {
-        value = themeMapping[propValueFinal] || propValueFinal;
-      } else {
-        value = getPath(themeMapping, propValueFinal) || propValueFinal;
-
-        if (transform) {
-          value = transform(value);
-        }
-      }
-
-      if (cssProperty === false) {
-        return value;
-      }
-
-      return _defineProperty({}, cssProperty, value);
-    };
-
-    return handleBreakpoints(props, propValue, styleFromPropValue);
-  };
-
-  fn.propTypes =  false ? undefined : {};
-  fn.filterProps = [prop];
-  return fn;
-}
-
-/* harmony default export */ var esm_style = (style_style);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/borders.js
-
-
-
-function getBorder(value) {
-  if (typeof value !== 'number') {
-    return value;
-  }
-
-  return "".concat(value, "px solid");
-}
-
-var border = esm_style({
-  prop: 'border',
-  themeKey: 'borders',
-  transform: getBorder
-});
-var borderTop = esm_style({
-  prop: 'borderTop',
-  themeKey: 'borders',
-  transform: getBorder
-});
-var borderRight = esm_style({
-  prop: 'borderRight',
-  themeKey: 'borders',
-  transform: getBorder
-});
-var borderBottom = esm_style({
-  prop: 'borderBottom',
-  themeKey: 'borders',
-  transform: getBorder
-});
-var borderLeft = esm_style({
-  prop: 'borderLeft',
-  themeKey: 'borders',
-  transform: getBorder
-});
-var borderColor = esm_style({
-  prop: 'borderColor',
-  themeKey: 'palette'
-});
-var borderRadius = esm_style({
-  prop: 'borderRadius',
-  themeKey: 'shape'
-});
-var borders = esm_compose(border, borderTop, borderRight, borderBottom, borderLeft, borderColor, borderRadius);
-/* harmony default export */ var esm_borders = (borders);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/display.js
-
-
-var displayPrint = esm_style({
-  prop: 'displayPrint',
-  cssProperty: false,
-  transform: function transform(value) {
-    return {
-      '@media print': {
-        display: value
-      }
-    };
-  }
-});
-var displayRaw = esm_style({
-  prop: 'display'
-});
-var overflow = esm_style({
-  prop: 'overflow'
-});
-var textOverflow = esm_style({
-  prop: 'textOverflow'
-});
-var visibility = esm_style({
-  prop: 'visibility'
-});
-var whiteSpace = esm_style({
-  prop: 'whiteSpace'
-});
-/* harmony default export */ var esm_display = (esm_compose(displayPrint, displayRaw, overflow, textOverflow, visibility, whiteSpace));
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/flexbox.js
-
-
-var flexBasis = esm_style({
-  prop: 'flexBasis'
-});
-var flexDirection = esm_style({
-  prop: 'flexDirection'
-});
-var flexWrap = esm_style({
-  prop: 'flexWrap'
-});
-var justifyContent = esm_style({
-  prop: 'justifyContent'
-});
-var flexbox_alignItems = esm_style({
-  prop: 'alignItems'
-});
-var flexbox_alignContent = esm_style({
-  prop: 'alignContent'
-});
-var order = esm_style({
-  prop: 'order'
-});
-var flex = esm_style({
-  prop: 'flex'
-});
-var flexGrow = esm_style({
-  prop: 'flexGrow'
-});
-var flexShrink = esm_style({
-  prop: 'flexShrink'
-});
-var alignSelf = esm_style({
-  prop: 'alignSelf'
-});
-var justifyItems = esm_style({
-  prop: 'justifyItems'
-});
-var justifySelf = esm_style({
-  prop: 'justifySelf'
-});
-var flexbox = esm_compose(flexBasis, flexDirection, flexWrap, justifyContent, flexbox_alignItems, flexbox_alignContent, order, flex, flexGrow, flexShrink, alignSelf, justifyItems, justifySelf);
-/* harmony default export */ var esm_flexbox = (flexbox);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/grid.js
-
-
-var gridGap = esm_style({
-  prop: 'gridGap'
-});
-var gridColumnGap = esm_style({
-  prop: 'gridColumnGap'
-});
-var gridRowGap = esm_style({
-  prop: 'gridRowGap'
-});
-var gridColumn = esm_style({
-  prop: 'gridColumn'
-});
-var gridRow = esm_style({
-  prop: 'gridRow'
-});
-var gridAutoFlow = esm_style({
-  prop: 'gridAutoFlow'
-});
-var gridAutoColumns = esm_style({
-  prop: 'gridAutoColumns'
-});
-var gridAutoRows = esm_style({
-  prop: 'gridAutoRows'
-});
-var gridTemplateColumns = esm_style({
-  prop: 'gridTemplateColumns'
-});
-var gridTemplateRows = esm_style({
-  prop: 'gridTemplateRows'
-});
-var gridTemplateAreas = esm_style({
-  prop: 'gridTemplateAreas'
-});
-var gridArea = esm_style({
-  prop: 'gridArea'
-});
-var grid = esm_compose(gridGap, gridColumnGap, gridRowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
-/* harmony default export */ var esm_grid = (grid);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/positions.js
-
-
-var position = esm_style({
-  prop: 'position'
-});
-var positions_zIndex = esm_style({
-  prop: 'zIndex',
-  themeKey: 'zIndex'
-});
-var positions_top = esm_style({
-  prop: 'top'
-});
-var right = esm_style({
-  prop: 'right'
-});
-var bottom = esm_style({
-  prop: 'bottom'
-});
-var left = esm_style({
-  prop: 'left'
-});
-/* harmony default export */ var positions = (esm_compose(position, positions_zIndex, positions_top, right, bottom, left));
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/palette.js
-
-
-var palette_color = esm_style({
-  prop: 'color',
-  themeKey: 'palette'
-});
-var bgcolor = esm_style({
-  prop: 'bgcolor',
-  cssProperty: 'backgroundColor',
-  themeKey: 'palette'
-});
-var palette_palette = esm_compose(palette_color, bgcolor);
-/* harmony default export */ var esm_palette = (palette_palette);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/shadows.js
-
-var boxShadow = esm_style({
-  prop: 'boxShadow',
-  themeKey: 'shadows'
-});
-/* harmony default export */ var esm_shadows = (boxShadow);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/sizing.js
-
-
-
-function sizing_transform(value) {
-  return value <= 1 ? "".concat(value * 100, "%") : value;
-}
-
-var sizing_width = esm_style({
-  prop: 'width',
-  transform: sizing_transform
-});
-var maxWidth = esm_style({
-  prop: 'maxWidth',
-  transform: sizing_transform
-});
-var minWidth = esm_style({
-  prop: 'minWidth',
-  transform: sizing_transform
-});
-var height = esm_style({
-  prop: 'height',
-  transform: sizing_transform
-});
-var maxHeight = esm_style({
-  prop: 'maxHeight',
-  transform: sizing_transform
-});
-var minHeight = esm_style({
-  prop: 'minHeight',
-  transform: sizing_transform
-});
-var sizeWidth = esm_style({
-  prop: 'size',
-  cssProperty: 'width',
-  transform: sizing_transform
-});
-var sizeHeight = esm_style({
-  prop: 'size',
-  cssProperty: 'height',
-  transform: sizing_transform
-});
-var boxSizing = esm_style({
-  prop: 'boxSizing'
-});
-var sizing = esm_compose(sizing_width, maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
-/* harmony default export */ var esm_sizing = (sizing);
-// CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/typography.js
-
-
-var typography_fontFamily = esm_style({
-  prop: 'fontFamily',
-  themeKey: 'typography'
-});
-var typography_fontSize = esm_style({
-  prop: 'fontSize',
-  themeKey: 'typography'
-});
-var fontStyle = esm_style({
-  prop: 'fontStyle',
-  themeKey: 'typography'
-});
-var typography_fontWeight = esm_style({
-  prop: 'fontWeight',
-  themeKey: 'typography'
-});
-var typography_letterSpacing = esm_style({
-  prop: 'letterSpacing'
-});
-var typography_lineHeight = esm_style({
-  prop: 'lineHeight'
-});
-var textAlign = esm_style({
-  prop: 'textAlign'
-});
-var typography_typography = esm_compose(typography_fontFamily, typography_fontSize, fontStyle, typography_fontWeight, typography_letterSpacing, typography_lineHeight, textAlign);
-/* harmony default export */ var esm_typography = (typography_typography);
-// CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/styled/styled.js
-
-
-
-
-
-
-
-
-
-function styled_omit(input, fields) {
-  var output = {};
-  Object.keys(input).forEach(function (prop) {
-    if (fields.indexOf(prop) === -1) {
-      output[prop] = input[prop];
-    }
-  });
-  return output;
-} // styled-components's API removes the mapping between components and styles.
-// Using components as a low-level styling construct can be simpler.
-
-
-function styled_styled(Component) {
-  var componentCreator = function componentCreator(style) {
-    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-    var name = options.name,
-        stylesOptions = _objectWithoutProperties(options, ["name"]);
-
-    if (false) {}
-
-    var classNamePrefix = name;
-
-    if (false) { var displayName; }
-
-    var stylesOrCreator = typeof style === 'function' ? function (theme) {
-      return {
-        root: function root(props) {
-          return style(_extends({
-            theme: theme
-          }, props));
-        }
-      };
-    } : {
-      root: style
-    };
-    var useStyles = makeStyles(stylesOrCreator, _extends({
-      Component: Component,
-      name: name || Component.displayName,
-      classNamePrefix: classNamePrefix
-    }, stylesOptions));
-    var filterProps;
-    var propTypes = {};
-
-    if (style.filterProps) {
-      filterProps = style.filterProps;
-      delete style.filterProps;
-    }
-    /* eslint-disable react/forbid-foreign-prop-types */
-
-
-    if (style.propTypes) {
-      propTypes = style.propTypes;
-      delete style.propTypes;
-    }
-    /* eslint-enable react/forbid-foreign-prop-types */
-
-
-    var StyledComponent = /*#__PURE__*/react_default.a.forwardRef(function StyledComponent(props, ref) {
-      var children = props.children,
-          classNameProp = props.className,
-          clone = props.clone,
-          ComponentProp = props.component,
-          other = _objectWithoutProperties(props, ["children", "className", "clone", "component"]);
-
-      var classes = useStyles(props);
-      var className = clsx_m(classes.root, classNameProp);
-      var spread = other;
-
-      if (filterProps) {
-        spread = styled_omit(spread, filterProps);
-      }
-
-      if (clone) {
-        return /*#__PURE__*/react_default.a.cloneElement(children, _extends({
-          className: clsx_m(children.props.className, className)
-        }, spread));
-      }
-
-      if (typeof children === 'function') {
-        return children(_extends({
-          className: className
-        }, spread));
-      }
-
-      var FinalComponent = ComponentProp || Component;
-      return /*#__PURE__*/react_default.a.createElement(FinalComponent, _extends({
-        ref: ref,
-        className: className
-      }, spread), children);
-    });
-     false ? undefined : void 0;
-
-    if (false) {}
-
-    hoist_non_react_statics_cjs_default()(StyledComponent, Component);
-    return StyledComponent;
-  };
-
-  return componentCreator;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/styled.js
-
-
-
-
-var styles_styled_styled = function styled(Component) {
-  var componentCreator = styled_styled(Component);
-  return function (style, options) {
-    return componentCreator(style, _extends({
-      defaultTheme: styles_defaultTheme
-    }, options));
-  };
-};
-
-/* harmony default export */ var styles_styled = (styles_styled_styled);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Box/Box.js
-
-
-var Box_styleFunction = esm_css(esm_compose(esm_borders, esm_display, esm_flexbox, esm_grid, positions, esm_palette, esm_shadows, esm_sizing, esm_spacing, esm_typography));
-/**
- * @ignore - do not document.
- */
-
-var Box = styles_styled('div')(Box_styleFunction, {
-  name: 'MuiBox'
-});
-/* harmony default export */ var Box_Box = (Box);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/setRef.js
-// TODO v5: consider to make it private
-function setRef(ref, value) {
-  if (typeof ref === 'function') {
-    ref(value);
-  } else if (ref) {
-    ref.current = value;
-  }
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/useForkRef.js
-
-
-function useForkRef(refA, refB) {
-  /**
-   * This will create a new function if the ref props change and are defined.
-   * This means react will call the old forkRef with `null` and the new forkRef
-   * with the ref. Cleanup naturally emerges from this behavior
-   */
-  return react["useMemo"](function () {
-    if (refA == null && refB == null) {
-      return null;
-    }
-
-    return function (refValue) {
-      setRef(refA, refValue);
-      setRef(refB, refValue);
-    };
-  }, [refA, refB]);
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/useEventCallback.js
-
-var useEnhancedEffect = typeof window !== 'undefined' ? react["useLayoutEffect"] : react["useEffect"];
-/**
- * https://github.com/facebook/react/issues/14099#issuecomment-440013892
- *
- * @param {function} fn
- */
-
-function useEventCallback(fn) {
-  var ref = react["useRef"](fn);
-  useEnhancedEffect(function () {
-    ref.current = fn;
-  });
-  return react["useCallback"](function () {
-    return (0, ref.current).apply(void 0, arguments);
-  }, []);
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/useIsFocusVisible.js
-// based on https://github.com/WICG/focus-visible/blob/v4.1.5/src/focus-visible.js
-
-
-var hadKeyboardEvent = true;
-var hadFocusVisibleRecently = false;
-var hadFocusVisibleRecentlyTimeout = null;
-var inputTypesWhitelist = {
-  text: true,
-  search: true,
-  url: true,
-  tel: true,
-  email: true,
-  password: true,
-  number: true,
-  date: true,
-  month: true,
-  week: true,
-  time: true,
-  datetime: true,
-  'datetime-local': true
-};
-/**
- * Computes whether the given element should automatically trigger the
- * `focus-visible` class being added, i.e. whether it should always match
- * `:focus-visible` when focused.
- * @param {Element} node
- * @return {boolean}
- */
-
-function focusTriggersKeyboardModality(node) {
-  var type = node.type,
-      tagName = node.tagName;
-
-  if (tagName === 'INPUT' && inputTypesWhitelist[type] && !node.readOnly) {
-    return true;
-  }
-
-  if (tagName === 'TEXTAREA' && !node.readOnly) {
-    return true;
-  }
-
-  if (node.isContentEditable) {
-    return true;
-  }
-
-  return false;
-}
-/**
- * Keep track of our keyboard modality state with `hadKeyboardEvent`.
- * If the most recent user interaction was via the keyboard;
- * and the key press did not include a meta, alt/option, or control key;
- * then the modality is keyboard. Otherwise, the modality is not keyboard.
- * @param {KeyboardEvent} event
- */
-
-
-function useIsFocusVisible_handleKeyDown(event) {
-  if (event.metaKey || event.altKey || event.ctrlKey) {
-    return;
-  }
-
-  hadKeyboardEvent = true;
-}
-/**
- * If at any point a user clicks with a pointing device, ensure that we change
- * the modality away from keyboard.
- * This avoids the situation where a user presses a key on an already focused
- * element, and then clicks on a different element, focusing it with a
- * pointing device, while we still think we're in keyboard modality.
- */
-
-
-function handlePointerDown() {
-  hadKeyboardEvent = false;
-}
-
-function handleVisibilityChange() {
-  if (this.visibilityState === 'hidden') {
-    // If the tab becomes active again, the browser will handle calling focus
-    // on the element (Safari actually calls it twice).
-    // If this tab change caused a blur on an element with focus-visible,
-    // re-apply the class when the user switches back to the tab.
-    if (hadFocusVisibleRecently) {
-      hadKeyboardEvent = true;
-    }
-  }
-}
-
-function prepare(doc) {
-  doc.addEventListener('keydown', useIsFocusVisible_handleKeyDown, true);
-  doc.addEventListener('mousedown', handlePointerDown, true);
-  doc.addEventListener('pointerdown', handlePointerDown, true);
-  doc.addEventListener('touchstart', handlePointerDown, true);
-  doc.addEventListener('visibilitychange', handleVisibilityChange, true);
-}
-
-function teardown(doc) {
-  doc.removeEventListener('keydown', useIsFocusVisible_handleKeyDown, true);
-  doc.removeEventListener('mousedown', handlePointerDown, true);
-  doc.removeEventListener('pointerdown', handlePointerDown, true);
-  doc.removeEventListener('touchstart', handlePointerDown, true);
-  doc.removeEventListener('visibilitychange', handleVisibilityChange, true);
-}
-
-function useIsFocusVisible_isFocusVisible(event) {
-  var target = event.target;
-
-  try {
-    return target.matches(':focus-visible');
-  } catch (error) {} // browsers not implementing :focus-visible will throw a SyntaxError
-  // we use our own heuristic for those browsers
-  // rethrow might be better if it's not the expected error but do we really
-  // want to crash if focus-visible malfunctioned?
-  // no need for validFocusTarget check. the user does that by attaching it to
-  // focusable events only
-
-
-  return hadKeyboardEvent || focusTriggersKeyboardModality(target);
-}
-/**
- * Should be called if a blur event is fired on a focus-visible element
- */
-
-
-function handleBlurVisible() {
-  // To detect a tab/window switch, we look for a blur event followed
-  // rapidly by a visibility change.
-  // If we don't see a visibility change within 100ms, it's probably a
-  // regular focus change.
-  hadFocusVisibleRecently = true;
-  window.clearTimeout(hadFocusVisibleRecentlyTimeout);
-  hadFocusVisibleRecentlyTimeout = window.setTimeout(function () {
-    hadFocusVisibleRecently = false;
-  }, 100);
-}
-
-function useIsFocusVisible() {
-  var ref = react["useCallback"](function (instance) {
-    var node = react_dom["findDOMNode"](instance);
-
-    if (node != null) {
-      prepare(node.ownerDocument);
-    }
-  }, []);
-
-  if (false) {}
-
-  return {
-    isFocusVisible: useIsFocusVisible_isFocusVisible,
-    onBlurVisible: handleBlurVisible,
-    ref: ref
-  };
-}
-// CONCATENATED MODULE: ./node_modules/react-transition-group/esm/TransitionGroupContext.js
-
-/* harmony default export */ var TransitionGroupContext = (react_default.a.createContext(null));
-// CONCATENATED MODULE: ./node_modules/react-transition-group/esm/utils/ChildMapping.js
-
-/**
- * Given `this.props.children`, return an object mapping key to child.
- *
- * @param {*} children `this.props.children`
- * @return {object} Mapping of key to child
- */
-
-function getChildMapping(children, mapFn) {
-  var mapper = function mapper(child) {
-    return mapFn && Object(react["isValidElement"])(child) ? mapFn(child) : child;
-  };
-
-  var result = Object.create(null);
-  if (children) react["Children"].map(children, function (c) {
-    return c;
-  }).forEach(function (child) {
-    // run the map function here instead so that the key is the computed one
-    result[child.key] = mapper(child);
-  });
-  return result;
-}
-/**
- * When you're adding or removing children some may be added or removed in the
- * same render pass. We want to show *both* since we want to simultaneously
- * animate elements in and out. This function takes a previous set of keys
- * and a new set of keys and merges them with its best guess of the correct
- * ordering. In the future we may expose some of the utilities in
- * ReactMultiChild to make this easy, but for now React itself does not
- * directly have this concept of the union of prevChildren and nextChildren
- * so we implement it here.
- *
- * @param {object} prev prev children as returned from
- * `ReactTransitionChildMapping.getChildMapping()`.
- * @param {object} next next children as returned from
- * `ReactTransitionChildMapping.getChildMapping()`.
- * @return {object} a key set that contains all keys in `prev` and all keys
- * in `next` in a reasonable order.
- */
-
-function mergeChildMappings(prev, next) {
-  prev = prev || {};
-  next = next || {};
-
-  function getValueForKey(key) {
-    return key in next ? next[key] : prev[key];
-  } // For each key of `next`, the list of keys to insert before that key in
-  // the combined list
-
-
-  var nextKeysPending = Object.create(null);
-  var pendingKeys = [];
-
-  for (var prevKey in prev) {
-    if (prevKey in next) {
-      if (pendingKeys.length) {
-        nextKeysPending[prevKey] = pendingKeys;
-        pendingKeys = [];
-      }
-    } else {
-      pendingKeys.push(prevKey);
-    }
-  }
-
-  var i;
-  var childMapping = {};
-
-  for (var nextKey in next) {
-    if (nextKeysPending[nextKey]) {
-      for (i = 0; i < nextKeysPending[nextKey].length; i++) {
-        var pendingNextKey = nextKeysPending[nextKey][i];
-        childMapping[nextKeysPending[nextKey][i]] = getValueForKey(pendingNextKey);
-      }
-    }
-
-    childMapping[nextKey] = getValueForKey(nextKey);
-  } // Finally, add the keys which didn't appear before any key in `next`
-
-
-  for (i = 0; i < pendingKeys.length; i++) {
-    childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
-  }
-
-  return childMapping;
-}
-
-function getProp(child, prop, props) {
-  return props[prop] != null ? props[prop] : child.props[prop];
-}
-
-function getInitialChildMapping(props, onExited) {
-  return getChildMapping(props.children, function (child) {
-    return Object(react["cloneElement"])(child, {
-      onExited: onExited.bind(null, child),
-      in: true,
-      appear: getProp(child, 'appear', props),
-      enter: getProp(child, 'enter', props),
-      exit: getProp(child, 'exit', props)
-    });
-  });
-}
-function getNextChildMapping(nextProps, prevChildMapping, onExited) {
-  var nextChildMapping = getChildMapping(nextProps.children);
-  var children = mergeChildMappings(prevChildMapping, nextChildMapping);
-  Object.keys(children).forEach(function (key) {
-    var child = children[key];
-    if (!Object(react["isValidElement"])(child)) return;
-    var hasPrev = (key in prevChildMapping);
-    var hasNext = (key in nextChildMapping);
-    var prevChild = prevChildMapping[key];
-    var isLeaving = Object(react["isValidElement"])(prevChild) && !prevChild.props.in; // item is new (entering)
-
-    if (hasNext && (!hasPrev || isLeaving)) {
-      // console.log('entering', key)
-      children[key] = Object(react["cloneElement"])(child, {
-        onExited: onExited.bind(null, child),
-        in: true,
-        exit: getProp(child, 'exit', nextProps),
-        enter: getProp(child, 'enter', nextProps)
-      });
-    } else if (!hasNext && hasPrev && !isLeaving) {
-      // item is old (exiting)
-      // console.log('leaving', key)
-      children[key] = Object(react["cloneElement"])(child, {
-        in: false
-      });
-    } else if (hasNext && hasPrev && Object(react["isValidElement"])(prevChild)) {
-      // item hasn't changed transition states
-      // copy over the last transition props;
-      // console.log('unchanged', key)
-      children[key] = Object(react["cloneElement"])(child, {
-        onExited: onExited.bind(null, child),
-        in: prevChild.props.in,
-        exit: getProp(child, 'exit', nextProps),
-        enter: getProp(child, 'enter', nextProps)
-      });
-    }
-  });
-  return children;
-}
-// CONCATENATED MODULE: ./node_modules/react-transition-group/esm/TransitionGroup.js
-
-
-
-
-
-
-
-
-
-var TransitionGroup_values = Object.values || function (obj) {
-  return Object.keys(obj).map(function (k) {
-    return obj[k];
-  });
-};
-
-var defaultProps = {
-  component: 'div',
-  childFactory: function childFactory(child) {
-    return child;
-  }
-};
-/**
- * The `<TransitionGroup>` component manages a set of transition components
- * (`<Transition>` and `<CSSTransition>`) in a list. Like with the transition
- * components, `<TransitionGroup>` is a state machine for managing the mounting
- * and unmounting of components over time.
- *
- * Consider the example below. As items are removed or added to the TodoList the
- * `in` prop is toggled automatically by the `<TransitionGroup>`.
- *
- * Note that `<TransitionGroup>`  does not define any animation behavior!
- * Exactly _how_ a list item animates is up to the individual transition
- * component. This means you can mix and match animations across different list
- * items.
- */
-
-var TransitionGroup_TransitionGroup = /*#__PURE__*/function (_React$Component) {
-  _inheritsLoose(TransitionGroup, _React$Component);
-
-  function TransitionGroup(props, context) {
-    var _this;
-
-    _this = _React$Component.call(this, props, context) || this;
-
-    var handleExited = _this.handleExited.bind(Object(assertThisInitialized["a" /* default */])(_this)); // Initial children should all be entering, dependent on appear
-
-
-    _this.state = {
-      contextValue: {
-        isMounting: true
-      },
-      handleExited: handleExited,
-      firstRender: true
-    };
-    return _this;
-  }
-
-  var _proto = TransitionGroup.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
-    this.mounted = true;
-    this.setState({
-      contextValue: {
-        isMounting: false
-      }
-    });
-  };
-
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    this.mounted = false;
-  };
-
-  TransitionGroup.getDerivedStateFromProps = function getDerivedStateFromProps(nextProps, _ref) {
-    var prevChildMapping = _ref.children,
-        handleExited = _ref.handleExited,
-        firstRender = _ref.firstRender;
-    return {
-      children: firstRender ? getInitialChildMapping(nextProps, handleExited) : getNextChildMapping(nextProps, prevChildMapping, handleExited),
-      firstRender: false
-    };
-  } // node is `undefined` when user provided `nodeRef` prop
-  ;
-
-  _proto.handleExited = function handleExited(child, node) {
-    var currentChildMapping = getChildMapping(this.props.children);
-    if (child.key in currentChildMapping) return;
-
-    if (child.props.onExited) {
-      child.props.onExited(node);
-    }
-
-    if (this.mounted) {
-      this.setState(function (state) {
-        var children = _extends({}, state.children);
-
-        delete children[child.key];
-        return {
-          children: children
-        };
-      });
-    }
-  };
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        Component = _this$props.component,
-        childFactory = _this$props.childFactory,
-        props = _objectWithoutPropertiesLoose(_this$props, ["component", "childFactory"]);
-
-    var contextValue = this.state.contextValue;
-    var children = TransitionGroup_values(this.state.children).map(childFactory);
-    delete props.appear;
-    delete props.enter;
-    delete props.exit;
-
-    if (Component === null) {
-      return /*#__PURE__*/react_default.a.createElement(TransitionGroupContext.Provider, {
-        value: contextValue
-      }, children);
-    }
-
-    return /*#__PURE__*/react_default.a.createElement(TransitionGroupContext.Provider, {
-      value: contextValue
-    }, /*#__PURE__*/react_default.a.createElement(Component, props, children));
-  };
-
-  return TransitionGroup;
-}(react_default.a.Component);
-
-TransitionGroup_TransitionGroup.propTypes =  false ? undefined : {};
-TransitionGroup_TransitionGroup.defaultProps = defaultProps;
-/* harmony default export */ var esm_TransitionGroup = (TransitionGroup_TransitionGroup);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/ButtonBase/Ripple.js
-
-
-
-
-var Ripple_useEnhancedEffect = typeof window === 'undefined' ? react["useEffect"] : react["useLayoutEffect"];
-/**
- * @ignore - internal component.
- */
-
-function Ripple(props) {
-  var classes = props.classes,
-      _props$pulsate = props.pulsate,
-      pulsate = _props$pulsate === void 0 ? false : _props$pulsate,
-      rippleX = props.rippleX,
-      rippleY = props.rippleY,
-      rippleSize = props.rippleSize,
-      inProp = props.in,
-      _props$onExited = props.onExited,
-      onExited = _props$onExited === void 0 ? function () {} : _props$onExited,
-      timeout = props.timeout;
-
-  var _React$useState = react["useState"](false),
-      leaving = _React$useState[0],
-      setLeaving = _React$useState[1];
-
-  var rippleClassName = clsx_m(classes.ripple, classes.rippleVisible, pulsate && classes.ripplePulsate);
-  var rippleStyles = {
-    width: rippleSize,
-    height: rippleSize,
-    top: -(rippleSize / 2) + rippleY,
-    left: -(rippleSize / 2) + rippleX
-  };
-  var childClassName = clsx_m(classes.child, leaving && classes.childLeaving, pulsate && classes.childPulsate);
-  var handleExited = useEventCallback(onExited); // Ripple is used for user feedback (e.g. click or press) so we want to apply styles with the highest priority
-
-  Ripple_useEnhancedEffect(function () {
-    if (!inProp) {
-      // react-transition-group#onExit
-      setLeaving(true); // react-transition-group#onExited
-
-      var timeoutId = setTimeout(handleExited, timeout);
-      return function () {
-        clearTimeout(timeoutId);
-      };
-    }
-
-    return undefined;
-  }, [handleExited, inProp, timeout]);
-  return /*#__PURE__*/react["createElement"]("span", {
-    className: rippleClassName,
-    style: rippleStyles
-  }, /*#__PURE__*/react["createElement"]("span", {
-    className: childClassName
-  }));
-}
-
- false ? undefined : void 0;
-/* harmony default export */ var ButtonBase_Ripple = (Ripple);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/ButtonBase/TouchRipple.js
-
-
-
-
-
-
-
-
-
-var DURATION = 550;
-var DELAY_RIPPLE = 80;
-var TouchRipple_styles = function styles(theme) {
-  return {
-    /* Styles applied to the root element. */
-    root: {
-      overflow: 'hidden',
-      pointerEvents: 'none',
-      position: 'absolute',
-      zIndex: 0,
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
-      borderRadius: 'inherit'
-    },
-
-    /* Styles applied to the internal `Ripple` components `ripple` class. */
-    ripple: {
-      opacity: 0,
-      position: 'absolute'
-    },
-
-    /* Styles applied to the internal `Ripple` components `rippleVisible` class. */
-    rippleVisible: {
-      opacity: 0.3,
-      transform: 'scale(1)',
-      animation: "$enter ".concat(DURATION, "ms ").concat(theme.transitions.easing.easeInOut)
-    },
-
-    /* Styles applied to the internal `Ripple` components `ripplePulsate` class. */
-    ripplePulsate: {
-      animationDuration: "".concat(theme.transitions.duration.shorter, "ms")
-    },
-
-    /* Styles applied to the internal `Ripple` components `child` class. */
-    child: {
-      opacity: 1,
-      display: 'block',
-      width: '100%',
-      height: '100%',
-      borderRadius: '50%',
-      backgroundColor: 'currentColor'
-    },
-
-    /* Styles applied to the internal `Ripple` components `childLeaving` class. */
-    childLeaving: {
-      opacity: 0,
-      animation: "$exit ".concat(DURATION, "ms ").concat(theme.transitions.easing.easeInOut)
-    },
-
-    /* Styles applied to the internal `Ripple` components `childPulsate` class. */
-    childPulsate: {
-      position: 'absolute',
-      left: 0,
-      top: 0,
-      animation: "$pulsate 2500ms ".concat(theme.transitions.easing.easeInOut, " 200ms infinite")
-    },
-    '@keyframes enter': {
-      '0%': {
-        transform: 'scale(0)',
-        opacity: 0.1
-      },
-      '100%': {
-        transform: 'scale(1)',
-        opacity: 0.3
-      }
-    },
-    '@keyframes exit': {
-      '0%': {
-        opacity: 1
-      },
-      '100%': {
-        opacity: 0
-      }
-    },
-    '@keyframes pulsate': {
-      '0%': {
-        transform: 'scale(1)'
-      },
-      '50%': {
-        transform: 'scale(0.92)'
-      },
-      '100%': {
-        transform: 'scale(1)'
-      }
-    }
-  };
-};
-/**
- * @ignore - internal component.
- *
- * TODO v5: Make private
- */
-
-var TouchRipple_TouchRipple = /*#__PURE__*/react["forwardRef"](function TouchRipple(props, ref) {
-  var _props$center = props.center,
-      centerProp = _props$center === void 0 ? false : _props$center,
-      classes = props.classes,
-      className = props.className,
-      other = _objectWithoutProperties(props, ["center", "classes", "className"]);
-
-  var _React$useState = react["useState"]([]),
-      ripples = _React$useState[0],
-      setRipples = _React$useState[1];
-
-  var nextKey = react["useRef"](0);
-  var rippleCallback = react["useRef"](null);
-  react["useEffect"](function () {
-    if (rippleCallback.current) {
-      rippleCallback.current();
-      rippleCallback.current = null;
-    }
-  }, [ripples]); // Used to filter out mouse emulated events on mobile.
-
-  var ignoringMouseDown = react["useRef"](false); // We use a timer in order to only show the ripples for touch "click" like events.
-  // We don't want to display the ripple for touch scroll events.
-
-  var startTimer = react["useRef"](null); // This is the hook called once the previous timeout is ready.
-
-  var startTimerCommit = react["useRef"](null);
-  var container = react["useRef"](null);
-  react["useEffect"](function () {
-    return function () {
-      clearTimeout(startTimer.current);
-    };
-  }, []);
-  var startCommit = react["useCallback"](function (params) {
-    var pulsate = params.pulsate,
-        rippleX = params.rippleX,
-        rippleY = params.rippleY,
-        rippleSize = params.rippleSize,
-        cb = params.cb;
-    setRipples(function (oldRipples) {
-      return [].concat(_toConsumableArray(oldRipples), [/*#__PURE__*/react["createElement"](ButtonBase_Ripple, {
-        key: nextKey.current,
-        classes: classes,
-        timeout: DURATION,
-        pulsate: pulsate,
-        rippleX: rippleX,
-        rippleY: rippleY,
-        rippleSize: rippleSize
-      })]);
-    });
-    nextKey.current += 1;
-    rippleCallback.current = cb;
-  }, [classes]);
-  var start = react["useCallback"](function () {
-    var event = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-    var cb = arguments.length > 2 ? arguments[2] : undefined;
-    var _options$pulsate = options.pulsate,
-        pulsate = _options$pulsate === void 0 ? false : _options$pulsate,
-        _options$center = options.center,
-        center = _options$center === void 0 ? centerProp || options.pulsate : _options$center,
-        _options$fakeElement = options.fakeElement,
-        fakeElement = _options$fakeElement === void 0 ? false : _options$fakeElement;
-
-    if (event.type === 'mousedown' && ignoringMouseDown.current) {
-      ignoringMouseDown.current = false;
-      return;
-    }
-
-    if (event.type === 'touchstart') {
-      ignoringMouseDown.current = true;
-    }
-
-    var element = fakeElement ? null : container.current;
-    var rect = element ? element.getBoundingClientRect() : {
-      width: 0,
-      height: 0,
-      left: 0,
-      top: 0
-    }; // Get the size of the ripple
-
-    var rippleX;
-    var rippleY;
-    var rippleSize;
-
-    if (center || event.clientX === 0 && event.clientY === 0 || !event.clientX && !event.touches) {
-      rippleX = Math.round(rect.width / 2);
-      rippleY = Math.round(rect.height / 2);
-    } else {
-      var _ref = event.touches ? event.touches[0] : event,
-          clientX = _ref.clientX,
-          clientY = _ref.clientY;
-
-      rippleX = Math.round(clientX - rect.left);
-      rippleY = Math.round(clientY - rect.top);
-    }
-
-    if (center) {
-      rippleSize = Math.sqrt((2 * Math.pow(rect.width, 2) + Math.pow(rect.height, 2)) / 3); // For some reason the animation is broken on Mobile Chrome if the size if even.
-
-      if (rippleSize % 2 === 0) {
-        rippleSize += 1;
-      }
-    } else {
-      var sizeX = Math.max(Math.abs((element ? element.clientWidth : 0) - rippleX), rippleX) * 2 + 2;
-      var sizeY = Math.max(Math.abs((element ? element.clientHeight : 0) - rippleY), rippleY) * 2 + 2;
-      rippleSize = Math.sqrt(Math.pow(sizeX, 2) + Math.pow(sizeY, 2));
-    } // Touche devices
-
-
-    if (event.touches) {
-      // check that this isn't another touchstart due to multitouch
-      // otherwise we will only clear a single timer when unmounting while two
-      // are running
-      if (startTimerCommit.current === null) {
-        // Prepare the ripple effect.
-        startTimerCommit.current = function () {
-          startCommit({
-            pulsate: pulsate,
-            rippleX: rippleX,
-            rippleY: rippleY,
-            rippleSize: rippleSize,
-            cb: cb
-          });
-        }; // Delay the execution of the ripple effect.
-
-
-        startTimer.current = setTimeout(function () {
-          if (startTimerCommit.current) {
-            startTimerCommit.current();
-            startTimerCommit.current = null;
-          }
-        }, DELAY_RIPPLE); // We have to make a tradeoff with this value.
-      }
-    } else {
-      startCommit({
-        pulsate: pulsate,
-        rippleX: rippleX,
-        rippleY: rippleY,
-        rippleSize: rippleSize,
-        cb: cb
-      });
-    }
-  }, [centerProp, startCommit]);
-  var pulsate = react["useCallback"](function () {
-    start({}, {
-      pulsate: true
-    });
-  }, [start]);
-  var stop = react["useCallback"](function (event, cb) {
-    clearTimeout(startTimer.current); // The touch interaction occurs too quickly.
-    // We still want to show ripple effect.
-
-    if (event.type === 'touchend' && startTimerCommit.current) {
-      event.persist();
-      startTimerCommit.current();
-      startTimerCommit.current = null;
-      startTimer.current = setTimeout(function () {
-        stop(event, cb);
-      });
-      return;
-    }
-
-    startTimerCommit.current = null;
-    setRipples(function (oldRipples) {
-      if (oldRipples.length > 0) {
-        return oldRipples.slice(1);
-      }
-
-      return oldRipples;
-    });
-    rippleCallback.current = cb;
-  }, []);
-  react["useImperativeHandle"](ref, function () {
-    return {
-      pulsate: pulsate,
-      start: start,
-      stop: stop
-    };
-  }, [pulsate, start, stop]);
-  return /*#__PURE__*/react["createElement"]("span", _extends({
-    className: clsx_m(classes.root, className),
-    ref: container
-  }, other), /*#__PURE__*/react["createElement"](esm_TransitionGroup, {
-    component: null,
-    exit: true
-  }, ripples));
-});
- false ? undefined : void 0;
-/* harmony default export */ var ButtonBase_TouchRipple = (styles_withStyles(TouchRipple_styles, {
-  flip: false,
-  name: 'MuiTouchRipple'
-})( /*#__PURE__*/react["memo"](TouchRipple_TouchRipple)));
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/ButtonBase/ButtonBase.js
-
-
-
-
-
-
-
-
-
-
-
-
-var ButtonBase_styles = {
-  /* Styles applied to the root element. */
-  root: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
-    WebkitTapHighlightColor: 'transparent',
-    backgroundColor: 'transparent',
-    // Reset default value
-    // We disable the focus ring for mouse, touch and keyboard users.
-    outline: 0,
-    border: 0,
-    margin: 0,
-    // Remove the margin in Safari
-    borderRadius: 0,
-    padding: 0,
-    // Remove the padding in Firefox
-    cursor: 'pointer',
-    userSelect: 'none',
-    verticalAlign: 'middle',
-    '-moz-appearance': 'none',
-    // Reset
-    '-webkit-appearance': 'none',
-    // Reset
-    textDecoration: 'none',
-    // So we take precedent over the style of a native <a /> element.
-    color: 'inherit',
-    '&::-moz-focus-inner': {
-      borderStyle: 'none' // Remove Firefox dotted outline.
-
-    },
-    '&$disabled': {
-      pointerEvents: 'none',
-      // Disable link interactions
-      cursor: 'default'
-    },
-    '@media print': {
-      colorAdjust: 'exact'
-    }
-  },
-
-  /* Pseudo-class applied to the root element if `disabled={true}`. */
-  disabled: {},
-
-  /* Pseudo-class applied to the root element if keyboard focused. */
-  focusVisible: {}
-};
-/**
- * `ButtonBase` contains as few styles as possible.
- * It aims to be a simple building block for creating a button.
- * It contains a load of style reset and some focus/ripple logic.
- */
-
-var ButtonBase_ButtonBase = /*#__PURE__*/react["forwardRef"](function ButtonBase(props, ref) {
-  var action = props.action,
-      buttonRefProp = props.buttonRef,
-      _props$centerRipple = props.centerRipple,
-      centerRipple = _props$centerRipple === void 0 ? false : _props$centerRipple,
-      children = props.children,
-      classes = props.classes,
-      className = props.className,
-      _props$component = props.component,
-      component = _props$component === void 0 ? 'button' : _props$component,
-      _props$disabled = props.disabled,
-      disabled = _props$disabled === void 0 ? false : _props$disabled,
-      _props$disableRipple = props.disableRipple,
-      disableRipple = _props$disableRipple === void 0 ? false : _props$disableRipple,
-      _props$disableTouchRi = props.disableTouchRipple,
-      disableTouchRipple = _props$disableTouchRi === void 0 ? false : _props$disableTouchRi,
-      _props$focusRipple = props.focusRipple,
-      focusRipple = _props$focusRipple === void 0 ? false : _props$focusRipple,
-      focusVisibleClassName = props.focusVisibleClassName,
-      onBlur = props.onBlur,
-      onClick = props.onClick,
-      onFocus = props.onFocus,
-      onFocusVisible = props.onFocusVisible,
-      onKeyDown = props.onKeyDown,
-      onKeyUp = props.onKeyUp,
-      onMouseDown = props.onMouseDown,
-      onMouseLeave = props.onMouseLeave,
-      onMouseUp = props.onMouseUp,
-      onTouchEnd = props.onTouchEnd,
-      onTouchMove = props.onTouchMove,
-      onTouchStart = props.onTouchStart,
-      onDragLeave = props.onDragLeave,
-      _props$tabIndex = props.tabIndex,
-      tabIndex = _props$tabIndex === void 0 ? 0 : _props$tabIndex,
-      TouchRippleProps = props.TouchRippleProps,
-      _props$type = props.type,
-      type = _props$type === void 0 ? 'button' : _props$type,
-      other = _objectWithoutProperties(props, ["action", "buttonRef", "centerRipple", "children", "classes", "className", "component", "disabled", "disableRipple", "disableTouchRipple", "focusRipple", "focusVisibleClassName", "onBlur", "onClick", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseDown", "onMouseLeave", "onMouseUp", "onTouchEnd", "onTouchMove", "onTouchStart", "onDragLeave", "tabIndex", "TouchRippleProps", "type"]);
-
-  var buttonRef = react["useRef"](null);
-
-  function getButtonNode() {
-    // #StrictMode ready
-    return react_dom["findDOMNode"](buttonRef.current);
-  }
-
-  var rippleRef = react["useRef"](null);
-
-  var _React$useState = react["useState"](false),
-      focusVisible = _React$useState[0],
-      setFocusVisible = _React$useState[1];
-
-  if (disabled && focusVisible) {
-    setFocusVisible(false);
-  }
-
-  var _useIsFocusVisible = useIsFocusVisible(),
-      isFocusVisible = _useIsFocusVisible.isFocusVisible,
-      onBlurVisible = _useIsFocusVisible.onBlurVisible,
-      focusVisibleRef = _useIsFocusVisible.ref;
-
-  react["useImperativeHandle"](action, function () {
-    return {
-      focusVisible: function focusVisible() {
-        setFocusVisible(true);
-        buttonRef.current.focus();
-      }
-    };
-  }, []);
-  react["useEffect"](function () {
-    if (focusVisible && focusRipple && !disableRipple) {
-      rippleRef.current.pulsate();
-    }
-  }, [disableRipple, focusRipple, focusVisible]);
-
-  function useRippleHandler(rippleAction, eventCallback) {
-    var skipRippleAction = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : disableTouchRipple;
-    return useEventCallback(function (event) {
-      if (eventCallback) {
-        eventCallback(event);
-      }
-
-      var ignore = skipRippleAction;
-
-      if (!ignore && rippleRef.current) {
-        rippleRef.current[rippleAction](event);
-      }
-
-      return true;
-    });
-  }
-
-  var handleMouseDown = useRippleHandler('start', onMouseDown);
-  var handleDragLeave = useRippleHandler('stop', onDragLeave);
-  var handleMouseUp = useRippleHandler('stop', onMouseUp);
-  var handleMouseLeave = useRippleHandler('stop', function (event) {
-    if (focusVisible) {
-      event.preventDefault();
-    }
-
-    if (onMouseLeave) {
-      onMouseLeave(event);
-    }
-  });
-  var handleTouchStart = useRippleHandler('start', onTouchStart);
-  var handleTouchEnd = useRippleHandler('stop', onTouchEnd);
-  var handleTouchMove = useRippleHandler('stop', onTouchMove);
-  var handleBlur = useRippleHandler('stop', function (event) {
-    if (focusVisible) {
-      onBlurVisible(event);
-      setFocusVisible(false);
-    }
-
-    if (onBlur) {
-      onBlur(event);
-    }
-  }, false);
-  var handleFocus = useEventCallback(function (event) {
-    // Fix for https://github.com/facebook/react/issues/7769
-    if (!buttonRef.current) {
-      buttonRef.current = event.currentTarget;
-    }
-
-    if (isFocusVisible(event)) {
-      setFocusVisible(true);
-
-      if (onFocusVisible) {
-        onFocusVisible(event);
-      }
-    }
-
-    if (onFocus) {
-      onFocus(event);
-    }
-  });
-
-  var isNonNativeButton = function isNonNativeButton() {
-    var button = getButtonNode();
-    return component && component !== 'button' && !(button.tagName === 'A' && button.href);
-  };
-  /**
-   * IE 11 shim for https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/repeat
-   */
-
-
-  var keydownRef = react["useRef"](false);
-  var handleKeyDown = useEventCallback(function (event) {
-    // Check if key is already down to avoid repeats being counted as multiple activations
-    if (focusRipple && !keydownRef.current && focusVisible && rippleRef.current && event.key === ' ') {
-      keydownRef.current = true;
-      event.persist();
-      rippleRef.current.stop(event, function () {
-        rippleRef.current.start(event);
-      });
-    }
-
-    if (event.target === event.currentTarget && isNonNativeButton() && event.key === ' ') {
-      event.preventDefault();
-    }
-
-    if (onKeyDown) {
-      onKeyDown(event);
-    } // Keyboard accessibility for non interactive elements
-
-
-    if (event.target === event.currentTarget && isNonNativeButton() && event.key === 'Enter' && !disabled) {
-      event.preventDefault();
-
-      if (onClick) {
-        onClick(event);
-      }
-    }
-  });
-  var handleKeyUp = useEventCallback(function (event) {
-    // calling preventDefault in keyUp on a <button> will not dispatch a click event if Space is pressed
-    // https://codesandbox.io/s/button-keyup-preventdefault-dn7f0
-    if (focusRipple && event.key === ' ' && rippleRef.current && focusVisible && !event.defaultPrevented) {
-      keydownRef.current = false;
-      event.persist();
-      rippleRef.current.stop(event, function () {
-        rippleRef.current.pulsate(event);
-      });
-    }
-
-    if (onKeyUp) {
-      onKeyUp(event);
-    } // Keyboard accessibility for non interactive elements
-
-
-    if (onClick && event.target === event.currentTarget && isNonNativeButton() && event.key === ' ' && !event.defaultPrevented) {
-      onClick(event);
-    }
-  });
-  var ComponentProp = component;
-
-  if (ComponentProp === 'button' && other.href) {
-    ComponentProp = 'a';
-  }
-
-  var buttonProps = {};
-
-  if (ComponentProp === 'button') {
-    buttonProps.type = type;
-    buttonProps.disabled = disabled;
-  } else {
-    if (ComponentProp !== 'a' || !other.href) {
-      buttonProps.role = 'button';
-    }
-
-    buttonProps['aria-disabled'] = disabled;
-  }
-
-  var handleUserRef = useForkRef(buttonRefProp, ref);
-  var handleOwnRef = useForkRef(focusVisibleRef, buttonRef);
-  var handleRef = useForkRef(handleUserRef, handleOwnRef);
-
-  var _React$useState2 = react["useState"](false),
-      mountedState = _React$useState2[0],
-      setMountedState = _React$useState2[1];
-
-  react["useEffect"](function () {
-    setMountedState(true);
-  }, []);
-  var enableTouchRipple = mountedState && !disableRipple && !disabled;
-
-  if (false) {}
-
-  return /*#__PURE__*/react["createElement"](ComponentProp, _extends({
-    className: clsx_m(classes.root, className, focusVisible && [classes.focusVisible, focusVisibleClassName], disabled && classes.disabled),
-    onBlur: handleBlur,
-    onClick: onClick,
-    onFocus: handleFocus,
-    onKeyDown: handleKeyDown,
-    onKeyUp: handleKeyUp,
-    onMouseDown: handleMouseDown,
-    onMouseLeave: handleMouseLeave,
-    onMouseUp: handleMouseUp,
-    onDragLeave: handleDragLeave,
-    onTouchEnd: handleTouchEnd,
-    onTouchMove: handleTouchMove,
-    onTouchStart: handleTouchStart,
-    ref: handleRef,
-    tabIndex: disabled ? -1 : tabIndex
-  }, buttonProps, other), children, enableTouchRipple ?
-  /*#__PURE__*/
-
-  /* TouchRipple is only needed client-side, x2 boost on the server. */
-  react["createElement"](ButtonBase_TouchRipple, _extends({
-    ref: rippleRef,
-    center: centerRipple
-  }, TouchRippleProps)) : null);
-});
- false ? undefined : void 0;
-/* harmony default export */ var esm_ButtonBase_ButtonBase = (styles_withStyles(ButtonBase_styles, {
-  name: 'MuiButtonBase'
-})(ButtonBase_ButtonBase));
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Button/Button.js
-
-
-
-
-
-
-
-
-
-var Button_styles = function styles(theme) {
-  return {
-    /* Styles applied to the root element. */
-    root: _extends({}, theme.typography.button, {
-      boxSizing: 'border-box',
-      minWidth: 64,
-      padding: '6px 16px',
-      borderRadius: theme.shape.borderRadius,
-      color: theme.palette.text.primary,
-      transition: theme.transitions.create(['background-color', 'box-shadow', 'border'], {
-        duration: theme.transitions.duration.short
-      }),
-      '&:hover': {
-        textDecoration: 'none',
-        backgroundColor: fade(theme.palette.text.primary, theme.palette.action.hoverOpacity),
-        // Reset on touch devices, it doesn't add specificity
-        '@media (hover: none)': {
-          backgroundColor: 'transparent'
-        },
-        '&$disabled': {
-          backgroundColor: 'transparent'
-        }
-      },
-      '&$disabled': {
-        color: theme.palette.action.disabled
-      }
-    }),
-
-    /* Styles applied to the span element that wraps the children. */
-    label: {
-      width: '100%',
-      // Ensure the correct width for iOS Safari
-      display: 'inherit',
-      alignItems: 'inherit',
-      justifyContent: 'inherit'
-    },
-
-    /* Styles applied to the root element if `variant="text"`. */
-    text: {
-      padding: '6px 8px'
-    },
-
-    /* Styles applied to the root element if `variant="text"` and `color="primary"`. */
-    textPrimary: {
-      color: theme.palette.primary.main,
-      '&:hover': {
-        backgroundColor: fade(theme.palette.primary.main, theme.palette.action.hoverOpacity),
-        // Reset on touch devices, it doesn't add specificity
-        '@media (hover: none)': {
-          backgroundColor: 'transparent'
-        }
-      }
-    },
-
-    /* Styles applied to the root element if `variant="text"` and `color="secondary"`. */
-    textSecondary: {
-      color: theme.palette.secondary.main,
-      '&:hover': {
-        backgroundColor: fade(theme.palette.secondary.main, theme.palette.action.hoverOpacity),
-        // Reset on touch devices, it doesn't add specificity
-        '@media (hover: none)': {
-          backgroundColor: 'transparent'
-        }
-      }
-    },
-
-    /* Styles applied to the root element if `variant="outlined"`. */
-    outlined: {
-      padding: '5px 15px',
-      border: "1px solid ".concat(theme.palette.type === 'light' ? 'rgba(0, 0, 0, 0.23)' : 'rgba(255, 255, 255, 0.23)'),
-      '&$disabled': {
-        border: "1px solid ".concat(theme.palette.action.disabledBackground)
-      }
-    },
-
-    /* Styles applied to the root element if `variant="outlined"` and `color="primary"`. */
-    outlinedPrimary: {
-      color: theme.palette.primary.main,
-      border: "1px solid ".concat(fade(theme.palette.primary.main, 0.5)),
-      '&:hover': {
-        border: "1px solid ".concat(theme.palette.primary.main),
-        backgroundColor: fade(theme.palette.primary.main, theme.palette.action.hoverOpacity),
-        // Reset on touch devices, it doesn't add specificity
-        '@media (hover: none)': {
-          backgroundColor: 'transparent'
-        }
-      }
-    },
-
-    /* Styles applied to the root element if `variant="outlined"` and `color="secondary"`. */
-    outlinedSecondary: {
-      color: theme.palette.secondary.main,
-      border: "1px solid ".concat(fade(theme.palette.secondary.main, 0.5)),
-      '&:hover': {
-        border: "1px solid ".concat(theme.palette.secondary.main),
-        backgroundColor: fade(theme.palette.secondary.main, theme.palette.action.hoverOpacity),
-        // Reset on touch devices, it doesn't add specificity
-        '@media (hover: none)': {
-          backgroundColor: 'transparent'
-        }
-      },
-      '&$disabled': {
-        border: "1px solid ".concat(theme.palette.action.disabled)
-      }
-    },
-
-    /* Styles applied to the root element if `variant="contained"`. */
-    contained: {
-      color: theme.palette.getContrastText(theme.palette.grey[300]),
-      backgroundColor: theme.palette.grey[300],
-      boxShadow: theme.shadows[2],
-      '&:hover': {
-        backgroundColor: theme.palette.grey.A100,
-        boxShadow: theme.shadows[4],
-        // Reset on touch devices, it doesn't add specificity
-        '@media (hover: none)': {
-          boxShadow: theme.shadows[2],
-          backgroundColor: theme.palette.grey[300]
-        },
-        '&$disabled': {
-          backgroundColor: theme.palette.action.disabledBackground
-        }
-      },
-      '&$focusVisible': {
-        boxShadow: theme.shadows[6]
-      },
-      '&:active': {
-        boxShadow: theme.shadows[8]
-      },
-      '&$disabled': {
-        color: theme.palette.action.disabled,
-        boxShadow: theme.shadows[0],
-        backgroundColor: theme.palette.action.disabledBackground
-      }
-    },
-
-    /* Styles applied to the root element if `variant="contained"` and `color="primary"`. */
-    containedPrimary: {
-      color: theme.palette.primary.contrastText,
-      backgroundColor: theme.palette.primary.main,
-      '&:hover': {
-        backgroundColor: theme.palette.primary.dark,
-        // Reset on touch devices, it doesn't add specificity
-        '@media (hover: none)': {
-          backgroundColor: theme.palette.primary.main
-        }
-      }
-    },
-
-    /* Styles applied to the root element if `variant="contained"` and `color="secondary"`. */
-    containedSecondary: {
-      color: theme.palette.secondary.contrastText,
-      backgroundColor: theme.palette.secondary.main,
-      '&:hover': {
-        backgroundColor: theme.palette.secondary.dark,
-        // Reset on touch devices, it doesn't add specificity
-        '@media (hover: none)': {
-          backgroundColor: theme.palette.secondary.main
-        }
-      }
-    },
-
-    /* Styles applied to the root element if `disableElevation={true}`. */
-    disableElevation: {
-      boxShadow: 'none',
-      '&:hover': {
-        boxShadow: 'none'
-      },
-      '&$focusVisible': {
-        boxShadow: 'none'
-      },
-      '&:active': {
-        boxShadow: 'none'
-      },
-      '&$disabled': {
-        boxShadow: 'none'
-      }
-    },
-
-    /* Pseudo-class applied to the ButtonBase root element if the button is keyboard focused. */
-    focusVisible: {},
-
-    /* Pseudo-class applied to the root element if `disabled={true}`. */
-    disabled: {},
-
-    /* Styles applied to the root element if `color="inherit"`. */
-    colorInherit: {
-      color: 'inherit',
-      borderColor: 'currentColor'
-    },
-
-    /* Styles applied to the root element if `size="small"` and `variant="text"`. */
-    textSizeSmall: {
-      padding: '4px 5px',
-      fontSize: theme.typography.pxToRem(13)
-    },
-
-    /* Styles applied to the root element if `size="large"` and `variant="text"`. */
-    textSizeLarge: {
-      padding: '8px 11px',
-      fontSize: theme.typography.pxToRem(15)
-    },
-
-    /* Styles applied to the root element if `size="small"` and `variant="outlined"`. */
-    outlinedSizeSmall: {
-      padding: '3px 9px',
-      fontSize: theme.typography.pxToRem(13)
-    },
-
-    /* Styles applied to the root element if `size="large"` and `variant="outlined"`. */
-    outlinedSizeLarge: {
-      padding: '7px 21px',
-      fontSize: theme.typography.pxToRem(15)
-    },
-
-    /* Styles applied to the root element if `size="small"` and `variant="contained"`. */
-    containedSizeSmall: {
-      padding: '4px 10px',
-      fontSize: theme.typography.pxToRem(13)
-    },
-
-    /* Styles applied to the root element if `size="large"` and `variant="contained"`. */
-    containedSizeLarge: {
-      padding: '8px 22px',
-      fontSize: theme.typography.pxToRem(15)
-    },
-
-    /* Styles applied to the root element if `size="small"`. */
-    sizeSmall: {},
-
-    /* Styles applied to the root element if `size="large"`. */
-    sizeLarge: {},
-
-    /* Styles applied to the root element if `fullWidth={true}`. */
-    fullWidth: {
-      width: '100%'
-    },
-
-    /* Styles applied to the startIcon element if supplied. */
-    startIcon: {
-      display: 'inherit',
-      marginRight: 8,
-      marginLeft: -4,
-      '&$iconSizeSmall': {
-        marginLeft: -2
-      }
-    },
-
-    /* Styles applied to the endIcon element if supplied. */
-    endIcon: {
-      display: 'inherit',
-      marginRight: -4,
-      marginLeft: 8,
-      '&$iconSizeSmall': {
-        marginRight: -2
-      }
-    },
-
-    /* Styles applied to the icon element if supplied and `size="small"`. */
-    iconSizeSmall: {
-      '& > *:first-child': {
-        fontSize: 18
-      }
-    },
-
-    /* Styles applied to the icon element if supplied and `size="medium"`. */
-    iconSizeMedium: {
-      '& > *:first-child': {
-        fontSize: 20
-      }
-    },
-
-    /* Styles applied to the icon element if supplied and `size="large"`. */
-    iconSizeLarge: {
-      '& > *:first-child': {
-        fontSize: 22
-      }
-    }
-  };
-};
-var Button_Button = /*#__PURE__*/react["forwardRef"](function Button(props, ref) {
-  var children = props.children,
-      classes = props.classes,
-      className = props.className,
-      _props$color = props.color,
-      color = _props$color === void 0 ? 'default' : _props$color,
-      _props$component = props.component,
-      component = _props$component === void 0 ? 'button' : _props$component,
-      _props$disabled = props.disabled,
-      disabled = _props$disabled === void 0 ? false : _props$disabled,
-      _props$disableElevati = props.disableElevation,
-      disableElevation = _props$disableElevati === void 0 ? false : _props$disableElevati,
-      _props$disableFocusRi = props.disableFocusRipple,
-      disableFocusRipple = _props$disableFocusRi === void 0 ? false : _props$disableFocusRi,
-      endIconProp = props.endIcon,
-      focusVisibleClassName = props.focusVisibleClassName,
-      _props$fullWidth = props.fullWidth,
-      fullWidth = _props$fullWidth === void 0 ? false : _props$fullWidth,
-      _props$size = props.size,
-      size = _props$size === void 0 ? 'medium' : _props$size,
-      startIconProp = props.startIcon,
-      _props$type = props.type,
-      type = _props$type === void 0 ? 'button' : _props$type,
-      _props$variant = props.variant,
-      variant = _props$variant === void 0 ? 'text' : _props$variant,
-      other = _objectWithoutProperties(props, ["children", "classes", "className", "color", "component", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"]);
-
-  var startIcon = startIconProp && /*#__PURE__*/react["createElement"]("span", {
-    className: clsx_m(classes.startIcon, classes["iconSize".concat(capitalize(size))])
-  }, startIconProp);
-  var endIcon = endIconProp && /*#__PURE__*/react["createElement"]("span", {
-    className: clsx_m(classes.endIcon, classes["iconSize".concat(capitalize(size))])
-  }, endIconProp);
-  return /*#__PURE__*/react["createElement"](esm_ButtonBase_ButtonBase, _extends({
-    className: clsx_m(classes.root, classes[variant], className, color === 'inherit' ? classes.colorInherit : color !== 'default' && classes["".concat(variant).concat(capitalize(color))], size !== 'medium' && [classes["".concat(variant, "Size").concat(capitalize(size))], classes["size".concat(capitalize(size))]], disableElevation && classes.disableElevation, disabled && classes.disabled, fullWidth && classes.fullWidth),
-    component: component,
-    disabled: disabled,
-    focusRipple: !disableFocusRipple,
-    focusVisibleClassName: clsx_m(classes.focusVisible, focusVisibleClassName),
-    ref: ref,
-    type: type
-  }, other), /*#__PURE__*/react["createElement"]("span", {
-    className: classes.label
-  }, startIcon, children, endIcon));
-});
- false ? undefined : void 0;
-/* harmony default export */ var esm_Button_Button = (styles_withStyles(Button_styles, {
-  name: 'MuiButton'
-})(Button_Button));
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/useTheme.js
-
-
-
-function useTheme_useTheme() {
-  var theme = useTheme() || styles_defaultTheme;
-
-  if (false) {}
-
-  return theme;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/unstable_useId.js
-
-/**
- * Private module reserved for @material-ui/x packages.
- */
-
-function useId(idOverride) {
-  var _React$useState = react["useState"](idOverride),
-      defaultId = _React$useState[0],
-      setDefaultId = _React$useState[1];
-
-  var id = idOverride || defaultId;
-  react["useEffect"](function () {
-    if (defaultId == null) {
-      // Fallback to this default id when possible.
-      // Use the random value for client-side rendering only.
-      // We can't use it server-side.
-      setDefaultId("mui-".concat(Math.round(Math.random() * 1e5)));
-    }
-  }, [defaultId]);
-  return id;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/useControlled.js
-/* eslint-disable react-hooks/rules-of-hooks, react-hooks/exhaustive-deps */
-
-function useControlled(_ref) {
-  var controlled = _ref.controlled,
-      defaultProp = _ref.default,
-      name = _ref.name,
-      _ref$state = _ref.state,
-      state = _ref$state === void 0 ? 'value' : _ref$state;
-
-  var _React$useRef = react["useRef"](controlled !== undefined),
-      isControlled = _React$useRef.current;
-
-  var _React$useState = react["useState"](defaultProp),
-      valueState = _React$useState[0],
-      setValue = _React$useState[1];
-
-  var value = isControlled ? controlled : valueState;
-
-  if (false) { var _React$useRef2, defaultValue; }
-
-  var setValueIfUncontrolled = react["useCallback"](function (newValue) {
-    if (!isControlled) {
-      setValue(newValue);
-    }
-  }, []);
-  return [value, setValueIfUncontrolled];
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/SvgIcon/SvgIcon.js
-
-
-
-
-
-
-
-var SvgIcon_styles = function styles(theme) {
-  return {
-    /* Styles applied to the root element. */
-    root: {
-      userSelect: 'none',
-      width: '1em',
-      height: '1em',
-      display: 'inline-block',
-      fill: 'currentColor',
-      flexShrink: 0,
-      fontSize: theme.typography.pxToRem(24),
-      transition: theme.transitions.create('fill', {
-        duration: theme.transitions.duration.shorter
-      })
-    },
-
-    /* Styles applied to the root element if `color="primary"`. */
-    colorPrimary: {
-      color: theme.palette.primary.main
-    },
-
-    /* Styles applied to the root element if `color="secondary"`. */
-    colorSecondary: {
-      color: theme.palette.secondary.main
-    },
-
-    /* Styles applied to the root element if `color="action"`. */
-    colorAction: {
-      color: theme.palette.action.active
-    },
-
-    /* Styles applied to the root element if `color="error"`. */
-    colorError: {
-      color: theme.palette.error.main
-    },
-
-    /* Styles applied to the root element if `color="disabled"`. */
-    colorDisabled: {
-      color: theme.palette.action.disabled
-    },
-
-    /* Styles applied to the root element if `fontSize="inherit"`. */
-    fontSizeInherit: {
-      fontSize: 'inherit'
-    },
-
-    /* Styles applied to the root element if `fontSize="small"`. */
-    fontSizeSmall: {
-      fontSize: theme.typography.pxToRem(20)
-    },
-
-    /* Styles applied to the root element if `fontSize="large"`. */
-    fontSizeLarge: {
-      fontSize: theme.typography.pxToRem(35)
-    }
-  };
-};
-var SvgIcon_SvgIcon = /*#__PURE__*/react["forwardRef"](function SvgIcon(props, ref) {
-  var children = props.children,
-      classes = props.classes,
-      className = props.className,
-      _props$color = props.color,
-      color = _props$color === void 0 ? 'inherit' : _props$color,
-      _props$component = props.component,
-      Component = _props$component === void 0 ? 'svg' : _props$component,
-      _props$fontSize = props.fontSize,
-      fontSize = _props$fontSize === void 0 ? 'default' : _props$fontSize,
-      htmlColor = props.htmlColor,
-      titleAccess = props.titleAccess,
-      _props$viewBox = props.viewBox,
-      viewBox = _props$viewBox === void 0 ? '0 0 24 24' : _props$viewBox,
-      other = _objectWithoutProperties(props, ["children", "classes", "className", "color", "component", "fontSize", "htmlColor", "titleAccess", "viewBox"]);
-
-  return /*#__PURE__*/react["createElement"](Component, _extends({
-    className: clsx_m(classes.root, className, color !== 'inherit' && classes["color".concat(capitalize(color))], fontSize !== 'default' && classes["fontSize".concat(capitalize(fontSize))]),
-    focusable: "false",
-    viewBox: viewBox,
-    color: htmlColor,
-    "aria-hidden": titleAccess ? undefined : true,
-    role: titleAccess ? 'img' : undefined,
-    ref: ref
-  }, other), children, titleAccess ? /*#__PURE__*/react["createElement"]("title", null, titleAccess) : null);
-});
- false ? undefined : void 0;
-SvgIcon_SvgIcon.muiName = 'SvgIcon';
-/* harmony default export */ var esm_SvgIcon_SvgIcon = (styles_withStyles(SvgIcon_styles, {
-  name: 'MuiSvgIcon'
-})(SvgIcon_SvgIcon));
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/createSvgIcon.js
-
-
-
-/**
- * Private module reserved for @material-ui/x packages.
- */
-
-function createSvgIcon(path, displayName) {
-  var Component = function Component(props, ref) {
-    return /*#__PURE__*/react_default.a.createElement(esm_SvgIcon_SvgIcon, _extends({
-      ref: ref
-    }, props), path);
-  };
-
-  if (false) {}
-
-  Component.muiName = esm_SvgIcon_SvgIcon.muiName;
-  return /*#__PURE__*/react_default.a.memo( /*#__PURE__*/react_default.a.forwardRef(Component));
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/lab/esm/internal/svg-icons/Star.js
-
-
-/**
- * @ignore - internal component.
- */
-
-/* harmony default export */ var Star = (createSvgIcon( /*#__PURE__*/react["createElement"]("path", {
-  d: "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
-}), 'Star'));
-// CONCATENATED MODULE: ./node_modules/@material-ui/lab/esm/Rating/Rating.js
-
-
-
-
-
-
-
-
-
-
-
-function Rating_clamp(value, min, max) {
-  if (value < min) {
-    return min;
-  }
-
-  if (value > max) {
-    return max;
-  }
-
-  return value;
-}
-
-function getDecimalPrecision(num) {
-  var decimalPart = num.toString().split('.')[1];
-  return decimalPart ? decimalPart.length : 0;
-}
-
-function roundValueToPrecision(value, precision) {
-  if (value == null) {
-    return value;
-  }
-
-  var nearest = Math.round(value / precision) * precision;
-  return Number(nearest.toFixed(getDecimalPrecision(precision)));
-}
-
-var Rating_styles = function styles(theme) {
-  return {
-    /* Styles applied to the root element. */
-    root: {
-      display: 'inline-flex',
-      position: 'relative',
-      fontSize: theme.typography.pxToRem(24),
-      color: '#ffb400',
-      cursor: 'pointer',
-      textAlign: 'left',
-      WebkitTapHighlightColor: 'transparent',
-      '&$disabled': {
-        opacity: 0.5,
-        pointerEvents: 'none'
-      },
-      '&$focusVisible $iconActive': {
-        outline: '1px solid #999'
-      }
-    },
-
-    /* Styles applied to the root element if `size="small"`. */
-    sizeSmall: {
-      fontSize: theme.typography.pxToRem(18)
-    },
-
-    /* Styles applied to the root element if `size="large"`. */
-    sizeLarge: {
-      fontSize: theme.typography.pxToRem(30)
-    },
-
-    /* Styles applied to the root element if `readOnly={true}`. */
-    readOnly: {
-      pointerEvents: 'none'
-    },
-
-    /* Pseudo-class applied to the root element if `disabled={true}`. */
-    disabled: {},
-
-    /* Pseudo-class applied to the root element if keyboard focused. */
-    focusVisible: {},
-
-    /* Visually hide an element. */
-    visuallyhidden: {
-      border: 0,
-      clip: 'rect(0 0 0 0)',
-      height: 1,
-      margin: -1,
-      color: '#000',
-      overflow: 'hidden',
-      padding: 0,
-      position: 'absolute',
-      top: 20,
-      width: 1
-    },
-
-    /* Styles applied to the pristine label. */
-    pristine: {
-      'input:focus + &': {
-        top: 0,
-        bottom: 0,
-        position: 'absolute',
-        outline: '1px solid #999',
-        width: '100%'
-      }
-    },
-
-    /* Styles applied to the label elements. */
-    label: {
-      cursor: 'inherit'
-    },
-
-    /* Styles applied to the icon wrapping elements. */
-    icon: {
-      display: 'flex',
-      transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest
-      }),
-      // Fix mouseLeave issue.
-      // https://github.com/facebook/react/issues/4492
-      pointerEvents: 'none'
-    },
-
-    /* Styles applied to the icon wrapping elements when empty. */
-    iconEmpty: {
-      color: theme.palette.action.disabled
-    },
-
-    /* Styles applied to the icon wrapping elements when filled. */
-    iconFilled: {},
-
-    /* Styles applied to the icon wrapping elements when hover. */
-    iconHover: {},
-
-    /* Styles applied to the icon wrapping elements when focus. */
-    iconFocus: {},
-
-    /* Styles applied to the icon wrapping elements when active. */
-    iconActive: {
-      transform: 'scale(1.2)'
-    },
-
-    /* Styles applied to the icon wrapping elements when decimals are necessary. */
-    decimal: {
-      position: 'relative'
-    }
-  };
-};
-
-function IconContainer(props) {
-  var value = props.value,
-      other = _objectWithoutProperties(props, ["value"]);
-
-  return /*#__PURE__*/react["createElement"]("span", other);
-}
-
- false ? undefined : void 0;
-var defaultIcon = /*#__PURE__*/react["createElement"](Star, {
-  fontSize: "inherit"
-});
-
-function defaultLabelText(value) {
-  return "".concat(value, " Star").concat(value !== 1 ? 's' : '');
-}
-
-var Rating_Rating = /*#__PURE__*/react["forwardRef"](function Rating(props, ref) {
-  var classes = props.classes,
-      className = props.className,
-      _props$defaultValue = props.defaultValue,
-      defaultValue = _props$defaultValue === void 0 ? null : _props$defaultValue,
-      _props$disabled = props.disabled,
-      disabled = _props$disabled === void 0 ? false : _props$disabled,
-      emptyIcon = props.emptyIcon,
-      _props$emptyLabelText = props.emptyLabelText,
-      emptyLabelText = _props$emptyLabelText === void 0 ? 'Empty' : _props$emptyLabelText,
-      _props$getLabelText = props.getLabelText,
-      getLabelText = _props$getLabelText === void 0 ? defaultLabelText : _props$getLabelText,
-      _props$icon = props.icon,
-      icon = _props$icon === void 0 ? defaultIcon : _props$icon,
-      _props$IconContainerC = props.IconContainerComponent,
-      IconContainerComponent = _props$IconContainerC === void 0 ? IconContainer : _props$IconContainerC,
-      _props$max = props.max,
-      max = _props$max === void 0 ? 5 : _props$max,
-      nameProp = props.name,
-      onChange = props.onChange,
-      onChangeActive = props.onChangeActive,
-      onMouseLeave = props.onMouseLeave,
-      onMouseMove = props.onMouseMove,
-      _props$precision = props.precision,
-      precision = _props$precision === void 0 ? 1 : _props$precision,
-      _props$readOnly = props.readOnly,
-      readOnly = _props$readOnly === void 0 ? false : _props$readOnly,
-      _props$size = props.size,
-      size = _props$size === void 0 ? 'medium' : _props$size,
-      valueProp = props.value,
-      other = _objectWithoutProperties(props, ["classes", "className", "defaultValue", "disabled", "emptyIcon", "emptyLabelText", "getLabelText", "icon", "IconContainerComponent", "max", "name", "onChange", "onChangeActive", "onMouseLeave", "onMouseMove", "precision", "readOnly", "size", "value"]);
-
-  var name = useId(nameProp);
-
-  var _useControlled = useControlled({
-    controlled: valueProp,
-    default: defaultValue,
-    name: 'Rating'
-  }),
-      _useControlled2 = _slicedToArray(_useControlled, 2),
-      valueDerived = _useControlled2[0],
-      setValueState = _useControlled2[1];
-
-  var valueRounded = roundValueToPrecision(valueDerived, precision);
-  var theme = useTheme_useTheme();
-
-  var _React$useState = react["useState"]({
-    hover: -1,
-    focus: -1
-  }),
-      _React$useState$ = _React$useState[0],
-      hover = _React$useState$.hover,
-      focus = _React$useState$.focus,
-      setState = _React$useState[1];
-
-  var value = valueRounded;
-
-  if (hover !== -1) {
-    value = hover;
-  }
-
-  if (focus !== -1) {
-    value = focus;
-  }
-
-  var _useIsFocusVisible = useIsFocusVisible(),
-      isFocusVisible = _useIsFocusVisible.isFocusVisible,
-      onBlurVisible = _useIsFocusVisible.onBlurVisible,
-      focusVisibleRef = _useIsFocusVisible.ref;
-
-  var _React$useState2 = react["useState"](false),
-      focusVisible = _React$useState2[0],
-      setFocusVisible = _React$useState2[1];
-
-  var rootRef = react["useRef"]();
-  var handleFocusRef = useForkRef(focusVisibleRef, rootRef);
-  var handleRef = useForkRef(handleFocusRef, ref);
-
-  var handleMouseMove = function handleMouseMove(event) {
-    if (onMouseMove) {
-      onMouseMove(event);
-    }
-
-    var rootNode = rootRef.current;
-
-    var _rootNode$getBounding = rootNode.getBoundingClientRect(),
-        right = _rootNode$getBounding.right,
-        left = _rootNode$getBounding.left;
-
-    var _rootNode$firstChild$ = rootNode.firstChild.getBoundingClientRect(),
-        width = _rootNode$firstChild$.width;
-
-    var percent;
-
-    if (theme.direction === 'rtl') {
-      percent = (right - event.clientX) / (width * max);
-    } else {
-      percent = (event.clientX - left) / (width * max);
-    }
-
-    var newHover = roundValueToPrecision(max * percent + precision / 2, precision);
-    newHover = Rating_clamp(newHover, precision, max);
-    setState(function (prev) {
-      return prev.hover === newHover && prev.focus === newHover ? prev : {
-        hover: newHover,
-        focus: newHover
-      };
-    });
-    setFocusVisible(false);
-
-    if (onChangeActive && hover !== newHover) {
-      onChangeActive(event, newHover);
-    }
-  };
-
-  var handleMouseLeave = function handleMouseLeave(event) {
-    if (onMouseLeave) {
-      onMouseLeave(event);
-    }
-
-    var newHover = -1;
-    setState({
-      hover: newHover,
-      focus: newHover
-    });
-
-    if (onChangeActive && hover !== newHover) {
-      onChangeActive(event, newHover);
-    }
-  };
-
-  var handleChange = function handleChange(event) {
-    var newValue = parseFloat(event.target.value);
-    setValueState(newValue);
-
-    if (onChange) {
-      onChange(event, newValue);
-    }
-  };
-
-  var handleClear = function handleClear(event) {
-    // Ignore keyboard events
-    // https://github.com/facebook/react/issues/7407
-    if (event.clientX === 0 && event.clientY === 0) {
-      return;
-    }
-
-    setState({
-      hover: -1,
-      focus: -1
-    });
-    setValueState(null);
-
-    if (onChange && parseFloat(event.target.value) === valueRounded) {
-      onChange(event, null);
-    }
-  };
-
-  var handleFocus = function handleFocus(event) {
-    if (isFocusVisible(event)) {
-      setFocusVisible(true);
-    }
-
-    var newFocus = parseFloat(event.target.value);
-    setState(function (prev) {
-      return {
-        hover: prev.hover,
-        focus: newFocus
-      };
-    });
-
-    if (onChangeActive && focus !== newFocus) {
-      onChangeActive(event, newFocus);
-    }
-  };
-
-  var handleBlur = function handleBlur(event) {
-    if (hover !== -1) {
-      return;
-    }
-
-    if (focusVisible !== false) {
-      setFocusVisible(false);
-      onBlurVisible();
-    }
-
-    var newFocus = -1;
-    setState(function (prev) {
-      return {
-        hover: prev.hover,
-        focus: newFocus
-      };
-    });
-
-    if (onChangeActive && focus !== newFocus) {
-      onChangeActive(event, newFocus);
-    }
-  };
-
-  var item = function item(state, labelProps) {
-    var id = "".concat(name, "-").concat(String(state.value).replace('.', '-'));
-    var container = /*#__PURE__*/react["createElement"](IconContainerComponent, {
-      value: state.value,
-      className: clsx_m(classes.icon, state.filled ? classes.iconFilled : classes.iconEmpty, state.hover && classes.iconHover, state.focus && classes.iconFocus, state.active && classes.iconActive)
-    }, emptyIcon && !state.filled ? emptyIcon : icon);
-
-    if (readOnly) {
-      return /*#__PURE__*/react["createElement"]("span", _extends({
-        key: state.value
-      }, labelProps), container);
-    }
-
-    return /*#__PURE__*/react["createElement"](react["Fragment"], {
-      key: state.value
-    }, /*#__PURE__*/react["createElement"]("label", _extends({
-      className: classes.label,
-      htmlFor: id
-    }, labelProps), container, /*#__PURE__*/react["createElement"]("span", {
-      className: classes.visuallyhidden
-    }, getLabelText(state.value))), /*#__PURE__*/react["createElement"]("input", {
-      onFocus: handleFocus,
-      onBlur: handleBlur,
-      onChange: handleChange,
-      onClick: handleClear,
-      disabled: disabled,
-      value: state.value,
-      id: id,
-      type: "radio",
-      name: name,
-      checked: state.checked,
-      className: classes.visuallyhidden
-    }));
-  };
-
-  return /*#__PURE__*/react["createElement"]("span", _extends({
-    ref: handleRef,
-    onMouseMove: handleMouseMove,
-    onMouseLeave: handleMouseLeave,
-    className: clsx_m(classes.root, className, size !== 'medium' && classes["size".concat(capitalize(size))], disabled && classes.disabled, focusVisible && classes.focusVisible, readOnly && classes.readOnly),
-    role: readOnly ? 'img' : null,
-    "aria-label": readOnly ? getLabelText(value) : null
-  }, other), Array.from(new Array(max)).map(function (_, index) {
-    var itemValue = index + 1;
-
-    if (precision < 1) {
-      var items = Array.from(new Array(1 / precision));
-      return /*#__PURE__*/react["createElement"]("span", {
-        key: itemValue,
-        className: clsx_m(classes.decimal, itemValue === Math.ceil(value) && (hover !== -1 || focus !== -1) && classes.iconActive)
-      }, items.map(function ($, indexDecimal) {
-        var itemDecimalValue = roundValueToPrecision(itemValue - 1 + (indexDecimal + 1) * precision, precision);
-        return item({
-          value: itemDecimalValue,
-          filled: itemDecimalValue <= value,
-          hover: itemDecimalValue <= hover,
-          focus: itemDecimalValue <= focus,
-          checked: itemDecimalValue === valueRounded
-        }, {
-          style: items.length - 1 === indexDecimal ? {} : {
-            width: itemDecimalValue === value ? "".concat((indexDecimal + 1) * precision * 100, "%") : '0%',
-            overflow: 'hidden',
-            zIndex: 1,
-            position: 'absolute'
-          }
-        });
-      }));
-    }
-
-    return item({
-      value: itemValue,
-      active: itemValue === value && (hover !== -1 || focus !== -1),
-      filled: itemValue <= value,
-      hover: itemValue <= hover,
-      focus: itemValue <= focus,
-      checked: itemValue === valueRounded
-    });
-  }), !readOnly && !disabled && valueRounded == null && /*#__PURE__*/react["createElement"](react["Fragment"], null, /*#__PURE__*/react["createElement"]("input", {
-    value: "",
-    id: "".concat(name, "-empty"),
-    type: "radio",
-    name: name,
-    defaultChecked: true,
-    className: classes.visuallyhidden
-  }), /*#__PURE__*/react["createElement"]("label", {
-    className: classes.pristine,
-    htmlFor: "".concat(name, "-empty")
-  }, /*#__PURE__*/react["createElement"]("span", {
-    className: classes.visuallyhidden
-  }, emptyLabelText))));
-});
- false ? undefined : void 0;
-/* harmony default export */ var esm_Rating_Rating = (styles_withStyles(Rating_styles, {
-  name: 'MuiRating'
-})(Rating_Rating));
-// EXTERNAL MODULE: ./dev/components/App/pages/settings/settings.scss
-var settings_settings = __webpack_require__(30);
-
-// CONCATENATED MODULE: ./node_modules/react-redux/es/components/Context.js
-
-var ReactReduxContext = /*#__PURE__*/react_default.a.createContext(null);
-
-if (false) {}
-
-/* harmony default export */ var components_Context = (ReactReduxContext);
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/batch.js
-// Default to a dummy "batch" implementation that just runs the callback
-function defaultNoopBatch(callback) {
-  callback();
-}
-
-var batch_batch = defaultNoopBatch; // Allow injecting another batching function later
-
-var setBatch = function setBatch(newBatch) {
-  return batch_batch = newBatch;
-}; // Supply a getter just to skip dealing with ESM bindings
-
-var getBatch = function getBatch() {
-  return batch_batch;
-};
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/Subscription.js
- // encapsulates the subscription logic for connecting a component to the redux store, as
-// well as nesting subscriptions of descendant components, so that we can ensure the
-// ancestor components re-render before descendants
-
-var nullListeners = {
-  notify: function notify() {}
-};
-
-function createListenerCollection() {
-  var batch = getBatch();
-  var first = null;
-  var last = null;
-  return {
-    clear: function clear() {
-      first = null;
-      last = null;
-    },
-    notify: function notify() {
-      batch(function () {
-        var listener = first;
-
-        while (listener) {
-          listener.callback();
-          listener = listener.next;
-        }
-      });
-    },
-    get: function get() {
-      var listeners = [];
-      var listener = first;
-
-      while (listener) {
-        listeners.push(listener);
-        listener = listener.next;
-      }
-
-      return listeners;
-    },
-    subscribe: function subscribe(callback) {
-      var isSubscribed = true;
-      var listener = last = {
-        callback: callback,
-        next: null,
-        prev: last
-      };
-
-      if (listener.prev) {
-        listener.prev.next = listener;
-      } else {
-        first = listener;
-      }
-
-      return function unsubscribe() {
-        if (!isSubscribed || first === null) return;
-        isSubscribed = false;
-
-        if (listener.next) {
-          listener.next.prev = listener.prev;
-        } else {
-          last = listener.prev;
-        }
-
-        if (listener.prev) {
-          listener.prev.next = listener.next;
-        } else {
-          first = listener.next;
-        }
-      };
-    }
-  };
-}
-
-var Subscription = /*#__PURE__*/function () {
-  function Subscription(store, parentSub) {
-    this.store = store;
-    this.parentSub = parentSub;
-    this.unsubscribe = null;
-    this.listeners = nullListeners;
-    this.handleChangeWrapper = this.handleChangeWrapper.bind(this);
-  }
-
-  var _proto = Subscription.prototype;
-
-  _proto.addNestedSub = function addNestedSub(listener) {
-    this.trySubscribe();
-    return this.listeners.subscribe(listener);
-  };
-
-  _proto.notifyNestedSubs = function notifyNestedSubs() {
-    this.listeners.notify();
-  };
-
-  _proto.handleChangeWrapper = function handleChangeWrapper() {
-    if (this.onStateChange) {
-      this.onStateChange();
-    }
-  };
-
-  _proto.isSubscribed = function isSubscribed() {
-    return Boolean(this.unsubscribe);
-  };
-
-  _proto.trySubscribe = function trySubscribe() {
-    if (!this.unsubscribe) {
-      this.unsubscribe = this.parentSub ? this.parentSub.addNestedSub(this.handleChangeWrapper) : this.store.subscribe(this.handleChangeWrapper);
-      this.listeners = createListenerCollection();
-    }
-  };
-
-  _proto.tryUnsubscribe = function tryUnsubscribe() {
-    if (this.unsubscribe) {
-      this.unsubscribe();
-      this.unsubscribe = null;
-      this.listeners.clear();
-      this.listeners = nullListeners;
-    }
-  };
-
-  return Subscription;
-}();
-
-
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js
- // React currently throws a warning when using useLayoutEffect on the server.
-// To get around it, we can conditionally useEffect on the server (no-op) and
-// useLayoutEffect in the browser. We need useLayoutEffect to ensure the store
-// subscription callback always has the selector from the latest render commit
-// available, otherwise a store update may happen between render and the effect,
-// which may cause missed updates; we also must ensure the store subscription
-// is created synchronously, otherwise a store update may occur before the
-// subscription is created and an inconsistent state may be observed
-
-var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? react["useLayoutEffect"] : react["useEffect"];
-// CONCATENATED MODULE: ./node_modules/react-redux/es/components/Provider.js
-
-
-
-
-
-
-function Provider(_ref) {
-  var store = _ref.store,
-      context = _ref.context,
-      children = _ref.children;
-  var contextValue = Object(react["useMemo"])(function () {
-    var subscription = new Subscription(store);
-    subscription.onStateChange = subscription.notifyNestedSubs;
-    return {
-      store: store,
-      subscription: subscription
-    };
-  }, [store]);
-  var previousState = Object(react["useMemo"])(function () {
-    return store.getState();
-  }, [store]);
-  useIsomorphicLayoutEffect(function () {
-    var subscription = contextValue.subscription;
-    subscription.trySubscribe();
-
-    if (previousState !== store.getState()) {
-      subscription.notifyNestedSubs();
-    }
-
-    return function () {
-      subscription.tryUnsubscribe();
-      subscription.onStateChange = null;
-    };
-  }, [contextValue, previousState]);
-  var Context = context || ReactReduxContext;
-  return /*#__PURE__*/react_default.a.createElement(Context.Provider, {
-    value: contextValue
-  }, children);
-}
-
-if (false) {}
-
-/* harmony default export */ var components_Provider = (Provider);
-// EXTERNAL MODULE: ./node_modules/react-redux/node_modules/react-is/index.js
-var react_is = __webpack_require__(12);
-
-// CONCATENATED MODULE: ./node_modules/react-redux/es/components/connectAdvanced.js
-
-
-
-
-
-
-
- // Define some constant arrays just to avoid re-creating these
-
-var EMPTY_ARRAY = [];
-var NO_SUBSCRIPTION_ARRAY = [null, null];
-
-var stringifyComponent = function stringifyComponent(Comp) {
-  try {
-    return JSON.stringify(Comp);
-  } catch (err) {
-    return String(Comp);
-  }
-};
-
-function storeStateUpdatesReducer(state, action) {
-  var updateCount = state[1];
-  return [action.payload, updateCount + 1];
-}
-
-function useIsomorphicLayoutEffectWithArgs(effectFunc, effectArgs, dependencies) {
-  useIsomorphicLayoutEffect(function () {
-    return effectFunc.apply(void 0, effectArgs);
-  }, dependencies);
-}
-
-function captureWrapperProps(lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs) {
-  // We want to capture the wrapper props and child props we used for later comparisons
-  lastWrapperProps.current = wrapperProps;
-  lastChildProps.current = actualChildProps;
-  renderIsScheduled.current = false; // If the render was from a store update, clear out that reference and cascade the subscriber update
-
-  if (childPropsFromStoreUpdate.current) {
-    childPropsFromStoreUpdate.current = null;
-    notifyNestedSubs();
-  }
-}
-
-function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch) {
-  // If we're not subscribed to the store, nothing to do here
-  if (!shouldHandleStateChanges) return; // Capture values for checking if and when this component unmounts
-
-  var didUnsubscribe = false;
-  var lastThrownError = null; // We'll run this callback every time a store subscription update propagates to this component
-
-  var checkForUpdates = function checkForUpdates() {
-    if (didUnsubscribe) {
-      // Don't run stale listeners.
-      // Redux doesn't guarantee unsubscriptions happen until next dispatch.
-      return;
-    }
-
-    var latestStoreState = store.getState();
-    var newChildProps, error;
-
-    try {
-      // Actually run the selector with the most recent store state and wrapper props
-      // to determine what the child props should be
-      newChildProps = childPropsSelector(latestStoreState, lastWrapperProps.current);
-    } catch (e) {
-      error = e;
-      lastThrownError = e;
-    }
-
-    if (!error) {
-      lastThrownError = null;
-    } // If the child props haven't changed, nothing to do here - cascade the subscription update
-
-
-    if (newChildProps === lastChildProps.current) {
-      if (!renderIsScheduled.current) {
-        notifyNestedSubs();
-      }
-    } else {
-      // Save references to the new child props.  Note that we track the "child props from store update"
-      // as a ref instead of a useState/useReducer because we need a way to determine if that value has
-      // been processed.  If this went into useState/useReducer, we couldn't clear out the value without
-      // forcing another re-render, which we don't want.
-      lastChildProps.current = newChildProps;
-      childPropsFromStoreUpdate.current = newChildProps;
-      renderIsScheduled.current = true; // If the child props _did_ change (or we caught an error), this wrapper component needs to re-render
-
-      forceComponentUpdateDispatch({
-        type: 'STORE_UPDATED',
-        payload: {
-          error: error
-        }
-      });
-    }
-  }; // Actually subscribe to the nearest connected ancestor (or store)
-
-
-  subscription.onStateChange = checkForUpdates;
-  subscription.trySubscribe(); // Pull data from the store after first render in case the store has
-  // changed since we began.
-
-  checkForUpdates();
-
-  var unsubscribeWrapper = function unsubscribeWrapper() {
-    didUnsubscribe = true;
-    subscription.tryUnsubscribe();
-    subscription.onStateChange = null;
-
-    if (lastThrownError) {
-      // It's possible that we caught an error due to a bad mapState function, but the
-      // parent re-rendered without this component and we're about to unmount.
-      // This shouldn't happen as long as we do top-down subscriptions correctly, but
-      // if we ever do those wrong, this throw will surface the error in our tests.
-      // In that case, throw the error from here so it doesn't get lost.
-      throw lastThrownError;
-    }
-  };
-
-  return unsubscribeWrapper;
-}
-
-var initStateUpdates = function initStateUpdates() {
-  return [null, 0];
-};
-
-function connectAdvanced(
-/*
-  selectorFactory is a func that is responsible for returning the selector function used to
-  compute new props from state, props, and dispatch. For example:
-      export default connectAdvanced((dispatch, options) => (state, props) => ({
-      thing: state.things[props.thingId],
-      saveThing: fields => dispatch(actionCreators.saveThing(props.thingId, fields)),
-    }))(YourComponent)
-    Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
-  outside of their selector as an optimization. Options passed to connectAdvanced are passed to
-  the selectorFactory, along with displayName and WrappedComponent, as the second argument.
-    Note that selectorFactory is responsible for all caching/memoization of inbound and outbound
-  props. Do not use connectAdvanced directly without memoizing results between calls to your
-  selector, otherwise the Connect component will re-render on every state or props change.
-*/
-selectorFactory, // options object:
-_ref) {
-  if (_ref === void 0) {
-    _ref = {};
-  }
-
-  var _ref2 = _ref,
-      _ref2$getDisplayName = _ref2.getDisplayName,
-      getDisplayName = _ref2$getDisplayName === void 0 ? function (name) {
-    return "ConnectAdvanced(" + name + ")";
-  } : _ref2$getDisplayName,
-      _ref2$methodName = _ref2.methodName,
-      methodName = _ref2$methodName === void 0 ? 'connectAdvanced' : _ref2$methodName,
-      _ref2$renderCountProp = _ref2.renderCountProp,
-      renderCountProp = _ref2$renderCountProp === void 0 ? undefined : _ref2$renderCountProp,
-      _ref2$shouldHandleSta = _ref2.shouldHandleStateChanges,
-      shouldHandleStateChanges = _ref2$shouldHandleSta === void 0 ? true : _ref2$shouldHandleSta,
-      _ref2$storeKey = _ref2.storeKey,
-      storeKey = _ref2$storeKey === void 0 ? 'store' : _ref2$storeKey,
-      _ref2$withRef = _ref2.withRef,
-      withRef = _ref2$withRef === void 0 ? false : _ref2$withRef,
-      _ref2$forwardRef = _ref2.forwardRef,
-      forwardRef = _ref2$forwardRef === void 0 ? false : _ref2$forwardRef,
-      _ref2$context = _ref2.context,
-      context = _ref2$context === void 0 ? ReactReduxContext : _ref2$context,
-      connectOptions = _objectWithoutPropertiesLoose(_ref2, ["getDisplayName", "methodName", "renderCountProp", "shouldHandleStateChanges", "storeKey", "withRef", "forwardRef", "context"]);
-
-  if (false) { var customStoreWarningMessage; }
-
-  var Context = context;
-  return function wrapWithConnect(WrappedComponent) {
-    if (false) {}
-
-    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
-    var displayName = getDisplayName(wrappedComponentName);
-
-    var selectorFactoryOptions = _extends({}, connectOptions, {
-      getDisplayName: getDisplayName,
-      methodName: methodName,
-      renderCountProp: renderCountProp,
-      shouldHandleStateChanges: shouldHandleStateChanges,
-      storeKey: storeKey,
-      displayName: displayName,
-      wrappedComponentName: wrappedComponentName,
-      WrappedComponent: WrappedComponent
-    });
-
-    var pure = connectOptions.pure;
-
-    function createChildSelector(store) {
-      return selectorFactory(store.dispatch, selectorFactoryOptions);
-    } // If we aren't running in "pure" mode, we don't want to memoize values.
-    // To avoid conditionally calling hooks, we fall back to a tiny wrapper
-    // that just executes the given callback immediately.
-
-
-    var usePureOnlyMemo = pure ? react["useMemo"] : function (callback) {
-      return callback();
-    };
-
-    function ConnectFunction(props) {
-      var _useMemo = Object(react["useMemo"])(function () {
-        // Distinguish between actual "data" props that were passed to the wrapper component,
-        // and values needed to control behavior (forwarded refs, alternate context instances).
-        // To maintain the wrapperProps object reference, memoize this destructuring.
-        var reactReduxForwardedRef = props.reactReduxForwardedRef,
-            wrapperProps = _objectWithoutPropertiesLoose(props, ["reactReduxForwardedRef"]);
-
-        return [props.context, reactReduxForwardedRef, wrapperProps];
-      }, [props]),
-          propsContext = _useMemo[0],
-          reactReduxForwardedRef = _useMemo[1],
-          wrapperProps = _useMemo[2];
-
-      var ContextToUse = Object(react["useMemo"])(function () {
-        // Users may optionally pass in a custom context instance to use instead of our ReactReduxContext.
-        // Memoize the check that determines which context instance we should use.
-        return propsContext && propsContext.Consumer && Object(react_is["isContextConsumer"])( /*#__PURE__*/react_default.a.createElement(propsContext.Consumer, null)) ? propsContext : Context;
-      }, [propsContext, Context]); // Retrieve the store and ancestor subscription via context, if available
-
-      var contextValue = Object(react["useContext"])(ContextToUse); // The store _must_ exist as either a prop or in context.
-      // We'll check to see if it _looks_ like a Redux store first.
-      // This allows us to pass through a `store` prop that is just a plain value.
-
-      var didStoreComeFromProps = Boolean(props.store) && Boolean(props.store.getState) && Boolean(props.store.dispatch);
-      var didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
-
-      if (false) {} // Based on the previous check, one of these must be true
-
-
-      var store = didStoreComeFromProps ? props.store : contextValue.store;
-      var childPropsSelector = Object(react["useMemo"])(function () {
-        // The child props selector needs the store reference as an input.
-        // Re-create this selector whenever the store changes.
-        return createChildSelector(store);
-      }, [store]);
-
-      var _useMemo2 = Object(react["useMemo"])(function () {
-        if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY; // This Subscription's source should match where store came from: props vs. context. A component
-        // connected to the store via props shouldn't use subscription from context, or vice versa.
-
-        var subscription = new Subscription(store, didStoreComeFromProps ? null : contextValue.subscription); // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
-        // the middle of the notification loop, where `subscription` will then be null. This can
-        // probably be avoided if Subscription's listeners logic is changed to not call listeners
-        // that have been unsubscribed in the  middle of the notification loop.
-
-        var notifyNestedSubs = subscription.notifyNestedSubs.bind(subscription);
-        return [subscription, notifyNestedSubs];
-      }, [store, didStoreComeFromProps, contextValue]),
-          subscription = _useMemo2[0],
-          notifyNestedSubs = _useMemo2[1]; // Determine what {store, subscription} value should be put into nested context, if necessary,
-      // and memoize that value to avoid unnecessary context updates.
-
-
-      var overriddenContextValue = Object(react["useMemo"])(function () {
-        if (didStoreComeFromProps) {
-          // This component is directly subscribed to a store from props.
-          // We don't want descendants reading from this store - pass down whatever
-          // the existing context value is from the nearest connected ancestor.
-          return contextValue;
-        } // Otherwise, put this component's subscription instance into context, so that
-        // connected descendants won't update until after this component is done
-
-
-        return _extends({}, contextValue, {
-          subscription: subscription
-        });
-      }, [didStoreComeFromProps, contextValue, subscription]); // We need to force this wrapper component to re-render whenever a Redux store update
-      // causes a change to the calculated child component props (or we caught an error in mapState)
-
-      var _useReducer = Object(react["useReducer"])(storeStateUpdatesReducer, EMPTY_ARRAY, initStateUpdates),
-          _useReducer$ = _useReducer[0],
-          previousStateUpdateResult = _useReducer$[0],
-          forceComponentUpdateDispatch = _useReducer[1]; // Propagate any mapState/mapDispatch errors upwards
-
-
-      if (previousStateUpdateResult && previousStateUpdateResult.error) {
-        throw previousStateUpdateResult.error;
-      } // Set up refs to coordinate values between the subscription effect and the render logic
-
-
-      var lastChildProps = Object(react["useRef"])();
-      var lastWrapperProps = Object(react["useRef"])(wrapperProps);
-      var childPropsFromStoreUpdate = Object(react["useRef"])();
-      var renderIsScheduled = Object(react["useRef"])(false);
-      var actualChildProps = usePureOnlyMemo(function () {
-        // Tricky logic here:
-        // - This render may have been triggered by a Redux store update that produced new child props
-        // - However, we may have gotten new wrapper props after that
-        // If we have new child props, and the same wrapper props, we know we should use the new child props as-is.
-        // But, if we have new wrapper props, those might change the child props, so we have to recalculate things.
-        // So, we'll use the child props from store update only if the wrapper props are the same as last time.
-        if (childPropsFromStoreUpdate.current && wrapperProps === lastWrapperProps.current) {
-          return childPropsFromStoreUpdate.current;
-        } // TODO We're reading the store directly in render() here. Bad idea?
-        // This will likely cause Bad Things (TM) to happen in Concurrent Mode.
-        // Note that we do this because on renders _not_ caused by store updates, we need the latest store state
-        // to determine what the child props should be.
-
-
-        return childPropsSelector(store.getState(), wrapperProps);
-      }, [store, previousStateUpdateResult, wrapperProps]); // We need this to execute synchronously every time we re-render. However, React warns
-      // about useLayoutEffect in SSR, so we try to detect environment and fall back to
-      // just useEffect instead to avoid the warning, since neither will run anyway.
-
-      useIsomorphicLayoutEffectWithArgs(captureWrapperProps, [lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs]); // Our re-subscribe logic only runs when the store/subscription setup changes
-
-      useIsomorphicLayoutEffectWithArgs(subscribeUpdates, [shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch], [store, subscription, childPropsSelector]); // Now that all that's done, we can finally try to actually render the child component.
-      // We memoize the elements for the rendered child component as an optimization.
-
-      var renderedWrappedComponent = Object(react["useMemo"])(function () {
-        return /*#__PURE__*/react_default.a.createElement(WrappedComponent, _extends({}, actualChildProps, {
-          ref: reactReduxForwardedRef
-        }));
-      }, [reactReduxForwardedRef, WrappedComponent, actualChildProps]); // If React sees the exact same element reference as last time, it bails out of re-rendering
-      // that child, same as if it was wrapped in React.memo() or returned false from shouldComponentUpdate.
-
-      var renderedChild = Object(react["useMemo"])(function () {
-        if (shouldHandleStateChanges) {
-          // If this component is subscribed to store updates, we need to pass its own
-          // subscription instance down to our descendants. That means rendering the same
-          // Context instance, and putting a different value into the context.
-          return /*#__PURE__*/react_default.a.createElement(ContextToUse.Provider, {
-            value: overriddenContextValue
-          }, renderedWrappedComponent);
-        }
-
-        return renderedWrappedComponent;
-      }, [ContextToUse, renderedWrappedComponent, overriddenContextValue]);
-      return renderedChild;
-    } // If we're in "pure" mode, ensure our wrapper component only re-renders when incoming props have changed.
-
-
-    var Connect = pure ? react_default.a.memo(ConnectFunction) : ConnectFunction;
-    Connect.WrappedComponent = WrappedComponent;
-    Connect.displayName = displayName;
-
-    if (forwardRef) {
-      var forwarded = react_default.a.forwardRef(function forwardConnectRef(props, ref) {
-        return /*#__PURE__*/react_default.a.createElement(Connect, _extends({}, props, {
-          reactReduxForwardedRef: ref
-        }));
-      });
-      forwarded.displayName = displayName;
-      forwarded.WrappedComponent = WrappedComponent;
-      return hoist_non_react_statics_cjs_default()(forwarded, WrappedComponent);
-    }
-
-    return hoist_non_react_statics_cjs_default()(Connect, WrappedComponent);
-  };
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/shallowEqual.js
-function is(x, y) {
-  if (x === y) {
-    return x !== 0 || y !== 0 || 1 / x === 1 / y;
-  } else {
-    return x !== x && y !== y;
-  }
-}
-
-function shallowEqual(objA, objB) {
-  if (is(objA, objB)) return true;
-
-  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
-    return false;
-  }
-
-  var keysA = Object.keys(objA);
-  var keysB = Object.keys(objB);
-  if (keysA.length !== keysB.length) return false;
-
-  for (var i = 0; i < keysA.length; i++) {
-    if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
-      return false;
-    }
-  }
-
-  return true;
-}
-// EXTERNAL MODULE: ./node_modules/symbol-observable/es/index.js
-var es = __webpack_require__(9);
-
-// CONCATENATED MODULE: ./node_modules/redux/es/redux.js
-
-
-/**
- * These are private action types reserved by Redux.
- * For any unknown actions, you must return the current state.
- * If the current state is undefined, you must return the initial state.
- * Do not reference these action types directly in your code.
- */
-var randomString = function randomString() {
-  return Math.random().toString(36).substring(7).split('').join('.');
-};
-
-var ActionTypes = {
-  INIT: "@@redux/INIT" + randomString(),
-  REPLACE: "@@redux/REPLACE" + randomString(),
-  PROBE_UNKNOWN_ACTION: function PROBE_UNKNOWN_ACTION() {
-    return "@@redux/PROBE_UNKNOWN_ACTION" + randomString();
-  }
-};
-
-/**
- * @param {any} obj The object to inspect.
- * @returns {boolean} True if the argument appears to be a plain object.
- */
-function redux_isPlainObject(obj) {
-  if (typeof obj !== 'object' || obj === null) return false;
-  var proto = obj;
-
-  while (Object.getPrototypeOf(proto) !== null) {
-    proto = Object.getPrototypeOf(proto);
-  }
-
-  return Object.getPrototypeOf(obj) === proto;
-}
-
-/**
- * Creates a Redux store that holds the state tree.
- * The only way to change the data in the store is to call `dispatch()` on it.
- *
- * There should only be a single store in your app. To specify how different
- * parts of the state tree respond to actions, you may combine several reducers
- * into a single reducer function by using `combineReducers`.
- *
- * @param {Function} reducer A function that returns the next state tree, given
- * the current state tree and the action to handle.
- *
- * @param {any} [preloadedState] The initial state. You may optionally specify it
- * to hydrate the state from the server in universal apps, or to restore a
- * previously serialized user session.
- * If you use `combineReducers` to produce the root reducer function, this must be
- * an object with the same shape as `combineReducers` keys.
- *
- * @param {Function} [enhancer] The store enhancer. You may optionally specify it
- * to enhance the store with third-party capabilities such as middleware,
- * time travel, persistence, etc. The only store enhancer that ships with Redux
- * is `applyMiddleware()`.
- *
- * @returns {Store} A Redux store that lets you read the state, dispatch actions
- * and subscribe to changes.
- */
-
-function createStore(reducer, preloadedState, enhancer) {
-  var _ref2;
-
-  if (typeof preloadedState === 'function' && typeof enhancer === 'function' || typeof enhancer === 'function' && typeof arguments[3] === 'function') {
-    throw new Error('It looks like you are passing several store enhancers to ' + 'createStore(). This is not supported. Instead, compose them ' + 'together to a single function.');
-  }
-
-  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
-    enhancer = preloadedState;
-    preloadedState = undefined;
-  }
-
-  if (typeof enhancer !== 'undefined') {
-    if (typeof enhancer !== 'function') {
-      throw new Error('Expected the enhancer to be a function.');
-    }
-
-    return enhancer(createStore)(reducer, preloadedState);
-  }
-
-  if (typeof reducer !== 'function') {
-    throw new Error('Expected the reducer to be a function.');
-  }
-
-  var currentReducer = reducer;
-  var currentState = preloadedState;
-  var currentListeners = [];
-  var nextListeners = currentListeners;
-  var isDispatching = false;
-  /**
-   * This makes a shallow copy of currentListeners so we can use
-   * nextListeners as a temporary list while dispatching.
-   *
-   * This prevents any bugs around consumers calling
-   * subscribe/unsubscribe in the middle of a dispatch.
-   */
-
-  function ensureCanMutateNextListeners() {
-    if (nextListeners === currentListeners) {
-      nextListeners = currentListeners.slice();
-    }
-  }
-  /**
-   * Reads the state tree managed by the store.
-   *
-   * @returns {any} The current state tree of your application.
-   */
-
-
-  function getState() {
-    if (isDispatching) {
-      throw new Error('You may not call store.getState() while the reducer is executing. ' + 'The reducer has already received the state as an argument. ' + 'Pass it down from the top reducer instead of reading it from the store.');
-    }
-
-    return currentState;
-  }
-  /**
-   * Adds a change listener. It will be called any time an action is dispatched,
-   * and some part of the state tree may potentially have changed. You may then
-   * call `getState()` to read the current state tree inside the callback.
-   *
-   * You may call `dispatch()` from a change listener, with the following
-   * caveats:
-   *
-   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
-   * If you subscribe or unsubscribe while the listeners are being invoked, this
-   * will not have any effect on the `dispatch()` that is currently in progress.
-   * However, the next `dispatch()` call, whether nested or not, will use a more
-   * recent snapshot of the subscription list.
-   *
-   * 2. The listener should not expect to see all state changes, as the state
-   * might have been updated multiple times during a nested `dispatch()` before
-   * the listener is called. It is, however, guaranteed that all subscribers
-   * registered before the `dispatch()` started will be called with the latest
-   * state by the time it exits.
-   *
-   * @param {Function} listener A callback to be invoked on every dispatch.
-   * @returns {Function} A function to remove this change listener.
-   */
-
-
-  function subscribe(listener) {
-    if (typeof listener !== 'function') {
-      throw new Error('Expected the listener to be a function.');
-    }
-
-    if (isDispatching) {
-      throw new Error('You may not call store.subscribe() while the reducer is executing. ' + 'If you would like to be notified after the store has been updated, subscribe from a ' + 'component and invoke store.getState() in the callback to access the latest state. ' + 'See https://redux.js.org/api-reference/store#subscribelistener for more details.');
-    }
-
-    var isSubscribed = true;
-    ensureCanMutateNextListeners();
-    nextListeners.push(listener);
-    return function unsubscribe() {
-      if (!isSubscribed) {
-        return;
-      }
-
-      if (isDispatching) {
-        throw new Error('You may not unsubscribe from a store listener while the reducer is executing. ' + 'See https://redux.js.org/api-reference/store#subscribelistener for more details.');
-      }
-
-      isSubscribed = false;
-      ensureCanMutateNextListeners();
-      var index = nextListeners.indexOf(listener);
-      nextListeners.splice(index, 1);
-      currentListeners = null;
-    };
-  }
-  /**
-   * Dispatches an action. It is the only way to trigger a state change.
-   *
-   * The `reducer` function, used to create the store, will be called with the
-   * current state tree and the given `action`. Its return value will
-   * be considered the **next** state of the tree, and the change listeners
-   * will be notified.
-   *
-   * The base implementation only supports plain object actions. If you want to
-   * dispatch a Promise, an Observable, a thunk, or something else, you need to
-   * wrap your store creating function into the corresponding middleware. For
-   * example, see the documentation for the `redux-thunk` package. Even the
-   * middleware will eventually dispatch plain object actions using this method.
-   *
-   * @param {Object} action A plain object representing “what changed”. It is
-   * a good idea to keep actions serializable so you can record and replay user
-   * sessions, or use the time travelling `redux-devtools`. An action must have
-   * a `type` property which may not be `undefined`. It is a good idea to use
-   * string constants for action types.
-   *
-   * @returns {Object} For convenience, the same action object you dispatched.
-   *
-   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
-   * return something else (for example, a Promise you can await).
-   */
-
-
-  function dispatch(action) {
-    if (!redux_isPlainObject(action)) {
-      throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');
-    }
-
-    if (typeof action.type === 'undefined') {
-      throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
-    }
-
-    if (isDispatching) {
-      throw new Error('Reducers may not dispatch actions.');
-    }
-
-    try {
-      isDispatching = true;
-      currentState = currentReducer(currentState, action);
-    } finally {
-      isDispatching = false;
-    }
-
-    var listeners = currentListeners = nextListeners;
-
-    for (var i = 0; i < listeners.length; i++) {
-      var listener = listeners[i];
-      listener();
-    }
-
-    return action;
-  }
-  /**
-   * Replaces the reducer currently used by the store to calculate the state.
-   *
-   * You might need this if your app implements code splitting and you want to
-   * load some of the reducers dynamically. You might also need this if you
-   * implement a hot reloading mechanism for Redux.
-   *
-   * @param {Function} nextReducer The reducer for the store to use instead.
-   * @returns {void}
-   */
-
-
-  function replaceReducer(nextReducer) {
-    if (typeof nextReducer !== 'function') {
-      throw new Error('Expected the nextReducer to be a function.');
-    }
-
-    currentReducer = nextReducer; // This action has a similiar effect to ActionTypes.INIT.
-    // Any reducers that existed in both the new and old rootReducer
-    // will receive the previous state. This effectively populates
-    // the new state tree with any relevant data from the old one.
-
-    dispatch({
-      type: ActionTypes.REPLACE
-    });
-  }
-  /**
-   * Interoperability point for observable/reactive libraries.
-   * @returns {observable} A minimal observable of state changes.
-   * For more information, see the observable proposal:
-   * https://github.com/tc39/proposal-observable
-   */
-
-
-  function observable() {
-    var _ref;
-
-    var outerSubscribe = subscribe;
-    return _ref = {
-      /**
-       * The minimal observable subscription method.
-       * @param {Object} observer Any object that can be used as an observer.
-       * The observer object should have a `next` method.
-       * @returns {subscription} An object with an `unsubscribe` method that can
-       * be used to unsubscribe the observable from the store, and prevent further
-       * emission of values from the observable.
-       */
-      subscribe: function subscribe(observer) {
-        if (typeof observer !== 'object' || observer === null) {
-          throw new TypeError('Expected the observer to be an object.');
-        }
-
-        function observeState() {
-          if (observer.next) {
-            observer.next(getState());
-          }
-        }
-
-        observeState();
-        var unsubscribe = outerSubscribe(observeState);
-        return {
-          unsubscribe: unsubscribe
-        };
-      }
-    }, _ref[es["a" /* default */]] = function () {
-      return this;
-    }, _ref;
-  } // When a store is created, an "INIT" action is dispatched so that every
-  // reducer returns their initial state. This effectively populates
-  // the initial state tree.
-
-
-  dispatch({
-    type: ActionTypes.INIT
-  });
-  return _ref2 = {
-    dispatch: dispatch,
-    subscribe: subscribe,
-    getState: getState,
-    replaceReducer: replaceReducer
-  }, _ref2[es["a" /* default */]] = observable, _ref2;
-}
-
-/**
- * Prints a warning in the console if it exists.
- *
- * @param {String} message The warning message.
- * @returns {void}
- */
-function redux_warning(message) {
-  /* eslint-disable no-console */
-  if (typeof console !== 'undefined' && typeof console.error === 'function') {
-    console.error(message);
-  }
-  /* eslint-enable no-console */
-
-
-  try {
-    // This error was thrown as a convenience so that if you enable
-    // "break on all exceptions" in your console,
-    // it would pause the execution at this line.
-    throw new Error(message);
-  } catch (e) {} // eslint-disable-line no-empty
-
-}
-
-function getUndefinedStateErrorMessage(key, action) {
-  var actionType = action && action.type;
-  var actionDescription = actionType && "action \"" + String(actionType) + "\"" || 'an action';
-  return "Given " + actionDescription + ", reducer \"" + key + "\" returned undefined. " + "To ignore an action, you must explicitly return the previous state. " + "If you want this reducer to hold no value, you can return null instead of undefined.";
-}
-
-function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
-  var reducerKeys = Object.keys(reducers);
-  var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
-
-  if (reducerKeys.length === 0) {
-    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
-  }
-
-  if (!redux_isPlainObject(inputState)) {
-    return "The " + argumentName + " has unexpected type of \"" + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + "\". Expected argument to be an object with the following " + ("keys: \"" + reducerKeys.join('", "') + "\"");
-  }
-
-  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
-    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
-  });
-  unexpectedKeys.forEach(function (key) {
-    unexpectedKeyCache[key] = true;
-  });
-  if (action && action.type === ActionTypes.REPLACE) return;
-
-  if (unexpectedKeys.length > 0) {
-    return "Unexpected " + (unexpectedKeys.length > 1 ? 'keys' : 'key') + " " + ("\"" + unexpectedKeys.join('", "') + "\" found in " + argumentName + ". ") + "Expected to find one of the known reducer keys instead: " + ("\"" + reducerKeys.join('", "') + "\". Unexpected keys will be ignored.");
-  }
-}
-
-function assertReducerShape(reducers) {
-  Object.keys(reducers).forEach(function (key) {
-    var reducer = reducers[key];
-    var initialState = reducer(undefined, {
-      type: ActionTypes.INIT
-    });
-
-    if (typeof initialState === 'undefined') {
-      throw new Error("Reducer \"" + key + "\" returned undefined during initialization. " + "If the state passed to the reducer is undefined, you must " + "explicitly return the initial state. The initial state may " + "not be undefined. If you don't want to set a value for this reducer, " + "you can use null instead of undefined.");
-    }
-
-    if (typeof reducer(undefined, {
-      type: ActionTypes.PROBE_UNKNOWN_ACTION()
-    }) === 'undefined') {
-      throw new Error("Reducer \"" + key + "\" returned undefined when probed with a random type. " + ("Don't try to handle " + ActionTypes.INIT + " or other actions in \"redux/*\" ") + "namespace. They are considered private. Instead, you must return the " + "current state for any unknown actions, unless it is undefined, " + "in which case you must return the initial state, regardless of the " + "action type. The initial state may not be undefined, but can be null.");
-    }
-  });
-}
-/**
- * Turns an object whose values are different reducer functions, into a single
- * reducer function. It will call every child reducer, and gather their results
- * into a single state object, whose keys correspond to the keys of the passed
- * reducer functions.
- *
- * @param {Object} reducers An object whose values correspond to different
- * reducer functions that need to be combined into one. One handy way to obtain
- * it is to use ES6 `import * as reducers` syntax. The reducers may never return
- * undefined for any action. Instead, they should return their initial state
- * if the state passed to them was undefined, and the current state for any
- * unrecognized action.
- *
- * @returns {Function} A reducer function that invokes every reducer inside the
- * passed object, and builds a state object with the same shape.
- */
-
-
-function combineReducers(reducers) {
-  var reducerKeys = Object.keys(reducers);
-  var finalReducers = {};
-
-  for (var i = 0; i < reducerKeys.length; i++) {
-    var key = reducerKeys[i];
-
-    if (false) {}
-
-    if (typeof reducers[key] === 'function') {
-      finalReducers[key] = reducers[key];
-    }
-  }
-
-  var finalReducerKeys = Object.keys(finalReducers); // This is used to make sure we don't warn about the same
-  // keys multiple times.
-
-  var unexpectedKeyCache;
-
-  if (false) {}
-
-  var shapeAssertionError;
-
-  try {
-    assertReducerShape(finalReducers);
-  } catch (e) {
-    shapeAssertionError = e;
-  }
-
-  return function combination(state, action) {
-    if (state === void 0) {
-      state = {};
-    }
-
-    if (shapeAssertionError) {
-      throw shapeAssertionError;
-    }
-
-    if (false) { var warningMessage; }
-
-    var hasChanged = false;
-    var nextState = {};
-
-    for (var _i = 0; _i < finalReducerKeys.length; _i++) {
-      var _key = finalReducerKeys[_i];
-      var reducer = finalReducers[_key];
-      var previousStateForKey = state[_key];
-      var nextStateForKey = reducer(previousStateForKey, action);
-
-      if (typeof nextStateForKey === 'undefined') {
-        var errorMessage = getUndefinedStateErrorMessage(_key, action);
-        throw new Error(errorMessage);
-      }
-
-      nextState[_key] = nextStateForKey;
-      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
-    }
-
-    hasChanged = hasChanged || finalReducerKeys.length !== Object.keys(state).length;
-    return hasChanged ? nextState : state;
-  };
-}
-
-function bindActionCreator(actionCreator, dispatch) {
-  return function () {
-    return dispatch(actionCreator.apply(this, arguments));
-  };
-}
-/**
- * Turns an object whose values are action creators, into an object with the
- * same keys, but with every function wrapped into a `dispatch` call so they
- * may be invoked directly. This is just a convenience method, as you can call
- * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
- *
- * For convenience, you can also pass an action creator as the first argument,
- * and get a dispatch wrapped function in return.
- *
- * @param {Function|Object} actionCreators An object whose values are action
- * creator functions. One handy way to obtain it is to use ES6 `import * as`
- * syntax. You may also pass a single function.
- *
- * @param {Function} dispatch The `dispatch` function available on your Redux
- * store.
- *
- * @returns {Function|Object} The object mimicking the original object, but with
- * every action creator wrapped into the `dispatch` call. If you passed a
- * function as `actionCreators`, the return value will also be a single
- * function.
- */
-
-
-function bindActionCreators(actionCreators, dispatch) {
-  if (typeof actionCreators === 'function') {
-    return bindActionCreator(actionCreators, dispatch);
-  }
-
-  if (typeof actionCreators !== 'object' || actionCreators === null) {
-    throw new Error("bindActionCreators expected an object or a function, instead received " + (actionCreators === null ? 'null' : typeof actionCreators) + ". " + "Did you write \"import ActionCreators from\" instead of \"import * as ActionCreators from\"?");
-  }
-
-  var boundActionCreators = {};
-
-  for (var key in actionCreators) {
-    var actionCreator = actionCreators[key];
-
-    if (typeof actionCreator === 'function') {
-      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
-    }
-  }
-
-  return boundActionCreators;
-}
-
-function redux_defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    keys.push.apply(keys, Object.getOwnPropertySymbols(object));
-  }
-
-  if (enumerableOnly) keys = keys.filter(function (sym) {
-    return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-  });
-  return keys;
-}
-
-function _objectSpread2(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(source, true).forEach(function (key) {
-        redux_defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(source).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
-  }
-
-  return target;
-}
-
-/**
- * Composes single-argument functions from right to left. The rightmost
- * function can take multiple arguments as it provides the signature for
- * the resulting composite function.
- *
- * @param {...Function} funcs The functions to compose.
- * @returns {Function} A function obtained by composing the argument functions
- * from right to left. For example, compose(f, g, h) is identical to doing
- * (...args) => f(g(h(...args))).
- */
-function redux_compose() {
-  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {
-    funcs[_key] = arguments[_key];
-  }
-
-  if (funcs.length === 0) {
-    return function (arg) {
-      return arg;
-    };
-  }
-
-  if (funcs.length === 1) {
-    return funcs[0];
-  }
-
-  return funcs.reduce(function (a, b) {
-    return function () {
-      return a(b.apply(void 0, arguments));
-    };
-  });
-}
-
-/**
- * Creates a store enhancer that applies middleware to the dispatch method
- * of the Redux store. This is handy for a variety of tasks, such as expressing
- * asynchronous actions in a concise manner, or logging every action payload.
- *
- * See `redux-thunk` package as an example of the Redux middleware.
- *
- * Because middleware is potentially asynchronous, this should be the first
- * store enhancer in the composition chain.
- *
- * Note that each middleware will be given the `dispatch` and `getState` functions
- * as named arguments.
- *
- * @param {...Function} middlewares The middleware chain to be applied.
- * @returns {Function} A store enhancer applying the middleware.
- */
-
-function applyMiddleware() {
-  for (var _len = arguments.length, middlewares = new Array(_len), _key = 0; _key < _len; _key++) {
-    middlewares[_key] = arguments[_key];
-  }
-
-  return function (createStore) {
-    return function () {
-      var store = createStore.apply(void 0, arguments);
-
-      var _dispatch = function dispatch() {
-        throw new Error('Dispatching while constructing your middleware is not allowed. ' + 'Other middleware would not be applied to this dispatch.');
-      };
-
-      var middlewareAPI = {
-        getState: store.getState,
-        dispatch: function dispatch() {
-          return _dispatch.apply(void 0, arguments);
-        }
-      };
-      var chain = middlewares.map(function (middleware) {
-        return middleware(middlewareAPI);
-      });
-      _dispatch = redux_compose.apply(void 0, chain)(store.dispatch);
-      return _objectSpread2({}, store, {
-        dispatch: _dispatch
-      });
-    };
-  };
-}
-
-/*
- * This is a dummy function to check if the function name has been altered by minification.
- * If the function has been minified and NODE_ENV !== 'production', warn the user.
- */
-
-function isCrushed() {}
-
-if (false) {}
-
-
-
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/isPlainObject.js
-/**
- * @param {any} obj The object to inspect.
- * @returns {boolean} True if the argument appears to be a plain object.
- */
-function isPlainObject_isPlainObject(obj) {
-  if (typeof obj !== 'object' || obj === null) return false;
-  var proto = Object.getPrototypeOf(obj);
-  if (proto === null) return true;
-  var baseProto = proto;
-
-  while (Object.getPrototypeOf(baseProto) !== null) {
-    baseProto = Object.getPrototypeOf(baseProto);
-  }
-
-  return proto === baseProto;
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/warning.js
-/**
- * Prints a warning in the console if it exists.
- *
- * @param {String} message The warning message.
- * @returns {void}
- */
-function warning_warning(message) {
-  /* eslint-disable no-console */
-  if (typeof console !== 'undefined' && typeof console.error === 'function') {
-    console.error(message);
-  }
-  /* eslint-enable no-console */
-
-
-  try {
-    // This error was thrown as a convenience so that if you enable
-    // "break on all exceptions" in your console,
-    // it would pause the execution at this line.
-    throw new Error(message);
-    /* eslint-disable no-empty */
-  } catch (e) {}
-  /* eslint-enable no-empty */
-
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/verifyPlainObject.js
-
-
-function verifyPlainObject(value, displayName, methodName) {
-  if (!isPlainObject_isPlainObject(value)) {
-    warning_warning(methodName + "() in " + displayName + " must return a plain object. Instead received " + value + ".");
-  }
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/wrapMapToProps.js
-
-function wrapMapToPropsConstant(getConstant) {
-  return function initConstantSelector(dispatch, options) {
-    var constant = getConstant(dispatch, options);
-
-    function constantSelector() {
-      return constant;
-    }
-
-    constantSelector.dependsOnOwnProps = false;
-    return constantSelector;
-  };
-} // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
-// to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
-// whether mapToProps needs to be invoked when props have changed.
-//
-// A length of one signals that mapToProps does not depend on props from the parent component.
-// A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
-// therefore not reporting its length accurately..
-
-function getDependsOnOwnProps(mapToProps) {
-  return mapToProps.dependsOnOwnProps !== null && mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
-} // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
-// this function wraps mapToProps in a proxy function which does several things:
-//
-//  * Detects whether the mapToProps function being called depends on props, which
-//    is used by selectorFactory to decide if it should reinvoke on props changes.
-//
-//  * On first call, handles mapToProps if returns another function, and treats that
-//    new function as the true mapToProps for subsequent calls.
-//
-//  * On first call, verifies the first result is a plain object, in order to warn
-//    the developer that their mapToProps function is not returning a valid result.
-//
-
-function wrapMapToPropsFunc(mapToProps, methodName) {
-  return function initProxySelector(dispatch, _ref) {
-    var displayName = _ref.displayName;
-
-    var proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
-      return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch);
-    }; // allow detectFactoryAndVerify to get ownProps
-
-
-    proxy.dependsOnOwnProps = true;
-
-    proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
-      proxy.mapToProps = mapToProps;
-      proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
-      var props = proxy(stateOrDispatch, ownProps);
-
-      if (typeof props === 'function') {
-        proxy.mapToProps = props;
-        proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
-        props = proxy(stateOrDispatch, ownProps);
-      }
-
-      if (false) {}
-      return props;
-    };
-
-    return proxy;
-  };
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mapDispatchToProps.js
-
-
-function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
-  return typeof mapDispatchToProps === 'function' ? wrapMapToPropsFunc(mapDispatchToProps, 'mapDispatchToProps') : undefined;
-}
-function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
-  return !mapDispatchToProps ? wrapMapToPropsConstant(function (dispatch) {
-    return {
-      dispatch: dispatch
-    };
-  }) : undefined;
-}
-function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
-  return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? wrapMapToPropsConstant(function (dispatch) {
-    return bindActionCreators(mapDispatchToProps, dispatch);
-  }) : undefined;
-}
-/* harmony default export */ var connect_mapDispatchToProps = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mapStateToProps.js
-
-function whenMapStateToPropsIsFunction(mapStateToProps) {
-  return typeof mapStateToProps === 'function' ? wrapMapToPropsFunc(mapStateToProps, 'mapStateToProps') : undefined;
-}
-function whenMapStateToPropsIsMissing(mapStateToProps) {
-  return !mapStateToProps ? wrapMapToPropsConstant(function () {
-    return {};
-  }) : undefined;
-}
-/* harmony default export */ var connect_mapStateToProps = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mergeProps.js
-
-
-function defaultMergeProps(stateProps, dispatchProps, ownProps) {
-  return _extends({}, ownProps, stateProps, dispatchProps);
-}
-function wrapMergePropsFunc(mergeProps) {
-  return function initMergePropsProxy(dispatch, _ref) {
-    var displayName = _ref.displayName,
-        pure = _ref.pure,
-        areMergedPropsEqual = _ref.areMergedPropsEqual;
-    var hasRunOnce = false;
-    var mergedProps;
-    return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
-      var nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-
-      if (hasRunOnce) {
-        if (!pure || !areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
-      } else {
-        hasRunOnce = true;
-        mergedProps = nextMergedProps;
-        if (false) {}
-      }
-
-      return mergedProps;
-    };
-  };
-}
-function whenMergePropsIsFunction(mergeProps) {
-  return typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : undefined;
-}
-function whenMergePropsIsOmitted(mergeProps) {
-  return !mergeProps ? function () {
-    return defaultMergeProps;
-  } : undefined;
-}
-/* harmony default export */ var connect_mergeProps = ([whenMergePropsIsFunction, whenMergePropsIsOmitted]);
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/verifySubselectors.js
-
-
-function verify(selector, methodName, displayName) {
-  if (!selector) {
-    throw new Error("Unexpected value for " + methodName + " in " + displayName + ".");
-  } else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
-    if (!Object.prototype.hasOwnProperty.call(selector, 'dependsOnOwnProps')) {
-      warning_warning("The selector for " + methodName + " of " + displayName + " did not specify a value for dependsOnOwnProps.");
-    }
-  }
-}
-
-function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, displayName) {
-  verify(mapStateToProps, 'mapStateToProps', displayName);
-  verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
-  verify(mergeProps, 'mergeProps', displayName);
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/selectorFactory.js
-
-
-function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
-  return function impureFinalPropsSelector(state, ownProps) {
-    return mergeProps(mapStateToProps(state, ownProps), mapDispatchToProps(dispatch, ownProps), ownProps);
-  };
-}
-function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, _ref) {
-  var areStatesEqual = _ref.areStatesEqual,
-      areOwnPropsEqual = _ref.areOwnPropsEqual,
-      areStatePropsEqual = _ref.areStatePropsEqual;
-  var hasRunAtLeastOnce = false;
-  var state;
-  var ownProps;
-  var stateProps;
-  var dispatchProps;
-  var mergedProps;
-
-  function handleFirstCall(firstState, firstOwnProps) {
-    state = firstState;
-    ownProps = firstOwnProps;
-    stateProps = mapStateToProps(state, ownProps);
-    dispatchProps = mapDispatchToProps(dispatch, ownProps);
-    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-    hasRunAtLeastOnce = true;
-    return mergedProps;
-  }
-
-  function handleNewPropsAndNewState() {
-    stateProps = mapStateToProps(state, ownProps);
-    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
-    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-    return mergedProps;
-  }
-
-  function handleNewProps() {
-    if (mapStateToProps.dependsOnOwnProps) stateProps = mapStateToProps(state, ownProps);
-    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
-    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-    return mergedProps;
-  }
-
-  function handleNewState() {
-    var nextStateProps = mapStateToProps(state, ownProps);
-    var statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
-    stateProps = nextStateProps;
-    if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-    return mergedProps;
-  }
-
-  function handleSubsequentCalls(nextState, nextOwnProps) {
-    var propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
-    var stateChanged = !areStatesEqual(nextState, state);
-    state = nextState;
-    ownProps = nextOwnProps;
-    if (propsChanged && stateChanged) return handleNewPropsAndNewState();
-    if (propsChanged) return handleNewProps();
-    if (stateChanged) return handleNewState();
-    return mergedProps;
-  }
-
-  return function pureFinalPropsSelector(nextState, nextOwnProps) {
-    return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
-  };
-} // TODO: Add more comments
-// If pure is true, the selector returned by selectorFactory will memoize its results,
-// allowing connectAdvanced's shouldComponentUpdate to return false if final
-// props have not changed. If false, the selector will always return a new
-// object and shouldComponentUpdate will always return true.
-
-function finalPropsSelectorFactory(dispatch, _ref2) {
-  var initMapStateToProps = _ref2.initMapStateToProps,
-      initMapDispatchToProps = _ref2.initMapDispatchToProps,
-      initMergeProps = _ref2.initMergeProps,
-      options = _objectWithoutPropertiesLoose(_ref2, ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"]);
-
-  var mapStateToProps = initMapStateToProps(dispatch, options);
-  var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
-  var mergeProps = initMergeProps(dispatch, options);
-
-  if (false) {}
-
-  var selectorFactory = options.pure ? pureFinalPropsSelectorFactory : impureFinalPropsSelectorFactory;
-  return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/connect.js
-
-
-
-
-
-
-
-
-/*
-  connect is a facade over connectAdvanced. It turns its args into a compatible
-  selectorFactory, which has the signature:
-
-    (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
-  
-  connect passes its args to connectAdvanced as options, which will in turn pass them to
-  selectorFactory each time a Connect component instance is instantiated or hot reloaded.
-
-  selectorFactory returns a final props selector from its mapStateToProps,
-  mapStateToPropsFactories, mapDispatchToProps, mapDispatchToPropsFactories, mergeProps,
-  mergePropsFactories, and pure args.
-
-  The resulting final props selector is called by the Connect component instance whenever
-  it receives new props or store state.
- */
-
-function match(arg, factories, name) {
-  for (var i = factories.length - 1; i >= 0; i--) {
-    var result = factories[i](arg);
-    if (result) return result;
-  }
-
-  return function (dispatch, options) {
-    throw new Error("Invalid value of type " + typeof arg + " for " + name + " argument when connecting component " + options.wrappedComponentName + ".");
-  };
-}
-
-function strictEqual(a, b) {
-  return a === b;
-} // createConnect with default args builds the 'official' connect behavior. Calling it with
-// different options opens up some testing and extensibility scenarios
-
-
-function createConnect(_temp) {
-  var _ref = _temp === void 0 ? {} : _temp,
-      _ref$connectHOC = _ref.connectHOC,
-      connectHOC = _ref$connectHOC === void 0 ? connectAdvanced : _ref$connectHOC,
-      _ref$mapStateToPropsF = _ref.mapStateToPropsFactories,
-      mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? connect_mapStateToProps : _ref$mapStateToPropsF,
-      _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories,
-      mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? connect_mapDispatchToProps : _ref$mapDispatchToPro,
-      _ref$mergePropsFactor = _ref.mergePropsFactories,
-      mergePropsFactories = _ref$mergePropsFactor === void 0 ? connect_mergeProps : _ref$mergePropsFactor,
-      _ref$selectorFactory = _ref.selectorFactory,
-      selectorFactory = _ref$selectorFactory === void 0 ? finalPropsSelectorFactory : _ref$selectorFactory;
-
-  return function connect(mapStateToProps, mapDispatchToProps, mergeProps, _ref2) {
-    if (_ref2 === void 0) {
-      _ref2 = {};
-    }
-
-    var _ref3 = _ref2,
-        _ref3$pure = _ref3.pure,
-        pure = _ref3$pure === void 0 ? true : _ref3$pure,
-        _ref3$areStatesEqual = _ref3.areStatesEqual,
-        areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual,
-        _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual,
-        areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? shallowEqual : _ref3$areOwnPropsEqua,
-        _ref3$areStatePropsEq = _ref3.areStatePropsEqual,
-        areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? shallowEqual : _ref3$areStatePropsEq,
-        _ref3$areMergedPropsE = _ref3.areMergedPropsEqual,
-        areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? shallowEqual : _ref3$areMergedPropsE,
-        extraOptions = _objectWithoutPropertiesLoose(_ref3, ["pure", "areStatesEqual", "areOwnPropsEqual", "areStatePropsEqual", "areMergedPropsEqual"]);
-
-    var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
-    var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
-    var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
-    return connectHOC(selectorFactory, _extends({
-      // used in error messages
-      methodName: 'connect',
-      // used to compute Connect's displayName from the wrapped component's displayName.
-      getDisplayName: function getDisplayName(name) {
-        return "Connect(" + name + ")";
-      },
-      // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
-      shouldHandleStateChanges: Boolean(mapStateToProps),
-      // passed through to selectorFactory
-      initMapStateToProps: initMapStateToProps,
-      initMapDispatchToProps: initMapDispatchToProps,
-      initMergeProps: initMergeProps,
-      pure: pure,
-      areStatesEqual: areStatesEqual,
-      areOwnPropsEqual: areOwnPropsEqual,
-      areStatePropsEqual: areStatePropsEqual,
-      areMergedPropsEqual: areMergedPropsEqual
-    }, extraOptions));
-  };
-}
-/* harmony default export */ var connect_connect = (/*#__PURE__*/createConnect());
-// CONCATENATED MODULE: ./node_modules/react-redux/es/hooks/useReduxContext.js
-
-
-/**
- * A hook to access the value of the `ReactReduxContext`. This is a low-level
- * hook that you should usually not need to call directly.
- *
- * @returns {any} the value of the `ReactReduxContext`
- *
- * @example
- *
- * import React from 'react'
- * import { useReduxContext } from 'react-redux'
- *
- * export const CounterComponent = ({ value }) => {
- *   const { store } = useReduxContext()
- *   return <div>{store.getState()}</div>
- * }
- */
-
-function useReduxContext_useReduxContext() {
-  var contextValue = Object(react["useContext"])(ReactReduxContext);
-
-  if (false) {}
-
-  return contextValue;
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/hooks/useStore.js
-
-
-
-/**
- * Hook factory, which creates a `useStore` hook bound to a given context.
- *
- * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
- * @returns {Function} A `useStore` hook bound to the specified context.
- */
-
-function createStoreHook(context) {
-  if (context === void 0) {
-    context = ReactReduxContext;
-  }
-
-  var useReduxContext = context === ReactReduxContext ? useReduxContext_useReduxContext : function () {
-    return Object(react["useContext"])(context);
-  };
-  return function useStore() {
-    var _useReduxContext = useReduxContext(),
-        store = _useReduxContext.store;
-
-    return store;
-  };
-}
-/**
- * A hook to access the redux store.
- *
- * @returns {any} the redux store
- *
- * @example
- *
- * import React from 'react'
- * import { useStore } from 'react-redux'
- *
- * export const ExampleComponent = () => {
- *   const store = useStore()
- *   return <div>{store.getState()}</div>
- * }
- */
-
-var useStore_useStore = /*#__PURE__*/createStoreHook();
-// CONCATENATED MODULE: ./node_modules/react-redux/es/hooks/useDispatch.js
-
-
-/**
- * Hook factory, which creates a `useDispatch` hook bound to a given context.
- *
- * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
- * @returns {Function} A `useDispatch` hook bound to the specified context.
- */
-
-function createDispatchHook(context) {
-  if (context === void 0) {
-    context = ReactReduxContext;
-  }
-
-  var useStore = context === ReactReduxContext ? useStore_useStore : createStoreHook(context);
-  return function useDispatch() {
-    var store = useStore();
-    return store.dispatch;
-  };
-}
-/**
- * A hook to access the redux `dispatch` function.
- *
- * @returns {any|function} redux store's `dispatch` function
- *
- * @example
- *
- * import React, { useCallback } from 'react'
- * import { useDispatch } from 'react-redux'
- *
- * export const CounterComponent = ({ value }) => {
- *   const dispatch = useDispatch()
- *   const increaseCounter = useCallback(() => dispatch({ type: 'increase-counter' }), [])
- *   return (
- *     <div>
- *       <span>{value}</span>
- *       <button onClick={increaseCounter}>Increase counter</button>
- *     </div>
- *   )
- * }
- */
-
-var useDispatch = /*#__PURE__*/createDispatchHook();
-// CONCATENATED MODULE: ./node_modules/react-redux/es/hooks/useSelector.js
-
-
-
-
-
-
-var refEquality = function refEquality(a, b) {
-  return a === b;
-};
-
-function useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub) {
-  var _useReducer = Object(react["useReducer"])(function (s) {
-    return s + 1;
-  }, 0),
-      forceRender = _useReducer[1];
-
-  var subscription = Object(react["useMemo"])(function () {
-    return new Subscription(store, contextSub);
-  }, [store, contextSub]);
-  var latestSubscriptionCallbackError = Object(react["useRef"])();
-  var latestSelector = Object(react["useRef"])();
-  var latestStoreState = Object(react["useRef"])();
-  var latestSelectedState = Object(react["useRef"])();
-  var storeState = store.getState();
-  var selectedState;
-
-  try {
-    if (selector !== latestSelector.current || storeState !== latestStoreState.current || latestSubscriptionCallbackError.current) {
-      var newSelectedState = selector(storeState); // ensure latest selected state is reused so that a custom equality function can result in identical references
-
-      if (latestSelectedState.current === undefined || !equalityFn(newSelectedState, latestSelectedState.current)) {
-        selectedState = newSelectedState;
-      } else {
-        selectedState = latestSelectedState.current;
-      }
-    } else {
-      selectedState = latestSelectedState.current;
-    }
-  } catch (err) {
-    if (latestSubscriptionCallbackError.current) {
-      err.message += "\nThe error may be correlated with this previous error:\n" + latestSubscriptionCallbackError.current.stack + "\n\n";
-    }
-
-    throw err;
-  }
-
-  useIsomorphicLayoutEffect(function () {
-    latestSelector.current = selector;
-    latestStoreState.current = storeState;
-    latestSelectedState.current = selectedState;
-    latestSubscriptionCallbackError.current = undefined;
-  });
-  useIsomorphicLayoutEffect(function () {
-    function checkForUpdates() {
-      try {
-        var _newSelectedState = latestSelector.current(store.getState());
-
-        if (equalityFn(_newSelectedState, latestSelectedState.current)) {
-          return;
-        }
-
-        latestSelectedState.current = _newSelectedState;
-      } catch (err) {
-        // we ignore all errors here, since when the component
-        // is re-rendered, the selectors are called again, and
-        // will throw again, if neither props nor store state
-        // changed
-        latestSubscriptionCallbackError.current = err;
-      }
-
-      forceRender();
-    }
-
-    subscription.onStateChange = checkForUpdates;
-    subscription.trySubscribe();
-    checkForUpdates();
-    return function () {
-      return subscription.tryUnsubscribe();
-    };
-  }, [store, subscription]);
-  return selectedState;
-}
-/**
- * Hook factory, which creates a `useSelector` hook bound to a given context.
- *
- * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
- * @returns {Function} A `useSelector` hook bound to the specified context.
- */
-
-
-function createSelectorHook(context) {
-  if (context === void 0) {
-    context = ReactReduxContext;
-  }
-
-  var useReduxContext = context === ReactReduxContext ? useReduxContext_useReduxContext : function () {
-    return Object(react["useContext"])(context);
-  };
-  return function useSelector(selector, equalityFn) {
-    if (equalityFn === void 0) {
-      equalityFn = refEquality;
-    }
-
-    if (false) {}
-
-    var _useReduxContext = useReduxContext(),
-        store = _useReduxContext.store,
-        contextSub = _useReduxContext.subscription;
-
-    var selectedState = useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub);
-    Object(react["useDebugValue"])(selectedState);
-    return selectedState;
-  };
-}
-/**
- * A hook to access the redux store's state. This hook takes a selector function
- * as an argument. The selector is called with the store state.
- *
- * This hook takes an optional equality comparison function as the second parameter
- * that allows you to customize the way the selected state is compared to determine
- * whether the component needs to be re-rendered.
- *
- * @param {Function} selector the selector function
- * @param {Function=} equalityFn the function that will be used to determine equality
- *
- * @returns {any} the selected state
- *
- * @example
- *
- * import React from 'react'
- * import { useSelector } from 'react-redux'
- *
- * export const CounterComponent = () => {
- *   const counter = useSelector(state => state.counter)
- *   return <div>{counter}</div>
- * }
- */
-
-var useSelector_useSelector = /*#__PURE__*/createSelectorHook();
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/reactBatchedUpdates.js
-/* eslint-disable import/no-unresolved */
-
-// CONCATENATED MODULE: ./node_modules/react-redux/es/index.js
-
-
-
-
-
-
-
-
-
-
-setBatch(react_dom["unstable_batchedUpdates"]);
-
-// CONCATENATED MODULE: ./dev/store/actions.js
-var SET_HUMANS = 'SET_HUMANS';
-var SET_SPYS = 'SET_SPYS';
-var SET_SPY_ARRAY = 'SET_SPY_ARRAY';
-var SET_LOCATION = 'SET_LOCATION';
-var SET_TIMER = 'SET_TIMER';
-var SHOW_FINAL_MODAL = 'SHOW_FINAL_MODAL';
-var SET_GAME_PROGRESS = 'SET_GAME_PROGRESS';
-var setHumans = function setHumans(bool) {
-  return {
-    type: SET_HUMANS,
-    payload: bool
-  };
-};
-var setSpys = function setSpys(bool) {
-  return {
-    type: SET_SPYS,
-    payload: bool
-  };
-};
-var setSpysArray = function setSpysArray(bool) {
-  return {
-    type: SET_SPY_ARRAY,
-    payload: bool
-  };
-};
-var setTimer = function setTimer(bool) {
-  return {
-    type: SET_TIMER,
-    payload: bool
-  };
-};
-var setLocation = function setLocation(bool) {
-  return {
-    type: SET_LOCATION,
-    payload: bool
-  };
-};
-var showFinalModal = function showFinalModal(bool) {
-  return {
-    type: SHOW_FINAL_MODAL,
-    payload: bool
-  };
-};
-var setGameProgress = function setGameProgress(bool) {
-  return {
-    type: SET_GAME_PROGRESS,
-    payload: bool
-  };
-};
-// CONCATENATED MODULE: ./dev/store/locations.js
-var locations = ["Бар", "Рай", "Вооенная база", "Больница", "Такси", "Туристический автобус", "Школьный автобус"];
-/* harmony default export */ var store_locations = (locations);
-// CONCATENATED MODULE: ./dev/components/App/pages/settings/settings.js
-
-
-
-
-
-
-
-
-var settings_settings_settings = function settings() {
-  function randomInteger(min, max) {
-    // случайное число от min до (max+1)
-    var rand = min + Math.random() * (max + 1 - min);
-    return Math.floor(rand);
-  }
-
-  var onSubmit = function onSubmit(data) {
-    getSpyArray();
-    dispatch(setLocation(store_locations[randomInteger(0, store_locations.length - 1)]));
-    dispatch(setGameProgress("cards"));
-  };
-
-  var humans = useSelector_useSelector(function (state) {
-    return state.humans;
-  });
-  var spys = useSelector_useSelector(function (state) {
-    return state.spys;
-  });
-  var dispatch = useDispatch();
-  var spyLost = spys;
-
-  var getSpyArray = function getSpyArray() {
-    var arr = [];
-    var humansIsSpy = [];
-    var hums = 0;
-
-    while (hums != humans) {
-      arr.push(hums);
-      humansIsSpy.push(false);
-      hums++;
-    }
-
-    while (spyLost) {
-      var rnd = randomInteger(0, humans - 1);
-
-      if (!humansIsSpy[rnd]) {
-        humansIsSpy[rnd] = true;
-        spyLost--;
-      }
-    }
-
-    dispatch(setSpysArray(humansIsSpy));
-  };
-
-  return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(esm_Typography_Typography, {
-    component: "h2",
-    variant: "h4"
-  }, "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B"), /*#__PURE__*/react_default.a.createElement(Box_Box, {
-    component: "fieldset",
-    mb: 3,
-    borderColor: "transparent"
-  }, /*#__PURE__*/react_default.a.createElement(esm_Typography_Typography, {
-    component: "legend"
-  }, "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0438\u0433\u0440\u043E\u043A\u043E\u0432"), /*#__PURE__*/react_default.a.createElement(esm_Rating_Rating, {
-    name: "humans",
-    value: humans,
-    className: "humans",
-    icon: "\uD83E\uDDD2",
-    max: 10,
-    onChange: function onChange(event, newValue) {
-      if (newValue < 3) {
-        newValue = 3;
-      }
-
-      dispatch(setHumans(newValue));
-      dispatch(setTimer(2 + newValue));
-    }
-  })), /*#__PURE__*/react_default.a.createElement(Box_Box, {
-    component: "fieldset",
-    mb: 3,
-    borderColor: "transparent"
-  }, /*#__PURE__*/react_default.a.createElement(esm_Typography_Typography, {
-    component: "legend"
-  }, "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0448\u043F\u0438\u043E\u043D\u043E\u0432"), /*#__PURE__*/react_default.a.createElement(esm_Rating_Rating, {
-    name: "spys",
-    value: spys,
-    icon: "\uD83D\uDD74\uFE0F",
-    max: Math.floor(humans / 2),
-    onChange: function onChange(event, newValue) {
-      dispatch(setSpys(newValue));
-    }
-  })), /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
-    variant: "contained",
-    onClick: onSubmit
-  }, "\u041D\u0430\u0447\u0430\u0442\u044C \u0438\u0433\u0440\u0443"));
-};
-
-/* harmony default export */ var pages_settings_settings = (settings_settings_settings);
-// EXTERNAL MODULE: ./dev/components/App/pages/cards/cards.scss
-var cards_cards = __webpack_require__(38);
-
-// CONCATENATED MODULE: ./dev/components/App/pages/cards/cards.js
-function cards_slicedToArray(arr, i) { return _arrayWithHoles(arr) || cards_iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function cards_iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-var cards_cards_cards = function cards() {
-  var spyArray = useSelector_useSelector(function (state) {
-    return state.spyArray;
-  });
-  var humans = useSelector_useSelector(function (state) {
-    return state.humans;
-  });
-  var location = useSelector_useSelector(function (state) {
-    return state.location;
-  });
-
-  var _useState = Object(react["useState"])(0),
-      _useState2 = cards_slicedToArray(_useState, 2),
-      count = _useState2[0],
-      setCount = _useState2[1];
-
-  var dispatch = useDispatch(); //const humans = useSelector(state=>state.humans)
-
-  var clickHandler = function clickHandler() {
-    setFlipped(!flipped);
-    setTimeout(function () {
-      if (!flipped) {
-        if (humans - 1 == count) {
-          dispatch(setGameProgress("timer"));
-        } else {
-          setCount(function (count) {
-            return count + 1;
-          });
-        }
-      }
-    }, 300);
-  };
-
-  var _useState3 = Object(react["useState"])(true),
-      _useState4 = cards_slicedToArray(_useState3, 2),
-      flipped = _useState4[0],
-      setFlipped = _useState4[1];
-
-  return /*#__PURE__*/react_default.a.createElement("div", {
-    className: "page-container"
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    onClick: clickHandler,
-    className: "card-container" + (flipped ? " flipped" : "")
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "back"
-  }, "\uD83D\uDD75\uFE0F\u200D\u2642\uFE0F"), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "front"
-  }, spyArray[count] ? /*#__PURE__*/react_default.a.createElement("span", {
-    className: "spyCard"
-  }, "\u0428\u043F\u0438\u043E\u043D") : location)));
-};
-
-/* harmony default export */ var pages_cards_cards = (cards_cards_cards);
-// EXTERNAL MODULE: ./dev/components/App/pages/timer/timer.scss
-var timer = __webpack_require__(39);
-
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/ownerDocument.js
-function ownerDocument(node) {
-  return node && node.ownerDocument || document;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Portal/Portal.js
-
-
-
-
-
-
-
-function getContainer(container) {
-  container = typeof container === 'function' ? container() : container; // #StrictMode ready
-
-  return react_dom["findDOMNode"](container);
-}
-
-var Portal_useEnhancedEffect = typeof window !== 'undefined' ? react["useLayoutEffect"] : react["useEffect"];
-/**
- * Portals provide a first-class way to render children into a DOM node
- * that exists outside the DOM hierarchy of the parent component.
- */
-
-var Portal_Portal = /*#__PURE__*/react["forwardRef"](function Portal(props, ref) {
-  var children = props.children,
-      container = props.container,
-      _props$disablePortal = props.disablePortal,
-      disablePortal = _props$disablePortal === void 0 ? false : _props$disablePortal,
-      onRendered = props.onRendered;
-
-  var _React$useState = react["useState"](null),
-      mountNode = _React$useState[0],
-      setMountNode = _React$useState[1];
-
-  var handleRef = useForkRef( /*#__PURE__*/react["isValidElement"](children) ? children.ref : null, ref);
-  Portal_useEnhancedEffect(function () {
-    if (!disablePortal) {
-      setMountNode(getContainer(container) || document.body);
-    }
-  }, [container, disablePortal]);
-  Portal_useEnhancedEffect(function () {
-    if (mountNode && !disablePortal) {
-      setRef(ref, mountNode);
-      return function () {
-        setRef(ref, null);
-      };
-    }
-
-    return undefined;
-  }, [ref, mountNode, disablePortal]);
-  Portal_useEnhancedEffect(function () {
-    if (onRendered && (mountNode || disablePortal)) {
-      onRendered();
-    }
-  }, [onRendered, mountNode, disablePortal]);
-
-  if (disablePortal) {
-    if ( /*#__PURE__*/react["isValidElement"](children)) {
-      return /*#__PURE__*/react["cloneElement"](children, {
-        ref: handleRef
-      });
-    }
-
-    return children;
-  }
-
-  return mountNode ? /*#__PURE__*/react_dom["createPortal"](children, mountNode) : mountNode;
-});
- false ? undefined : void 0;
-
-if (false) {}
-
-/* harmony default export */ var esm_Portal_Portal = (Portal_Portal);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/createChainedFunction.js
-/**
- * Safe chained function
- *
- * Will only create a new function if needed,
- * otherwise will pass back existing functions or null.
- *
- * @param {function} functions to chain
- * @returns {function|null}
- */
-function createChainedFunction() {
-  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {
-    funcs[_key] = arguments[_key];
-  }
-
-  return funcs.reduce(function (acc, func) {
-    if (func == null) {
-      return acc;
-    }
-
-    if (false) {}
-
-    return function chainedFunction() {
-      for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-        args[_key2] = arguments[_key2];
-      }
-
-      acc.apply(this, args);
-      func.apply(this, args);
-    };
-  }, function () {});
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/getScrollbarSize.js
-// A change of the browser zoom change the scrollbar size.
-// Credit https://github.com/twbs/bootstrap/blob/3ffe3a5d82f6f561b82ff78d82b32a7d14aed558/js/src/modal.js#L512-L519
-function getScrollbarSize() {
-  var scrollDiv = document.createElement('div');
-  scrollDiv.style.width = '99px';
-  scrollDiv.style.height = '99px';
-  scrollDiv.style.position = 'absolute';
-  scrollDiv.style.top = '-9999px';
-  scrollDiv.style.overflow = 'scroll';
-  document.body.appendChild(scrollDiv);
-  var scrollbarSize = scrollDiv.offsetWidth - scrollDiv.clientWidth;
-  document.body.removeChild(scrollDiv);
-  return scrollbarSize;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/utils/ownerWindow.js
-
-function ownerWindow(node) {
-  var doc = ownerDocument(node);
-  return doc.defaultView || window;
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Modal/ModalManager.js
-
-
-
-
-
- // Is a vertical scrollbar displayed?
-
-function isOverflowing(container) {
-  var doc = ownerDocument(container);
-
-  if (doc.body === container) {
-    return ownerWindow(doc).innerWidth > doc.documentElement.clientWidth;
-  }
-
-  return container.scrollHeight > container.clientHeight;
-}
-
-function ariaHidden(node, show) {
-  if (show) {
-    node.setAttribute('aria-hidden', 'true');
-  } else {
-    node.removeAttribute('aria-hidden');
-  }
-}
-
-function getPaddingRight(node) {
-  return parseInt(window.getComputedStyle(node)['padding-right'], 10) || 0;
-}
-
-function ariaHiddenSiblings(container, mountNode, currentNode) {
-  var nodesToExclude = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
-  var show = arguments.length > 4 ? arguments[4] : undefined;
-  var blacklist = [mountNode, currentNode].concat(_toConsumableArray(nodesToExclude));
-  var blacklistTagNames = ['TEMPLATE', 'SCRIPT', 'STYLE'];
-  [].forEach.call(container.children, function (node) {
-    if (node.nodeType === 1 && blacklist.indexOf(node) === -1 && blacklistTagNames.indexOf(node.tagName) === -1) {
-      ariaHidden(node, show);
-    }
-  });
-}
-
-function findIndexOf(containerInfo, callback) {
-  var idx = -1;
-  containerInfo.some(function (item, index) {
-    if (callback(item)) {
-      idx = index;
-      return true;
-    }
-
-    return false;
-  });
-  return idx;
-}
-
-function handleContainer(containerInfo, props) {
-  var restoreStyle = [];
-  var restorePaddings = [];
-  var container = containerInfo.container;
-  var fixedNodes;
-
-  if (!props.disableScrollLock) {
-    if (isOverflowing(container)) {
-      // Compute the size before applying overflow hidden to avoid any scroll jumps.
-      var scrollbarSize = getScrollbarSize();
-      restoreStyle.push({
-        value: container.style.paddingRight,
-        key: 'padding-right',
-        el: container
-      }); // Use computed style, here to get the real padding to add our scrollbar width.
-
-      container.style['padding-right'] = "".concat(getPaddingRight(container) + scrollbarSize, "px"); // .mui-fixed is a global helper.
-
-      fixedNodes = ownerDocument(container).querySelectorAll('.mui-fixed');
-      [].forEach.call(fixedNodes, function (node) {
-        restorePaddings.push(node.style.paddingRight);
-        node.style.paddingRight = "".concat(getPaddingRight(node) + scrollbarSize, "px");
-      });
-    } // Improve Gatsby support
-    // https://css-tricks.com/snippets/css/force-vertical-scrollbar/
-
-
-    var parent = container.parentElement;
-    var scrollContainer = parent.nodeName === 'HTML' && window.getComputedStyle(parent)['overflow-y'] === 'scroll' ? parent : container; // Block the scroll even if no scrollbar is visible to account for mobile keyboard
-    // screensize shrink.
-
-    restoreStyle.push({
-      value: scrollContainer.style.overflow,
-      key: 'overflow',
-      el: scrollContainer
-    });
-    scrollContainer.style.overflow = 'hidden';
-  }
-
-  var restore = function restore() {
-    if (fixedNodes) {
-      [].forEach.call(fixedNodes, function (node, i) {
-        if (restorePaddings[i]) {
-          node.style.paddingRight = restorePaddings[i];
-        } else {
-          node.style.removeProperty('padding-right');
-        }
-      });
-    }
-
-    restoreStyle.forEach(function (_ref) {
-      var value = _ref.value,
-          el = _ref.el,
-          key = _ref.key;
-
-      if (value) {
-        el.style.setProperty(key, value);
-      } else {
-        el.style.removeProperty(key);
-      }
-    });
-  };
-
-  return restore;
-}
-
-function getHiddenSiblings(container) {
-  var hiddenSiblings = [];
-  [].forEach.call(container.children, function (node) {
-    if (node.getAttribute && node.getAttribute('aria-hidden') === 'true') {
-      hiddenSiblings.push(node);
-    }
-  });
-  return hiddenSiblings;
-}
-/**
- * @ignore - do not document.
- *
- * Proper state management for containers and the modals in those containers.
- * Simplified, but inspired by react-overlay's ModalManager class.
- * Used by the Modal to ensure proper styling of containers.
- */
-
-
-var ModalManager_ModalManager = /*#__PURE__*/function () {
-  function ModalManager() {
-    _classCallCheck(this, ModalManager);
-
-    // this.modals[modalIndex] = modal
-    this.modals = []; // this.containers[containerIndex] = {
-    //   modals: [],
-    //   container,
-    //   restore: null,
-    // }
-
-    this.containers = [];
-  }
-
-  _createClass(ModalManager, [{
-    key: "add",
-    value: function add(modal, container) {
-      var modalIndex = this.modals.indexOf(modal);
-
-      if (modalIndex !== -1) {
-        return modalIndex;
-      }
-
-      modalIndex = this.modals.length;
-      this.modals.push(modal); // If the modal we are adding is already in the DOM.
-
-      if (modal.modalRef) {
-        ariaHidden(modal.modalRef, false);
-      }
-
-      var hiddenSiblingNodes = getHiddenSiblings(container);
-      ariaHiddenSiblings(container, modal.mountNode, modal.modalRef, hiddenSiblingNodes, true);
-      var containerIndex = findIndexOf(this.containers, function (item) {
-        return item.container === container;
-      });
-
-      if (containerIndex !== -1) {
-        this.containers[containerIndex].modals.push(modal);
-        return modalIndex;
-      }
-
-      this.containers.push({
-        modals: [modal],
-        container: container,
-        restore: null,
-        hiddenSiblingNodes: hiddenSiblingNodes
-      });
-      return modalIndex;
-    }
-  }, {
-    key: "mount",
-    value: function mount(modal, props) {
-      var containerIndex = findIndexOf(this.containers, function (item) {
-        return item.modals.indexOf(modal) !== -1;
-      });
-      var containerInfo = this.containers[containerIndex];
-
-      if (!containerInfo.restore) {
-        containerInfo.restore = handleContainer(containerInfo, props);
-      }
-    }
-  }, {
-    key: "remove",
-    value: function remove(modal) {
-      var modalIndex = this.modals.indexOf(modal);
-
-      if (modalIndex === -1) {
-        return modalIndex;
-      }
-
-      var containerIndex = findIndexOf(this.containers, function (item) {
-        return item.modals.indexOf(modal) !== -1;
-      });
-      var containerInfo = this.containers[containerIndex];
-      containerInfo.modals.splice(containerInfo.modals.indexOf(modal), 1);
-      this.modals.splice(modalIndex, 1); // If that was the last modal in a container, clean up the container.
-
-      if (containerInfo.modals.length === 0) {
-        // The modal might be closed before it had the chance to be mounted in the DOM.
-        if (containerInfo.restore) {
-          containerInfo.restore();
-        }
-
-        if (modal.modalRef) {
-          // In case the modal wasn't in the DOM yet.
-          ariaHidden(modal.modalRef, true);
-        }
-
-        ariaHiddenSiblings(containerInfo.container, modal.mountNode, modal.modalRef, containerInfo.hiddenSiblingNodes, false);
-        this.containers.splice(containerIndex, 1);
-      } else {
-        // Otherwise make sure the next top modal is visible to a screen reader.
-        var nextTop = containerInfo.modals[containerInfo.modals.length - 1]; // as soon as a modal is adding its modalRef is undefined. it can't set
-        // aria-hidden because the dom element doesn't exist either
-        // when modal was unmounted before modalRef gets null
-
-        if (nextTop.modalRef) {
-          ariaHidden(nextTop.modalRef, false);
-        }
-      }
-
-      return modalIndex;
-    }
-  }, {
-    key: "isTopModal",
-    value: function isTopModal(modal) {
-      return this.modals.length > 0 && this.modals[this.modals.length - 1] === modal;
-    }
-  }]);
-
-  return ModalManager;
-}();
-
-
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Unstable_TrapFocus/Unstable_TrapFocus.js
-/* eslint-disable consistent-return, jsx-a11y/no-noninteractive-tabindex, camelcase */
-
-
-
-
-
-
-/**
- * Utility component that locks focus inside the component.
- */
-
-function Unstable_TrapFocus(props) {
-  var children = props.children,
-      _props$disableAutoFoc = props.disableAutoFocus,
-      disableAutoFocus = _props$disableAutoFoc === void 0 ? false : _props$disableAutoFoc,
-      _props$disableEnforce = props.disableEnforceFocus,
-      disableEnforceFocus = _props$disableEnforce === void 0 ? false : _props$disableEnforce,
-      _props$disableRestore = props.disableRestoreFocus,
-      disableRestoreFocus = _props$disableRestore === void 0 ? false : _props$disableRestore,
-      getDoc = props.getDoc,
-      isEnabled = props.isEnabled,
-      open = props.open;
-  var ignoreNextEnforceFocus = react["useRef"]();
-  var sentinelStart = react["useRef"](null);
-  var sentinelEnd = react["useRef"](null);
-  var nodeToRestore = react["useRef"]();
-  var rootRef = react["useRef"](null); // can be removed once we drop support for non ref forwarding class components
-
-  var handleOwnRef = react["useCallback"](function (instance) {
-    // #StrictMode ready
-    rootRef.current = react_dom["findDOMNode"](instance);
-  }, []);
-  var handleRef = useForkRef(children.ref, handleOwnRef);
-  var prevOpenRef = react["useRef"]();
-  react["useEffect"](function () {
-    prevOpenRef.current = open;
-  }, [open]);
-
-  if (!prevOpenRef.current && open && typeof window !== 'undefined') {
-    // WARNING: Potentially unsafe in concurrent mode.
-    // The way the read on `nodeToRestore` is setup could make this actually safe.
-    // Say we render `open={false}` -> `open={true}` but never commit.
-    // We have now written a state that wasn't committed. But no committed effect
-    // will read this wrong value. We only read from `nodeToRestore` in effects
-    // that were committed on `open={true}`
-    // WARNING: Prevents the instance from being garbage collected. Should only
-    // hold a weak ref.
-    nodeToRestore.current = getDoc().activeElement;
-  }
-
-  react["useEffect"](function () {
-    if (!open) {
-      return;
-    }
-
-    var doc = ownerDocument(rootRef.current); // We might render an empty child.
-
-    if (!disableAutoFocus && rootRef.current && !rootRef.current.contains(doc.activeElement)) {
-      if (!rootRef.current.hasAttribute('tabIndex')) {
-        if (false) {}
-
-        rootRef.current.setAttribute('tabIndex', -1);
-      }
-
-      rootRef.current.focus();
-    }
-
-    var contain = function contain() {
-      var rootElement = rootRef.current; // Cleanup functions are executed lazily in React 17.
-      // Contain can be called between the component being unmounted and its cleanup function being run.
-
-      if (rootElement === null) {
-        return;
-      }
-
-      if (!doc.hasFocus() || disableEnforceFocus || !isEnabled() || ignoreNextEnforceFocus.current) {
-        ignoreNextEnforceFocus.current = false;
-        return;
-      }
-
-      if (rootRef.current && !rootRef.current.contains(doc.activeElement)) {
-        rootRef.current.focus();
-      }
-    };
-
-    var loopFocus = function loopFocus(event) {
-      // 9 = Tab
-      if (disableEnforceFocus || !isEnabled() || event.keyCode !== 9) {
-        return;
-      } // Make sure the next tab starts from the right place.
-
-
-      if (doc.activeElement === rootRef.current) {
-        // We need to ignore the next contain as
-        // it will try to move the focus back to the rootRef element.
-        ignoreNextEnforceFocus.current = true;
-
-        if (event.shiftKey) {
-          sentinelEnd.current.focus();
-        } else {
-          sentinelStart.current.focus();
-        }
-      }
-    };
-
-    doc.addEventListener('focus', contain, true);
-    doc.addEventListener('keydown', loopFocus, true); // With Edge, Safari and Firefox, no focus related events are fired when the focused area stops being a focused area
-    // e.g. https://bugzilla.mozilla.org/show_bug.cgi?id=559561.
-    //
-    // The whatwg spec defines how the browser should behave but does not explicitly mention any events:
-    // https://html.spec.whatwg.org/multipage/interaction.html#focus-fixup-rule.
-
-    var interval = setInterval(function () {
-      contain();
-    }, 50);
-    return function () {
-      clearInterval(interval);
-      doc.removeEventListener('focus', contain, true);
-      doc.removeEventListener('keydown', loopFocus, true); // restoreLastFocus()
-
-      if (!disableRestoreFocus) {
-        // In IE 11 it is possible for document.activeElement to be null resulting
-        // in nodeToRestore.current being null.
-        // Not all elements in IE 11 have a focus method.
-        // Once IE 11 support is dropped the focus() call can be unconditional.
-        if (nodeToRestore.current && nodeToRestore.current.focus) {
-          nodeToRestore.current.focus();
-        }
-
-        nodeToRestore.current = null;
-      }
-    };
-  }, [disableAutoFocus, disableEnforceFocus, disableRestoreFocus, isEnabled, open]);
-  return /*#__PURE__*/react["createElement"](react["Fragment"], null, /*#__PURE__*/react["createElement"]("div", {
-    tabIndex: 0,
-    ref: sentinelStart,
-    "data-test": "sentinelStart"
-  }), /*#__PURE__*/react["cloneElement"](children, {
-    ref: handleRef
-  }), /*#__PURE__*/react["createElement"]("div", {
-    tabIndex: 0,
-    ref: sentinelEnd,
-    "data-test": "sentinelEnd"
-  }));
-}
-
- false ? undefined : void 0;
-
-if (false) {}
-
-/* harmony default export */ var Unstable_TrapFocus_Unstable_TrapFocus = (Unstable_TrapFocus);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Modal/SimpleBackdrop.js
-
-
-
-
-var SimpleBackdrop_styles = {
-  /* Styles applied to the root element. */
-  root: {
-    zIndex: -1,
-    position: 'fixed',
-    right: 0,
-    bottom: 0,
-    top: 0,
-    left: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    WebkitTapHighlightColor: 'transparent'
-  },
-
-  /* Styles applied to the root element if `invisible={true}`. */
-  invisible: {
-    backgroundColor: 'transparent'
-  }
-};
-/**
- * @ignore - internal component.
- */
-
-var SimpleBackdrop_SimpleBackdrop = /*#__PURE__*/react["forwardRef"](function SimpleBackdrop(props, ref) {
-  var _props$invisible = props.invisible,
-      invisible = _props$invisible === void 0 ? false : _props$invisible,
-      open = props.open,
-      other = _objectWithoutProperties(props, ["invisible", "open"]);
-
-  return open ? /*#__PURE__*/react["createElement"]("div", _extends({
-    "aria-hidden": true,
-    ref: ref
-  }, other, {
-    style: _extends({}, SimpleBackdrop_styles.root, invisible ? SimpleBackdrop_styles.invisible : {}, other.style)
-  })) : null;
-});
- false ? undefined : void 0;
-/* harmony default export */ var Modal_SimpleBackdrop = (SimpleBackdrop_SimpleBackdrop);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Modal/Modal.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function Modal_getContainer(container) {
-  container = typeof container === 'function' ? container() : container;
-  return react_dom["findDOMNode"](container);
-}
-
-function getHasTransition(props) {
-  return props.children ? props.children.props.hasOwnProperty('in') : false;
-} // A modal manager used to track and manage the state of open Modals.
-// Modals don't open on the server so this won't conflict with concurrent requests.
-
-
-var defaultManager = new ModalManager_ModalManager();
-var Modal_styles = function styles(theme) {
-  return {
-    /* Styles applied to the root element. */
-    root: {
-      position: 'fixed',
-      zIndex: theme.zIndex.modal,
-      right: 0,
-      bottom: 0,
-      top: 0,
-      left: 0
-    },
-
-    /* Styles applied to the root element if the `Modal` has exited. */
-    hidden: {
-      visibility: 'hidden'
-    }
-  };
-};
-/**
- * Modal is a lower-level construct that is leveraged by the following components:
- *
- * - [Dialog](/api/dialog/)
- * - [Drawer](/api/drawer/)
- * - [Menu](/api/menu/)
- * - [Popover](/api/popover/)
- *
- * If you are creating a modal dialog, you probably want to use the [Dialog](/api/dialog/) component
- * rather than directly using Modal.
- *
- * This component shares many concepts with [react-overlays](https://react-bootstrap.github.io/react-overlays/#modals).
- */
-
-var Modal_Modal = /*#__PURE__*/react["forwardRef"](function Modal(inProps, ref) {
-  var theme = useTheme();
-  var props = getThemeProps({
-    name: 'MuiModal',
-    props: _extends({}, inProps),
-    theme: theme
-  });
-
-  var _props$BackdropCompon = props.BackdropComponent,
-      BackdropComponent = _props$BackdropCompon === void 0 ? Modal_SimpleBackdrop : _props$BackdropCompon,
-      BackdropProps = props.BackdropProps,
-      children = props.children,
-      _props$closeAfterTran = props.closeAfterTransition,
-      closeAfterTransition = _props$closeAfterTran === void 0 ? false : _props$closeAfterTran,
-      container = props.container,
-      _props$disableAutoFoc = props.disableAutoFocus,
-      disableAutoFocus = _props$disableAutoFoc === void 0 ? false : _props$disableAutoFoc,
-      _props$disableBackdro = props.disableBackdropClick,
-      disableBackdropClick = _props$disableBackdro === void 0 ? false : _props$disableBackdro,
-      _props$disableEnforce = props.disableEnforceFocus,
-      disableEnforceFocus = _props$disableEnforce === void 0 ? false : _props$disableEnforce,
-      _props$disableEscapeK = props.disableEscapeKeyDown,
-      disableEscapeKeyDown = _props$disableEscapeK === void 0 ? false : _props$disableEscapeK,
-      _props$disablePortal = props.disablePortal,
-      disablePortal = _props$disablePortal === void 0 ? false : _props$disablePortal,
-      _props$disableRestore = props.disableRestoreFocus,
-      disableRestoreFocus = _props$disableRestore === void 0 ? false : _props$disableRestore,
-      _props$disableScrollL = props.disableScrollLock,
-      disableScrollLock = _props$disableScrollL === void 0 ? false : _props$disableScrollL,
-      _props$hideBackdrop = props.hideBackdrop,
-      hideBackdrop = _props$hideBackdrop === void 0 ? false : _props$hideBackdrop,
-      _props$keepMounted = props.keepMounted,
-      keepMounted = _props$keepMounted === void 0 ? false : _props$keepMounted,
-      _props$manager = props.manager,
-      manager = _props$manager === void 0 ? defaultManager : _props$manager,
-      onBackdropClick = props.onBackdropClick,
-      onClose = props.onClose,
-      onEscapeKeyDown = props.onEscapeKeyDown,
-      onRendered = props.onRendered,
-      open = props.open,
-      other = _objectWithoutProperties(props, ["BackdropComponent", "BackdropProps", "children", "closeAfterTransition", "container", "disableAutoFocus", "disableBackdropClick", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onEscapeKeyDown", "onRendered", "open"]);
-
-  var _React$useState = react["useState"](true),
-      exited = _React$useState[0],
-      setExited = _React$useState[1];
-
-  var modal = react["useRef"]({});
-  var mountNodeRef = react["useRef"](null);
-  var modalRef = react["useRef"](null);
-  var handleRef = useForkRef(modalRef, ref);
-  var hasTransition = getHasTransition(props);
-
-  var getDoc = function getDoc() {
-    return ownerDocument(mountNodeRef.current);
-  };
-
-  var getModal = function getModal() {
-    modal.current.modalRef = modalRef.current;
-    modal.current.mountNode = mountNodeRef.current;
-    return modal.current;
-  };
-
-  var handleMounted = function handleMounted() {
-    manager.mount(getModal(), {
-      disableScrollLock: disableScrollLock
-    }); // Fix a bug on Chrome where the scroll isn't initially 0.
-
-    modalRef.current.scrollTop = 0;
-  };
-
-  var handleOpen = useEventCallback(function () {
-    var resolvedContainer = Modal_getContainer(container) || getDoc().body;
-    manager.add(getModal(), resolvedContainer); // The element was already mounted.
-
-    if (modalRef.current) {
-      handleMounted();
-    }
-  });
-  var isTopModal = react["useCallback"](function () {
-    return manager.isTopModal(getModal());
-  }, [manager]);
-  var handlePortalRef = useEventCallback(function (node) {
-    mountNodeRef.current = node;
-
-    if (!node) {
-      return;
-    }
-
-    if (onRendered) {
-      onRendered();
-    }
-
-    if (open && isTopModal()) {
-      handleMounted();
-    } else {
-      ariaHidden(modalRef.current, true);
-    }
-  });
-  var handleClose = react["useCallback"](function () {
-    manager.remove(getModal());
-  }, [manager]);
-  react["useEffect"](function () {
-    return function () {
-      handleClose();
-    };
-  }, [handleClose]);
-  react["useEffect"](function () {
-    if (open) {
-      handleOpen();
-    } else if (!hasTransition || !closeAfterTransition) {
-      handleClose();
-    }
-  }, [open, handleClose, hasTransition, closeAfterTransition, handleOpen]);
-
-  if (!keepMounted && !open && (!hasTransition || exited)) {
-    return null;
-  }
-
-  var handleEnter = function handleEnter() {
-    setExited(false);
-  };
-
-  var handleExited = function handleExited() {
-    setExited(true);
-
-    if (closeAfterTransition) {
-      handleClose();
-    }
-  };
-
-  var handleBackdropClick = function handleBackdropClick(event) {
-    if (event.target !== event.currentTarget) {
-      return;
-    }
-
-    if (onBackdropClick) {
-      onBackdropClick(event);
-    }
-
-    if (!disableBackdropClick && onClose) {
-      onClose(event, 'backdropClick');
-    }
-  };
-
-  var handleKeyDown = function handleKeyDown(event) {
-    // The handler doesn't take event.defaultPrevented into account:
-    //
-    // event.preventDefault() is meant to stop default behaviours like
-    // clicking a checkbox to check it, hitting a button to submit a form,
-    // and hitting left arrow to move the cursor in a text input etc.
-    // Only special HTML elements have these default behaviors.
-    if (event.key !== 'Escape' || !isTopModal()) {
-      return;
-    }
-
-    if (onEscapeKeyDown) {
-      onEscapeKeyDown(event);
-    }
-
-    if (!disableEscapeKeyDown) {
-      // Swallow the event, in case someone is listening for the escape key on the body.
-      event.stopPropagation();
-
-      if (onClose) {
-        onClose(event, 'escapeKeyDown');
-      }
-    }
-  };
-
-  var inlineStyle = Modal_styles(theme || {
-    zIndex: styles_zIndex
-  });
-  var childProps = {};
-
-  if (children.props.tabIndex === undefined) {
-    childProps.tabIndex = children.props.tabIndex || '-1';
-  } // It's a Transition like component
-
-
-  if (hasTransition) {
-    childProps.onEnter = createChainedFunction(handleEnter, children.props.onEnter);
-    childProps.onExited = createChainedFunction(handleExited, children.props.onExited);
-  }
-
-  return /*#__PURE__*/react["createElement"](esm_Portal_Portal, {
-    ref: handlePortalRef,
-    container: container,
-    disablePortal: disablePortal
-  }, /*#__PURE__*/react["createElement"]("div", _extends({
-    ref: handleRef,
-    onKeyDown: handleKeyDown,
-    role: "presentation"
-  }, other, {
-    style: _extends({}, inlineStyle.root, !open && exited ? inlineStyle.hidden : {}, other.style)
-  }), hideBackdrop ? null : /*#__PURE__*/react["createElement"](BackdropComponent, _extends({
-    open: open,
-    onClick: handleBackdropClick
-  }, BackdropProps)), /*#__PURE__*/react["createElement"](Unstable_TrapFocus_Unstable_TrapFocus, {
-    disableEnforceFocus: disableEnforceFocus,
-    disableAutoFocus: disableAutoFocus,
-    disableRestoreFocus: disableRestoreFocus,
-    getDoc: getDoc,
-    isEnabled: isTopModal,
-    open: open
-  }, /*#__PURE__*/react["cloneElement"](children, childProps))));
-});
- false ? undefined : void 0;
-/* harmony default export */ var esm_Modal_Modal = (Modal_Modal);
-// EXTERNAL MODULE: ./dev/components/Modal/Modal.scss
-var components_Modal_Modal = __webpack_require__(40);
-
-// CONCATENATED MODULE: ./node_modules/react-transition-group/esm/config.js
-/* harmony default export */ var config = ({
-  disabled: false
-});
-// CONCATENATED MODULE: ./node_modules/react-transition-group/esm/Transition.js
-
-
-
-
-
-
-
-
-var UNMOUNTED = 'unmounted';
-var EXITED = 'exited';
-var ENTERING = 'entering';
-var ENTERED = 'entered';
-var EXITING = 'exiting';
-/**
- * The Transition component lets you describe a transition from one component
- * state to another _over time_ with a simple declarative API. Most commonly
- * it's used to animate the mounting and unmounting of a component, but can also
- * be used to describe in-place transition states as well.
- *
- * ---
- *
- * **Note**: `Transition` is a platform-agnostic base component. If you're using
- * transitions in CSS, you'll probably want to use
- * [`CSSTransition`](https://reactcommunity.org/react-transition-group/css-transition)
- * instead. It inherits all the features of `Transition`, but contains
- * additional features necessary to play nice with CSS transitions (hence the
- * name of the component).
- *
- * ---
- *
- * By default the `Transition` component does not alter the behavior of the
- * component it renders, it only tracks "enter" and "exit" states for the
- * components. It's up to you to give meaning and effect to those states. For
- * example we can add styles to a component when it enters or exits:
- *
- * ```jsx
- * import { Transition } from 'react-transition-group';
- *
- * const duration = 300;
- *
- * const defaultStyle = {
- *   transition: `opacity ${duration}ms ease-in-out`,
- *   opacity: 0,
- * }
- *
- * const transitionStyles = {
- *   entering: { opacity: 1 },
- *   entered:  { opacity: 1 },
- *   exiting:  { opacity: 0 },
- *   exited:  { opacity: 0 },
- * };
- *
- * const Fade = ({ in: inProp }) => (
- *   <Transition in={inProp} timeout={duration}>
- *     {state => (
- *       <div style={{
- *         ...defaultStyle,
- *         ...transitionStyles[state]
- *       }}>
- *         I'm a fade Transition!
- *       </div>
- *     )}
- *   </Transition>
- * );
- * ```
- *
- * There are 4 main states a Transition can be in:
- *  - `'entering'`
- *  - `'entered'`
- *  - `'exiting'`
- *  - `'exited'`
- *
- * Transition state is toggled via the `in` prop. When `true` the component
- * begins the "Enter" stage. During this stage, the component will shift from
- * its current transition state, to `'entering'` for the duration of the
- * transition and then to the `'entered'` stage once it's complete. Let's take
- * the following example (we'll use the
- * [useState](https://reactjs.org/docs/hooks-reference.html#usestate) hook):
- *
- * ```jsx
- * function App() {
- *   const [inProp, setInProp] = useState(false);
- *   return (
- *     <div>
- *       <Transition in={inProp} timeout={500}>
- *         {state => (
- *           // ...
- *         )}
- *       </Transition>
- *       <button onClick={() => setInProp(true)}>
- *         Click to Enter
- *       </button>
- *     </div>
- *   );
- * }
- * ```
- *
- * When the button is clicked the component will shift to the `'entering'` state
- * and stay there for 500ms (the value of `timeout`) before it finally switches
- * to `'entered'`.
- *
- * When `in` is `false` the same thing happens except the state moves from
- * `'exiting'` to `'exited'`.
- */
-
-var Transition_Transition = /*#__PURE__*/function (_React$Component) {
-  _inheritsLoose(Transition, _React$Component);
-
-  function Transition(props, context) {
-    var _this;
-
-    _this = _React$Component.call(this, props, context) || this;
-    var parentGroup = context; // In the context of a TransitionGroup all enters are really appears
-
-    var appear = parentGroup && !parentGroup.isMounting ? props.enter : props.appear;
-    var initialStatus;
-    _this.appearStatus = null;
-
-    if (props.in) {
-      if (appear) {
-        initialStatus = EXITED;
-        _this.appearStatus = ENTERING;
-      } else {
-        initialStatus = ENTERED;
-      }
-    } else {
-      if (props.unmountOnExit || props.mountOnEnter) {
-        initialStatus = UNMOUNTED;
-      } else {
-        initialStatus = EXITED;
-      }
-    }
-
-    _this.state = {
-      status: initialStatus
-    };
-    _this.nextCallback = null;
-    return _this;
-  }
-
-  Transition.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
-    var nextIn = _ref.in;
-
-    if (nextIn && prevState.status === UNMOUNTED) {
-      return {
-        status: EXITED
-      };
-    }
-
-    return null;
-  } // getSnapshotBeforeUpdate(prevProps) {
-  //   let nextStatus = null
-  //   if (prevProps !== this.props) {
-  //     const { status } = this.state
-  //     if (this.props.in) {
-  //       if (status !== ENTERING && status !== ENTERED) {
-  //         nextStatus = ENTERING
-  //       }
-  //     } else {
-  //       if (status === ENTERING || status === ENTERED) {
-  //         nextStatus = EXITING
-  //       }
-  //     }
-  //   }
-  //   return { nextStatus }
-  // }
-  ;
-
-  var _proto = Transition.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
-    this.updateStatus(true, this.appearStatus);
-  };
-
-  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
-    var nextStatus = null;
-
-    if (prevProps !== this.props) {
-      var status = this.state.status;
-
-      if (this.props.in) {
-        if (status !== ENTERING && status !== ENTERED) {
-          nextStatus = ENTERING;
-        }
-      } else {
-        if (status === ENTERING || status === ENTERED) {
-          nextStatus = EXITING;
-        }
-      }
-    }
-
-    this.updateStatus(false, nextStatus);
-  };
-
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    this.cancelNextCallback();
-  };
-
-  _proto.getTimeouts = function getTimeouts() {
-    var timeout = this.props.timeout;
-    var exit, enter, appear;
-    exit = enter = appear = timeout;
-
-    if (timeout != null && typeof timeout !== 'number') {
-      exit = timeout.exit;
-      enter = timeout.enter; // TODO: remove fallback for next major
-
-      appear = timeout.appear !== undefined ? timeout.appear : enter;
-    }
-
-    return {
-      exit: exit,
-      enter: enter,
-      appear: appear
-    };
-  };
-
-  _proto.updateStatus = function updateStatus(mounting, nextStatus) {
-    if (mounting === void 0) {
-      mounting = false;
-    }
-
-    if (nextStatus !== null) {
-      // nextStatus will always be ENTERING or EXITING.
-      this.cancelNextCallback();
-
-      if (nextStatus === ENTERING) {
-        this.performEnter(mounting);
-      } else {
-        this.performExit();
-      }
-    } else if (this.props.unmountOnExit && this.state.status === EXITED) {
-      this.setState({
-        status: UNMOUNTED
-      });
-    }
-  };
-
-  _proto.performEnter = function performEnter(mounting) {
-    var _this2 = this;
-
-    var enter = this.props.enter;
-    var appearing = this.context ? this.context.isMounting : mounting;
-
-    var _ref2 = this.props.nodeRef ? [appearing] : [react_dom_default.a.findDOMNode(this), appearing],
-        maybeNode = _ref2[0],
-        maybeAppearing = _ref2[1];
-
-    var timeouts = this.getTimeouts();
-    var enterTimeout = appearing ? timeouts.appear : timeouts.enter; // no enter animation skip right to ENTERED
-    // if we are mounting and running this it means appear _must_ be set
-
-    if (!mounting && !enter || config.disabled) {
-      this.safeSetState({
-        status: ENTERED
-      }, function () {
-        _this2.props.onEntered(maybeNode);
-      });
-      return;
-    }
-
-    this.props.onEnter(maybeNode, maybeAppearing);
-    this.safeSetState({
-      status: ENTERING
-    }, function () {
-      _this2.props.onEntering(maybeNode, maybeAppearing);
-
-      _this2.onTransitionEnd(enterTimeout, function () {
-        _this2.safeSetState({
-          status: ENTERED
-        }, function () {
-          _this2.props.onEntered(maybeNode, maybeAppearing);
-        });
-      });
-    });
-  };
-
-  _proto.performExit = function performExit() {
-    var _this3 = this;
-
-    var exit = this.props.exit;
-    var timeouts = this.getTimeouts();
-    var maybeNode = this.props.nodeRef ? undefined : react_dom_default.a.findDOMNode(this); // no exit animation skip right to EXITED
-
-    if (!exit || config.disabled) {
-      this.safeSetState({
-        status: EXITED
-      }, function () {
-        _this3.props.onExited(maybeNode);
-      });
-      return;
-    }
-
-    this.props.onExit(maybeNode);
-    this.safeSetState({
-      status: EXITING
-    }, function () {
-      _this3.props.onExiting(maybeNode);
-
-      _this3.onTransitionEnd(timeouts.exit, function () {
-        _this3.safeSetState({
-          status: EXITED
-        }, function () {
-          _this3.props.onExited(maybeNode);
-        });
-      });
-    });
-  };
-
-  _proto.cancelNextCallback = function cancelNextCallback() {
-    if (this.nextCallback !== null) {
-      this.nextCallback.cancel();
-      this.nextCallback = null;
-    }
-  };
-
-  _proto.safeSetState = function safeSetState(nextState, callback) {
-    // This shouldn't be necessary, but there are weird race conditions with
-    // setState callbacks and unmounting in testing, so always make sure that
-    // we can cancel any pending setState callbacks after we unmount.
-    callback = this.setNextCallback(callback);
-    this.setState(nextState, callback);
-  };
-
-  _proto.setNextCallback = function setNextCallback(callback) {
-    var _this4 = this;
-
-    var active = true;
-
-    this.nextCallback = function (event) {
-      if (active) {
-        active = false;
-        _this4.nextCallback = null;
-        callback(event);
-      }
-    };
-
-    this.nextCallback.cancel = function () {
-      active = false;
-    };
-
-    return this.nextCallback;
-  };
-
-  _proto.onTransitionEnd = function onTransitionEnd(timeout, handler) {
-    this.setNextCallback(handler);
-    var node = this.props.nodeRef ? this.props.nodeRef.current : react_dom_default.a.findDOMNode(this);
-    var doesNotHaveTimeoutOrListener = timeout == null && !this.props.addEndListener;
-
-    if (!node || doesNotHaveTimeoutOrListener) {
-      setTimeout(this.nextCallback, 0);
-      return;
-    }
-
-    if (this.props.addEndListener) {
-      var _ref3 = this.props.nodeRef ? [this.nextCallback] : [node, this.nextCallback],
-          maybeNode = _ref3[0],
-          maybeNextCallback = _ref3[1];
-
-      this.props.addEndListener(maybeNode, maybeNextCallback);
-    }
-
-    if (timeout != null) {
-      setTimeout(this.nextCallback, timeout);
-    }
-  };
-
-  _proto.render = function render() {
-    var status = this.state.status;
-
-    if (status === UNMOUNTED) {
-      return null;
-    }
-
-    var _this$props = this.props,
-        children = _this$props.children,
-        _in = _this$props.in,
-        _mountOnEnter = _this$props.mountOnEnter,
-        _unmountOnExit = _this$props.unmountOnExit,
-        _appear = _this$props.appear,
-        _enter = _this$props.enter,
-        _exit = _this$props.exit,
-        _timeout = _this$props.timeout,
-        _addEndListener = _this$props.addEndListener,
-        _onEnter = _this$props.onEnter,
-        _onEntering = _this$props.onEntering,
-        _onEntered = _this$props.onEntered,
-        _onExit = _this$props.onExit,
-        _onExiting = _this$props.onExiting,
-        _onExited = _this$props.onExited,
-        _nodeRef = _this$props.nodeRef,
-        childProps = _objectWithoutPropertiesLoose(_this$props, ["children", "in", "mountOnEnter", "unmountOnExit", "appear", "enter", "exit", "timeout", "addEndListener", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "nodeRef"]);
-
-    return (
-      /*#__PURE__*/
-      // allows for nested Transitions
-      react_default.a.createElement(TransitionGroupContext.Provider, {
-        value: null
-      }, typeof children === 'function' ? children(status, childProps) : react_default.a.cloneElement(react_default.a.Children.only(children), childProps))
-    );
-  };
-
-  return Transition;
-}(react_default.a.Component);
-
-Transition_Transition.contextType = TransitionGroupContext;
-Transition_Transition.propTypes =  false ? undefined : {}; // Name the function so it is clearer in the documentation
-
-function noop() {}
-
-Transition_Transition.defaultProps = {
-  in: false,
-  mountOnEnter: false,
-  unmountOnExit: false,
-  appear: false,
-  enter: true,
-  exit: true,
-  onEnter: noop,
-  onEntering: noop,
-  onEntered: noop,
-  onExit: noop,
-  onExiting: noop,
-  onExited: noop
-};
-Transition_Transition.UNMOUNTED = UNMOUNTED;
-Transition_Transition.EXITED = EXITED;
-Transition_Transition.ENTERING = ENTERING;
-Transition_Transition.ENTERED = ENTERED;
-Transition_Transition.EXITING = EXITING;
-/* harmony default export */ var esm_Transition = (Transition_Transition);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/transitions/utils.js
-var reflow = function reflow(node) {
-  return node.scrollTop;
-};
-function getTransitionProps(props, options) {
-  var timeout = props.timeout,
-      _props$style = props.style,
-      style = _props$style === void 0 ? {} : _props$style;
-  return {
-    duration: style.transitionDuration || typeof timeout === 'number' ? timeout : timeout[options.mode] || 0,
-    delay: style.transitionDelay
-  };
-}
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Fade/Fade.js
-
-
-
-
-
-
-
-
-
-
-var Fade_styles = {
-  entering: {
-    opacity: 1
-  },
-  entered: {
-    opacity: 1
-  }
-};
-var defaultTimeout = {
-  enter: duration.enteringScreen,
-  exit: duration.leavingScreen
-};
-/**
- * The Fade transition is used by the [Modal](/components/modal/) component.
- * It uses [react-transition-group](https://github.com/reactjs/react-transition-group) internally.
- */
-
-var Fade_Fade = /*#__PURE__*/react["forwardRef"](function Fade(props, ref) {
-  var children = props.children,
-      _props$disableStrictM = props.disableStrictModeCompat,
-      disableStrictModeCompat = _props$disableStrictM === void 0 ? false : _props$disableStrictM,
-      inProp = props.in,
-      onEnter = props.onEnter,
-      onEntered = props.onEntered,
-      onEntering = props.onEntering,
-      onExit = props.onExit,
-      onExited = props.onExited,
-      onExiting = props.onExiting,
-      style = props.style,
-      _props$TransitionComp = props.TransitionComponent,
-      TransitionComponent = _props$TransitionComp === void 0 ? esm_Transition : _props$TransitionComp,
-      _props$timeout = props.timeout,
-      timeout = _props$timeout === void 0 ? defaultTimeout : _props$timeout,
-      other = _objectWithoutProperties(props, ["children", "disableStrictModeCompat", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "TransitionComponent", "timeout"]);
-
-  var theme = useTheme_useTheme();
-  var enableStrictModeCompat = theme.unstable_strictMode && !disableStrictModeCompat;
-  var nodeRef = react["useRef"](null);
-  var foreignRef = useForkRef(children.ref, ref);
-  var handleRef = useForkRef(enableStrictModeCompat ? nodeRef : undefined, foreignRef);
-
-  var normalizedTransitionCallback = function normalizedTransitionCallback(callback) {
-    return function (nodeOrAppearing, maybeAppearing) {
-      if (callback) {
-        var _ref = enableStrictModeCompat ? [nodeRef.current, nodeOrAppearing] : [nodeOrAppearing, maybeAppearing],
-            _ref2 = _slicedToArray(_ref, 2),
-            node = _ref2[0],
-            isAppearing = _ref2[1]; // onEnterXxx and onExitXxx callbacks have a different arguments.length value.
-
-
-        if (isAppearing === undefined) {
-          callback(node);
-        } else {
-          callback(node, isAppearing);
-        }
-      }
-    };
-  };
-
-  var handleEntering = normalizedTransitionCallback(onEntering);
-  var handleEnter = normalizedTransitionCallback(function (node, isAppearing) {
-    reflow(node); // So the animation always start from the start.
-
-    var transitionProps = getTransitionProps({
-      style: style,
-      timeout: timeout
-    }, {
-      mode: 'enter'
-    });
-    node.style.webkitTransition = theme.transitions.create('opacity', transitionProps);
-    node.style.transition = theme.transitions.create('opacity', transitionProps);
-
-    if (onEnter) {
-      onEnter(node, isAppearing);
-    }
-  });
-  var handleEntered = normalizedTransitionCallback(onEntered);
-  var handleExiting = normalizedTransitionCallback(onExiting);
-  var handleExit = normalizedTransitionCallback(function (node) {
-    var transitionProps = getTransitionProps({
-      style: style,
-      timeout: timeout
-    }, {
-      mode: 'exit'
-    });
-    node.style.webkitTransition = theme.transitions.create('opacity', transitionProps);
-    node.style.transition = theme.transitions.create('opacity', transitionProps);
-
-    if (onExit) {
-      onExit(node);
-    }
-  });
-  var handleExited = normalizedTransitionCallback(onExited);
-  return /*#__PURE__*/react["createElement"](TransitionComponent, _extends({
-    appear: true,
-    in: inProp,
-    nodeRef: enableStrictModeCompat ? nodeRef : undefined,
-    onEnter: handleEnter,
-    onEntered: handleEntered,
-    onEntering: handleEntering,
-    onExit: handleExit,
-    onExited: handleExited,
-    onExiting: handleExiting,
-    timeout: timeout
-  }, other), function (state, childProps) {
-    return /*#__PURE__*/react["cloneElement"](children, _extends({
-      style: _extends({
-        opacity: 0,
-        visibility: state === 'exited' && !inProp ? 'hidden' : undefined
-      }, Fade_styles[state], style, children.props.style),
-      ref: handleRef
-    }, childProps));
-  });
-});
- false ? undefined : void 0;
-/* harmony default export */ var esm_Fade_Fade = (Fade_Fade);
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Backdrop/Backdrop.js
-
-
-
-
-
-
-
-var Backdrop_styles = {
-  /* Styles applied to the root element. */
-  root: {
-    // Improve scrollable dialog support.
-    zIndex: -1,
-    position: 'fixed',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    right: 0,
-    bottom: 0,
-    top: 0,
-    left: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    WebkitTapHighlightColor: 'transparent'
-  },
-
-  /* Styles applied to the root element if `invisible={true}`. */
-  invisible: {
-    backgroundColor: 'transparent'
-  }
-};
-var Backdrop_Backdrop = /*#__PURE__*/react["forwardRef"](function Backdrop(props, ref) {
-  var children = props.children,
-      classes = props.classes,
-      className = props.className,
-      _props$invisible = props.invisible,
-      invisible = _props$invisible === void 0 ? false : _props$invisible,
-      open = props.open,
-      transitionDuration = props.transitionDuration,
-      _props$TransitionComp = props.TransitionComponent,
-      TransitionComponent = _props$TransitionComp === void 0 ? esm_Fade_Fade : _props$TransitionComp,
-      other = _objectWithoutProperties(props, ["children", "classes", "className", "invisible", "open", "transitionDuration", "TransitionComponent"]);
-
-  return /*#__PURE__*/react["createElement"](TransitionComponent, _extends({
-    in: open,
-    timeout: transitionDuration
-  }, other), /*#__PURE__*/react["createElement"]("div", {
-    className: clsx_m(classes.root, className, invisible && classes.invisible),
-    "aria-hidden": true,
-    ref: ref
-  }, children));
-});
- false ? undefined : void 0;
-/* harmony default export */ var esm_Backdrop_Backdrop = (styles_withStyles(Backdrop_styles, {
-  name: 'MuiBackdrop'
-})(Backdrop_Backdrop));
-// CONCATENATED MODULE: ./dev/components/Modal/Modal.js
-
-
-
- //import {WrapedUserError} from '../UserLoginErrorModal/UserLoginErrorModal'
-
-
-
-
-
-function LoginModal() {
-  var open = useSelector_useSelector(function (state) {
-    return state.showModal;
-  });
-  var location = useSelector_useSelector(function (state) {
-    return state.location;
-  });
-  var spys = useSelector_useSelector(function (state) {
-    return state.spys;
-  });
-  var spyArray = useSelector_useSelector(function (state) {
-    return state.spyArray;
-  });
-  var dispatch = useDispatch();
-
-  var handleClose = function handleClose() {
-    dispatch(showFinalModal(false));
-    dispatch(setGameProgress('settings'));
-  };
-
-  return /*#__PURE__*/react_default.a.createElement(esm_Modal_Modal, {
-    "aria-labelledby": "transition-modal-title",
-    "aria-describedby": "transition-modal-description",
-    className: 'modal',
-    open: open,
-    closeAfterTransition: true,
-    BackdropComponent: esm_Backdrop_Backdrop,
-    BackdropProps: {
-      timeout: 500
-    } // disableScrollLock={true}
-
-  }, /*#__PURE__*/react_default.a.createElement(esm_Fade_Fade, {
-    "in": open
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: 'modalWindow'
-  }, /*#__PURE__*/react_default.a.createElement("h3", {
-    id: "transition-modal-title",
-    className: "light"
-  }, "\u0418\u0433\u0440\u0430 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u0430!"), /*#__PURE__*/react_default.a.createElement("h4", {
-    className: "light"
-  }, "\u041B\u043E\u043A\u0430\u0446\u0438\u044F: ", /*#__PURE__*/react_default.a.createElement("b", null, location)), /*#__PURE__*/react_default.a.createElement("h4", {
-    className: "light"
-  }, "\u0428\u043F\u0438\u043E\u043D", spys > 1 ? "ы" : null, ":"), spyArray.map(function (isSpy, index) {
-    if (isSpy) {
-      return /*#__PURE__*/react_default.a.createElement("p", {
-        key: index
-      }, "\u0418\u0433\u0440\u043E\u043A ", ++index);
-      return null;
-    }
-  }), /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
-    onClick: handleClose,
-    variant: "contained"
-  }, "\u0421\u044B\u0433\u0440\u0430\u0442\u044C \u0435\u0449\u0451 \u0440\u0430\u0437"))));
-}
-// CONCATENATED MODULE: ./dev/components/App/pages/timer/timer.js
-function timer_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { timer_typeof = function _typeof(obj) { return typeof obj; }; } else { timer_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return timer_typeof(obj); }
-
-function timer_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function timer_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function timer_createClass(Constructor, protoProps, staticProps) { if (protoProps) timer_defineProperties(Constructor.prototype, protoProps); if (staticProps) timer_defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (timer_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
- // import cn from 'classnames/bind'
-
-
- //const cx = cn.bind(styles)
-
-
-
-
-
-
-var timer_CountDown = /*#__PURE__*/function (_Component) {
-  _inherits(CountDown, _Component);
-
-  var _super = _createSuper(CountDown);
-
-  function CountDown(props) {
-    var _this;
-
-    timer_classCallCheck(this, CountDown);
-
-    _this = _super.call(this, props);
-    _this.count = _this.count.bind(_assertThisInitialized(_this));
-    _this.timeIsUp = _this.timeIsUp.bind(_assertThisInitialized(_this));
-    _this.timerPause = _this.timerPause.bind(_assertThisInitialized(_this));
-    _this.state = {
-      minutes: 0,
-      secounds: 0
-    };
-
-    var getWord = function getWord() {
-      if (_this.props.spys == 1) {
-        return "шпиона";
-      } else {
-        return _this.props.spys + "х шпионов";
-      }
-    };
-
-    _this.title = "Вычислите среди игроков " + getWord();
-    _this.deadline = props.timer * 60 * 1000;
-    _this.x = null;
-    return _this;
-  }
-
-  timer_createClass(CountDown, [{
-    key: "count",
-    value: function count() {
-      this.deadline -= 1000;
-      var minutes = Math.floor(this.deadline % (1000 * 60 * 60) / (1000 * 60));
-      var seconds = Math.floor(this.deadline % (1000 * 60) / 1000);
-      this.setState({
-        minutes: minutes,
-        seconds: seconds
-      });
-
-      if (this.deadline < 0) {
-        this.timeIsUp();
-      }
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.count();
-      this.x = setInterval(this.count, 1000);
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      clearInterval(this.x);
-      this.x = null;
-    }
-  }, {
-    key: "timerPause",
-    value: function timerPause() {
-      if (this.x) {
-        clearInterval(this.x);
-        this.x = null;
-      } else {
-        this.x = setInterval(this.count, 1000);
-      }
-    }
-  }, {
-    key: "timeIsUp",
-    value: function timeIsUp() {
-      this.props.showFinalModal(true);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$state = this.state,
-          seconds = _this$state.seconds,
-          minutes = _this$state.minutes;
-      return /*#__PURE__*/react_default.a.createElement("div", {
-        className: "timer"
-      }, /*#__PURE__*/react_default.a.createElement("h1", null, this.title), /*#__PURE__*/react_default.a.createElement("div", {
-        id: "clockdiv",
-        onClick: this.timerPause
-      }, /*#__PURE__*/react_default.a.createElement("span", {
-        className: "minutes",
-        id: "minute"
-      }, minutes), /*#__PURE__*/react_default.a.createElement("span", {
-        className: "seconds",
-        id: "second"
-      }, seconds)), /*#__PURE__*/react_default.a.createElement(LoginModal, null), /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
-        variant: "contained",
-        onClick: this.timeIsUp
-      }, "\u0417\u0430\u0432\u0435\u0440\u0448\u0438\u0442\u044C"));
-    }
-  }]);
-
-  return CountDown;
-}(react["Component"]);
-
-var timer_mapStateToProps = function mapStateToProps(state) {
-  return {
-    timer: state.timer,
-    spys: state.spys
-  };
-};
-
-var timer_putActionsToProps = function putActionsToProps(dispatch) {
-  return {
-    showFinalModal: bindActionCreators(showFinalModal, dispatch)
-  };
-};
-
-/* harmony default export */ var timer_timer = (connect_connect(timer_mapStateToProps, timer_putActionsToProps)(timer_CountDown));
-// CONCATENATED MODULE: ./dev/store/reducers.js
-function reducers_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { reducers_ownKeys(Object(source), true).forEach(function (key) { reducers_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { reducers_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function reducers_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
- // Or with Immutablejs:
-
-var initialState = {
-  humans: 3,
-  spys: 1,
-  spyArray: [true, false, true],
-  location: "Кафе",
-  timer: 5,
-  showModal: false,
-  gameProgress: "settings"
-};
-var reducers_rootRedducer = function rootRedducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-
-  switch (action.type) {
-    case SET_HUMANS:
-      return _objectSpread(_objectSpread({}, state), {}, {
-        humans: action.payload
-      });
-
-    case SET_SPYS:
-      return _objectSpread(_objectSpread({}, state), {}, {
-        spys: action.payload
-      });
-
-    case SET_SPY_ARRAY:
-      return _objectSpread(_objectSpread({}, state), {}, {
-        spyArray: action.payload
-      });
-
-    case SET_TIMER:
-      return _objectSpread(_objectSpread({}, state), {}, {
-        timer: action.payload
-      });
-
-    case SET_LOCATION:
-      return _objectSpread(_objectSpread({}, state), {}, {
-        location: action.payload
-      });
-
-    case SHOW_FINAL_MODAL:
-      return _objectSpread(_objectSpread({}, state), {}, {
-        showModal: action.payload
-      });
-
-    case SET_GAME_PROGRESS:
-      return _objectSpread(_objectSpread({}, state), {}, {
-        gameProgress: action.payload
-      });
-  }
-
-  return state;
-}; // const reducers = {
-//   data: rootRedducer,
-//   form: formReducer,
-// };
-//export const reducer = combineReducers(reducers);
-// CONCATENATED MODULE: ./dev/store/store.js
-
-
-var user = {
-  firstName: 'Владимир',
-  cheki: 50,
-  prizi: 4,
-  phone: '+7 888 555 6666',
-  email: 'sqs@sa.ssa'
-};
-var store_store = createStore(reducers_rootRedducer);
-// CONCATENATED MODULE: ./dev/components/App/App.js
- // import Main from '../pages/main/main'
-// import Header from './Header/Header'
-// import Footer from './Footer/Footer'
-// import Registration from '../pages/Registration/Registration'
-// import Cabinet from '../pages/Cabinet/Cabinet'
-
-
- //import ScrollSection from './scroll-section/scroll-section'
-//import FAQ from '../pages/faq/faq'
-
-
-
-
-var DataContext = /*#__PURE__*/Object(react["createContext"])();
-
-
-
-var App_App_App = function App() {
-  return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(esm_Grid_Grid, {
-    container: true,
-    className: "appContainer",
-    direction: "column",
-    justify: "center",
-    alignItems: "center"
-  }, /*#__PURE__*/react_default.a.createElement(esm_Grid_Grid, {
-    item: true,
-    className: "appWpap"
-  }, /*#__PURE__*/react_default.a.createElement(components_Provider, {
-    store: store_store
-  }, /*#__PURE__*/react_default.a.createElement(App_GetGameProgress, null)))));
-};
-
-var App_GetGameProgress = function GetGameProgress() {
-  var gameProgress = useSelector_useSelector(function (state) {
-    return state.gameProgress;
-  });
-
-  switch (gameProgress) {
-    case "settings":
-      return /*#__PURE__*/react_default.a.createElement(pages_settings_settings, null);
-
-    case "cards":
-      return /*#__PURE__*/react_default.a.createElement(pages_cards_cards, null);
-
-    case "timer":
-      return /*#__PURE__*/react_default.a.createElement(timer_timer, null);
-  }
-};
-
-/* harmony default export */ var components_App_App = (App_App_App);
-// EXTERNAL MODULE: ./dev/index.scss
-var dev = __webpack_require__(41);
-
-// CONCATENATED MODULE: ./dev/index.js
-
-
- //import Log from "./components/Modal/LoginModal/LoginModal";
-//import list from "./components/Header/List/List";
-
-
-react_dom_default.a.render( /*#__PURE__*/react_default.a.createElement(components_App_App, null), document.getElementById("root")); //import Main from './components/pages/main/main' //++
-// import Rules from './components/Rules/Rules'//++
-// import Top from './components/Top/Top' //++
-// import Priz from './components/Priz/Priz' //++
-// import Random sfrom './components/Random/Random' //++
-// import Winners from './components/Winners/Winners' //++
+spacing.propTypes =  false ? undefined : {};
+spacing.filterProps = spacingKeys;
+/* harmony default export */ var esm_spacing = __webpack_exports__["b"] = (spacing);
 
 /***/ })
 /******/ ]);
