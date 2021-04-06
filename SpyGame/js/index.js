@@ -291,13 +291,13 @@ var hoist_non_react_statics_cjs = __webpack_require__(17);
 var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/makeStyles/makeStyles.js + 21 modules
-var makeStyles = __webpack_require__(98);
+var makeStyles = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/getThemeProps/getThemeProps.js
-var getThemeProps = __webpack_require__(97);
+var getThemeProps = __webpack_require__(98);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/useTheme/useTheme.js + 1 modules
-var useTheme = __webpack_require__(99);
+var useTheme = __webpack_require__(100);
 
 // CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/withStyles/withStyles.js
 
@@ -1590,7 +1590,7 @@ var shape = {
 };
 /* harmony default export */ var styles_shape = (shape);
 // EXTERNAL MODULE: ./node_modules/@material-ui/system/esm/spacing.js + 1 modules
-var esm_spacing = __webpack_require__(100);
+var esm_spacing = __webpack_require__(101);
 
 // CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/createSpacing.js
 
@@ -2977,8 +2977,8 @@ var React = _interopRequireWildcard(__webpack_require__(0));
 var _createSvgIcon = _interopRequireDefault(__webpack_require__(43));
 
 var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement("path", {
-  d: "M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-}), 'PlayCircleOutline');
+  d: "M9 16h2V8H9v8zm3-14C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-4h2V8h-2v8z"
+}), 'PauseCircleOutline');
 
 exports.default = _default;
 
@@ -3003,8 +3003,8 @@ var React = _interopRequireWildcard(__webpack_require__(0));
 var _createSvgIcon = _interopRequireDefault(__webpack_require__(43));
 
 var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement("path", {
-  d: "M9 16h2V8H9v8zm3-14C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-4h2V8h-2v8z"
-}), 'PauseCircleOutline');
+  d: "M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+}), 'PlayCircleOutline');
 
 exports.default = _default;
 
@@ -4580,7 +4580,7 @@ var boxSizing = esm_style({
 var sizing = esm_compose(width, maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
 /* harmony default export */ var esm_sizing = (sizing);
 // EXTERNAL MODULE: ./node_modules/@material-ui/system/esm/spacing.js + 1 modules
-var esm_spacing = __webpack_require__(100);
+var esm_spacing = __webpack_require__(101);
 
 // CONCATENATED MODULE: ./node_modules/@material-ui/system/esm/typography.js
 
@@ -4617,7 +4617,7 @@ var hoist_non_react_statics_cjs = __webpack_require__(17);
 var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/makeStyles/makeStyles.js + 21 modules
-var makeStyles = __webpack_require__(98);
+var makeStyles = __webpack_require__(99);
 
 // CONCATENATED MODULE: ./node_modules/@material-ui/styles/esm/styled/styled.js
 
@@ -6080,7 +6080,7 @@ var Button_Button = /*#__PURE__*/react["forwardRef"](function Button(props, ref)
 var slicedToArray = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/useTheme/useTheme.js + 1 modules
-var useTheme = __webpack_require__(99);
+var useTheme = __webpack_require__(100);
 
 // CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/styles/useTheme.js
 
@@ -8521,8 +8521,14 @@ var setGameProgress = function setGameProgress(bool) {
   };
 };
 // CONCATENATED MODULE: ./dev/store/locations.js
-var locations = ["Автобус", "Автозаправка", "Автосалон", "Аквапарк", "Анонимное собрание", "Аэропорт", "Банк", "Бар", "Бар", "Бар", "Бассейн", "Библиотека", "Больница", "Вертолёт", "Воинская часть", "Вооенная база", "Встреча выпускников", "Гараж", "Горящяя квартира", "Детский садик", "Застрявший лифт", "Зоопарк", "Избирательный участок", "Казино", "Каток", "Кафе", "Киностудия", "Кинотеатр", "Конфетная фабрика", "Корабль", "Корпоратив", "Круизный корабль", "Лес", "Магазин сантехники", "Маршрутка", "Мастерская по ремонту телевизоров", "Метро", "Море", "Музей", "Музей", "Мясная фабрика", "Наркопритон", "Ночной клуб", "Орбитальная станция", "Отель", "Парк", "Парковка", "Пиратский корабль", "Подводная лодка", "Поезд", "Поезд", "Полицейский участок", "Рай", "Ресторан", "Рынок", "Салон красоты", "Самолёт", "Свадьба", "Стадион", "Стройка", "Стройка", "Студия программистов", "Супермаркет", "Такси", "Такси", "Театр", "Театр", "Тренажёрный зал", "Туристический автобус", "Тюрьма", "Университет", "Цирк", "Школа", "Школа", "Школа", "Школьный автобус", "Электрозаправка"];
+var locations = ["Автобус", "Автозаправка", "Автосалон", "Аквапарк", "Анонимное собрание", "Аэропорт", "Банк", "Бар", "Бар", "Бар", "Бассейн", "Библиотека", "Больница", "Вертолёт", "Воинская часть", "Вооенная база", "Встреча выпускников", "Гараж", "Горящяя квартира", "Детский садик", "Застрявший лифт", "Зоопарк", "Избирательный участок", "Казино", "Каток", "Кафе", "Киностудия", "Кинотеатр", "Конфетная фабрика", "Корабль", "Корпоратив", "Круизный корабль", "Лес", "Магазин сантехники", "Маршрутка", "Мастерская по ремонту телевизоров", "Метро", "Море", "Музей", "Музей", "Мясная фабрика", "Наркопритон", "Ночной клуб", "Орбитальная станция", "Отель", "Парк", "Парковка", "Пиратский корабль", "Подводная лодка", "Поезд", "Поезд", "Полицейский участок", "Рай", "Ресторан", "Рынок", "Салон красоты", "Самолёт", "Свадьба", "Стадион", "Стройка", "Стройка", "Студия программистов", "Супермаркет", "Такси", "Такси", "Театр", "Театр", "Тренажёрный зал", "Туристический автобус", "Тюрьма", "Университет", "Цирк", "Школа", "Школа", "Школа", "Школьный автобус", "Электрозаправка"];
 /* harmony default export */ var store_locations = (locations);
+// CONCATENATED MODULE: ./dev/sounds/start.mp3
+/* harmony default export */ var sounds_start = (__webpack_require__.p + "sounds/start.mp3");
+// CONCATENATED MODULE: ./dev/sounds/toggle.mp3
+/* harmony default export */ var toggle = (__webpack_require__.p + "sounds/toggle.mp3");
+// CONCATENATED MODULE: ./dev/sounds/click.mp3
+/* harmony default export */ var click = (__webpack_require__.p + "sounds/click.mp3");
 // CONCATENATED MODULE: ./dev/components/App/pages/settings/settings.js
 
 
@@ -8533,6 +8539,12 @@ var locations = ["Автобус", "Автозаправка", "Автосало
 
 
 
+
+
+var sound = new Audio(sounds_start);
+var settings_toggle = new Audio(toggle);
+var settings_click = new Audio(click);
+
 var settings_settings_settings = function settings() {
   function randomInteger(min, max) {
     // случайное число от min до (max+1)
@@ -8541,6 +8553,7 @@ var settings_settings_settings = function settings() {
   }
 
   var onSubmit = function onSubmit(data) {
+    sound.play();
     getSpyArray();
     dispatch(setLocation(store_locations[randomInteger(0, store_locations.length - 1)]));
     dispatch(setGameProgress("cards"));
@@ -8588,9 +8601,13 @@ var settings_settings_settings = function settings() {
     } else {
       dispatch(setTheme(false));
     }
+
+    settings_toggle.play();
   };
 
-  return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(esm_Typography_Typography, {
+  return /*#__PURE__*/react_default.a.createElement("div", {
+    className: "ratings"
+  }, /*#__PURE__*/react_default.a.createElement(esm_Typography_Typography, {
     component: "h2",
     variant: "h4"
   }, "\u041F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B"), /*#__PURE__*/react_default.a.createElement(Box_Box, {
@@ -8599,7 +8616,7 @@ var settings_settings_settings = function settings() {
     borderColor: "transparent"
   }, /*#__PURE__*/react_default.a.createElement(esm_Typography_Typography, {
     component: "legend"
-  }, "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0438\u0433\u0440\u043E\u043A\u043E\u0432"), /*#__PURE__*/react_default.a.createElement(esm_Rating_Rating, {
+  }, "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0438\u0433\u0440\u043E\u043A\u043E\u0432: ", humans), /*#__PURE__*/react_default.a.createElement(esm_Rating_Rating, {
     name: "humans",
     value: humans,
     className: "humans",
@@ -8616,6 +8633,7 @@ var settings_settings_settings = function settings() {
         dispatch(setSpys(floor));
       }
 
+      settings_click.play();
       dispatch(setHumans(newValue));
       dispatch(setTimer(2 + newValue));
     }
@@ -8625,12 +8643,18 @@ var settings_settings_settings = function settings() {
     borderColor: "transparent"
   }, /*#__PURE__*/react_default.a.createElement(esm_Typography_Typography, {
     component: "legend"
-  }, "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0448\u043F\u0438\u043E\u043D\u043E\u0432"), /*#__PURE__*/react_default.a.createElement(esm_Rating_Rating, {
+  }, "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0448\u043F\u0438\u043E\u043D\u043E\u0432: ", spys), /*#__PURE__*/react_default.a.createElement(esm_Rating_Rating, {
     name: "spys",
     value: spys,
     icon: "\uD83D\uDD74\uFE0F",
     max: Math.floor(humans / 2),
     onChange: function onChange(event, newValue) {
+      settings_click.play();
+
+      if (newValue < 1) {
+        newValue = 1;
+      }
+
       dispatch(setSpys(newValue));
     }
   })), /*#__PURE__*/react_default.a.createElement(esm_Button_Button, {
@@ -8644,6 +8668,8 @@ var settings_settings_settings = function settings() {
 };
 
 /* harmony default export */ var pages_settings_settings = (settings_settings_settings);
+// CONCATENATED MODULE: ./dev/sounds/card.mp3
+/* harmony default export */ var card = (__webpack_require__.p + "sounds/card.mp3");
 // EXTERNAL MODULE: ./dev/components/App/pages/cards/cards.scss
 var cards_cards = __webpack_require__(75);
 
@@ -8663,6 +8689,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+var cards_sound = new Audio(card);
 
 
 var cards_cards_cards = function cards() {
@@ -8684,6 +8712,7 @@ var cards_cards_cards = function cards() {
   var dispatch = useDispatch(); //const humans = useSelector(state=>state.humans)
 
   var clickHandler = function clickHandler() {
+    cards_sound.play();
     setFlipped(!flipped);
     setTimeout(function () {
       if (!flipped) {
@@ -8722,7 +8751,7 @@ var cards_cards_cards = function cards() {
 var timer = __webpack_require__(76);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/getThemeProps/getThemeProps.js
-var getThemeProps = __webpack_require__(97);
+var getThemeProps = __webpack_require__(98);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/ownerDocument.js
 var ownerDocument = __webpack_require__(13);
@@ -10196,6 +10225,8 @@ var Backdrop_Backdrop = /*#__PURE__*/react["forwardRef"](function Backdrop(props
 
 
 
+
+var Modal_click = new Audio(click);
 function LoginModal() {
   var open = useSelector_useSelector(function (state) {
     return state.showModal;
@@ -10215,6 +10246,7 @@ function LoginModal() {
   });
 
   var handleClose = function handleClose() {
+    Modal_click.play();
     dispatch(showFinalModal(false));
     dispatch(setGameProgress('settings'));
   };
@@ -10394,13 +10426,17 @@ var IconButton_IconButton = /*#__PURE__*/react["forwardRef"](function IconButton
   name: 'MuiIconButton'
 })(IconButton_IconButton));
 // EXTERNAL MODULE: ./node_modules/@material-ui/icons/PlayCircleOutline.js
-var PlayCircleOutline = __webpack_require__(51);
+var PlayCircleOutline = __webpack_require__(52);
 var PlayCircleOutline_default = /*#__PURE__*/__webpack_require__.n(PlayCircleOutline);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/icons/PauseCircleOutline.js
-var PauseCircleOutline = __webpack_require__(52);
+var PauseCircleOutline = __webpack_require__(51);
 var PauseCircleOutline_default = /*#__PURE__*/__webpack_require__.n(PauseCircleOutline);
 
+// CONCATENATED MODULE: ./dev/sounds/tick.mp3
+/* harmony default export */ var tick = (__webpack_require__.p + "sounds/tick.mp3");
+// CONCATENATED MODULE: ./dev/sounds/gameEnd.mp3
+/* harmony default export */ var gameEnd = (__webpack_require__.p + "sounds/gameEnd.mp3");
 // CONCATENATED MODULE: ./dev/components/App/pages/timer/timer.js
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -10437,6 +10473,13 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
+
+
+
+var timer_tick = new Audio(tick);
+var gameEndSound = new Audio(gameEnd);
+var timer_toggle = new Audio(toggle);
 
 var timer_CountDown = /*#__PURE__*/function (_Component) {
   _inherits(CountDown, _Component);
@@ -10478,13 +10521,15 @@ var timer_CountDown = /*#__PURE__*/function (_Component) {
       this.deadline -= 1000;
       var minutes = Math.floor(this.deadline % (1000 * 60 * 60) / (1000 * 60));
       var seconds = Math.floor(this.deadline % (1000 * 60) / 1000);
-      this.setState({
-        minutes: minutes,
-        seconds: seconds
-      });
 
-      if (this.deadline < 0) {
+      if (this.deadline <= 0) {
         this.timeIsUp();
+      } else {
+        timer_tick.play();
+        this.setState({
+          minutes: minutes,
+          seconds: seconds
+        });
       }
     }
   }, {
@@ -10505,6 +10550,8 @@ var timer_CountDown = /*#__PURE__*/function (_Component) {
   }, {
     key: "timerPause",
     value: function timerPause() {
+      timer_toggle.play();
+
       if (this.state.active) {
         this.setState({
           active: false
@@ -10521,6 +10568,8 @@ var timer_CountDown = /*#__PURE__*/function (_Component) {
   }, {
     key: "timeIsUp",
     value: function timeIsUp() {
+      clearInterval(this.x);
+      gameEndSound.play();
       this.props.showFinalModal(true);
     }
   }, {
@@ -10536,9 +10585,9 @@ var timer_CountDown = /*#__PURE__*/function (_Component) {
         onClick: this.timerPause,
         "aria-label": "upload picture",
         component: "span"
-      }, active ? /*#__PURE__*/react_default.a.createElement(PlayCircleOutline_default.a, {
+      }, active ? /*#__PURE__*/react_default.a.createElement(PauseCircleOutline_default.a, {
         className: "button active"
-      }) : /*#__PURE__*/react_default.a.createElement(PauseCircleOutline_default.a, {
+      }) : /*#__PURE__*/react_default.a.createElement(PlayCircleOutline_default.a, {
         className: "button"
       })), /*#__PURE__*/react_default.a.createElement("div", {
         id: "clockdiv",
@@ -10787,7 +10836,8 @@ function deepmerge(target, source) {
 /* 94 */,
 /* 95 */,
 /* 96 */,
-/* 97 */
+/* 97 */,
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10817,7 +10867,7 @@ function getThemeProps(params) {
 }
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13181,7 +13231,7 @@ var multiKeyStore = {
 };
 /* harmony default export */ var makeStyles_multiKeyStore = (multiKeyStore);
 // EXTERNAL MODULE: ./node_modules/@material-ui/styles/esm/useTheme/useTheme.js + 1 modules
-var useTheme = __webpack_require__(99);
+var useTheme = __webpack_require__(100);
 
 // EXTERNAL MODULE: ./node_modules/prop-types/index.js
 var prop_types = __webpack_require__(4);
@@ -15050,7 +15100,7 @@ function makeStyles(stylesOrCreator) {
 }
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15081,7 +15131,7 @@ function useTheme() {
 }
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
