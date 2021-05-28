@@ -95,12 +95,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 window.onload = function () {
-    const e = document.getElementById("preloader");
-    e.classList.add("anim_fade_out"),
-      setTimeout(function () {
-        e.remove();
-      }, 300);
-  };
+  const e = document.getElementById("preloader");
+  e.classList.add("anim_fade_out"),
+    setTimeout(function () {
+      e.remove();
+    }, 300);
+};
+
 
 /***/ }),
 
