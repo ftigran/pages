@@ -8,7 +8,7 @@
     <link href="index.css" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
+    <div id="preloader">
         <h1 class="name">
             fTigran
         </h1>
@@ -36,5 +36,14 @@
                 </a>
             </li>
         </ul>
+        <script>
+            window.onload = function () {
+              const e = document.getElementById("preloader");
+              e.classList.add("anim_fade_out"),
+                setTimeout(function () {
+                  e.remove();
+                }, 300);
+            };
+          </script>
 </body>
 </html>

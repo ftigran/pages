@@ -10972,6 +10972,7 @@ return jQuery;
 /* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
+
 /***/ }),
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10981,6 +10982,7 @@ return jQuery;
 /* harmony import */ var _button_border_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_border_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
+
 /***/ }),
 /* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10988,6 +10990,7 @@ return jQuery;
 "use strict";
 /* harmony import */ var _logo_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
 /* harmony import */ var _logo_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_logo_scss__WEBPACK_IMPORTED_MODULE_0__);
+
 
 
 /***/ }),
@@ -11011,6 +11014,7 @@ return jQuery;
 /* harmony import */ var _button_arrow_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_arrow_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
+
 /***/ }),
 /* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -11019,6 +11023,7 @@ return jQuery;
 /* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
 /* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_text_field_text_field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+
 
 
 
@@ -11036,6 +11041,7 @@ return jQuery;
 "use strict";
 /* harmony import */ var _button_fill_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
 /* harmony import */ var _button_fill_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_fill_scss__WEBPACK_IMPORTED_MODULE_0__);
+
 
 
 /***/ }),
@@ -11061,36 +11067,69 @@ return jQuery;
 
 
 
-
 $(document).ready(function () {
-    $(".calendar").datepicker({
-        clearButton: true,
-        multipleDates: "2",
-        multipleDatesSeparator: " ",
-        position:'bottom left',
-        range:true,
-        clearButton:true,
-        prevHtml: 'arrow_back',
-        nextHtml: 'arrow_forward',
-        navTitles: {
-            days: '<h2>MM yyyy</h2>'
-        },
-        onSelect: function(formattedDate, date, inst){
-            $.dates=formattedDate;
-        }
-    });
+  $(".calendar").datepicker({
+    clearButton: true,
+    multipleDates: "2",
+    multipleDatesSeparator: " ",
+    position: "bottom left",
+    range: true,
+    clearButton: true,
+    prevHtml: "arrow_back",
+    nextHtml: "arrow_forward",
+    navTitles: {
+      days: "<h2>MM yyyy</h2>",
+    },
+    onSelect: function (formattedDate, date, inst) {
+      $.dates = formattedDate;
+    },
   });
-  $.fn.datepicker.language['ru'] =  {
-    days: ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],
-    daysShort: ['Вос','Пон','Вто','Сре','Чет','Пят','Суб'],
-    daysMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-    months: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-    monthsShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
-    today: 'Применить',
-    clear: 'Очистить',
-    dateFormat: 'dd.mm.yyyy',
-    timeFormat: 'hh:ii',
-    firstDay: 1
+});
+$.fn.datepicker.language["ru"] = {
+  days: [
+    "Воскресенье",
+    "Понедельник",
+    "Вторник",
+    "Среда",
+    "Четверг",
+    "Пятница",
+    "Суббота",
+  ],
+  daysShort: ["Вос", "Пон", "Вто", "Сре", "Чет", "Пят", "Суб"],
+  daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+  months: [
+    "Январь",
+    "Февраль",
+    "Март",
+    "Апрель",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Август",
+    "Сентябрь",
+    "Октябрь",
+    "Ноябрь",
+    "Декабрь",
+  ],
+  monthsShort: [
+    "Янв",
+    "Фев",
+    "Мар",
+    "Апр",
+    "Май",
+    "Июн",
+    "Июл",
+    "Авг",
+    "Сен",
+    "Окт",
+    "Ноя",
+    "Дек",
+  ],
+  today: "Применить",
+  clear: "Очистить",
+  dateFormat: "dd.mm.yyyy",
+  timeFormat: "hh:ii",
+  firstDay: 1,
 };
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
@@ -11116,12 +11155,11 @@ $(document).ready(function () {
 
 
 
-
 $(document).ready(function () {
-  $('.header__burger').click(function (event) {
-    $('.header__nav').toggleClass('header__nav_active');
-    $(this).toggleClass('header__burger_active');
-    $('body').toggleClass('lock');
+  $(".header__burger").click(function (event) {
+    $(".header__nav").toggleClass("header__nav_active");
+    $(this).toggleClass("header__burger_active");
+    $("body").toggleClass("lock");
   });
 });
 
@@ -11153,6 +11191,7 @@ $(document).ready(function () {
 
 
 
+
 /***/ }),
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -11171,37 +11210,37 @@ $(document).ready(function () {
 
 
 
-const maxVal=7;
-const minVal=0;
-let droptownRoomsText=[];
-let droptownGuestsText=[];
-const droptownRoomsDefaultText='Удобства номера'
-let droptownGuestsDefaultText='Сколько гостей'
-let  totalNotbaby=0;
-const itemsGuests=[
+const maxVal = 7;
+const minVal = 0;
+let droptownRoomsText = [];
+let droptownGuestsText = [];
+const droptownRoomsDefaultText = "Удобства номера";
+let droptownGuestsDefaultText = "Сколько гостей";
+let totalNotbaby = 0;
+const itemsGuests = [
   {
-    item:'notbaby',
-    words:['','гость','гостя','гостей'],
+    item: "notbaby",
+    words: ["", "гость", "гостя", "гостей"],
   },
   {
-    item:'baby',
-    words:['','младенец','младенца','младенцев'],
-  }];
+    item: "baby",
+    words: ["", "младенец", "младенца", "младенцев"],
+  },
+];
 const itemsRooms = [
-      {
-      item:'bedroom',
-      words:['','спальня','спальни','спален'],
-      },
-      {
-        item:'bed',
-        words:['','кровать','кровати','кроватей'],
-      }
-      ,
-      {
-        item:'bathroom',
-        words:['','ванная комната','ванные комнаты','ванных комнат'],
-      },
-      ]
+  {
+    item: "bedroom",
+    words: ["", "спальня", "спальни", "спален"],
+  },
+  {
+    item: "bed",
+    words: ["", "кровать", "кровати", "кроватей"],
+  },
+  {
+    item: "bathroom",
+    words: ["", "ванная комната", "ванные комнаты", "ванных комнат"],
+  },
+];
 
 let type;
 let item;
@@ -11209,187 +11248,209 @@ let val;
 let DropdownText;
 
 //Задаёт текст в дропдауне, согласно его типу и значениям его параметров
-function dropdownInitialize(dropdown){
-  type = $(dropdown).find('.dropdown__item').data('type');
-  DropdownText=$(dropdown).find('.dropdown__text');
-let sum=0;
-  if  (type=='room'){
-    $(dropdown).find('.dropdown__item').each(function(i,elem){
-      item = $(this).data('item');
-      val=$(this).find('.dropdown__quantity').text();
-      sum+=val;
-      dropdownButtonDisable(this);
-    dropdownTextSemantica(val, itemsRooms, droptownRoomsText);
-  })
-    calcDropdownText(DropdownText, droptownRoomsText, droptownGuestsDefaultText)
-    
-  } else if (type=='guest'){
-    $(dropdown).find('.dropdown__item').each(function(i,elem){
-      item = $(this).data('item');
-      val=$(this).find('.dropdown__quantity').text();
-      sum+=val;
-      dropdownButtonDisable(this);
-      if ($(this).data('item')=='notbaby'){
-        totalNotbaby+=+val;
-        dropdownTextSemantica(totalNotbaby, itemsGuests, droptownGuestsText);
-      }else {
-        dropdownTextSemantica(val, itemsGuests, droptownGuestsText);
-      }
-      calcDropdownText(DropdownText, droptownGuestsText, droptownGuestsDefaultText)
-
-    })
-    if (sum==0){
-      $(dropdown).find('.dropdown__clear').addClass('dropdown__clear_disabled')
+function dropdownInitialize(dropdown) {
+  type = $(dropdown).find(".dropdown__item").data("type");
+  DropdownText = $(dropdown).find(".dropdown__text");
+  let sum = 0;
+  if (type == "room") {
+    $(dropdown)
+      .find(".dropdown__item")
+      .each(function (i, elem) {
+        item = $(this).data("item");
+        val = $(this).find(".dropdown__quantity").text();
+        sum += val;
+        dropdownButtonDisable(this);
+        dropdownTextSemantica(val, itemsRooms, droptownRoomsText);
+      });
+    calcDropdownText(
+      DropdownText,
+      droptownRoomsText,
+      droptownGuestsDefaultText
+    );
+  } else if (type == "guest") {
+    $(dropdown)
+      .find(".dropdown__item")
+      .each(function (i, elem) {
+        item = $(this).data("item");
+        val = $(this).find(".dropdown__quantity").text();
+        sum += val;
+        dropdownButtonDisable(this);
+        if ($(this).data("item") == "notbaby") {
+          totalNotbaby += +val;
+          dropdownTextSemantica(totalNotbaby, itemsGuests, droptownGuestsText);
+        } else {
+          dropdownTextSemantica(val, itemsGuests, droptownGuestsText);
+        }
+        calcDropdownText(
+          DropdownText,
+          droptownGuestsText,
+          droptownGuestsDefaultText
+        );
+      });
+    if (sum == 0) {
+      $(dropdown).find(".dropdown__clear").addClass("dropdown__clear_disabled");
     }
   }
 }
 
-function dropdownButtonDisable(elem){
-  if (val==minVal) {
-    $(elem).find('.button-minus').attr('disabled', true)
+function dropdownButtonDisable(elem) {
+  if (val == minVal) {
+    $(elem).find(".button-minus").attr("disabled", true);
   }
-  if (val!=maxVal) {
-    $(elem).find('.button-plus').removeAttr('disabled');
+  if (val != maxVal) {
+    $(elem).find(".button-plus").removeAttr("disabled");
   }
 }
 //Присвоение значений текста в дропдаунах прии загрузке страницы
-$('.dropdown').each(function(i,elem){
-  dropdownInitialize(this)
+$(".dropdown").each(function (i, elem) {
+  dropdownInitialize(this);
 });
 
 //обработка клика по дропдауну
-$('.dropdown__text').click(function (event) {
-  const dropdown=$(this).parent('.dropdown');
+$(".dropdown__text").click(function (event) {
+  const dropdown = $(this).parent(".dropdown");
 
-  $(dropdown).toggleClass('dropdown_expanded');
-  $(dropdown).find('.dropdown__menu').toggleClass('dropdown__menu_showed');
+  $(dropdown).toggleClass("dropdown_expanded");
+  $(dropdown).find(".dropdown__menu").toggleClass("dropdown__menu_showed");
 });
 
 //обработка клика по кнопкам плюс и минус
-$('.dropdown__button').click(function (event) {
-
-  const parent = $(this).parent('.dropdown__controls');
-  const value = $(parent).find('.dropdown__quantity');
-  const menu= $(parent).parent('.dropdown__item').parent('.dropdown__menu')
-  const clearButton = $(menu).find('.dropdown__clear')
-  item = $(parent).parent('.dropdown__item').data('item');
-  type = $(parent).parent('.dropdown__item').data('type')
+$(".dropdown__button").click(function (event) {
+  const parent = $(this).parent(".dropdown__controls");
+  const value = $(parent).find(".dropdown__quantity");
+  const menu = $(parent).parent(".dropdown__item").parent(".dropdown__menu");
+  const clearButton = $(menu).find(".dropdown__clear");
+  item = $(parent).parent(".dropdown__item").data("item");
+  type = $(parent).parent(".dropdown__item").data("type");
   val = $(value).text();
-  let isCalc=false;
-  if (this.textContent=='+'){
+  let isCalc = false;
+  if (this.textContent == "+") {
     val++;
-    isCalc=true;
-    $(value).text(val);//присвоение значения параметру
-    $(clearButton).removeClass('dropdown__clear_disabled')//включение кнопки "очистить"
-    if (val==maxVal) {
-      $(this).attr('disabled', true)
-    } else if(val==minVal+1) {
-      $(parent).find('.button-minus').removeAttr('disabled') 
+    isCalc = true;
+    $(value).text(val); //присвоение значения параметру
+    $(clearButton).removeClass("dropdown__clear_disabled"); //включение кнопки "очистить"
+    if (val == maxVal) {
+      $(this).attr("disabled", true);
+    } else if (val == minVal + 1) {
+      $(parent).find(".button-minus").removeAttr("disabled");
     }
-  }else{
+  } else {
     val--;
     $(value).text(val);
-    if (val==minVal) {
-      $(this).attr('disabled', true)
-      let sum=0;
-      $(menu).find('.dropdown__quantity').each(function(){
-        sum+=+$(this).text();
-      });
-      if (sum==0) $(clearButton).addClass('dropdown__clear_disabled');//отключение кнопки "очистить"
-    } else if (val==maxVal-1) {
-      $(parent).find('.button-plus').removeAttr('disabled') 
+    if (val == minVal) {
+      $(this).attr("disabled", true);
+      let sum = 0;
+      $(menu)
+        .find(".dropdown__quantity")
+        .each(function () {
+          sum += +$(this).text();
+        });
+      if (sum == 0) $(clearButton).addClass("dropdown__clear_disabled"); //отключение кнопки "очистить"
+    } else if (val == maxVal - 1) {
+      $(parent).find(".button-plus").removeAttr("disabled");
     }
   }
 
-  
-  
-  DropdownText= $(parent).parent('.dropdown__item').parent('.dropdown__menu').parent('.dropdown').find('.dropdown__text');
+  DropdownText = $(parent)
+    .parent(".dropdown__item")
+    .parent(".dropdown__menu")
+    .parent(".dropdown")
+    .find(".dropdown__text");
 
-  dropdownTypeDistribution(DropdownText,isCalc);
+  dropdownTypeDistribution(DropdownText, isCalc);
 });
 
 //
-function dropdownTypeDistribution(text,isCalc){
-  if  (type=='room'){
+function dropdownTypeDistribution(text, isCalc) {
+  if (type == "room") {
     dropdownTextSemantica(val, itemsRooms, droptownRoomsText);
-    calcDropdownText(text, droptownRoomsText, droptownRoomsDefaultText)
-  } else if (type=='guest'){
-    if (type=='guest'){
-      if (item=='notbaby'){
-        isCalc ? totalNotbaby++:totalNotbaby--;
+    calcDropdownText(text, droptownRoomsText, droptownRoomsDefaultText);
+  } else if (type == "guest") {
+    if (type == "guest") {
+      if (item == "notbaby") {
+        isCalc ? totalNotbaby++ : totalNotbaby--;
         dropdownTextSemantica(totalNotbaby, itemsGuests, droptownGuestsText);
-      } else{
+      } else {
         dropdownTextSemantica(val, itemsGuests, droptownGuestsText);
       }
-      calcDropdownText(text, droptownGuestsText, droptownGuestsDefaultText)
+      calcDropdownText(text, droptownGuestsText, droptownGuestsDefaultText);
     }
   }
 }
 
 //задать текст дропдауну
-function setDropdownText(elem, text){
+function setDropdownText(elem, text) {
   $(elem).text(text);
 }
 
 //сбор слов с разных параметров о один текст
-function calcDropdownText (elem, arr, def){
-  let text=''; 
-  for (let i=0; i<arr.length; i++) {
-    if (text.length+arr[i].length>25){
-      text+='...'
-      break
+function calcDropdownText(elem, arr, def) {
+  let text = "";
+  for (let i = 0; i < arr.length; i++) {
+    if (text.length + arr[i].length > 25) {
+      text += "...";
+      break;
     }
-    if (i!=0&&text!=''&&arr[i]!=''){
-      text+=', ';
-    };
-    
-    text+=arr[i];
+    if (i != 0 && text != "" && arr[i] != "") {
+      text += ", ";
+    }
+
+    text += arr[i];
   }
-  if (text=='') text=def; 
-  setDropdownText(elem, text)
+  if (text == "") text = def;
+  setDropdownText(elem, text);
 }
 
-
-
 //Определение необходимого окончания
-function dropdownTextSemantica(val, array, outputArray){
-  for (let n=0; n< array.length;n++) {
-    if(array[n].item==item){
+function dropdownTextSemantica(val, array, outputArray) {
+  for (let n = 0; n < array.length; n++) {
+    if (array[n].item == item) {
       let message;
-      if (val==0){
-        message=array[n].words[0];
-      } else if (val==1){
-        message= val+' '+array[n].words[1];
-      } else if (val<=4){
-        message=val+' '+array[n].words[2];
-      }else {
-        message=val+' '+array[n].words[3];
-      };
-      outputArray[n]= message;
+      if (val == 0) {
+        message = array[n].words[0];
+      } else if (val == 1) {
+        message = val + " " + array[n].words[1];
+      } else if (val <= 4) {
+        message = val + " " + array[n].words[2];
+      } else {
+        message = val + " " + array[n].words[3];
+      }
+      outputArray[n] = message;
       break;
     }
   }
 }
 
 //Клик по кнопке "Применить"
-$('.button_purple').click(function (event) {
-  const dropdown=$(this).parent('.dropdown__apply').parent('.dropdown__buttons').parent('.dropdown__menu').parent('.dropdown')
-  
-  $(dropdown).find('.dropdown__menu').toggleClass('dropdown__menu_showed');
-  $(dropdown).toggleClass('dropdown_expanded');
-}) 
+$(".button_purple").click(function (event) {
+  const dropdown = $(this)
+    .parent(".dropdown__apply")
+    .parent(".dropdown__buttons")
+    .parent(".dropdown__menu")
+    .parent(".dropdown");
+
+  $(dropdown).find(".dropdown__menu").toggleClass("dropdown__menu_showed");
+  $(dropdown).toggleClass("dropdown_expanded");
+});
 
 //клик по кнопке "Очистить"
-$('.button_gray').click(function (event) {
-  const dropdown=$(this).parent('.dropdown__clear').parent('.dropdown__buttons').parent('.dropdown__menu').parent('.dropdown')
-  const dropdownItem = $(dropdown).find('.dropdown__item');
-    let isGuest = $(dropdownItem).data('type')=='guest';
-    if (isGuest)  totalNotbaby=0;
-    $(dropdownItem).find('.dropdown__quantity').each(function(){
+$(".button_gray").click(function (event) {
+  const dropdown = $(this)
+    .parent(".dropdown__clear")
+    .parent(".dropdown__buttons")
+    .parent(".dropdown__menu")
+    .parent(".dropdown");
+  const dropdownItem = $(dropdown).find(".dropdown__item");
+  let isGuest = $(dropdownItem).data("type") == "guest";
+  if (isGuest) totalNotbaby = 0;
+  $(dropdownItem)
+    .find(".dropdown__quantity")
+    .each(function () {
       $(this).text(minVal);
-          })
+    });
   dropdownInitialize(dropdown);
-}) 
+});
+
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
 /***/ }),
@@ -11399,6 +11460,7 @@ $('.button_gray').click(function (event) {
 "use strict";
 /* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23);
 /* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_scss__WEBPACK_IMPORTED_MODULE_0__);
+
 
 
 /***/ }),
@@ -13706,27 +13768,42 @@ __webpack_require__(28);
 
 
 
-
 // клик по полю - открытие календаря
-$('.date-dropdown__input').click(function(){
-    $(this).parent('.date-dropdown__label').parent('.date-dropdown__controls').parent('.date-dropdown').find('.calendar').toggleClass('calendar_showed')
-})
+$(".date-dropdown__input").click(function () {
+  $(this)
+    .parent(".date-dropdown__label")
+    .parent(".date-dropdown__controls")
+    .parent(".date-dropdown")
+    .find(".calendar")
+    .toggleClass("calendar_showed");
+});
 
 // клик по кнопке применить - ввод дат в поля
-$('.calendar__button').click(function (){
-    const inputs = $(this).parent('.calendar').parent('.date-dropdown__calendar').parent('.date-dropdown');
-    $(inputs).find('.date-dropdown__input.in').val($.dates.slice(0, 10));
-    $(inputs).find('.date-dropdown__input.out').val($.dates.slice(11, 21));
-    $(inputs).find('.calendar').removeClass('calendar_showed');
-})
+$(".calendar__button").click(function () {
+  const inputs = $(this)
+    .parent(".calendar")
+    .parent(".date-dropdown__calendar")
+    .parent(".date-dropdown");
+  $(inputs).find(".date-dropdown__input.in").val($.dates.slice(0, 10));
+  $(inputs).find(".date-dropdown__input.out").val($.dates.slice(11, 21));
+  $(inputs).find(".calendar").removeClass("calendar_showed");
+});
 
 //клик по кнопке очистить - сброс дат в полях
-$(document).ready(function () {$('.datepicker--button').click(function (){
-    const parent = $(this).parent('.datepicker--buttons').parent('.datepicker').parent('.datepicker-inline').parent('.calendar').parent('.date-dropdown__calendar').parent('.date-dropdown');
-    $(parent).find('.date-dropdown__input.in').val('');
-    $(parent).find('.date-dropdown__input.out').val('');
-    $.dates='';
-})})
+$(document).ready(function () {
+  $(".datepicker--button").click(function () {
+    const parent = $(this)
+      .parent(".datepicker--buttons")
+      .parent(".datepicker")
+      .parent(".datepicker-inline")
+      .parent(".calendar")
+      .parent(".date-dropdown__calendar")
+      .parent(".date-dropdown");
+    $(parent).find(".date-dropdown__input.in").val("");
+    $(parent).find(".date-dropdown__input.out").val("");
+    $.dates = "";
+  });
+});
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(0)))
 
@@ -13825,6 +13902,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
 /* harmony import */ var _landing_page_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(89);
 /* harmony import */ var _landing_page_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_landing_page_scss__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 

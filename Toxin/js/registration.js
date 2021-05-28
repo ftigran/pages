@@ -10972,6 +10972,7 @@ return jQuery;
 /* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
+
 /***/ }),
 /* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10981,6 +10982,7 @@ return jQuery;
 /* harmony import */ var _button_border_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_border_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
+
 /***/ }),
 /* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10988,6 +10990,7 @@ return jQuery;
 "use strict";
 /* harmony import */ var _logo_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
 /* harmony import */ var _logo_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_logo_scss__WEBPACK_IMPORTED_MODULE_0__);
+
 
 
 /***/ }),
@@ -11011,6 +11014,7 @@ return jQuery;
 /* harmony import */ var _button_arrow_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_arrow_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
+
 /***/ }),
 /* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -11019,6 +11023,7 @@ return jQuery;
 /* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
 /* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_text_field_text_field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+
 
 
 
@@ -11036,6 +11041,7 @@ return jQuery;
 "use strict";
 /* harmony import */ var _button_fill_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
 /* harmony import */ var _button_fill_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_fill_scss__WEBPACK_IMPORTED_MODULE_0__);
+
 
 
 /***/ }),
@@ -11066,12 +11072,11 @@ return jQuery;
 
 
 
-
 $(document).ready(function () {
-  $('.header__burger').click(function (event) {
-    $('.header__nav').toggleClass('header__nav_active');
-    $(this).toggleClass('header__burger_active');
-    $('body').toggleClass('lock');
+  $(".header__burger").click(function (event) {
+    $(".header__nav").toggleClass("header__nav_active");
+    $(this).toggleClass("header__burger_active");
+    $("body").toggleClass("lock");
   });
 });
 
@@ -11098,6 +11103,7 @@ $(document).ready(function () {
 /* harmony import */ var _footer_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_footer_scss__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_subscription_text_field_subscription_text_field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 /* harmony import */ var _modules_logo_logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+
 
 
 
@@ -11132,11 +11138,12 @@ $(document).ready(function () {
 
 
 
-var cleave = new Cleave('.masked-text-field__input', {
-    date: true,
-    delimiter: '.',
-    datePattern: ['d', 'm', 'Y']
+var cleave = new Cleave(".masked-text-field__input", {
+  date: true,
+  delimiter: ".",
+  datePattern: ["d", "m", "Y"],
 });
+
 
 /***/ }),
 /* 32 */,
@@ -12740,6 +12747,7 @@ module.exports = g;
 /* harmony import */ var _radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_radio_buttons_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
+
 /***/ }),
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -12753,6 +12761,7 @@ module.exports = g;
 "use strict";
 /* harmony import */ var _toggle_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
 /* harmony import */ var _toggle_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_toggle_scss__WEBPACK_IMPORTED_MODULE_0__);
+
 
 
 /***/ }),
@@ -12814,6 +12823,7 @@ module.exports = g;
 
 
 
+
 /***/ }),
 /* 71 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -12833,6 +12843,7 @@ module.exports = g;
 /* harmony import */ var _enter_page_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_enter_page_scss__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(13);
 /* harmony import */ var _footer_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
+
 
 
 

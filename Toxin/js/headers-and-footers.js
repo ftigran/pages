@@ -10974,6 +10974,7 @@ return jQuery;
 /* harmony import */ var _text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
+
 /***/ }),
 
 /***/ 10:
@@ -10997,12 +10998,11 @@ return jQuery;
 
 
 
-
 $(document).ready(function () {
-  $('.header__burger').click(function (event) {
-    $('.header__nav').toggleClass('header__nav_active');
-    $(this).toggleClass('header__burger_active');
-    $('body').toggleClass('lock');
+  $(".header__burger").click(function (event) {
+    $(".header__nav").toggleClass("header__nav_active");
+    $(this).toggleClass("header__burger_active");
+    $("body").toggleClass("lock");
   });
 });
 
@@ -11037,6 +11037,7 @@ $(document).ready(function () {
 
 
 
+
 /***/ }),
 
 /***/ 17:
@@ -11054,6 +11055,7 @@ $(document).ready(function () {
 /* harmony import */ var _button_border_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_border_scss__WEBPACK_IMPORTED_MODULE_0__);
 
 
+
 /***/ }),
 
 /***/ 3:
@@ -11062,6 +11064,7 @@ $(document).ready(function () {
 "use strict";
 /* harmony import */ var _logo_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
 /* harmony import */ var _logo_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_logo_scss__WEBPACK_IMPORTED_MODULE_0__);
+
 
 
 /***/ }),
@@ -11087,6 +11090,7 @@ $(document).ready(function () {
 /* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
 /* harmony import */ var _subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_subscription_text_field_scss__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_text_field_text_field__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+
 
 
 
@@ -11118,7 +11122,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 /***/ }),
 
 /***/ 85:
@@ -11134,6 +11137,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* harmony import */ var _button_fill_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
 /* harmony import */ var _button_fill_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_button_fill_scss__WEBPACK_IMPORTED_MODULE_0__);
+
 
 
 /***/ })
