@@ -49620,7 +49620,7 @@ var src = __webpack_require__(364);
 
 
 react_dom_default.a.render( /*#__PURE__*/react_default.a.createElement(react_router_dom_BrowserRouter, {
-  basename: "/Weleda"
+  basename: "/pages/Weleda"
 }, /*#__PURE__*/react_default.a.createElement(components_App_App, null)), document.getElementById("root")); //import Main from './components/pages/main/main' //++
 // import Rules from './components/Rules/Rules'//++
 // import Top from './components/Top/Top' //++
