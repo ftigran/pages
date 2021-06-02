@@ -38201,35 +38201,8 @@ var slider_Locked = function Locked(date) {
 // EXTERNAL MODULE: ./src/components/Modal/PrizSelectModal/PrizSelectModal.scss
 var PrizSelectModal = __webpack_require__(348);
 
-// CONCATENATED MODULE: ./src/img/items/1.png
-/* harmony default export */ var _1 = (__webpack_require__.p + "images/1.png");
-// CONCATENATED MODULE: ./src/img/items/2.png
-/* harmony default export */ var _2 = (__webpack_require__.p + "images/2.png");
-// CONCATENATED MODULE: ./src/img/items/3.png
-/* harmony default export */ var _3 = (__webpack_require__.p + "images/3.png");
-// CONCATENATED MODULE: ./src/img/items/4.png
-/* harmony default export */ var _4 = (__webpack_require__.p + "images/4.png");
-// CONCATENATED MODULE: ./src/img/items/5.png
-/* harmony default export */ var _5 = (__webpack_require__.p + "images/5.png");
-// CONCATENATED MODULE: ./src/img/items/6.png
-/* harmony default export */ var _6 = (__webpack_require__.p + "images/6.png");
-// CONCATENATED MODULE: ./src/img/items/7.png
-/* harmony default export */ var _7 = (__webpack_require__.p + "images/7.png");
-// CONCATENATED MODULE: ./src/img/items/8.png
-/* harmony default export */ var _8 = (__webpack_require__.p + "images/8.png");
-// CONCATENATED MODULE: ./src/img/items/9.png
-/* harmony default export */ var _9 = (__webpack_require__.p + "images/9.png");
 // CONCATENATED MODULE: ./src/components/Modal/PrizSelectModal/PrizSelectModal.js
 function PrizSelectModal_extends() { PrizSelectModal_extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return PrizSelectModal_extends.apply(this, arguments); }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -38239,43 +38212,34 @@ function PrizSelectModal_extends() { PrizSelectModal_extends = Object.assign || 
 var itemsArr = [{
   title: "Набор из 4-х мини-продуктов*",
   subtitle: "*набор составляется из продуктов в наличии",
-  img: _1,
   cost: 5
 }, {
   title: "Промокод на бесплатную доставку",
-  img: _2,
   cost: 10,
   isDigital: true
 }, {
   title: "Косметичка из органического хлопка",
-  img: _3,
   cost: 10
 }, {
   title: "Промокод на покупку в интернет-магазине*",
   subtitle: "*скидка 30%",
-  img: _4,
   cost: 15,
   isDigital: true
 }, {
   title: "Сумка из органического хлопка",
-  img: _5,
   cost: 15
 }, {
   title: "Набор из 3-х продуктов *",
   subtitle: "*набор составляется из продуктов в наличии",
-  img: _6,
   cost: 20
 }, {
   title: "Набор для спорта: бутылка для воды + массажное масло с арникой",
-  img: _7,
   cost: 25
 }, {
   title: "Толстовка",
-  img: _8,
   cost: 30
 }, {
   title: "Рюкзак",
-  img: _9,
   cost: 40
 }];
 
@@ -38293,6 +38257,7 @@ var PrizSelectModal_PSM = function PSM() {
   var getElems = function getElems() {
     return itemsArr.map(function (item, id) {
       return /*#__PURE__*/react_default.a.createElement(PrizSelectModal_Item, PrizSelectModal_extends({}, item, {
+        id: id + 1,
         key: id
       }));
     });
@@ -38337,7 +38302,7 @@ var PrizSelectModal_PSM = function PSM() {
 
 
 var PrizSelectModal_Item = function Item(_ref2) {
-  var img = _ref2.img,
+  var id = _ref2.id,
       title = _ref2.title,
       subtitle = _ref2.subtitle,
       cost = _ref2.cost,
@@ -38374,7 +38339,7 @@ var PrizSelectModal_Item = function Item(_ref2) {
   }, /*#__PURE__*/react_default.a.createElement("div", {
     className: "prizItemImg"
   }, /*#__PURE__*/react_default.a.createElement("img", {
-    src: img
+    src: "./images/".concat(id, ".png")
   })), /*#__PURE__*/react_default.a.createElement("p", {
     className: "priziItemTitle"
   }, title), /*#__PURE__*/react_default.a.createElement("p", {
@@ -49577,24 +49542,24 @@ var App_Routes = function Routes() {
   return /*#__PURE__*/react_default.a.createElement(react_router["Switch"], {
     location: location
   }, isLogged ? /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
-    path: "/cabinet",
+    path: "/:cabinet",
     render: function render() {
       return /*#__PURE__*/react_default.a.createElement(cabinet_cabinet, null);
     }
   }) : /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
-    path: "/reg",
+    path: "/:reg",
     render: function render() {
       return /*#__PURE__*/react_default.a.createElement(reg_reg, null);
     }
   }), /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
-    path: "/winners",
+    path: "/:winners",
     render: function render() {
       return /*#__PURE__*/react_default.a.createElement(winners_winners, null);
     }
   }), /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
     key: "index",
     location: location,
-    path: "/",
+    path: "/:",
     render: function render() {
       return /*#__PURE__*/react_default.a.createElement(pages_main_main, null);
     },
