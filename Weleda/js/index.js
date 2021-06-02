@@ -38083,7 +38083,9 @@ var App_Routes = function Routes(_ref2) {
     return state.data.isLogged;
   });
   return /*#__PURE__*/react_default.a.createElement(react["Suspense"], {
-    fallback: /*#__PURE__*/react_default.a.createElement("div", null, "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430...")
+    fallback: /*#__PURE__*/react_default.a.createElement("div", {
+      id: "pre-loader"
+    }, "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430...")
   }, /*#__PURE__*/react_default.a.createElement(react_router["Switch"], {
     location: location
   }, isLogged ? /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
@@ -38118,9 +38120,9 @@ var src = __webpack_require__(365);
 //import list from "./components/Header/List/List";
 
 
- // const basename = "/pages/Weleda";
 
-var src_basename = "";
+var src_basename = "/pages/Weleda"; // const basename = "";
+
 react_dom_default.a.render( /*#__PURE__*/react_default.a.createElement(react_router_dom["a" /* BrowserRouter */], {
   basename: src_basename
 }, /*#__PURE__*/react_default.a.createElement(components_App_App, {
