@@ -14959,7 +14959,6 @@ var User_User_User = function User(_ref) {
   var name = Object(es["d" /* useSelector */])(function (state) {
     return state.user.name;
   });
-  var basename = "/pages/Pepsilays";
 
   if (name) {
     return /*#__PURE__*/react_default.a.createElement("li", {
@@ -14967,7 +14966,7 @@ var User_User_User = function User(_ref) {
     }, /*#__PURE__*/react_default.a.createElement(esm_Link_Link, {
       component: NavLink_NavLink,
       className: "cabinetLink",
-      to: "/enter",
+      to: "/cabinet",
       onClick: scrollToTop
     }, "\u041B\u0438\u0447\u043D\u044B\u0439 \u043A\u0430\u0431\u0438\u043D\u0435\u0442"), /*#__PURE__*/react_default.a.createElement(Popup_UserWithStore, null), /*#__PURE__*/react_default.a.createElement("span", {
       className: "UserName",
@@ -14979,7 +14978,7 @@ var User_User_User = function User(_ref) {
     }, /*#__PURE__*/react_default.a.createElement(Button["a" /* default */], {
       className: "headerListReg"
     }, /*#__PURE__*/react_default.a.createElement(esm_Link_Link, {
-      to: "".concat(basename, "/reg"),
+      to: "/reg",
       component: NavLink_NavLink,
       onClick: scrollToTop
     }, "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F")), /*#__PURE__*/react_default.a.createElement(Modal_LoginModal_LoginModal, {
@@ -15047,7 +15046,6 @@ var List_List_List = function List(props) {
     c_prizes: "Призы",
     c_winners: "Победители"
   };
-  var basename = "/pages/Pepsilays";
   return /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
     container: true,
     component: "nav",
@@ -15073,7 +15071,7 @@ var List_List_List = function List(props) {
     }, val));
   }), /*#__PURE__*/react_default.a.createElement("li", null, /*#__PURE__*/react_default.a.createElement(esm_Link_Link, {
     component: NavLink_NavLink,
-    to: "".concat(basename, "/faq"),
+    to: "/faq",
     onClick: changePage
   }, "FAQ")), /*#__PURE__*/react_default.a.createElement("div", {
     className: "headerListGap"
