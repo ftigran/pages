@@ -14967,7 +14967,7 @@ var User_User_User = function User(_ref) {
     }, /*#__PURE__*/react_default.a.createElement(esm_Link_Link, {
       component: NavLink_NavLink,
       className: "cabinetLink",
-      to: "".concat(basename, "/cabinet"),
+      to: "/enter",
       onClick: scrollToTop
     }, "\u041B\u0438\u0447\u043D\u044B\u0439 \u043A\u0430\u0431\u0438\u043D\u0435\u0442"), /*#__PURE__*/react_default.a.createElement(Popup_UserWithStore, null), /*#__PURE__*/react_default.a.createElement("span", {
       className: "UserName",
