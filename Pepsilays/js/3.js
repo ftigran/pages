@@ -388,10 +388,10 @@ var Form = __webpack_require__(209);
 var Cabinet = __webpack_require__(232);
 
 // EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
-var es = __webpack_require__(22);
+var es = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/redux/es/redux.js
-var redux = __webpack_require__(25);
+var redux = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/store/store.js + 1 modules
 var store = __webpack_require__(59);
@@ -404,9 +404,6 @@ var Tabs = __webpack_require__(262);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Tab/Tab.js
 var Tab = __webpack_require__(256);
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Typography/Typography.js
-var Typography = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Box/Box.js + 14 modules
 var Box = __webpack_require__(260);
@@ -572,7 +569,7 @@ function TabPanel(props) {
     "aria-labelledby": "simple-tab-".concat(index)
   }, other), value === index && /*#__PURE__*/react_default.a.createElement(Box["a" /* default */], {
     p: 3
-  }, /*#__PURE__*/react_default.a.createElement(Typography["a" /* default */], null, children)));
+  }, /*#__PURE__*/react_default.a.createElement(Box["a" /* default */], null, children)));
 }
 
 function a11yProps(index) {

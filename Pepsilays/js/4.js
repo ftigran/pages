@@ -459,7 +459,7 @@ var Priz_Priz_Priz = function Priz() {
 
 /* harmony default export */ var components_Priz_Priz = (Priz_Priz_Priz);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
-var defineProperty = __webpack_require__(27);
+var defineProperty = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/capitalize.js
 var capitalize = __webpack_require__(6);
@@ -670,11 +670,11 @@ var rows = [createData("25.02.21", "r.bol***@ya.ru", "Роман", "Еженед
 var Footer = __webpack_require__(98);
 
 // EXTERNAL MODULE: ./node_modules/use-react-router/use-react-router.js
-var use_react_router = __webpack_require__(41);
+var use_react_router = __webpack_require__(32);
 var use_react_router_default = /*#__PURE__*/__webpack_require__.n(use_react_router);
 
 // EXTERNAL MODULE: ./node_modules/react-scroll/modules/index.js
-var modules = __webpack_require__(32);
+var modules = __webpack_require__(33);
 
 // CONCATENATED MODULE: ./src/pages/main/main.js
 
