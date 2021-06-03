@@ -1,14 +1,14 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
 
-/***/ 227:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(242);
-/* harmony import */ var _material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(235);
-/* harmony import */ var _Checkbox_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(228);
+/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(238);
+/* harmony import */ var _material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(230);
+/* harmony import */ var _Checkbox_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(201);
 /* harmony import */ var _Checkbox_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Checkbox_scss__WEBPACK_IMPORTED_MODULE_3__);
 
 
@@ -31,28 +31,162 @@
 
 /***/ }),
 
-/***/ 228:
+/***/ 199:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getPagination; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_lab_Pagination__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(237);
+/* harmony import */ var _Pagination_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(200);
+/* harmony import */ var _Pagination_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Pagination_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+function getPagination(props) {
+  var _props$rowsPerPage = props.rowsPerPage,
+      rowsPerPage = _props$rowsPerPage === void 0 ? 5 : _props$rowsPerPage,
+      rows = props.rows,
+      page = props.page,
+      handler = props.handler,
+      className = props.className;
+
+  if (rows >= rowsPerPage) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_lab_Pagination__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], {
+      className: "Pagination " + className,
+      count: Math.ceil(rows / rowsPerPage),
+      page: page,
+      onChange: handler
+    });
+  } else return null;
+}
+
+/***/ }),
+
+/***/ 200:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 231:
+/***/ 201:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 232:
+/***/ 205:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StickyHeadTable; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(150);
+/* harmony import */ var _material_ui_core_Table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(251);
+/* harmony import */ var _material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(255);
+/* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(254);
+/* harmony import */ var _material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(250);
+/* harmony import */ var _material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(252);
+/* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(253);
+/* harmony import */ var _Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(199);
+/* harmony import */ var _Table_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(206);
+/* harmony import */ var _Table_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_Table_scss__WEBPACK_IMPORTED_MODULE_9__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+function StickyHeadTable(props) {
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(1),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      page = _React$useState2[0],
+      setPage = _React$useState2[1];
+
+  var rowsPerPage = props.rowsPerPage || 5;
+
+  var handleChangePage = function handleChangePage(event, newPage) {
+    setPage(newPage);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], {
+    className: "table"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Table__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], {
+    stickyHeader: true,
+    "aria-label": "sticky table"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
+    className: "tableHeader"
+  }, props.columns.map(function (column) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
+      key: column.id,
+      align: column.align
+    }, column.label);
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], null, props.rows.slice((page - 1) * rowsPerPage, (page - 1) * rowsPerPage + rowsPerPage).map(function (row, id) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
+      hover: true,
+      tabIndex: -1,
+      key: id
+    }, props.columns.map(function (column) {
+      var value = row[column.id];
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
+        key: column.id,
+        className: "tableCell"
+      }, column.format && typeof value === "number" ? column.format(value) : value);
+    }));
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"], {
+    rowsPerPage: rowsPerPage,
+    rows: props.rows.length,
+    page: page,
+    handler: handleChangePage
+  }));
+}
+
+/***/ }),
+
+/***/ 206:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 233:
+/***/ 207:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 208:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65,34 +199,34 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Grid/Grid.js
-var Grid = __webpack_require__(35);
+var Grid = __webpack_require__(74);
 
 // EXTERNAL MODULE: ./src/components/TextField/TextField.js + 2 modules
-var TextField = __webpack_require__(61);
+var TextField = __webpack_require__(56);
 
 // EXTERNAL MODULE: ./src/components/Form/Form.scss
-var Form = __webpack_require__(231);
+var Form = __webpack_require__(207);
 
 // EXTERNAL MODULE: ./src/components/Modal/SimpleModal/SimpleModal.js
-var SimpleModal = __webpack_require__(86);
+var SimpleModal = __webpack_require__(77);
 
 // EXTERNAL MODULE: ./src/components/Checkbox/Checkbox.js
-var Checkbox = __webpack_require__(227);
+var Checkbox = __webpack_require__(198);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/InputLabel/InputLabel.js + 1 modules
-var InputLabel = __webpack_require__(224);
+var InputLabel = __webpack_require__(194);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/MenuItem/MenuItem.js + 1 modules
-var MenuItem = __webpack_require__(258);
+var MenuItem = __webpack_require__(266);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/FormControl/FormControl.js
-var FormControl = __webpack_require__(218);
+var FormControl = __webpack_require__(188);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Select/Select.js + 7 modules
-var Select = __webpack_require__(222);
+var Select = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./src/components/Select/Select.scss
-var Select_Select = __webpack_require__(232);
+var Select_Select = __webpack_require__(208);
 
 // CONCATENATED MODULE: ./src/components/Select/Select.js
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -176,21 +310,21 @@ function EmployeeForm() {
 
 /***/ }),
 
-/***/ 236:
+/***/ 231:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 237:
+/***/ 232:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 257:
+/***/ 264:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -205,19 +339,19 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Grid/Grid.js
-var Grid = __webpack_require__(35);
+var Grid = __webpack_require__(74);
 
 // EXTERNAL MODULE: ./src/components/Checkbox/Checkbox.js
-var Checkbox = __webpack_require__(227);
+var Checkbox = __webpack_require__(198);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Button/Button.js
-var Button = __webpack_require__(112);
+var Button = __webpack_require__(149);
 
 // EXTERNAL MODULE: ./src/components/Modal/Modal.js
-var Modal = __webpack_require__(54);
+var Modal = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/Modal/CheckRequirementsModal/CheckRequirementsModal.scss
-var CheckRequirementsModal = __webpack_require__(236);
+var CheckRequirementsModal = __webpack_require__(231);
 
 // CONCATENATED MODULE: ./src/components/Modal/CheckRequirementsModal/CheckRequirementsModal.js
 
@@ -245,40 +379,40 @@ var CheckRequirementsModal = __webpack_require__(236);
   }, /*#__PURE__*/react_default.a.createElement("h4", null, "\u041D\u0430 \u0447\u0435\u043A\u0435 \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C:"), /*#__PURE__*/react_default.a.createElement("ul", null, /*#__PURE__*/react_default.a.createElement("li", null, "\u041D\u0430\u0438\u043C\u0435\u043D\u043E\u0432\u0430\u043D\u0438\u0435 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0430"), /*#__PURE__*/react_default.a.createElement("li", null, "\u041D\u043E\u043C\u0435\u0440 \u0447\u0435\u043A\u0430"), /*#__PURE__*/react_default.a.createElement("li", null, "\u0414\u0430\u0442\u0430 \u0438 \u0432\u0440\u0435\u043C\u044F \u043F\u043E\u043A\u0443\u043F\u043A\u0438"), /*#__PURE__*/react_default.a.createElement("li", null, "\u041D\u0430\u043B\u0438\u0447\u0438\u0435 \u043C\u0438\u043D\u0438\u043C\u0443\u043C 2-\u0445 \u0430\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0445 \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u043E\u0432"), /*#__PURE__*/react_default.a.createElement("li", null, "\u0418\u0442\u043E\u0433\u043E\u0432\u0430\u044F \u0441\u0443\u043C\u043C\u0430 \u043F\u043E\u043A\u0443\u043F\u043A\u0438"), /*#__PURE__*/react_default.a.createElement("li", null, "QR-\u043A\u043E\u0434, \u0430 \u0432 \u0435\u0433\u043E \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 - \u043D\u043E\u043C\u0435\u0440\u0430 \u0424\u041D, \u0424\u0414, \u0424\u041F/\u0424\u041F\u0414"), /*#__PURE__*/react_default.a.createElement("p", null, "*\u041F\u0440\u0438 \u043E\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0438 \u0432 \u0447\u0435\u043A\u0435 \u043B\u044E\u0431\u043E\u0433\u043E \u0438\u0437 \u043F\u0435\u0440\u0435\u0447\u0438\u0441\u043B\u0435\u043D\u043D\u044B\u0445 \u043F\u0443\u043D\u043A\u0442\u043E\u0432 \u0447\u0435\u043A \u0431\u0443\u0434\u0435\u0442 \u043E\u0442\u043A\u043B\u043E\u043D\u0435\u043D")))));
 });
 // EXTERNAL MODULE: ./src/components/Modal/SimpleModal/SimpleModal.js
-var SimpleModal = __webpack_require__(86);
+var SimpleModal = __webpack_require__(77);
 
 // EXTERNAL MODULE: ./src/components/Form/Form.js + 1 modules
-var Form = __webpack_require__(233);
+var Form = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./src/pages/Cabinet/Cabinet.scss
-var Cabinet = __webpack_require__(237);
+var Cabinet = __webpack_require__(232);
 
 // EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
-var es = __webpack_require__(24);
+var es = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/redux/es/redux.js
-var redux = __webpack_require__(28);
+var redux = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/store/store.js + 1 modules
-var store = __webpack_require__(64);
+var store = __webpack_require__(59);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/AppBar/AppBar.js
-var AppBar = __webpack_require__(220);
+var AppBar = __webpack_require__(190);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Tabs/Tabs.js + 7 modules
-var Tabs = __webpack_require__(256);
+var Tabs = __webpack_require__(262);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Tab/Tab.js
-var Tab = __webpack_require__(253);
+var Tab = __webpack_require__(256);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Typography/Typography.js
-var Typography = __webpack_require__(219);
+var Typography = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Box/Box.js + 14 modules
-var Box = __webpack_require__(114);
+var Box = __webpack_require__(260);
 
-// EXTERNAL MODULE: ./src/components/Table/Table.js + 8 modules
-var Table = __webpack_require__(104);
+// EXTERNAL MODULE: ./src/components/Table/Table.js
+var Table = __webpack_require__(205);
 
 // CONCATENATED MODULE: ./src/pages/Cabinet/Cabinet.js
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }

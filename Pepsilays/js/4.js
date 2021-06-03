@@ -1,33 +1,184 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[4],{
 
-/***/ 227:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getPagination; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(242);
-/* harmony import */ var _material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(235);
-/* harmony import */ var _Checkbox_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(228);
-/* harmony import */ var _Checkbox_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Checkbox_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_lab_Pagination__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(237);
+/* harmony import */ var _Pagination_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(200);
+/* harmony import */ var _Pagination_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Pagination_scss__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+function getPagination(props) {
+  var _props$rowsPerPage = props.rowsPerPage,
+      rowsPerPage = _props$rowsPerPage === void 0 ? 5 : _props$rowsPerPage,
+      rows = props.rows,
+      page = props.page,
+      handler = props.handler,
+      className = props.className;
+
+  if (rows >= rowsPerPage) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_lab_Pagination__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], {
+      className: "Pagination " + className,
+      count: Math.ceil(rows / rowsPerPage),
+      page: page,
+      onChange: handler
+    });
+  } else return null;
+}
+
+/***/ }),
+
+/***/ 200:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 205:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StickyHeadTable; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(150);
+/* harmony import */ var _material_ui_core_Table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(251);
+/* harmony import */ var _material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(255);
+/* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(254);
+/* harmony import */ var _material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(250);
+/* harmony import */ var _material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(252);
+/* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(253);
+/* harmony import */ var _Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(199);
+/* harmony import */ var _Table_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(206);
+/* harmony import */ var _Table_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_Table_scss__WEBPACK_IMPORTED_MODULE_9__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
 
-/* harmony default export */ __webpack_exports__["a"] = (function (props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], {
-    control: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], {
-      className: "checkbox",
-      name: "checkedB",
-      color: "primary",
-      checkedIcon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "./images/checkbox.svg"
-      })
-    }),
-    className: "checkboxContainer",
-    label: props.children
-  });
+
+
+
+
+
+
+
+
+
+function StickyHeadTable(props) {
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(1),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      page = _React$useState2[0],
+      setPage = _React$useState2[1];
+
+  var rowsPerPage = props.rowsPerPage || 5;
+
+  var handleChangePage = function handleChangePage(event, newPage) {
+    setPage(newPage);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], {
+    className: "table"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableContainer__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Table__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], {
+    stickyHeader: true,
+    "aria-label": "sticky table"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableHead__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
+    className: "tableHeader"
+  }, props.columns.map(function (column) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
+      key: column.id,
+      align: column.align
+    }, column.label);
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], null, props.rows.slice((page - 1) * rowsPerPage, (page - 1) * rowsPerPage + rowsPerPage).map(function (row, id) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
+      hover: true,
+      tabIndex: -1,
+      key: id
+    }, props.columns.map(function (column) {
+      var value = row[column.id];
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
+        key: column.id,
+        className: "tableCell"
+      }, column.format && typeof value === "number" ? column.format(value) : value);
+    }));
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"], {
+    rowsPerPage: rowsPerPage,
+    rows: props.rows.length,
+    page: page,
+    handler: handleChangePage
+  }));
+}
+
+/***/ }),
+
+/***/ 206:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 212:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(79);
+
+var _interopRequireWildcard = __webpack_require__(80);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
+exports.default = void 0;
+
+var React = _interopRequireWildcard(__webpack_require__(0));
+
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(81));
+
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement("path", {
+  d: "M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+}), 'Search');
+
+exports.default = _default;
+
+/***/ }),
+
+/***/ 225:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 226:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 227:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -38,148 +189,26 @@
 
 /***/ }),
 
-/***/ 235:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export styles */
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3);
-/* harmony import */ var _FormControl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(27);
-/* harmony import */ var _styles_withStyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4);
-/* harmony import */ var _Typography__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(219);
-/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(6);
-
-
-
-
-
-
-
-
-
-
-var styles = function styles(theme) {
-  return {
-    /* Styles applied to the root element. */
-    root: {
-      display: 'inline-flex',
-      alignItems: 'center',
-      cursor: 'pointer',
-      // For correct alignment with the text.
-      verticalAlign: 'middle',
-      WebkitTapHighlightColor: 'transparent',
-      marginLeft: -11,
-      marginRight: 16,
-      // used for row presentation of radio/checkbox
-      '&$disabled': {
-        cursor: 'default'
-      }
-    },
-
-    /* Styles applied to the root element if `labelPlacement="start"`. */
-    labelPlacementStart: {
-      flexDirection: 'row-reverse',
-      marginLeft: 16,
-      // used for row presentation of radio/checkbox
-      marginRight: -11
-    },
-
-    /* Styles applied to the root element if `labelPlacement="top"`. */
-    labelPlacementTop: {
-      flexDirection: 'column-reverse',
-      marginLeft: 16
-    },
-
-    /* Styles applied to the root element if `labelPlacement="bottom"`. */
-    labelPlacementBottom: {
-      flexDirection: 'column',
-      marginLeft: 16
-    },
-
-    /* Pseudo-class applied to the root element if `disabled={true}`. */
-    disabled: {},
-
-    /* Styles applied to the label's Typography component. */
-    label: {
-      '&$disabled': {
-        color: theme.palette.text.disabled
-      }
-    }
-  };
-};
-/**
- * Drop in replacement of the `Radio`, `Switch` and `Checkbox` component.
- * Use this component if you want to display an extra label.
- */
-
-var FormControlLabel = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["forwardRef"](function FormControlLabel(props, ref) {
-  var checked = props.checked,
-      classes = props.classes,
-      className = props.className,
-      control = props.control,
-      disabledProp = props.disabled,
-      inputRef = props.inputRef,
-      label = props.label,
-      _props$labelPlacement = props.labelPlacement,
-      labelPlacement = _props$labelPlacement === void 0 ? 'end' : _props$labelPlacement,
-      name = props.name,
-      onChange = props.onChange,
-      value = props.value,
-      other = Object(_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(props, ["checked", "classes", "className", "control", "disabled", "inputRef", "label", "labelPlacement", "name", "onChange", "value"]);
-
-  var muiFormControl = Object(_FormControl__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"])();
-  var disabled = disabledProp;
-
-  if (typeof disabled === 'undefined' && typeof control.props.disabled !== 'undefined') {
-    disabled = control.props.disabled;
-  }
-
-  if (typeof disabled === 'undefined' && muiFormControl) {
-    disabled = muiFormControl.disabled;
-  }
-
-  var controlProps = {
-    disabled: disabled
-  };
-  ['checked', 'name', 'onChange', 'value', 'inputRef'].forEach(function (key) {
-    if (typeof control.props[key] === 'undefined' && typeof props[key] !== 'undefined') {
-      controlProps[key] = props[key];
-    }
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"]("label", Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({
-    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(classes.root, className, labelPlacement !== 'end' && classes["labelPlacement".concat(Object(_utils_capitalize__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"])(labelPlacement))], disabled && classes.disabled),
-    ref: ref
-  }, other), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["cloneElement"](control, controlProps), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["createElement"](_Typography__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
-    component: "span",
-    className: Object(clsx__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(classes.label, disabled && classes.disabled)
-  }, label));
-});
- false ? undefined : void 0;
-/* harmony default export */ __webpack_exports__["a"] = (Object(_styles_withStyles__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"])(styles, {
-  name: 'MuiFormControlLabel'
-})(FormControlLabel));
-
-/***/ }),
-
-/***/ 238:
+/***/ 229:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 242:
+/***/ 261:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
 
-// UNUSED EXPORTS: styles
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(0);
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Grid/Grid.js
+var Grid = __webpack_require__(74);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 var esm_extends = __webpack_require__(1);
@@ -187,211 +216,255 @@ var esm_extends = __webpack_require__(1);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
 var objectWithoutProperties = __webpack_require__(2);
 
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(0);
-
 // EXTERNAL MODULE: ./node_modules/prop-types/index.js
-var prop_types = __webpack_require__(5);
+var prop_types = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
 var clsx_m = __webpack_require__(3);
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
-var slicedToArray = __webpack_require__(26);
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/useControlled.js
-var useControlled = __webpack_require__(58);
-
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/FormControl/useFormControl.js
-var useFormControl = __webpack_require__(27);
-
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/withStyles.js + 1 modules
-var withStyles = __webpack_require__(4);
+var withStyles = __webpack_require__(5);
 
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/IconButton/IconButton.js
-var IconButton = __webpack_require__(111);
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Typography/Typography.js
+var Typography = __webpack_require__(189);
 
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/internal/SwitchBase.js
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/List/ListContext.js
+var ListContext = __webpack_require__(84);
 
-
-
-
-
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/ListItemText/ListItemText.js
 
 
 
 
 
 
-var SwitchBase_styles = {
+
+
+var ListItemText_styles = {
+  /* Styles applied to the root element. */
   root: {
-    padding: 9
+    flex: '1 1 auto',
+    minWidth: 0,
+    marginTop: 4,
+    marginBottom: 4
   },
-  checked: {},
-  disabled: {},
-  input: {
-    cursor: 'inherit',
-    position: 'absolute',
-    opacity: 0,
-    width: '100%',
-    height: '100%',
-    top: 0,
-    left: 0,
-    margin: 0,
-    padding: 0,
-    zIndex: 1
-  }
-};
-/**
- * @ignore - internal component.
- */
 
-var SwitchBase_SwitchBase = /*#__PURE__*/react["forwardRef"](function SwitchBase(props, ref) {
-  var autoFocus = props.autoFocus,
-      checkedProp = props.checked,
-      checkedIcon = props.checkedIcon,
+  /* Styles applied to the `Typography` components if primary and secondary are set. */
+  multiline: {
+    marginTop: 6,
+    marginBottom: 6
+  },
+
+  /* Styles applied to the `Typography` components if dense. */
+  dense: {},
+
+  /* Styles applied to the root element if `inset={true}`. */
+  inset: {
+    paddingLeft: 56
+  },
+
+  /* Styles applied to the primary `Typography` component. */
+  primary: {},
+
+  /* Styles applied to the secondary `Typography` component. */
+  secondary: {}
+};
+var ListItemText_ListItemText = /*#__PURE__*/react["forwardRef"](function ListItemText(props, ref) {
+  var children = props.children,
       classes = props.classes,
       className = props.className,
-      defaultChecked = props.defaultChecked,
-      disabledProp = props.disabled,
-      icon = props.icon,
-      id = props.id,
-      inputProps = props.inputProps,
-      inputRef = props.inputRef,
-      name = props.name,
-      onBlur = props.onBlur,
-      onChange = props.onChange,
-      onFocus = props.onFocus,
-      readOnly = props.readOnly,
-      required = props.required,
-      tabIndex = props.tabIndex,
-      type = props.type,
-      value = props.value,
-      other = Object(objectWithoutProperties["a" /* default */])(props, ["autoFocus", "checked", "checkedIcon", "classes", "className", "defaultChecked", "disabled", "icon", "id", "inputProps", "inputRef", "name", "onBlur", "onChange", "onFocus", "readOnly", "required", "tabIndex", "type", "value"]);
+      _props$disableTypogra = props.disableTypography,
+      disableTypography = _props$disableTypogra === void 0 ? false : _props$disableTypogra,
+      _props$inset = props.inset,
+      inset = _props$inset === void 0 ? false : _props$inset,
+      primaryProp = props.primary,
+      primaryTypographyProps = props.primaryTypographyProps,
+      secondaryProp = props.secondary,
+      secondaryTypographyProps = props.secondaryTypographyProps,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["children", "classes", "className", "disableTypography", "inset", "primary", "primaryTypographyProps", "secondary", "secondaryTypographyProps"]);
 
-  var _useControlled = Object(useControlled["a" /* default */])({
-    controlled: checkedProp,
-    default: Boolean(defaultChecked),
-    name: 'SwitchBase',
-    state: 'checked'
-  }),
-      _useControlled2 = Object(slicedToArray["a" /* default */])(_useControlled, 2),
-      checked = _useControlled2[0],
-      setCheckedState = _useControlled2[1];
+  var _React$useContext = react["useContext"](ListContext["a" /* default */]),
+      dense = _React$useContext.dense;
 
-  var muiFormControl = Object(useFormControl["a" /* default */])();
+  var primary = primaryProp != null ? primaryProp : children;
 
-  var handleFocus = function handleFocus(event) {
-    if (onFocus) {
-      onFocus(event);
-    }
-
-    if (muiFormControl && muiFormControl.onFocus) {
-      muiFormControl.onFocus(event);
-    }
-  };
-
-  var handleBlur = function handleBlur(event) {
-    if (onBlur) {
-      onBlur(event);
-    }
-
-    if (muiFormControl && muiFormControl.onBlur) {
-      muiFormControl.onBlur(event);
-    }
-  };
-
-  var handleInputChange = function handleInputChange(event) {
-    var newChecked = event.target.checked;
-    setCheckedState(newChecked);
-
-    if (onChange) {
-      // TODO v5: remove the second argument.
-      onChange(event, newChecked);
-    }
-  };
-
-  var disabled = disabledProp;
-
-  if (muiFormControl) {
-    if (typeof disabled === 'undefined') {
-      disabled = muiFormControl.disabled;
-    }
+  if (primary != null && primary.type !== Typography["a" /* default */] && !disableTypography) {
+    primary = /*#__PURE__*/react["createElement"](Typography["a" /* default */], Object(esm_extends["a" /* default */])({
+      variant: dense ? 'body2' : 'body1',
+      className: classes.primary,
+      component: "span",
+      display: "block"
+    }, primaryTypographyProps), primary);
   }
 
-  var hasLabelFor = type === 'checkbox' || type === 'radio';
-  return /*#__PURE__*/react["createElement"](IconButton["a" /* default */], Object(esm_extends["a" /* default */])({
-    component: "span",
-    className: Object(clsx_m["a" /* default */])(classes.root, className, checked && classes.checked, disabled && classes.disabled),
-    disabled: disabled,
-    tabIndex: null,
-    role: undefined,
-    onFocus: handleFocus,
-    onBlur: handleBlur,
+  var secondary = secondaryProp;
+
+  if (secondary != null && secondary.type !== Typography["a" /* default */] && !disableTypography) {
+    secondary = /*#__PURE__*/react["createElement"](Typography["a" /* default */], Object(esm_extends["a" /* default */])({
+      variant: "body2",
+      className: classes.secondary,
+      color: "textSecondary",
+      display: "block"
+    }, secondaryTypographyProps), secondary);
+  }
+
+  return /*#__PURE__*/react["createElement"]("div", Object(esm_extends["a" /* default */])({
+    className: Object(clsx_m["a" /* default */])(classes.root, className, dense && classes.dense, inset && classes.inset, primary && secondary && classes.multiline),
     ref: ref
-  }, other), /*#__PURE__*/react["createElement"]("input", Object(esm_extends["a" /* default */])({
-    autoFocus: autoFocus,
-    checked: checkedProp,
-    defaultChecked: defaultChecked,
-    className: classes.input,
-    disabled: disabled,
-    id: hasLabelFor && id,
-    name: name,
-    onChange: handleInputChange,
-    readOnly: readOnly,
-    ref: inputRef,
-    required: required,
-    tabIndex: tabIndex,
-    type: type,
-    value: value
-  }, inputProps)), checked ? checkedIcon : icon);
-}); // NB: If changed, please update Checkbox, Switch and Radio
-// so that the API documentation is updated.
-
+  }, other), primary, secondary);
+});
  false ? undefined : void 0;
-/* harmony default export */ var internal_SwitchBase = (Object(withStyles["a" /* default */])(SwitchBase_styles, {
-  name: 'PrivateSwitchBase'
-})(SwitchBase_SwitchBase));
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/createSvgIcon.js + 1 modules
-var createSvgIcon = __webpack_require__(57);
+/* harmony default export */ var esm_ListItemText_ListItemText = (Object(withStyles["a" /* default */])(ListItemText_styles, {
+  name: 'MuiListItemText'
+})(ListItemText_ListItemText));
+// EXTERNAL MODULE: ./src/components/Rules/Rules.scss
+var Rules = __webpack_require__(225);
 
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/internal/svg-icons/CheckBoxOutlineBlank.js
-
-
-/**
- * @ignore - internal component.
- */
-
-/* harmony default export */ var CheckBoxOutlineBlank = (Object(createSvgIcon["a" /* default */])( /*#__PURE__*/react["createElement"]("path", {
-  d: "M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-}), 'CheckBoxOutlineBlank'));
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/internal/svg-icons/CheckBox.js
+// CONCATENATED MODULE: ./src/components/Rules/Rules.js
 
 
-/**
- * @ignore - internal component.
- */
-
-/* harmony default export */ var CheckBox = (Object(createSvgIcon["a" /* default */])( /*#__PURE__*/react["createElement"]("path", {
-  d: "M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-}), 'CheckBox'));
-// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/styles/colorManipulator.js
-var colorManipulator = __webpack_require__(10);
-
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/internal/svg-icons/IndeterminateCheckBox.js
 
 
-/**
- * @ignore - internal component.
- */
 
-/* harmony default export */ var IndeterminateCheckBox = (Object(createSvgIcon["a" /* default */])( /*#__PURE__*/react["createElement"]("path", {
-  d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"
-}), 'IndeterminateCheckBox'));
+
+
+
+
+function Rules_Rules() {
+  return /*#__PURE__*/react_default.a.createElement("div", {
+    className: "rulesBlock",
+    id: "c_rules"
+  }, /*#__PURE__*/react_default.a.createElement("h2", {
+    className: "title"
+  }, "\u041F\u0440\u0430\u0432\u0438\u043B\u0430"), /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
+    direction: "column",
+    justify: "center",
+    container: true,
+    className: "rulesContainer",
+    alignItems: "center"
+  }, /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
+    item: true,
+    className: "rulesList"
+  }, /*#__PURE__*/react_default.a.createElement("img", {
+    alt: "1",
+    className: "rulesNumb",
+    src: "./images/numb1.svg"
+  }), /*#__PURE__*/react_default.a.createElement(esm_ListItemText_ListItemText, {
+    primary: "\u041A\u0443\u043F\u0438",
+    secondary: "2 \u043B\u044E\u0431\u044B\u0445 \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u0430 Lay's (150, 225 \u0433.) \u0438\u043B\u0438 Pepsi (1 \u0438\u043B\u0438 2 \u043B.)"
+  }), /*#__PURE__*/react_default.a.createElement("img", {
+    alt: "2",
+    className: "rulesNumb",
+    src: "./images/numb2.svg"
+  }), /*#__PURE__*/react_default.a.createElement(esm_ListItemText_ListItemText, {
+    primary: "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u0443\u0439 \u0447\u0435\u043A \u043D\u0430 \u0441\u0430\u0439\u0442\u0435",
+    secondary: "\u0432\u044B\u0431\u0435\u0440\u0438 \u0436\u0430\u043D\u0440, \u0443\u0447\u0430\u0441\u0442\u0432\u0443\u0439 \u0432 \u0440\u043E\u0437\u044B\u0433\u0440\u044B\u0448\u0435 \u043F\u0440\u0438\u0437\u043E\u0432"
+  }), /*#__PURE__*/react_default.a.createElement("img", {
+    alt: "3",
+    className: "rulesNumb",
+    src: "./images/numb3.svg"
+  }), /*#__PURE__*/react_default.a.createElement(esm_ListItemText_ListItemText, {
+    primary: "\u0432\u044B\u0438\u0433\u0440\u044B\u0432\u0430\u0439 \u043F\u0440\u0438\u0437\u044B    ",
+    secondary: "\u043A\u0430\u0436\u0434\u0443\u044E \u043D\u0435\u0434\u0435\u043B\u044E"
+  })), /*#__PURE__*/react_default.a.createElement("a", {
+    href: "empty"
+  }, "\u041F\u043E\u043B\u043D\u044B\u0435 \u043F\u0440\u0430\u0432\u0438\u043B\u0430 \u0430\u043A\u0446\u0438\u0438")));
+}
+
+/* harmony default export */ var components_Rules_Rules = (Rules_Rules);
+// EXTERNAL MODULE: ./src/components/Top/Top.scss
+var Top = __webpack_require__(226);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Button/Button.js
+var Button = __webpack_require__(149);
+
+// CONCATENATED MODULE: ./src/components/Top/Top.js
+
+
+
+
+
+
+function Top_Rules() {
+  return /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
+    direction: "column",
+    container: true,
+    justify: "flex-start",
+    alignItems: "center",
+    className: "topGrid",
+    id: "c_main"
+  }, /*#__PURE__*/react_default.a.createElement("img", {
+    className: "topPromo",
+    src: "./images/promo.png"
+  }), /*#__PURE__*/react_default.a.createElement("img", {
+    className: "topPromoM",
+    src: "./images/promo2.png"
+  }), /*#__PURE__*/react_default.a.createElement("h3", {
+    className: "topText"
+  }, "\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439 \u0436\u0430\u043D\u0440\u044B \u043D\u0430 \u0432\u043A\u0443\u0441"), /*#__PURE__*/react_default.a.createElement(Button["a" /* default */], {
+    size: "large",
+    color: "primary"
+  }, "\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0447\u0435\u043A"));
+}
+
+/* harmony default export */ var Top_Top = (Top_Rules);
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Box/Box.js + 14 modules
+var Box = __webpack_require__(260);
+
+// EXTERNAL MODULE: ./src/components/Priz/Priz.scss
+var Priz_Priz = __webpack_require__(227);
+
+// CONCATENATED MODULE: ./src/components/Priz/Priz.js
+
+
+
+
+var Priz_Priz_Priz = function Priz() {
+  return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(Box["a" /* default */], {
+    className: "priz",
+    id: "c_prizes"
+  }, /*#__PURE__*/react_default.a.createElement("h2", {
+    className: "title"
+  }, "\u041F\u0440\u0438\u0437\u044B"), /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
+    container: true,
+    alignItems: "center",
+    justify: "center",
+    className: "prizContainer"
+  }, /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
+    item: true,
+    xs: 12,
+    lg: 3
+  }, /*#__PURE__*/react_default.a.createElement("img", {
+    src: "./images/priz1.png",
+    className: "prizImg"
+  })), /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
+    item: true,
+    xs: 12,
+    lg: 3
+  }, /*#__PURE__*/react_default.a.createElement("img", {
+    src: "./images/priz2.png",
+    className: "prizImg"
+  })), /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
+    item: true,
+    xs: 12,
+    lg: 6
+  }, /*#__PURE__*/react_default.a.createElement("img", {
+    src: "./images/priz3.png",
+    className: "prizImg prizImg_pc"
+  }), /*#__PURE__*/react_default.a.createElement("img", {
+    src: "./images/priz3-1.png",
+    className: "prizImg prizImg_mob"
+  })))));
+};
+
+/* harmony default export */ var components_Priz_Priz = (Priz_Priz_Priz);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
+var defineProperty = __webpack_require__(27);
+
 // EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/utils/capitalize.js
 var capitalize = __webpack_require__(6);
 
-// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Checkbox/Checkbox.js
+// CONCATENATED MODULE: ./node_modules/@material-ui/core/esm/Container/Container.js
 
 
 
@@ -400,200 +473,242 @@ var capitalize = __webpack_require__(6);
 
 
 
-
-
-
-
-
-var Checkbox_styles = function styles(theme) {
+var Container_styles = function styles(theme) {
   return {
     /* Styles applied to the root element. */
-    root: {
-      color: theme.palette.text.secondary
+    root: Object(defineProperty["a" /* default */])({
+      width: '100%',
+      marginLeft: 'auto',
+      boxSizing: 'border-box',
+      marginRight: 'auto',
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2),
+      display: 'block'
+    }, theme.breakpoints.up('sm'), {
+      paddingLeft: theme.spacing(3),
+      paddingRight: theme.spacing(3)
+    }),
+
+    /* Styles applied to the root element if `disableGutters={true}`. */
+    disableGutters: {
+      paddingLeft: 0,
+      paddingRight: 0
     },
 
-    /* Pseudo-class applied to the root element if `checked={true}`. */
-    checked: {},
+    /* Styles applied to the root element if `fixed={true}`. */
+    fixed: Object.keys(theme.breakpoints.values).reduce(function (acc, breakpoint) {
+      var value = theme.breakpoints.values[breakpoint];
 
-    /* Pseudo-class applied to the root element if `disabled={true}`. */
-    disabled: {},
-
-    /* Pseudo-class applied to the root element if `indeterminate={true}`. */
-    indeterminate: {},
-
-    /* Styles applied to the root element if `color="primary"`. */
-    colorPrimary: {
-      '&$checked': {
-        color: theme.palette.primary.main,
-        '&:hover': {
-          backgroundColor: Object(colorManipulator["b" /* fade */])(theme.palette.primary.main, theme.palette.action.hoverOpacity),
-          // Reset on touch devices, it doesn't add specificity
-          '@media (hover: none)': {
-            backgroundColor: 'transparent'
-          }
-        }
-      },
-      '&$disabled': {
-        color: theme.palette.action.disabled
+      if (value !== 0) {
+        acc[theme.breakpoints.up(breakpoint)] = {
+          maxWidth: value
+        };
       }
-    },
 
-    /* Styles applied to the root element if `color="secondary"`. */
-    colorSecondary: {
-      '&$checked': {
-        color: theme.palette.secondary.main,
-        '&:hover': {
-          backgroundColor: Object(colorManipulator["b" /* fade */])(theme.palette.secondary.main, theme.palette.action.hoverOpacity),
-          // Reset on touch devices, it doesn't add specificity
-          '@media (hover: none)': {
-            backgroundColor: 'transparent'
-          }
-        }
-      },
-      '&$disabled': {
-        color: theme.palette.action.disabled
-      }
-    }
+      return acc;
+    }, {}),
+
+    /* Styles applied to the root element if `maxWidth="xs"`. */
+    maxWidthXs: Object(defineProperty["a" /* default */])({}, theme.breakpoints.up('xs'), {
+      maxWidth: Math.max(theme.breakpoints.values.xs, 444)
+    }),
+
+    /* Styles applied to the root element if `maxWidth="sm"`. */
+    maxWidthSm: Object(defineProperty["a" /* default */])({}, theme.breakpoints.up('sm'), {
+      maxWidth: theme.breakpoints.values.sm
+    }),
+
+    /* Styles applied to the root element if `maxWidth="md"`. */
+    maxWidthMd: Object(defineProperty["a" /* default */])({}, theme.breakpoints.up('md'), {
+      maxWidth: theme.breakpoints.values.md
+    }),
+
+    /* Styles applied to the root element if `maxWidth="lg"`. */
+    maxWidthLg: Object(defineProperty["a" /* default */])({}, theme.breakpoints.up('lg'), {
+      maxWidth: theme.breakpoints.values.lg
+    }),
+
+    /* Styles applied to the root element if `maxWidth="xl"`. */
+    maxWidthXl: Object(defineProperty["a" /* default */])({}, theme.breakpoints.up('xl'), {
+      maxWidth: theme.breakpoints.values.xl
+    })
   };
 };
-var defaultCheckedIcon = /*#__PURE__*/react["createElement"](CheckBox, null);
-var defaultIcon = /*#__PURE__*/react["createElement"](CheckBoxOutlineBlank, null);
-var defaultIndeterminateIcon = /*#__PURE__*/react["createElement"](IndeterminateCheckBox, null);
-var Checkbox_Checkbox = /*#__PURE__*/react["forwardRef"](function Checkbox(props, ref) {
-  var _props$checkedIcon = props.checkedIcon,
-      checkedIcon = _props$checkedIcon === void 0 ? defaultCheckedIcon : _props$checkedIcon,
-      classes = props.classes,
-      _props$color = props.color,
-      color = _props$color === void 0 ? 'secondary' : _props$color,
-      _props$icon = props.icon,
-      iconProp = _props$icon === void 0 ? defaultIcon : _props$icon,
-      _props$indeterminate = props.indeterminate,
-      indeterminate = _props$indeterminate === void 0 ? false : _props$indeterminate,
-      _props$indeterminateI = props.indeterminateIcon,
-      indeterminateIconProp = _props$indeterminateI === void 0 ? defaultIndeterminateIcon : _props$indeterminateI,
-      inputProps = props.inputProps,
-      _props$size = props.size,
-      size = _props$size === void 0 ? 'medium' : _props$size,
-      other = Object(objectWithoutProperties["a" /* default */])(props, ["checkedIcon", "classes", "color", "icon", "indeterminate", "indeterminateIcon", "inputProps", "size"]);
+var Container_Container = /*#__PURE__*/react["forwardRef"](function Container(props, ref) {
+  var classes = props.classes,
+      className = props.className,
+      _props$component = props.component,
+      Component = _props$component === void 0 ? 'div' : _props$component,
+      _props$disableGutters = props.disableGutters,
+      disableGutters = _props$disableGutters === void 0 ? false : _props$disableGutters,
+      _props$fixed = props.fixed,
+      fixed = _props$fixed === void 0 ? false : _props$fixed,
+      _props$maxWidth = props.maxWidth,
+      maxWidth = _props$maxWidth === void 0 ? 'lg' : _props$maxWidth,
+      other = Object(objectWithoutProperties["a" /* default */])(props, ["classes", "className", "component", "disableGutters", "fixed", "maxWidth"]);
 
-  var icon = indeterminate ? indeterminateIconProp : iconProp;
-  var indeterminateIcon = indeterminate ? indeterminateIconProp : checkedIcon;
-  return /*#__PURE__*/react["createElement"](internal_SwitchBase, Object(esm_extends["a" /* default */])({
-    type: "checkbox",
-    classes: {
-      root: Object(clsx_m["a" /* default */])(classes.root, classes["color".concat(Object(capitalize["a" /* default */])(color))], indeterminate && classes.indeterminate),
-      checked: classes.checked,
-      disabled: classes.disabled
-    },
-    color: color,
-    inputProps: Object(esm_extends["a" /* default */])({
-      'data-indeterminate': indeterminate
-    }, inputProps),
-    icon: /*#__PURE__*/react["cloneElement"](icon, {
-      fontSize: icon.props.fontSize === undefined && size === "small" ? size : icon.props.fontSize
-    }),
-    checkedIcon: /*#__PURE__*/react["cloneElement"](indeterminateIcon, {
-      fontSize: indeterminateIcon.props.fontSize === undefined && size === "small" ? size : indeterminateIcon.props.fontSize
-    }),
+  return /*#__PURE__*/react["createElement"](Component, Object(esm_extends["a" /* default */])({
+    className: Object(clsx_m["a" /* default */])(classes.root, className, fixed && classes.fixed, disableGutters && classes.disableGutters, maxWidth !== false && classes["maxWidth".concat(Object(capitalize["a" /* default */])(String(maxWidth)))]),
     ref: ref
   }, other));
 });
  false ? undefined : void 0;
-/* harmony default export */ var esm_Checkbox_Checkbox = __webpack_exports__["a"] = (Object(withStyles["a" /* default */])(Checkbox_styles, {
-  name: 'MuiCheckbox'
-})(Checkbox_Checkbox));
+/* harmony default export */ var esm_Container_Container = (Object(withStyles["a" /* default */])(Container_styles, {
+  name: 'MuiContainer'
+})(Container_Container));
+// EXTERNAL MODULE: ./src/components/Random/Random.scss
+var Random = __webpack_require__(228);
 
-/***/ }),
-
-/***/ 254:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Registration; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(35);
-/* harmony import */ var _components_TextField_TextField__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(61);
-/* harmony import */ var _Registration_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(238);
-/* harmony import */ var _Registration_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Registration_scss__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_Modal_SimpleModal_SimpleModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(86);
-/* harmony import */ var _components_Checkbox_Checkbox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(227);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+// CONCATENATED MODULE: ./src/components/Random/Random.js
 
 
 
 
+function Random_Priz() {
+  return /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
+    className: "random"
+  }, /*#__PURE__*/react_default.a.createElement("img", {
+    src: "./images/bg2.svg",
+    className: "randomBG randomBGback"
+  }), /*#__PURE__*/react_default.a.createElement("img", {
+    src: "./images/bg3.svg",
+    className: "randomBGtop randomBG"
+  }), /*#__PURE__*/react_default.a.createElement(esm_Container_Container, {
+    className: "randomScreen"
+  }, /*#__PURE__*/react_default.a.createElement("img", {
+    src: "./images/video-1.png",
+    className: "randomVideo"
+  }), /*#__PURE__*/react_default.a.createElement("h2", {
+    className: "randomText"
+  }, "\u0437\u0430\u0433\u0430\u0434\u044B\u0432\u0430\u0439 \u0444\u0438\u043B\u044C\u043C \u0438 \u0436\u043C\u0438 \u043F\u0443\u0441\u043A!"), /*#__PURE__*/react_default.a.createElement(Button["a" /* default */], {
+    className: "buttonVideo"
+  }, /*#__PURE__*/react_default.a.createElement("img", {
+    src: "./images/buttonPlay.png"
+  })), /*#__PURE__*/react_default.a.createElement("img", {
+    src: "./images/video-2.png",
+    className: "randomVideo"
+  })));
+}
+
+/* harmony default export */ var Random_Random = (Random_Priz);
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/Paper/Paper.js
+var Paper = __webpack_require__(150);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/InputBase/InputBase.js + 1 modules
+var InputBase = __webpack_require__(105);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/core/esm/IconButton/IconButton.js
+var IconButton = __webpack_require__(148);
+
+// EXTERNAL MODULE: ./node_modules/@material-ui/icons/Search.js
+var Search = __webpack_require__(212);
+var Search_default = /*#__PURE__*/__webpack_require__.n(Search);
+
+// EXTERNAL MODULE: ./src/components/Table/Table.js
+var Table = __webpack_require__(205);
+
+// EXTERNAL MODULE: ./src/components/Winners/Winners.scss
+var Winners = __webpack_require__(229);
+
+// CONCATENATED MODULE: ./src/components/Winners/Winners.js
 
 
 
 
-var Registration = /*#__PURE__*/function (_Component) {
-  _inherits(Registration, _Component);
 
-  var _super = _createSuper(Registration);
 
-  function Registration() {
-    _classCallCheck(this, Registration);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Registration, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], {
-        container: true,
-        alignContent: "center",
-        justify: "center",
-        direction: "column",
-        className: "RegistrationContainer"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], {
-        item: true,
-        component: "form",
-        className: "Registration"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "formTitle"
-      }, "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TextField_TextField__WEBPACK_IMPORTED_MODULE_2__[/* default */ "b"], {
-        type: "name",
-        placeholder: "Имя"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TextField_TextField__WEBPACK_IMPORTED_MODULE_2__[/* TextFieldPhone */ "a"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_TextField_TextField__WEBPACK_IMPORTED_MODULE_2__[/* default */ "b"], {
-        type: "email",
-        placeholder: "E-mail"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "checkboxs"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Checkbox_Checkbox__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], null, "\u042F \u043F\u0440\u043E\u0447\u0438\u0442\u0430\u043B \u0438 \u0441\u043E\u0433\u043B\u0430\u0441\u0435\u043D \u0441 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "empty"
-      }, "\u041F\u0440\u0430\u0432\u0438\u043B\u0430\u043C\u0438 \u0430\u043A\u0446\u0438\u0438"), " \u0438", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "empty"
-      }, "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u043C \u0441\u043E\u0433\u043B\u0430\u0448\u0435\u043D\u0438\u0435\u043C"), ", \u0441\u043E\u0433\u043B\u0430\u0441\u0435\u043D \u043D\u0430 \u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0443 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0445 \u0434\u0430\u043D\u043D\u044B\u0445"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Checkbox_Checkbox__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], null, "\u042F \u0441\u043E\u0433\u043B\u0430\u0441\u0435\u043D \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u044C \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u043E\u0431 \u0430\u043A\u0446\u0438\u0438 \u043F\u043E E-mail"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Checkbox_Checkbox__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], null, "\u042F \u0441\u043E\u0433\u043B\u0430\u0441\u0435\u043D \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u044C \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u043E\u0431 \u0430\u043A\u0446\u0438\u0438 \u043F\u043E \u0421\u041C\u0421")), _components_Modal_SimpleModal_SimpleModal__WEBPACK_IMPORTED_MODULE_4__[/* verify */ "c"]));
+function Winners_Winners() {
+  return /*#__PURE__*/react_default.a.createElement(Box["a" /* default */], {
+    id: "c_winners",
+    className: "winners"
+  }, /*#__PURE__*/react_default.a.createElement("h2", null, "\u041F\u043E\u0431\u0435\u0434\u0438\u0442\u0435\u043B\u0438"), /*#__PURE__*/react_default.a.createElement(Paper["a" /* default */], {
+    component: "form",
+    className: "winnersForm"
+  }, /*#__PURE__*/react_default.a.createElement(InputBase["a" /* default */], {
+    className: "winnersInput",
+    placeholder: "e-mail",
+    inputProps: {
+      "aria-label": "e-mail"
     }
-  }]);
+  }), /*#__PURE__*/react_default.a.createElement(IconButton["a" /* default */], {
+    type: "submit",
+    "aria-label": "search",
+    className: "winnersButton"
+  }, /*#__PURE__*/react_default.a.createElement(Search_default.a, null))), /*#__PURE__*/react_default.a.createElement(Table["a" /* default */], {
+    rows: rows,
+    columns: columns,
+    rowsPerPage: 10
+  }));
+}
 
-  return Registration;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+/* harmony default export */ var components_Winners_Winners = (Winners_Winners);
+var columns = [{
+  id: "date",
+  label: "Дата"
+}, {
+  id: "email",
+  label: "e-mail"
+}, {
+  id: "name",
+  label: "имя"
+}, {
+  id: "priz",
+  label: "приз"
+}];
+
+function createData(date, email, name, priz) {
+  return {
+    date: date,
+    email: email,
+    name: name,
+    priz: priz
+  };
+}
+
+var rows = [createData("25.02.21", "r.bol***@ya.ru", "Роман", "Еженедельный"), createData("25.02.21", "r.bol***@ya.ru", "Evgeny", "Еженедельный"), createData("25.02.21", "anya***@yahoo.com", "Анна", "Еженедельный"), createData("25.02.21", "r.bol***@ya.ru", "Роман", "Еженедельный"), createData("25.02.21", "anya***@yahoo.com", "Анна", "Еженедельный"), createData("25.02.21", "r.bol***@ya.ru", "Роман", "Еженедельный"), createData("25.02.21", "anya***@yahoo.com", "Анна", "Еженедельный"), createData("25.02.21", "r.bol***@ya.ru", "Роман", "Еженедельный"), createData("25.02.21", "anya***@yahoo.com", "Анна", "Еженедельный"), createData("25.02.21", "r.bol***@ya.ru", "Роман", "Еженедельный"), createData("25.02.21", "anya***@yahoo.com", "Анна", "Еженедельный"), createData("25.02.21", "r.bol***@ya.ru", "Роман", "Еженедельный"), createData("25.02.21", "anya***@yahoo.com", "Анна", "Еженедельный"), createData("25.02.21", "r.bol***@ya.ru", "Роман", "Еженедельный"), createData("25.02.21", "anya***@yahoo.com", "Анна", "Еженедельный"), createData("25.02.21", "anya***@yahoo.com", "Анна", "Еженедельный")];
+// EXTERNAL MODULE: ./src/components/Footer/Footer.js
+var Footer = __webpack_require__(98);
+
+// EXTERNAL MODULE: ./node_modules/use-react-router/use-react-router.js
+var use_react_router = __webpack_require__(41);
+var use_react_router_default = /*#__PURE__*/__webpack_require__.n(use_react_router);
+
+// EXTERNAL MODULE: ./node_modules/react-scroll/modules/index.js
+var modules = __webpack_require__(32);
+
+// CONCATENATED MODULE: ./src/pages/main/main.js
 
 
+
+
+
+
+
+
+
+
+
+var main_Main = function Main() {
+  var _useReactRouter = use_react_router_default()(),
+      history = _useReactRouter.history;
+
+  return /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
+    container: true,
+    direction: "column",
+    justify: "flex-start",
+    alignItems: "stretch",
+    className: "wrap"
+  }, /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
+    item: true,
+    xs: 12
+  }, /*#__PURE__*/react_default.a.createElement(Top_Top, null)), /*#__PURE__*/react_default.a.createElement(Grid["a" /* default */], {
+    item: true,
+    xs: 12,
+    className: "blockContainer"
+  }, /*#__PURE__*/react_default.a.createElement(components_Rules_Rules, null), /*#__PURE__*/react_default.a.createElement(components_Priz_Priz, null), /*#__PURE__*/react_default.a.createElement(Random_Random, null), /*#__PURE__*/react_default.a.createElement(components_Winners_Winners, null))));
+};
+
+/* harmony default export */ var main = __webpack_exports__["default"] = (main_Main);
 
 /***/ })
 
