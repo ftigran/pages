@@ -16172,19 +16172,19 @@ var App_App = function App(_ref) {
   }, /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
     key: "faq",
     location: location,
-    path: basename + "/faq",
+    path: "".concat(basename, "/faq"),
     component: FAQ,
     exact: true
   }), /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
-    path: basename + "/reg",
+    path: "".concat(basename, "/reg"),
     component: Registration
   }), /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
-    path: basename + "/cabinet",
+    path: "".concat(basename, "/cabinet"),
     component: Cabinet
   }), /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
     key: "index",
     location: location,
-    path: basename + "/",
+    path: "".concat(basename, "/"),
     component: Main,
     exact: true
   }), /*#__PURE__*/react_default.a.createElement(react_router["Route"], {
